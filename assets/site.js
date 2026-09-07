@@ -42,5 +42,13 @@
     document.querySelectorAll('.navlinks a').forEach(a=>{
       if(a.getAttribute('href') === here) a.setAttribute('aria-current','page');
     });
+
+    // Verze nasazení v patičce – ať jde poznat, jestli prohlížeč nedrží starou verzi.
+    const verEl = document.getElementById('app-version');
+    const meta = document.querySelector('meta[name="app-version"]');
+    if(verEl && meta){
+      const v = meta.getAttribute('content') || '';
+      verEl.textContent = v.startsWith('__') ? ' · verze: dev' : ' · verze ' + v.slice(0, 7);
+    }
   });
 })();

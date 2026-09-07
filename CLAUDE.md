@@ -141,7 +141,13 @@ Původní kód volal `refreshPrices()` několikrát po sobě (snapshot pozic + p
 po každém zápisu), takže jedno otevření stránky spálilo 12 kreditů a API vracelo
 `429 – You have run out of API credits for the current minute`.
 
-Proto `refreshPrices()` v `assets/portfolio.js`:
+Proto `assets/prices.js` má **vlastní hlídač kreditů** (`CREDIT_LIMIT_PER_MIN` 8 mínus
+rezerva 2 → využívá max 6/min, log útraty v `localStorage` klíč `portfolio-td-credits-v1`):
+když by se dotaz do rozpočtu nevešel, **vůbec se neodešle** a vrátí se hláška označená
+`local: true`. Po odpovědi 429 se navíc nastaví cooldown (`portfolio-td-cooldown-v1`, 70 s).
+Hlášky s `local: true` se **nikdy necachují** (není to odpověď API, jen náš stav).
+
+A `refreshPrices()` v `assets/portfolio.js`:
 - drží ceny v **localStorage cache** (`portfolio-price-cache-v1`, klíč `type:symbol:currency`),
   takže i reload stránky je zadarmo – TTL `PRICE_TTL_MS` (3 min), u chyb kratší
   `PRICE_ERR_TTL_MS` (45 s, ať se to po vyčerpání limitu samo zkusí znovu),
@@ -152,6 +158,16 @@ Proto `refreshPrices()` v `assets/portfolio.js`:
 **Nikdy nevolej `refreshPrices({force:true})` automaticky** (např. při příchodu API klíče) –
 spálí to kredity při každém načtení. Stav "chybí API klíč" se schválně **necachuje**, takže
 se ceny dotáhnou i běžným voláním, jakmile klíč dorazí.
+
+**Neúspěšný pokus nesmí zahodit už načtenou cenu.** Jak v `pricesCache`, tak v localStorage
+cache platí: když nový dotaz skončí chybou, poslední známá cena zůstává a jen se k ní
+poznamená chyba (`staleError`, resp. `error`+`errAt`); v tabulce se pak ukáže cena
+s poznámkou "z HH:MM" místo červené hlášky. Červená hláška je jen tam, kde žádná cena není.
+(Bez tohohle spadla tabulka po kliknutí na aktualizaci z živých cen zpátky na ruční.)
+
+V patičce se zobrazuje **verze nasazení** (7 znaků commit SHA, `assets/site.js` ji bere
+z `<meta name="app-version">`) – při hlášení "nefunguje to" si tím ověř, jestli uživatel
+nemá v prohlížeči starou verzi.
 
 Pokud by v budoucnu hlášky ukázaly i omezení pokrytí burz (XETRA/Euronext/HKEX na free
 tarifu), řeš to ručními cenami nebo jiným zdrojem – pozor, většina alternativ (Yahoo,

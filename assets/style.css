@@ -252,6 +252,7 @@ html[data-gate="locked"] .site-header, html[data-gate="locked"] .content, html[d
   padding:26px 20px 34px; text-align:center; color:var(--muted); font-size:.8rem;
 }
 .site-footer a{ color:var(--muted); text-decoration:underline; }
+.appver{ opacity:.65; font-size:.74rem; }
 
 /* ---------- Responsivita ---------- */
 @media (max-width:560px){

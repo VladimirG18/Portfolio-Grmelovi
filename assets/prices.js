@@ -4,6 +4,40 @@
 
 const FX_CACHE_STORAGE = 'portfolio-fx-cache-v1';
 
+/* ---------- Hlídač kreditů Twelve Data ----------
+   Free tarif má 8 kreditů/minutu a účtuje 1 kredit za KAŽDÝ symbol. Když se limit
+   překročí, API vrací 429 – a další pokusy ho drží vyčerpaný. Proto si počítáme
+   útratu sami a raději dotaz vůbec neodešleme, než abychom dostali 429. */
+const CREDIT_LOG_KEY = 'portfolio-td-credits-v1';
+const CREDIT_COOLDOWN_KEY = 'portfolio-td-cooldown-v1';
+const CREDIT_LIMIT_PER_MIN = 8;
+const CREDIT_RESERVE = 2; // rezerva, ať nenarazíme přesně na strop
+
+function readCreditLog(){
+  try {
+    const log = JSON.parse(localStorage.getItem(CREDIT_LOG_KEY)) || [];
+    const cutoff = Date.now() - 60000;
+    return log.filter(e => e && e.at > cutoff);
+  } catch(e){ return []; }
+}
+function spentLastMinute(){
+  return readCreditLog().reduce((n, e) => n + (e.n || 0), 0);
+}
+function recordCredits(n){
+  const log = readCreditLog();
+  log.push({ at: Date.now(), n });
+  try { localStorage.setItem(CREDIT_LOG_KEY, JSON.stringify(log)); } catch(e){}
+}
+function cooldownLeftMs(){
+  try {
+    const until = parseInt(localStorage.getItem(CREDIT_COOLDOWN_KEY) || '0', 10);
+    return Math.max(0, until - Date.now());
+  } catch(e){ return 0; }
+}
+function startCooldown(ms){
+  try { localStorage.setItem(CREDIT_COOLDOWN_KEY, String(Date.now() + ms)); } catch(e){}
+}
+
 /* ---------- Kryptoměny (CoinGecko) ---------- */
 async function fetchCryptoPrices(ids){
   if(!ids.length) return {};
@@ -26,9 +60,23 @@ async function fetchStockPrices(symbols, apiKey){
   const out = {};
   if(!symbols.length) return out;
   if(!apiKey){
-    symbols.forEach(s => { out[s] = { error: 'Chybí API klíč pro akcie (vlož ho v Nastavení)' }; });
+    symbols.forEach(s => { out[s] = { error: 'Chybí API klíč pro akcie (vlož ho v Nastavení)', local: true }; });
     return out;
   }
+
+  // Limit vyčerpaný z minulého pokusu – nezkoušej to znovu, jen by se to protáhlo.
+  const cool = cooldownLeftMs();
+  if(cool > 0){
+    const s = Math.ceil(cool / 1000);
+    symbols.forEach(x => { out[x] = { error: `Limit Twelve Data vyčerpán, zkusím to za ${s} s`, local: true }; });
+    return out;
+  }
+  // Nevejdeme se do minutového rozpočtu – radši dotaz vůbec neposílej.
+  if(spentLastMinute() + symbols.length > CREDIT_LIMIT_PER_MIN - CREDIT_RESERVE){
+    symbols.forEach(x => { out[x] = { error: 'Šetřím kredity Twelve Data (limit 8/min), zkus to za chvíli', local: true }; });
+    return out;
+  }
+  recordCredits(symbols.length);
 
   const url = `https://api.twelvedata.com/price?symbol=${encodeURIComponent(symbols.join(','))}&apikey=${encodeURIComponent(apiKey)}`;
   let data;
@@ -42,6 +90,8 @@ async function fetchStockPrices(symbols, apiKey){
 
   // Chyba platná pro celý dotaz (špatný klíč, tarif, rate limit).
   if(data && (data.status === 'error' || (data.code && !data.price))){
+    // 429 = vyčerpané kredity za minutu; drž chvíli klid, ať se limit stihne obnovit.
+    if(data.code === 429) startCooldown(70000);
     const msg = (data.message || 'neznámá chyba') + (data.code ? ' (kód ' + data.code + ')' : '');
     symbols.forEach(s => { out[s] = { error: msg }; });
     return out;
@@ -111,7 +161,7 @@ export async function fetchAllPrices(positions, apiKey){
   const stockErr = stockRes.status === 'rejected' ? String(stockRes.reason) : null;
 
   positions.forEach(p => {
-    let auto = null, error = null;
+    let auto = null, error = null, local = false;
     if(p.type === 'krypto'){
       const price = cryptoPrices[p.symbol];
       if(price != null) auto = { priceNative: price, currency: 'CZK' };
@@ -119,16 +169,19 @@ export async function fetchAllPrices(positions, apiKey){
     } else {
       const r = stockResults[p.symbol];
       if(r && r.price != null) auto = { priceNative: r.price, currency: p.currency };
-      else error = (r && r.error) || stockErr || 'Symbol nenalezen';
+      else {
+        error = (r && r.error) || stockErr || 'Symbol nenalezen';
+        local = !!(r && r.local); // naše vlastní hláška, ne odpověď API – necachovat
+      }
     }
 
     if(auto){ out[p.id] = auto; return; }
 
     // Automatická cena nedostupná – použij ručně zadanou, pokud u pozice je.
     if(p.manualPrice != null && !isNaN(p.manualPrice)){
-      out[p.id] = { priceNative: p.manualPrice, currency: p.currency, manual: true, error };
+      out[p.id] = { priceNative: p.manualPrice, currency: p.currency, manual: true, error, local };
     } else {
-      out[p.id] = { priceNative: null, currency: p.currency, error };
+      out[p.id] = { priceNative: null, currency: p.currency, error, local };
     }
   });
 

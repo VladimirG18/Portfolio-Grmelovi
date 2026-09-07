@@ -172,8 +172,13 @@ function renderTable(){
     if(isCash){
       priceCell = '—';
     } else if(price && price.priceNative != null){
+      // Máme cenu → chybu z posledního (neúspěšného) pokusu nekřič, jen naznač stáří.
+      let note = '';
+      if(price.manual) note = 'ručně zadaná';
+      else if(price.staleError && price.cachedAt) note = 'z ' + new Date(price.cachedAt).toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit' });
+      else if(price.staleError) note = 'poslední známá';
       priceCell = fmtNum(price.priceNative, 2) + ' ' + price.currency
-        + (price.manual ? '<span class="sub">ručně zadaná</span>' : '');
+        + (note ? '<span class="sub">' + note + '</span>' : '');
     } else if(price && price.error){
       priceCell = '<span class="pricerr">⚠️ ' + escapeHtml(price.error) + '</span>';
     } else {
@@ -298,7 +303,7 @@ function escapeHtml(s){
    (localStorage) a stahují se jen symboly, které v cache nejsou nebo už jsou staré.
    Bez toho jedno otevření stránky spálilo několikanásobek limitu a API vracelo 429. */
 const PRICE_CACHE_KEY = 'portfolio-price-cache-v1';
-const PRICE_TTL_MS = 3 * 60 * 1000;
+const PRICE_TTL_MS = 15 * 60 * 1000;
 // Chyby (typicky 429 – vyčerpané kredity za minutu) drž kratší dobu, ať se to samo
 // zkusí znovu, jakmile se limit obnoví, ale ne hned při každém překreslení.
 const PRICE_ERR_TTL_MS = 45 * 1000;
@@ -331,7 +336,7 @@ async function refreshPrices({ force = false } = {}){
     const c = symCache[priceCacheKey(p)];
     if(!c || pricesCache[p.id]) return;
     if(c.priceNative != null){
-      pricesCache[p.id] = { priceNative: c.priceNative, currency: c.currency, cachedAt: c.at };
+      pricesCache[p.id] = { priceNative: c.priceNative, currency: c.currency, cachedAt: c.at, staleError: c.error || null };
     } else if(p.manualPrice != null && !isNaN(p.manualPrice)){
       pricesCache[p.id] = { priceNative: p.manualPrice, currency: p.currency, manual: true, error: c.error };
     } else {
@@ -339,10 +344,14 @@ async function refreshPrices({ force = false } = {}){
     }
   });
 
+  // Čerstvá je buď platná cena v rámci PRICE_TTL_MS, nebo nedávná chyba (ať se po
+  // neúspěchu nezkouší hned znovu a nepálí kredity).
   const isFresh = p => {
     const c = symCache[priceCacheKey(p)];
     if(!c) return false;
-    return (now - c.at) < (c.error ? PRICE_ERR_TTL_MS : PRICE_TTL_MS);
+    if(c.priceNative != null && (now - (c.at || 0)) < PRICE_TTL_MS) return true;
+    if(c.error && (now - (c.errAt || 0)) < PRICE_ERR_TTL_MS) return true;
+    return false;
   };
   const needed = force ? priceable : priceable.filter(p => !isFresh(p));
 
@@ -358,20 +367,37 @@ async function refreshPrices({ force = false } = {}){
   priceFetchInFlight = (async () => {
     try {
       const fetched = await fetchAllPrices(needed, stockApiKey);
-      Object.assign(pricesCache, fetched);
+
+      // Neúspěšný pokus NESMÍ zahodit dřív načtenou platnou cenu – jinak by po
+      // kliknutí na aktualizaci (nebo po zásahu hlídače kreditů) tabulka spadla
+      // z živých cen zpátky na ruční/prázdné.
+      Object.entries(fetched).forEach(([id, r]) => {
+        const prev = pricesCache[id];
+        const gotPrice = r && r.priceNative != null && !r.manual;
+        if(gotPrice){
+          pricesCache[id] = { ...r, cachedAt: Date.now() };
+        } else if(!prev || prev.priceNative == null){
+          pricesCache[id] = r;
+        } else {
+          pricesCache[id] = { ...prev, staleError: r.error || null };
+        }
+      });
+
       // Ulož i chyby – ať se při dalším překreslení hned neopakuje dotaz do limitu.
-      // Výjimka: "chybí klíč" není odpověď API, ale lokální stav – ten cachovat nesmíme,
-      // jinak by po doplnění klíče zůstala chyba viset až do vypršení TTL.
+      // Výjimka: hlášky označené `local` (chybí klíč, šetření kreditů) nejsou odpovědí
+      // API, jen náš vlastní stav – cachovat je nesmíme, jinak by po pominutí důvodu
+      // zůstaly viset až do vypršení TTL.
       needed.forEach(p => {
         const r = fetched[p.id];
-        if(!r) return;
-        if(r.error && r.error.startsWith('Chybí API klíč')) return;
-        symCache[priceCacheKey(p)] = {
-          priceNative: r.manual ? null : r.priceNative,
-          currency: r.currency,
-          error: r.error || null,
-          at: Date.now()
-        };
+        if(!r || r.local) return;
+        const key = priceCacheKey(p);
+        const prev = symCache[key] || {};
+        if(!r.manual && r.priceNative != null){
+          symCache[key] = { priceNative: r.priceNative, currency: r.currency, at: Date.now(), error: null, errAt: 0 };
+        } else {
+          // Chyba z API: poslední známou cenu si nech, jen si poznač chybu a její čas.
+          symCache[key] = { ...prev, currency: r.currency || prev.currency, error: r.error || null, errAt: Date.now() };
+        }
       });
       saveSymbolCache(symCache);
       await recompute();
