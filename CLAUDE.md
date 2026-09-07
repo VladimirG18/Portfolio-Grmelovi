@@ -82,6 +82,8 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
   quantity: number,     // u hotovosti = částka
   avgBuyPrice: number,  // za kus, v měně "currency"; u hotovosti vždy 1
   currency: 'CZK'|'USD'|'EUR'|'GBP',
+  manualPrice: number|null, // volitelná ručně zadaná aktuální cena za kus (v "currency");
+                            // použije se JEN když automatická cena selže (viz §4c)
   note: string,
   ts: number,           // Date.now() při vytvoření (u historických importů = datum nákupu)
 
@@ -118,6 +120,24 @@ zůstávají jako historický nákupní záznam. Uzavřené pozice:
 - Smazání řádku v historii (🗑) smaže celý záznam z Firestore – žádná "obnova" zpět na
   otevřenou pozici zatím není (kdyby bylo potřeba, jde ručně smazat pole `closed`/
   `sellPrice`/`closedAt` přes Firestore konzoli nebo REST).
+
+### 4c) Chyby cen a ruční cena
+
+`fetchStockPrices()` v `assets/prices.js` propouští **skutečnou hlášku z Twelve Data**
+(např. neplatný ticker, symbol mimo tarif, vyčerpané kredity) až do tabulky, kde se
+vypíše viditelně červeně (`.pricerr`) – dřív se schovávala do `title` tooltipu, který je
+na mobilu nedostupný, takže uživatel viděl jen "chyba" a nedalo se to diagnostikovat.
+**Nevracej se k tomu.**
+
+Když automatická cena selže a pozice má vyplněné `manualPrice`, použije se ta a v tabulce
+je označená popiskem "ručně zadaná". Automatická cena má vždy přednost (je čerstvější);
+ruční je jen záchranná brzda pro tituly, které daný zdroj cen neumí.
+
+**Pozor na tarif Twelve Data**: free tarif nemusí pokrývat evropské burzy (XETRA,
+Euronext, HKEX) – uživatel drží hlavně evropské tituly (`RHM.DE`, `HO.PA`, `1211.HK`).
+Pokud hlášky z API ukážou omezení tarifu, řeš to buď ručními cenami, nebo změnou zdroje
+cen (pozor: většina alternativ jako Yahoo/Stooq nemá CORS a z čistě statického webu bez
+backendu je nepoužiješ přímo).
 
 ## 5) Známá omezení / co dodělat příště, když si to řeknou
 

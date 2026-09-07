@@ -18,22 +18,46 @@ async function fetchCryptoPrices(ids){
   return out;
 }
 
-/* ---------- Akcie / ETF (Twelve Data) ---------- */
+/* ---------- Akcie / ETF (Twelve Data) ----------
+   Vrací mapu symbol -> { price } nebo { error }. Chybovou hlášku z API
+   propouštíme dál, ať je v tabulce vidět skutečný důvod (neplatný ticker,
+   symbol mimo tarif, vyčerpané kredity…), ne jen "chyba". */
 async function fetchStockPrices(symbols, apiKey){
-  if(!symbols.length || !apiKey) return {};
-  const url = `https://api.twelvedata.com/price?symbol=${encodeURIComponent(symbols.join(','))}&apikey=${encodeURIComponent(apiKey)}`;
-  const res = await fetch(url);
-  if(!res.ok) throw new Error('Twelve Data HTTP ' + res.status);
-  const data = await res.json();
   const out = {};
-  if(symbols.length === 1){
-    if(data && data.price && !data.code) out[symbols[0]] = parseFloat(data.price);
-  } else {
-    symbols.forEach(sym => {
-      const d = data[sym];
-      if(d && d.price && !d.code) out[sym] = parseFloat(d.price);
-    });
+  if(!symbols.length) return out;
+  if(!apiKey){
+    symbols.forEach(s => { out[s] = { error: 'Chybí API klíč pro akcie (vlož ho v Nastavení)' }; });
+    return out;
   }
+
+  const url = `https://api.twelvedata.com/price?symbol=${encodeURIComponent(symbols.join(','))}&apikey=${encodeURIComponent(apiKey)}`;
+  let data;
+  try {
+    const res = await fetch(url);
+    data = await res.json();
+  } catch(e){
+    symbols.forEach(s => { out[s] = { error: 'Twelve Data je nedostupná: ' + e }; });
+    return out;
+  }
+
+  // Chyba platná pro celý dotaz (špatný klíč, tarif, rate limit).
+  if(data && (data.status === 'error' || (data.code && !data.price))){
+    const msg = (data.message || 'neznámá chyba') + (data.code ? ' (kód ' + data.code + ')' : '');
+    symbols.forEach(s => { out[s] = { error: msg }; });
+    return out;
+  }
+
+  symbols.forEach(sym => {
+    // Jeden symbol => plochá odpověď {price}; víc symbolů => mapa podle symbolu.
+    const d = symbols.length === 1 ? data : (data ? data[sym] : null);
+    if(d && d.price != null && !d.code){
+      out[sym] = { price: parseFloat(d.price) };
+    } else if(d && (d.message || d.code)){
+      out[sym] = { error: (d.message || 'chyba') + (d.code ? ' (kód ' + d.code + ')' : '') };
+    } else {
+      out[sym] = { error: 'Symbol nenalezen na Twelve Data' };
+    }
+  });
   return out;
 }
 
@@ -82,25 +106,29 @@ export async function fetchAllPrices(positions, apiKey){
   ]);
 
   const cryptoPrices = cryptoRes.status === 'fulfilled' ? cryptoRes.value : {};
-  const stockPrices = stockRes.status === 'fulfilled' ? stockRes.value : {};
+  const stockResults = stockRes.status === 'fulfilled' ? stockRes.value : {};
   const cryptoErr = cryptoRes.status === 'rejected' ? String(cryptoRes.reason) : null;
   const stockErr = stockRes.status === 'rejected' ? String(stockRes.reason) : null;
 
   positions.forEach(p => {
+    let auto = null, error = null;
     if(p.type === 'krypto'){
       const price = cryptoPrices[p.symbol];
-      out[p.id] = price != null
-        ? { priceNative: price, currency: 'CZK' }
-        : { priceNative: null, currency: 'CZK', error: cryptoErr || 'Symbol nenalezen na CoinGecko' };
+      if(price != null) auto = { priceNative: price, currency: 'CZK' };
+      else error = cryptoErr || 'Symbol nenalezen na CoinGecko';
     } else {
-      if(!apiKey){
-        out[p.id] = { priceNative: null, currency: p.currency, error: 'Chybí API klíč pro akcie (nastav ho v Nastavení)' };
-      } else {
-        const price = stockPrices[p.symbol];
-        out[p.id] = price != null
-          ? { priceNative: price, currency: p.currency }
-          : { priceNative: null, currency: p.currency, error: stockErr || 'Symbol nenalezen' };
-      }
+      const r = stockResults[p.symbol];
+      if(r && r.price != null) auto = { priceNative: r.price, currency: p.currency };
+      else error = (r && r.error) || stockErr || 'Symbol nenalezen';
+    }
+
+    if(auto){ out[p.id] = auto; return; }
+
+    // Automatická cena nedostupná – použij ručně zadanou, pokud u pozice je.
+    if(p.manualPrice != null && !isNaN(p.manualPrice)){
+      out[p.id] = { priceNative: p.manualPrice, currency: p.currency, manual: true, error };
+    } else {
+      out[p.id] = { priceNative: null, currency: p.currency, error };
     }
   });
 

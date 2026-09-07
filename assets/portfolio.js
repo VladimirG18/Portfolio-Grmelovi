@@ -30,6 +30,7 @@ const fName = document.getElementById('f-name');
 const fQty = document.getElementById('f-qty');
 const fPrice = document.getElementById('f-price');
 const fCurrency = document.getElementById('f-currency');
+const fManual = document.getElementById('f-manual');
 const fNote = document.getElementById('f-note');
 const saveBtn = document.getElementById('save-btn');
 const cancelBtn = document.getElementById('cancel-btn');
@@ -167,9 +168,17 @@ function renderTable(){
     const c = computed[p.id] || {};
     const tr = document.createElement('tr');
     const gainClass = (c.gainCZK == null || isCash) ? '' : (c.gainCZK >= 0 ? 'gain' : 'loss');
-    const priceCell = isCash ? '—'
-      : (price && price.priceNative != null ? fmtNum(price.priceNative, 2) + ' ' + price.currency
-        : (price && price.error ? '<span title="' + escapeHtml(price.error) + '">⚠️ chyba</span>' : '…'));
+    let priceCell;
+    if(isCash){
+      priceCell = '—';
+    } else if(price && price.priceNative != null){
+      priceCell = fmtNum(price.priceNative, 2) + ' ' + price.currency
+        + (price.manual ? '<span class="sub">ručně zadaná</span>' : '');
+    } else if(price && price.error){
+      priceCell = '<span class="pricerr">⚠️ ' + escapeHtml(price.error) + '</span>';
+    } else {
+      priceCell = '…';
+    }
     const buyCell = isCash ? '—' : fmtNum(p.avgBuyPrice, 2) + ' ' + p.currency;
     const gainCell = isCash ? '—' : (c.gainCZK == null ? '—' : (c.gainCZK >= 0 ? '+' : '') + fmtCZK(c.gainCZK) + ' (' + fmtPct(c.gainPct) + ')');
     tr.innerHTML = `
@@ -329,6 +338,7 @@ function openModal(pos){
   fQty.value = pos ? pos.quantity : '';
   fPrice.value = pos ? pos.avgBuyPrice : '';
   fCurrency.value = pos ? pos.currency : 'CZK';
+  fManual.value = (pos && pos.manualPrice != null) ? pos.manualPrice : '';
   fNote.value = pos ? (pos.note || '') : '';
   updateSymbolHint();
   modal.classList.add('open');
@@ -343,6 +353,7 @@ modal.addEventListener('click', e => { if(e.target === modal) closeModal(); });
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
+  const manual = parseFloat(fManual.value);
   const data = {
     type: fType.value,
     symbol: fSymbol.value.trim(),
@@ -350,6 +361,7 @@ form.addEventListener('submit', async e => {
     quantity: parseFloat(fQty.value),
     avgBuyPrice: parseFloat(fPrice.value),
     currency: fCurrency.value,
+    manualPrice: (fType.value === 'hotovost' || isNaN(manual)) ? null : manual,
     note: fNote.value.trim(),
   };
   if(!data.symbol || !data.quantity || !data.avgBuyPrice){ return; }

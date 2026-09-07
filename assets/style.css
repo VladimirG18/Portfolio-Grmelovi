@@ -153,6 +153,8 @@ td.num,th.num{ text-align:right; font-variant-numeric:tabular-nums; white-space:
 tr.sum td{ font-weight:700; border-top:2px solid var(--border-strong); background:var(--surface-2); }
 td .sub{ display:block; color:var(--muted); font-size:.8rem; }
 .gain{ color:var(--ok); font-weight:650; } .loss{ color:var(--danger); font-weight:650; }
+.pricerr{ display:inline-block; white-space:normal; text-align:right; color:var(--danger);
+  font-size:.76rem; line-height:1.35; max-width:260px; font-variant-numeric:normal; }
 .rowactions{ display:flex; gap:6px; justify-content:flex-end; }
 .iconbtn{ border:1px solid var(--border); background:var(--surface); color:var(--muted); cursor:pointer;
   width:30px; height:30px; border-radius:8px; font-size:.9rem; display:inline-grid; place-items:center; }
