@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio – Nastavení</title>
+<meta name="description" content="Nastavení API klíče pro automatické ceny akcií a ETF." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%88%3C/text%3E%3C/svg%3E" />
+<script>(function(){try{var t=localStorage.getItem('portfolio-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
+<script>(function(){try{var u=localStorage.getItem('portfolio-unlock-v1');document.documentElement.setAttribute('data-gate', u==='1'?'open':'locked');}catch(e){document.documentElement.setAttribute('data-gate','locked');}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+<script src="assets/site.js"></script>
+<script src="assets/gate.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html"><span class="logo">📈</span><span>Portfolio<small>Grmelovi</small></span></a>
+    <div class="navlinks">
+      <a href="index.html">Přehled</a>
+      <a href="nastaveni.html">Nastavení</a>
+    </div>
+    <button class="theme-btn" title="Přepnout světlý / tmavý režim" aria-label="Přepnout vzhled">🌙</button>
+  </nav>
+</header>
+
+<div class="content">
+  <span class="eyebrow">Nastavení</span>
+  <h1>API klíč pro ceny akcií a ETF</h1>
+  <p class="lead">Kryptoměny se stahují automaticky bez klíče (CoinGecko). Pro akcie a ETF je potřeba
+    vlastní zdarma klíč od Twelve Data – ukládá se jen v tomto prohlížeči (localStorage), nikam se
+    neposílá ani se neukládá do repozitáře.</p>
+
+  <div class="callout info">
+    <b>Jak získat klíč (cca 2 minuty, zdarma):</b>
+    <ol style="margin:8px 0 0; padding-left:20px">
+      <li>Jdi na <a href="https://twelvedata.com" target="_blank" rel="noopener">twelvedata.com</a> a zaregistruj se (stačí e-mail).</li>
+      <li>Po přihlášení najdeš v sekci <b>API Keys / Dashboard</b> svůj klíč (dlouhý řetězec znaků).</li>
+      <li>Zkopíruj ho a vlož do pole níže.</li>
+    </ol>
+    <p style="margin:8px 0 0">Zdarma tarif má limit cca 800 dotazů/den a 8/minutu – pro rodinné
+      portfolio to bohatě stačí. Klíč si musí vložit každý zvlášť ve svém prohlížeči.</p>
+  </div>
+
+  <div class="formcard">
+    <div class="field grow2">
+      <label for="td-key">Twelve Data API klíč</label>
+      <input type="text" id="td-key" placeholder="např. 0123456789abcdef0123456789abcdef" autocomplete="off" />
+    </div>
+    <div class="formactions" style="justify-content:flex-start; margin-top:10px">
+      <button class="btn primary" id="td-save">Uložit klíč</button>
+      <button class="btn" id="td-test">Otestovat (AAPL)</button>
+      <button class="btn" id="td-clear">Smazat klíč</button>
+    </div>
+    <p class="note" id="td-status"></p>
+  </div>
+
+  <h2>Heslo pro vstup na stránku</h2>
+  <p>Heslo je zašité (jako hash) přímo v kódu stránky – nejde o silné zabezpečení, jen odradí
+    náhodné návštěvníky. Změnu hesla si řekni Claude Code v repozitáři (přepočítá hash a nahradí ho
+    v <code>assets/gate.js</code>).</p>
+
+  <h2>Měna a přepočty</h2>
+  <p>Součty v přehledu jsou vždy v korunách. Cizí měny (USD, EUR, GBP) se přepočítávají aktuálním
+    kurzem (Frankfurter, kurz ČNB/ECB) v okamžiku zobrazení – nejde tedy o historický kurz ke dni nákupu.</p>
+</div>
+
+<footer class="site-footer">
+  Portfolio Grmelovi — soukromý přehled investic. Ceny jsou informativní, nejde o investiční doporučení.
+</footer>
+
+<script type="module">
+import { getStockApiKey, setStockApiKey } from './assets/prices.js';
+
+const input = document.getElementById('td-key');
+const statusEl = document.getElementById('td-status');
+
+input.value = getStockApiKey();
+
+document.getElementById('td-save').addEventListener('click', () => {
+  setStockApiKey(input.value);
+  statusEl.textContent = '✅ Klíč uložen v tomto prohlížeči.';
+});
+
+document.getElementById('td-clear').addEventListener('click', () => {
+  setStockApiKey('');
+  input.value = '';
+  statusEl.textContent = 'Klíč smazán.';
+});
+
+document.getElementById('td-test').addEventListener('click', async () => {
+  const key = input.value.trim();
+  if(!key){ statusEl.textContent = '⚠️ Nejdřív vlož klíč.'; return; }
+  statusEl.textContent = '⏳ Testuji…';
+  try {
+    const res = await fetch(`https://api.twelvedata.com/price?symbol=AAPL&apikey=${encodeURIComponent(key)}`);
+    const data = await res.json();
+    if(data && data.price && !data.code){
+      statusEl.textContent = `✅ Funguje – aktuální cena AAPL: ${data.price} USD.`;
+    } else {
+      statusEl.textContent = '⚠️ Klíč nefunguje: ' + (data && data.message ? data.message : 'neznámá chyba');
+    }
+  } catch(e){
+    statusEl.textContent = '⚠️ Test se nepodařil: ' + e;
+  }
+});
+</script>
+</body>
+</html>

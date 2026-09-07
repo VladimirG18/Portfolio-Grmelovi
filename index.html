@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio – Grmelovi</title>
+<meta name="description" content="Sdílený přehled rodinných investic – akcie, ETF a kryptoměny s automaticky aktualizovanými cenami." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%88%3C/text%3E%3C/svg%3E" />
+<script>(function(){try{var t=localStorage.getItem('portfolio-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
+<script>(function(){try{var u=localStorage.getItem('portfolio-unlock-v1');document.documentElement.setAttribute('data-gate', u==='1'?'open':'locked');}catch(e){document.documentElement.setAttribute('data-gate','locked');}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+<script src="assets/site.js"></script>
+<script src="assets/gate.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html"><span class="logo">📈</span><span>Portfolio<small>Grmelovi</small></span></a>
+    <div class="navlinks">
+      <a href="index.html">Přehled</a>
+      <a href="nastaveni.html">Nastavení</a>
+    </div>
+    <button class="theme-btn" title="Přepnout světlý / tmavý režim" aria-label="Přepnout vzhled">🌙</button>
+  </nav>
+</header>
+
+<div class="content wide">
+  <span class="eyebrow">Rodinné investice</span>
+  <h1>Přehled portfolia</h1>
+  <p class="lead">Společný přehled akcií, ETF a kryptoměn. Aktuální ceny se stahují automaticky,
+    stačí přidat pozice s množstvím a nákupní cenou.</p>
+
+  <div id="status" class="statusbar"></div>
+
+  <div class="stats">
+    <div class="stat"><b id="stat-value">—</b><span>Aktuální hodnota</span></div>
+    <div class="stat"><b id="stat-invested">—</b><span>Vloženo</span></div>
+    <div class="stat"><b id="stat-gain">—</b><span>Zisk / ztráta</span></div>
+    <div class="stat"><b id="stat-gainpct">—</b><span>Zisk / ztráta %</span></div>
+  </div>
+
+  <h2>Alokace</h2>
+  <div class="panel">
+    <div class="allocwrap" id="alloc-wrap"><div class="donut-empty">Načítám…</div></div>
+  </div>
+
+  <h2>Pozice</h2>
+  <div class="frow" style="justify-content:space-between; align-items:center; margin-bottom:10px">
+    <button class="btn primary" id="add-btn">➕ Přidat pozici</button>
+    <div style="display:flex; align-items:center; gap:10px">
+      <span class="note" id="last-update" style="margin:0"></span>
+      <button class="btn" id="refresh-btn">🔄 Aktualizovat ceny</button>
+    </div>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Typ</th><th>Název</th><th class="num">Množství</th><th class="num">Nákupní cena</th>
+          <th class="num">Aktuální cena</th><th class="num">Hodnota</th><th class="num">Zisk/ztráta</th><th></th>
+        </tr>
+      </thead>
+      <tbody id="positions-body"></tbody>
+    </table>
+    <div class="empty" id="positions-empty" style="display:none; padding:20px; text-align:center; color:var(--muted); font-style:italic;">
+      Zatím tu nejsou žádné pozice – přidej první tlačítkem výše.
+    </div>
+  </div>
+
+  <p class="note">Ceny akcií a ETF (Twelve Data) i kryptoměn (CoinGecko) jsou orientační a mohou mít
+    zpoždění. Kurzy USD/EUR → CZK (Frankfurter) se používají jen pro součty v přehledu.</p>
+</div>
+
+<div class="modal" id="position-modal">
+  <div class="modal-card">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <h2 id="modal-title">Přidat pozici</h2>
+    <form id="position-form">
+      <div class="frow">
+        <div class="field">
+          <label for="f-type">Typ</label>
+          <select id="f-type">
+            <option value="akcie">Akcie / ETF</option>
+            <option value="krypto">Kryptoměna</option>
+          </select>
+        </div>
+        <div class="field grow2">
+          <label for="f-symbol">Symbol</label>
+          <input type="text" id="f-symbol" required placeholder="AAPL / bitcoin" />
+          <small id="f-symbol-hint"></small>
+        </div>
+      </div>
+      <div class="frow">
+        <div class="field grow2">
+          <label for="f-name">Název (volitelné)</label>
+          <input type="text" id="f-name" placeholder="Apple Inc." />
+        </div>
+      </div>
+      <div class="frow">
+        <div class="field">
+          <label for="f-qty">Množství</label>
+          <input type="number" id="f-qty" step="any" min="0" required />
+        </div>
+        <div class="field">
+          <label for="f-price">Nákupní cena / kus</label>
+          <input type="number" id="f-price" step="any" min="0" required />
+        </div>
+        <div class="field">
+          <label for="f-currency">Měna</label>
+          <select id="f-currency">
+            <option value="CZK">CZK</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+          </select>
+        </div>
+      </div>
+      <div class="frow">
+        <div class="field grow2">
+          <label for="f-note">Poznámka (volitelné)</label>
+          <input type="text" id="f-note" placeholder="např. penzijní účet, brokerage XY…" />
+        </div>
+      </div>
+      <div class="formactions">
+        <button type="button" class="btn" id="cancel-btn">Zrušit</button>
+        <button type="submit" class="btn primary" id="save-btn">Uložit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  Portfolio Grmelovi — soukromý přehled investic. Ceny jsou informativní, nejde o investiční doporučení.
+</footer>
+
+<script type="module" src="assets/portfolio.js"></script>
+</body>
+</html>
