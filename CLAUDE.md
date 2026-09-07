@@ -133,11 +133,29 @@ Když automatická cena selže a pozice má vyplněné `manualPrice`, použije s
 je označená popiskem "ručně zadaná". Automatická cena má vždy přednost (je čerstvější);
 ruční je jen záchranná brzda pro tituly, které daný zdroj cen neumí.
 
-**Pozor na tarif Twelve Data**: free tarif nemusí pokrývat evropské burzy (XETRA,
-Euronext, HKEX) – uživatel drží hlavně evropské tituly (`RHM.DE`, `HO.PA`, `1211.HK`).
-Pokud hlášky z API ukážou omezení tarifu, řeš to buď ručními cenami, nebo změnou zdroje
-cen (pozor: většina alternativ jako Yahoo/Stooq nemá CORS a z čistě statického webu bez
-backendu je nepoužiješ přímo).
+### 4d) Kredity Twelve Data a cache cen (POZOR – tady se to už jednou rozbilo)
+
+Twelve Data účtuje **1 kredit za každý symbol**, ne za dotaz, a free tarif má jen
+**8 kreditů/minutu** (800/den). Uživatel drží 3 akcie → jedno stažení = 3 kredity.
+Původní kód volal `refreshPrices()` několikrát po sobě (snapshot pozic + příchod klíče +
+po každém zápisu), takže jedno otevření stránky spálilo 12 kreditů a API vracelo
+`429 – You have run out of API credits for the current minute`.
+
+Proto `refreshPrices()` v `assets/portfolio.js`:
+- drží ceny v **localStorage cache** (`portfolio-price-cache-v1`, klíč `type:symbol:currency`),
+  takže i reload stránky je zadarmo – TTL `PRICE_TTL_MS` (3 min), u chyb kratší
+  `PRICE_ERR_TTL_MS` (45 s, ať se to po vyčerpání limitu samo zkusí znovu),
+- stahuje **jen symboly, které v cache nejsou nebo jsou staré** (ne vždy všechny),
+- má guard `priceFetchInFlight` proti souběžným dotazům,
+- `force: true` (jen tlačítko "Aktualizovat ceny") obchází TTL.
+
+**Nikdy nevolej `refreshPrices({force:true})` automaticky** (např. při příchodu API klíče) –
+spálí to kredity při každém načtení. Stav "chybí API klíč" se schválně **necachuje**, takže
+se ceny dotáhnou i běžným voláním, jakmile klíč dorazí.
+
+Pokud by v budoucnu hlášky ukázaly i omezení pokrytí burz (XETRA/Euronext/HKEX na free
+tarifu), řeš to ručními cenami nebo jiným zdrojem – pozor, většina alternativ (Yahoo,
+Stooq) nemá CORS a z čistě statického webu bez backendu je přímo nepoužiješ.
 
 ## 5) Známá omezení / co dodělat příště, když si to řeknou
 

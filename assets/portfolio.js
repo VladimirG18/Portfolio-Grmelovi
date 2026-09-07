@@ -292,23 +292,99 @@ function escapeHtml(s){
   return String(s == null ? '' : s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m]));
 }
 
-/* ---------- Ceny ---------- */
-async function refreshPrices(){
-  if(!positions.length){ render(); return; }
-  refreshBtn.disabled = true;
-  refreshBtn.textContent = '⏳ Aktualizuji…';
-  try {
-    const priceable = positions.filter(p => !p.closed && p.type !== 'hotovost');
-    pricesCache = await fetchAllPrices(priceable, stockApiKey);
+/* ---------- Ceny ----------
+   Twelve Data účtuje 1 kredit za KAŽDÝ symbol (free tarif má jen 8 kreditů/minutu),
+   takže se ceny drží v cache s platností PRICE_TTL_MS – přežije i reload stránky
+   (localStorage) a stahují se jen symboly, které v cache nejsou nebo už jsou staré.
+   Bez toho jedno otevření stránky spálilo několikanásobek limitu a API vracelo 429. */
+const PRICE_CACHE_KEY = 'portfolio-price-cache-v1';
+const PRICE_TTL_MS = 3 * 60 * 1000;
+// Chyby (typicky 429 – vyčerpané kredity za minutu) drž kratší dobu, ať se to samo
+// zkusí znovu, jakmile se limit obnoví, ale ne hned při každém překreslení.
+const PRICE_ERR_TTL_MS = 45 * 1000;
+let priceFetchInFlight = null;
+
+const priceCacheKey = p => `${p.type}:${p.symbol}:${p.currency}`;
+
+function loadSymbolCache(){
+  try { return JSON.parse(localStorage.getItem(PRICE_CACHE_KEY)) || {}; } catch(e){ return {}; }
+}
+function saveSymbolCache(cache){
+  try { localStorage.setItem(PRICE_CACHE_KEY, JSON.stringify(cache)); } catch(e){}
+}
+
+function setBusy(busy){
+  refreshBtn.disabled = busy;
+  refreshBtn.textContent = busy ? '⏳ Aktualizuji…' : '🔄 Aktualizovat ceny';
+}
+
+async function refreshPrices({ force = false } = {}){
+  if(priceFetchInFlight) return priceFetchInFlight;   // už běží – nezakládej druhý dotaz
+  const priceable = positions.filter(p => !p.closed && p.type !== 'hotovost');
+  if(!priceable.length){ render(); return; }
+
+  const symCache = loadSymbolCache();
+  const now = Date.now();
+
+  // Nejdřív dopň, co víme z cache (ať je hned co zobrazit i bez dotazu).
+  priceable.forEach(p => {
+    const c = symCache[priceCacheKey(p)];
+    if(!c || pricesCache[p.id]) return;
+    if(c.priceNative != null){
+      pricesCache[p.id] = { priceNative: c.priceNative, currency: c.currency, cachedAt: c.at };
+    } else if(p.manualPrice != null && !isNaN(p.manualPrice)){
+      pricesCache[p.id] = { priceNative: p.manualPrice, currency: p.currency, manual: true, error: c.error };
+    } else {
+      pricesCache[p.id] = { priceNative: null, currency: c.currency, error: c.error };
+    }
+  });
+
+  const isFresh = p => {
+    const c = symCache[priceCacheKey(p)];
+    if(!c) return false;
+    return (now - c.at) < (c.error ? PRICE_ERR_TTL_MS : PRICE_TTL_MS);
+  };
+  const needed = force ? priceable : priceable.filter(p => !isFresh(p));
+
+  if(!needed.length){
     await recompute();
-  } catch(e){
-    console.error(e);
-  } finally {
-    refreshBtn.disabled = false;
-    refreshBtn.textContent = '🔄 Aktualizovat ceny';
-    lastUpdateEl.textContent = 'Poslední aktualizace: ' + new Date().toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit' });
+    const newest = Math.max(...priceable.map(p => (symCache[priceCacheKey(p)] || {}).at || 0));
+    if(newest > 0) lastUpdateEl.textContent = 'Ceny z ' + new Date(newest).toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit' });
     render();
+    return;
   }
+
+  setBusy(true);
+  priceFetchInFlight = (async () => {
+    try {
+      const fetched = await fetchAllPrices(needed, stockApiKey);
+      Object.assign(pricesCache, fetched);
+      // Ulož i chyby – ať se při dalším překreslení hned neopakuje dotaz do limitu.
+      // Výjimka: "chybí klíč" není odpověď API, ale lokální stav – ten cachovat nesmíme,
+      // jinak by po doplnění klíče zůstala chyba viset až do vypršení TTL.
+      needed.forEach(p => {
+        const r = fetched[p.id];
+        if(!r) return;
+        if(r.error && r.error.startsWith('Chybí API klíč')) return;
+        symCache[priceCacheKey(p)] = {
+          priceNative: r.manual ? null : r.priceNative,
+          currency: r.currency,
+          error: r.error || null,
+          at: Date.now()
+        };
+      });
+      saveSymbolCache(symCache);
+      await recompute();
+    } catch(e){
+      console.error(e);
+    } finally {
+      setBusy(false);
+      lastUpdateEl.textContent = 'Poslední aktualizace: ' + new Date().toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit' });
+      render();
+      priceFetchInFlight = null;
+    }
+  })();
+  return priceFetchInFlight;
 }
 
 /* ---------- Formulář ---------- */
@@ -379,7 +455,7 @@ form.addEventListener('submit', async e => {
   }
 });
 
-refreshBtn.addEventListener('click', refreshPrices);
+refreshBtn.addEventListener('click', () => refreshPrices({ force: true }));
 
 /* ---------- Inicializace ---------- */
 async function init(){
@@ -406,6 +482,9 @@ async function init(){
     const changed = key !== stockApiKey;
     stockApiKey = key;
     apiKeyWarnEl.innerHTML = stockApiKey ? '' : ' · ⚠️ Pro ceny akcií/ETF nejdřív nastav API klíč v <a href="nastaveni.html">Nastavení</a>.';
+    // Klíč mohl dorazit až po prvním pokusu o ceny. Vynucovat se to nesmí (spálilo by
+    // to kredity při každém načtení) – stav "chybí klíč" se necachuje, takže se ceny
+    // dotáhnou i tímhle běžným, cache-respektujícím voláním.
     if(changed && positions.length) refreshPrices();
   });
 
