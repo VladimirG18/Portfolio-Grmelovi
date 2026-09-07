@@ -1,16 +1,8 @@
 /* Stahování aktuálních cen – kryptoměny (CoinGecko, bez klíče) a akcie/ETF
-   (Twelve Data, potřebuje vlastní zdarma API klíč, viz nastaveni.html).
+   (Twelve Data, potřebuje API klíč – spravuje se sdíleně přes assets/settings.js).
    Kurzy měn (USD/EUR → CZK) přes Frankfurter (bez klíče). */
 
-const TD_KEY_STORAGE = 'portfolio-td-key';
 const FX_CACHE_STORAGE = 'portfolio-fx-cache-v1';
-
-export function getStockApiKey(){
-  try { return localStorage.getItem(TD_KEY_STORAGE) || ''; } catch(e){ return ''; }
-}
-export function setStockApiKey(key){
-  try { localStorage.setItem(TD_KEY_STORAGE, key.trim()); } catch(e){}
-}
 
 /* ---------- Kryptoměny (CoinGecko) ---------- */
 async function fetchCryptoPrices(ids){
@@ -73,16 +65,16 @@ export async function convertToCZK(amount, currency){
 /**
  * Načte aktuální ceny pro seznam pozic.
  * positions: [{ id, type:'akcie'|'krypto', symbol, currency }]
+ * apiKey: sdílený Twelve Data klíč (z assets/settings.js), může být prázdný.
  * Vrací mapu id -> { priceNative, currency, error }
  * U krypta je "currency" vždy 'CZK' (cena rovnou v CZK).
  * U akcií je cena v měně pozice (currency z formuláře) – ber to jako
  * nejlepší dostupný odhad, Twelve Data konverzi měny nedělá.
  */
-export async function fetchAllPrices(positions){
+export async function fetchAllPrices(positions, apiKey){
   const out = {};
   const cryptoIds = [...new Set(positions.filter(p => p.type === 'krypto').map(p => p.symbol))];
   const stockSymbols = [...new Set(positions.filter(p => p.type === 'akcie').map(p => p.symbol))];
-  const apiKey = getStockApiKey();
 
   const [cryptoRes, stockRes] = await Promise.allSettled([
     fetchCryptoPrices(cryptoIds),

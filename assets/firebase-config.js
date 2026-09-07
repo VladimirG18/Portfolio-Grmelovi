@@ -5,10 +5,10 @@
 // a spravovat druhý projekt. apiKey je veřejná (běžné pro web SDK) –
 // bezpečnost řeší pravidla Firestore, ne skrývání configu.
 //
-// Aby pozice šly ukládat sdíleně, musí mít Firestore pravidla povolené
-// čtení i zápis kolekce "portfolio_pozice" (stejně jako mají "poznamky",
-// "pozadavky" apod. pro RD Modřice) – nastavuje se ve Firebase konzoli,
-// Firestore Database → Rules.
+// Pravidla Firestore v tomto projektu jsou nastavená obecně (ne po jednotlivých
+// vyjmenovaných kolekcích), takže nové kolekce "portfolio_pozice" a
+// "portfolio_nastaveni" fungují bez jakékoli úpravy pravidel (ověřeno zápisem
+// přes REST API).
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCLU7cH1tXPqnaxVV_-BsSNssl-NU9Pz1I",

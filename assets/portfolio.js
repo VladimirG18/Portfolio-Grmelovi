@@ -1,5 +1,6 @@
 import { firebaseConfig, POSITIONS_COLLECTION } from './firebase-config.js';
-import { fetchAllPrices, convertToCZK, getStockApiKey } from './prices.js';
+import { fetchAllPrices, convertToCZK } from './prices.js';
+import { subscribeStockApiKey } from './settings.js';
 
 const TYPE_LABEL = { akcie: 'Akcie / ETF', krypto: 'Kryptoměna' };
 const CUR = ['CZK', 'USD', 'EUR', 'GBP'];
@@ -40,6 +41,7 @@ let positions = [];
 let pricesCache = {}; // id -> { priceNative, currency, error }
 let computed = {};    // id -> { valueCZK, investedCZK, gainCZK, gainPct }
 let editingId = null;
+let stockApiKey = ''; // sdílený Twelve Data klíč (viz assets/settings.js)
 
 /* ---------- Backend (Firestore realtime, s fallbackem na localStorage) ---------- */
 const LOCAL_KEY = 'portfolio-pozice-v1';
@@ -217,7 +219,7 @@ async function refreshPrices(){
   refreshBtn.disabled = true;
   refreshBtn.textContent = '⏳ Aktualizuji…';
   try {
-    pricesCache = await fetchAllPrices(positions);
+    pricesCache = await fetchAllPrices(positions, stockApiKey);
     await recompute();
   } catch(e){
     console.error(e);
@@ -306,11 +308,14 @@ async function init(){
     statusEl.className = 'statusbar';
   }
 
-  if(!getStockApiKey()){
-    const warn = document.createElement('span');
-    warn.innerHTML = ' · ⚠️ Pro ceny akcií/ETF nejdřív nastav API klíč v <a href="nastaveni.html">Nastavení</a>.';
-    statusEl.appendChild(warn);
-  }
+  const apiKeyWarnEl = document.createElement('span');
+  statusEl.appendChild(apiKeyWarnEl);
+  subscribeStockApiKey(key => {
+    const changed = key !== stockApiKey;
+    stockApiKey = key;
+    apiKeyWarnEl.innerHTML = stockApiKey ? '' : ' · ⚠️ Pro ceny akcií/ETF nejdřív nastav API klíč v <a href="nastaveni.html">Nastavení</a>.';
+    if(changed && positions.length) refreshPrices();
+  });
 
   backend.subscribe(async list => {
     positions = list;

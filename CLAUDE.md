@@ -38,14 +38,20 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
   SHA-256 hash (`python3 -c "import hashlib;print(hashlib.sha256(b'NOVE_HESLO').hexdigest())"`)
   a nahraď konstantu `HASH` v `assets/gate.js`.
 - `assets/firebase-config.js` – **stejný Firebase projekt jako RD Modřice** (`rd-modrice-e9477`),
-  nová kolekce `portfolio_pozice`. Firestore pravidla musí mít tuto kolekci povolenou pro
-  čtení i zápis (nastavuje se ve Firebase konzoli, stejně jako pro RD Modřice kolekce).
+  nové kolekce `portfolio_pozice` a `portfolio_nastaveni`. Firestore pravidla jsou u tohoto
+  projektu nastavená obecně (ne po jednotlivých vyjmenovaných kolekcích) – ověřeno zápisem
+  přes REST API, nové kolekce fungují bez jakékoli úpravy pravidel.
+- `assets/settings.js` – sdílené nastavení (Firestore kolekce `portfolio_nastaveni`, dokument
+  `sdilene`), zatím jen pole `twelveDataKey` (API klíč pro ceny akcií/ETF). Zadá se jednou na
+  `nastaveni.html` a od té chvíle ho vidí a používá kdokoli, kdo otevře stránku (stejná databáze
+  jako pozice) – nemusí ho zadávat každý zvlášť. `localStorage` slouží jen jako rychlý fallback,
+  když je Firestore zrovna nedostupný.
 - `assets/prices.js` – stahování cen: kryptoměny přes CoinGecko (bez klíče, `vs_currencies=czk`),
-  akcie/ETF přes Twelve Data (potřebuje API klíč, který si každý uživatel uloží sám do
-  `localStorage` na `nastaveni.html` – neukládá se sdíleně ani do repa), kurzy měn přes
-  Frankfurter (bez klíče).
+  akcie/ETF přes Twelve Data (`fetchAllPrices(positions, apiKey)` – klíč se předává jako parametr,
+  bere se z `assets/settings.js`), kurzy měn přes Frankfurter (bez klíče).
 - `assets/portfolio.js` – hlavní logika dashboardu: Firestore CRUD (kolekce `portfolio_pozice`),
-  přepočty na CZK, vykreslení tabulky a alokačního grafu (inline SVG donut).
+  přihlášení k odběru sdíleného API klíče, přepočty na CZK, vykreslení tabulky a alokačního
+  grafu (inline SVG donut).
 
 ## 4) Datový model pozice (Firestore `portfolio_pozice`)
 
