@@ -64,27 +64,58 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
 
 ```
 {
-  type: 'akcie' | 'krypto',
-  symbol: string,       // ticker pro Twelve Data (akcie) nebo CoinGecko id (krypto)
+  type: 'akcie' | 'krypto' | 'hotovost',
+  symbol: string,       // ticker pro Twelve Data (akcie) nebo CoinGecko id (krypto);
+                         // u hotovosti jen popisek (typicky = měna), cena se nefetchuje
   name: string,         // volitelný lidský název
-  quantity: number,
-  avgBuyPrice: number,  // za kus, v měně "currency"
+  quantity: number,     // u hotovosti = částka
+  avgBuyPrice: number,  // za kus, v měně "currency"; u hotovosti vždy 1
   currency: 'CZK'|'USD'|'EUR'|'GBP',
   note: string,
-  ts: number            // Date.now() při vytvoření
+  ts: number,           // Date.now() při vytvoření (u historických importů = datum nákupu)
+
+  // volitelně – uzavřená (prodaná) pozice, viz §4b:
+  closed: boolean,
+  sellPrice: number,    // za kus, v měně "currency"
+  closedAt: number       // Date.now() při uzavření (u historických importů = datum prodeje)
 }
 ```
 
 Součty v dashboardu jsou vždy v CZK – cizí měny se přepočítávají aktuálním kurzem
 (Frankfurter), ne historickým kurzem ke dni nákupu.
 
+### 4a) Typ `hotovost`
+
+Volný kapitál (peníze na účtu brokera, ještě nezainvestované) – nemá tiker, cena se
+nefetchuje, `quantity` = přímo částka, `avgBuyPrice` je vždy `1`. Počítá se do "Aktuální
+hodnoty" i "Vloženo" stejnou částkou (nulový zisk/ztráta), a má vlastní barvu v alokačním
+grafu (`--series-3`). Formulář na `index.html` (`f-type` = `hotovost`) automaticky doplní
+symbol podle zvolené měny a zamkne nákupní cenu na 1.
+
+### 4b) Uzavřené (prodané) pozice – historie
+
+Tlačítko 💰 u pozice (akcie/krypto, ne hotovost) v tabulce vyzve na prodejní cenu za kus
+(`prompt()`) a nastaví `closed: true`, `sellPrice`, `closedAt` – `quantity`/`avgBuyPrice`
+zůstávají jako historický nákupní záznam. Uzavřené pozice:
+- **nepočítají se** do "Aktuální hodnoty" ani "Vloženo" v hlavním přehledu (viz
+  `recompute()` v `assets/portfolio.js` – pro `closed` pozice se `valueCZK`/`investedCZK`
+  nastaví na `null`),
+- **nefetchují cenu** (vyřazené z `refreshPrices()`),
+- zobrazují se ve zvlášní sekci "Historie uzavřených pozic" (`index.html`
+  `#history-section`/`#history-body`, vykresluje `renderHistory()`) s realizovaným
+  ziskem/ztrátou `quantity * (sellPrice - avgBuyPrice)`, přepočteným na CZK.
+- Smazání řádku v historii (🗑) smaže celý záznam z Firestore – žádná "obnova" zpět na
+  otevřenou pozici zatím není (kdyby bylo potřeba, jde ručně smazat pole `closed`/
+  `sellPrice`/`closedAt` přes Firestore konzoli nebo REST).
+
 ## 5) Známá omezení / co dodělat příště, když si to řeknou
 
 - Twelve Data free tarif má rate limit (~8 req/min, 800/den) – při velkém počtu pozic
   zvážit dávkování nebo cache.
-- Currency konverze je jen k okamžiku zobrazení, ne historická k datu nákupu.
-- Nemovitosti/hotovost/spoření zatím nejsou v datovém modelu (uživatel zatím chtěl jen
-  akcie/ETF + krypto) – přidání by šlo jako další `type`.
+- Currency konverze je jen k okamžiku zobrazení, ne historická k datu nákupu (týká se i
+  realizovaného zisku/ztráty u uzavřených pozic).
+- Nemovitosti/spoření zatím nejsou v datovém modelu (uživatel zatím chtěl akcie/ETF,
+  krypto a hotovost) – přidání by šlo jako další `type`.
 - Heslo na stránce je jen klientská ochrana (viz §1) – při zvýšení nároků na soukromí
   zvážit přechod na Firebase Auth nebo private GitHub Pages (GitHub Pro).
 

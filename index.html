@@ -74,6 +74,23 @@
 
   <p class="note">Ceny akcií a ETF (Twelve Data) i kryptoměn (CoinGecko) jsou orientační a mohou mít
     zpoždění. Kurzy USD/EUR → CZK (Frankfurter) se používají jen pro součty v přehledu.</p>
+
+  <div id="history-section" style="display:none">
+    <h2>Historie uzavřených pozic</h2>
+    <p class="note" style="margin-top:0">Prodané pozice se nepočítají do aktuální hodnoty ani vloženého
+      kapitálu nahoře – zůstává tu jen záznam s realizovaným ziskem/ztrátou.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Typ</th><th>Název</th><th class="num">Množství</th><th class="num">Nákupní cena</th>
+            <th class="num">Prodejní cena</th><th class="num">Realizovaný zisk/ztráta</th><th></th>
+          </tr>
+        </thead>
+        <tbody id="history-body"></tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
 <div class="modal" id="position-modal">
@@ -87,6 +104,7 @@
           <select id="f-type">
             <option value="akcie">Akcie / ETF</option>
             <option value="krypto">Kryptoměna</option>
+            <option value="hotovost">Hotovost</option>
           </select>
         </div>
         <div class="field grow2">
