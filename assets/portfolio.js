@@ -1,6 +1,6 @@
-import { firebaseConfig, POSITIONS_COLLECTION } from './firebase-config.js';
-import { fetchAllPrices, convertToCZK } from './prices.js';
-import { subscribeStockApiKey } from './settings.js';
+import { firebaseConfig, POSITIONS_COLLECTION } from './firebase-config.js?v=__CACHEBUST__';
+import { fetchAllPrices, convertToCZK } from './prices.js?v=__CACHEBUST__';
+import { subscribeStockApiKey } from './settings.js?v=__CACHEBUST__';
 
 const TYPE_LABEL = { akcie: 'Akcie / ETF', krypto: 'Kryptoměna', hotovost: 'Hotovost' };
 const CUR = ['CZK', 'USD', 'EUR', 'GBP'];

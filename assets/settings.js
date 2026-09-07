@@ -3,7 +3,7 @@
    jako pozice (portfolio_pozice) – kdo vidí web, vidí i tohle; klíč je jen na čtení cen,
    žádná platba se přes něj neprovádí. Lokální localStorage slouží jen jako rychlý
    fallback, když je Firestore zrovna nedostupný. */
-import { firebaseConfig } from './firebase-config.js';
+import { firebaseConfig } from './firebase-config.js?v=__CACHEBUST__';
 
 const SETTINGS_COLLECTION = 'portfolio_nastaveni';
 const SETTINGS_DOC = 'sdilene';

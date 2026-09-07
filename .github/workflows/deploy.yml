@@ -27,6 +27,10 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Cache-bust local assets
+        run: |
+          grep -rl '__CACHEBUST__' --include='*.html' --include='*.js' . \
+            | xargs -r sed -i "s/__CACHEBUST__/${{ github.sha }}/g"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

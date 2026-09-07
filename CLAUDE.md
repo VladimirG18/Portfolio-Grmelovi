@@ -23,6 +23,17 @@ Statický web na **GitHub Pages**, nasazuje se přes GitHub Actions workflow
 neřekne jinak. Po pushi ověř run workflow "Deploy static site to GitHub Pages" přes
 GitHub MCP (`actions_list`/`actions_get`, `branch:main`) – má trvat do 1–2 minut.
 
+**Cache-busting**: všechny lokální `<script src>`/`<link href>` v HTML a lokální ES
+module importy (`from './xxx.js'`) mají v URL `?v=__CACHEBUST__`. Workflow krok
+"Cache-bust local assets" tenhle placeholder při každém deploy nahradí za `github.sha`
+(`sed` přes všechny `*.html`/`*.js`), takže po každé změně JS/CSS dostane návštěvník
+automaticky čerstvou verzi, aniž by musel ručně mazat cache/dělat hard refresh. Když
+přidáš novou stránku nebo nový lokální `<script>`/`import`, **nezapomeň k němu taky
+připsat `?v=__CACHEBUST__`** – jinak se ten konkrétní soubor bude cachovat postaru a
+uživatel po aktualizaci uvidí nekonzistentní směs starého a nového JS (přesně tenhle bug
+se stal – hotovost/historie se nezobrazovaly správně, dokud uživatel neudělal ruční
+hard refresh).
+
 Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
 
 ## 3) Struktura

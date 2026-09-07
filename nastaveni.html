@@ -11,9 +11,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/style.css" />
-<script src="assets/site.js"></script>
-<script src="assets/gate.js"></script>
+<link rel="stylesheet" href="assets/style.css?v=__CACHEBUST__" />
+<script src="assets/site.js?v=__CACHEBUST__"></script>
+<script src="assets/gate.js?v=__CACHEBUST__"></script>
 </head>
 <body>
 
@@ -86,7 +86,7 @@
 </footer>
 
 <script type="module">
-import { subscribeStockApiKey, saveStockApiKey } from './assets/settings.js';
+import { subscribeStockApiKey, saveStockApiKey } from './assets/settings.js?v=__CACHEBUST__';
 
 const input = document.getElementById('td-key');
 const statusEl = document.getElementById('td-status');
