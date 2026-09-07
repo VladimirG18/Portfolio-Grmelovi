@@ -36,7 +36,14 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
 - `assets/gate.js` – heslová brána (SHA-256 hash hesla zašitý v souboru, porovnává se přes
   Web Crypto API, `localStorage` klíč `portfolio-unlock-v1`). **Změna hesla**: spočítej nový
   SHA-256 hash (`python3 -c "import hashlib;print(hashlib.sha256(b'NOVE_HESLO').hexdigest())"`)
-  a nahraď konstantu `HASH` v `assets/gate.js`.
+  a nahraď konstantu `HASH` v `assets/gate.js`. Navíc volitelně **WebAuthn biometrie** (otisk/Face
+  ID/Windows Hello) – po prvním zadání hesla na daném zařízení se nabídne registrace
+  (`navigator.credentials.create`, `authenticatorAttachment:'platform'`), credential id se uloží
+  do `localStorage` (`portfolio-webauthn-cred-v1`) a při dalších návštěvách se nabídne tlačítko
+  pro odemčení biometrií (`navigator.credentials.get`) – vždy jen jako lokální náhrada hesla na
+  tom jednom zařízení, bez serveru není co ověřovat vůči útočníkovi, takže bezpečnostně na stejné
+  úrovni jako heslo. Reset per zařízení: `nastaveni.html` → "Zapomenout biometrii" (volá
+  `window.portfolioForgetBiometric()` z gate.js).
 - `assets/firebase-config.js` – **stejný Firebase projekt jako RD Modřice** (`rd-modrice-e9477`),
   nové kolekce `portfolio_pozice` a `portfolio_nastaveni`. Firestore pravidla jsou u tohoto
   projektu nastavená obecně (ne po jednotlivých vyjmenovaných kolekcích) – ověřeno zápisem

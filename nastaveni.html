@@ -65,6 +65,17 @@
     náhodné návštěvníky. Změnu hesla si řekni Claude Code v repozitáři (přepočítá hash a nahradí ho
     v <code>assets/gate.js</code>).</p>
 
+  <h2>Otisk / Face ID na tomto zařízení</h2>
+  <p>Po prvním zadání hesla na daném telefonu nebo počítači se nabídne nastavení odemykání
+    biometrií (otisk, Face ID, Windows Hello) – funguje jen na tom jednom zařízení, kde se
+    nastaví, a je to pořád jen pohodlnější náhrada hesla, ne skutečné ověření identity.</p>
+  <div class="formcard">
+    <p class="note" id="bio-status" style="margin:0 0 10px"></p>
+    <div class="formactions" style="justify-content:flex-start">
+      <button class="btn" id="bio-forget">Zapomenout biometrii na tomto zařízení</button>
+    </div>
+  </div>
+
   <h2>Měna a přepočty</h2>
   <p>Součty v přehledu jsou vždy v korunách. Cizí měny (USD, EUR, GBP) se přepočítávají aktuálním
     kurzem (Frankfurter, kurz ČNB/ECB) v okamžiku zobrazení – nejde tedy o historický kurz ke dni nákupu.</p>
@@ -116,6 +127,21 @@ document.getElementById('td-test').addEventListener('click', async () => {
   } catch(e){
     statusEl.textContent = '⚠️ Test se nepodařil: ' + e;
   }
+});
+
+const bioStatusEl = document.getElementById('bio-status');
+const bioForgetBtn = document.getElementById('bio-forget');
+function renderBioStatus(){
+  const has = window.portfolioHasBiometric && window.portfolioHasBiometric();
+  bioStatusEl.textContent = has
+    ? '✅ Na tomhle zařízení je biometrie nastavená.'
+    : 'Na tomhle zařízení zatím není biometrie nastavená (nabídne se po dalším zadání hesla).';
+  bioForgetBtn.disabled = !has;
+}
+renderBioStatus();
+bioForgetBtn.addEventListener('click', () => {
+  if(window.portfolioForgetBiometric) window.portfolioForgetBiometric();
+  renderBioStatus();
 });
 </script>
 </body>
