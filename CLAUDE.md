@@ -293,7 +293,9 @@ je slepá), `corsproxy.io` = HTTP 401 (chce registraci), `cors.lol` = nedostupn�
 `whateverorigin` = vrací HTML. Funkční, ale **pomalé** jsou `allorigins` a `codetabs` →
 mají delší limit (`slow: true`, 20 s) a hlavně jim posíláme malé odpovědi (`range=5d`).
 
-**Vlastní CORS proxy (`corsProxy` ve sdíleném nastavení) je nejspolehlivější cesta.**
+**Vlastní CORS proxy (`corsProxy` ve sdíleném nastavení) je nejspolehlivější cesta a má
+VŽDY přednost** – `preferredGateway()` ji vrací dřív, než sáhne po zapamatované bráně.
+Bez toho vyhrála zapamatovaná `allorigins` a nastavená proxy zůstala nevyužitá.
 Veřejné proxy bývají zablokované rozšířeními v prohlížeči nebo DNS filtrem („Failed to
 fetch" během pár desítek ms) a občas prostě přestanou fungovat. Na `nastaveni.html` je
 proto návod na 15řádkový Cloudflare Worker (zdarma, 100k dotazů/den), který propouští

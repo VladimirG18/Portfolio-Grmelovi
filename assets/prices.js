@@ -227,6 +227,11 @@ function rememberGateway(name){
   try { localStorage.setItem(YAHOO_GW_KEY, name); } catch(e){}
 }
 function preferredGateway(){
+  // Vlastní proxy má VŽDY přednost před zapamatovanou veřejnou bránou. Uživatel si ji
+  // postavil právě proto, že veřejné služby jsou nespolehlivé – nechat místo ní vyhrát
+  // zapamatovanou allorigins by ten smysl popřelo (a proxy by zůstala nevyužitá).
+  const mine = customGateway();
+  if(mine) return mine;
   try {
     const name = localStorage.getItem(YAHOO_GW_KEY);
     return allGateways().find(g => g.name === name) || null;
