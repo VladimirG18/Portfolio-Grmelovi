@@ -614,6 +614,7 @@ async function refreshPrices({ force = false } = {}){
   }
 
   setBusy(true);
+  let gotFresh = 0;
   priceFetchInFlight = (async () => {
     try {
       // Akcie a krypto se stahují z jiných zdrojů, takže je pouštíme jako dvě nezávislé
@@ -652,12 +653,24 @@ async function refreshPrices({ force = false } = {}){
         }
       });
       saveSymbolCache(symCache);
+      gotFresh = needed.filter(p => {
+        const r = fetched[p.id];
+        return r && r.priceNative != null && !r.manual;
+      }).length;
       await recompute();
     } catch(e){
       console.error(e);
     } finally {
       setBusy(false);
-      lastUpdateEl.textContent = 'Poslední aktualizace: ' + new Date().toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit' });
+      // Čas říká, co se opravdu stalo. „Poslední aktualizace 22:33" u cen z 12:07 je lež –
+      // pokus proběhl, ale nová cena nedorazila, a to musí být na první pohled vidět.
+      const now = new Date().toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit' });
+      lastUpdateEl.textContent = gotFresh === 0
+        ? `Pokus ${now} – nové ceny nedorazily`
+        : (gotFresh < needed.length
+            ? `Ceny z ${now} (${gotFresh} z ${needed.length})`
+            : `Ceny z ${now}`);
+      lastUpdateEl.classList.toggle('warn', gotFresh === 0);
       render();
       priceFetchInFlight = null;
     }

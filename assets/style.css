@@ -332,3 +332,7 @@ html[data-gate="locked"] .site-header, html[data-gate="locked"] .content, html[d
   word-break: break-word;
   color: var(--muted);
 }
+
+/* Čas poslední aktualizace, když nová cena vůbec nedorazila – ať to nevypadá,
+   že jsou ceny čerstvé. */
+#last-update.warn{ color: var(--danger); font-weight: 600 }

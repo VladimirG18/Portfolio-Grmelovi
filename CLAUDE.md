@@ -232,6 +232,11 @@ A `refreshPrices()` v `assets/portfolio.js`:
 spálí to kredity při každém načtení. Stav "chybí API klíč" se schválně **necachuje**, takže
 se ceny dotáhnou i běžným voláním, jakmile klíč dorazí.
 
+Údaj o čase u tlačítka aktualizace **říká, co se opravdu stalo**: „Ceny z HH:MM" jen
+když nové ceny dorazily, „Ceny z HH:MM (2 z 3)" při částečném úspěchu a červené
+„Pokus HH:MM – nové ceny nedorazily", když nepřišlo nic. Dřív tam svítil čas pokusu
+i u cen deset hodin starých, což vypadalo, že je vše čerstvé.
+
 **Neúspěšný pokus nesmí zahodit už načtenou cenu.** Jak v `pricesCache`, tak v localStorage
 cache platí: když nový dotaz skončí chybou, poslední známá cena zůstává a jen se k ní
 poznamená chyba (`staleError`, resp. `error`+`errAt`); v tabulce se pak ukáže cena
