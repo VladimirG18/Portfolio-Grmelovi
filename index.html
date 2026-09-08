@@ -151,6 +151,17 @@
       </div>
       <div class="frow">
         <div class="field">
+          <label for="f-primary">Zobrazovat v tabulce</label>
+          <select id="f-primary">
+            <option value="">v měně pozice</option>
+            <option value="CZK">CZK</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+          </select>
+          <small>Nákupní cena zůstane uložená v měně výše, jen se přepočítá kurzem.</small>
+        </div>
+        <div class="field">
           <label for="f-manual">Aktuální cena ručně</label>
           <input type="number" id="f-manual" step="any" min="0" placeholder="volitelné" />
           <small>Použije se jen tehdy, když se cenu nepodaří stáhnout automaticky.</small>

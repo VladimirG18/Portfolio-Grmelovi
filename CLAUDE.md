@@ -98,6 +98,10 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
   currency: 'CZK'|'USD'|'EUR'|'GBP',
   manualPrice: number|null, // volitelná ručně zadaná aktuální cena za kus (v "currency");
                             // použije se JEN když automatická cena selže (viz §4c)
+  primaryCurrency: string,  // volitelné; prázdné = hlavní údaje řádku jsou v "currency".
+                            // Když je vyplněné (bitcoin má 'EUR'), přepočítají se v tabulce
+                            // VŠECHNY hlavní údaje řádku do téhle měny aktuálním kurzem –
+                            // uložená data (nákupní cena) se nemění, jen zobrazení (viz §4f)
   note: string,
   ts: number,           // Date.now() při vytvoření (u historických importů = datum nákupu)
 
@@ -248,6 +252,21 @@ Twelve Data zůstává jen jako záloha, když je klíč uložený; jinak se ani
 v EUR). `fetchAllPrices` proto vrací `currency` z Yahoo a `recompute()` v `portfolio.js`
 z ní počítá `priceInPos` (přepočet do měny pozice) – v tabulce je hlavní údaj v měně pozice
 a původní burzovní kurz drobně pod ním. Graf zůstává v měně burzy.
+
+### 4f) Měna hlavního údaje řádku (`primaryCurrency`)
+
+Tabulka ukazuje hlavní údaje **v měně pozice** a menším písmem pod tím přepočet do
+zvolené měny (`displayCur`). Bitcoin je ale koupený za koruny, kdežto zbytek portfolia
+je v eurech – uživatel chtěl vidět i bitcoin primárně v eurech. Řeší to volitelné pole
+`primaryCurrency` (ve formuláři „Zobrazovat v tabulce"): když je vyplněné, `recompute()`
+přepočítá nákupní cenu, aktuální cenu, hodnotu i zisk do téhle měny (`toNative()`)
+a původní hodnota v měně pozice se ukáže drobně pod tím.
+
+**Uložená data se nemění** – `currency` a `avgBuyPrice` zůstávají tím, co uživatel
+opravdu zaplatil (koruny), přepočet se dělá až při vykreslení aktuálním kurzem. Proto
+zisk v % vychází stejně jako v původní měně (na obě strany se použije stejný kurz),
+ale absolutní čísla se s pohybem kurzu mění. Nesnaž se to „zjednodušit" přepsáním
+`avgBuyPrice` na eura – tím by se ztratil skutečný nákupní základ v korunách.
 
 ## 5) Známá omezení / co dodělat příště, když si to řeknou
 
