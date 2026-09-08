@@ -72,6 +72,12 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
   poslední známý kurz (i starý) a `fxStatus()` to ohlásí – `updateFxWarning()` v `portfolio.js`
   to vypíše do status baru. Dřív se selhání kurzu jen tiše projevilo pomlčkami v celé tabulce
   a nedalo se poznat proč.
+- `assets/chart.js` – spojnicový graf vývoje ceny (inline SVG, bez knihovny): rozsahy
+  1 měsíc / 3 měsíce / 1 rok, hover zaměřovač s bublinou, ovládání i šipkami z klávesnice.
+  **viewBox je v reálných pixelech šířky kontejneru** (a překresluje se přes `ResizeObserver`) –
+  s pevným viewBoxem a `preserveAspectRatio="none"` se roztahoval i text popisků.
+  **Pozor:** `el.hidden = true/false` na SVG prvku nefunguje (není to HTML prvek) – skrývání
+  zaměřovače jde přes `setAttribute('hidden')` + vlastní CSS pravidlo.
 - `assets/portfolio.js` – hlavní logika dashboardu: Firestore CRUD (kolekce `portfolio_pozice`),
   přihlášení k odběru sdíleného API klíče, přepočty na CZK, vykreslení tabulky a alokačního
   grafu (inline SVG donut).
@@ -146,6 +152,25 @@ zůstávají jako historický nákupní záznam. Uzavřené pozice:
 - Smazání řádku v historii (🗑) smaže celý záznam z Firestore – žádná "obnova" zpět na
   otevřenou pozici zatím není (kdyby bylo potřeba, jde ručně smazat pole `closed`/
   `sellPrice`/`closedAt` přes Firestore konzoli nebo REST).
+
+### 4bb) Odkazy na detail a graf vývoje
+
+V tabulce je název pozice odkaz na detail titulu: u krypta `coingecko.com/en/coins/<symbol>`
+(uložený symbol JE CoinGecko id, takže vždy sedí), u akcií `finance.yahoo.com/quote/<symbol>`
+(sedí u tickerů s burzovní příponou jako `RHM.DE`, `HO.PA`). Když u nějakého titulu
+neodpovídá, jde vlastní adresu uložit do pole `infoUrl` (v editaci "Odkaz na detail") –
+ta má přednost.
+
+Tlačítko 📈 rozbalí pod řádkem graf vývoje ceny. **Historie se stahuje až na rozkliknutí**
+(`fetchPriceHistory` v `assets/prices.js`) – u akcií stojí 1 kredit Twelve Data, takže:
+- vždy se načte **celý rok denních dat** a kratší rozsahy se ořezávají lokálně
+  (jedno rozkliknutí = jeden dotaz, přepínání rozsahu je zadarmo),
+- výsledek se drží 12 h v `localStorage` (`portfolio-history-cache-v1`),
+- platí stejný hlídač kreditů i cooldown po 429 jako u cen,
+- při selhání se ukáže starší graf z cache (s poznámkou), ne prázdno.
+
+Rozbalené grafy si drží `openCharts` (Set id pozic), aby překreslení tabulky (nové ceny,
+změna měny) graf nezavřelo.
 
 ### 4c) Chyby cen a ruční cena
 

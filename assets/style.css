@@ -156,7 +156,47 @@ td .sub{ display:block; color:var(--muted); font-size:.8rem; }
 .gain{ color:var(--ok); font-weight:650; } .loss{ color:var(--danger); font-weight:650; }
 .pricerr{ display:inline-block; white-space:normal; text-align:right; color:var(--danger);
   font-size:.76rem; line-height:1.35; max-width:260px; font-variant-numeric:normal; }
+td a{ color:var(--text); }
+td a:hover{ color:var(--accent-ink); }
+.extlink{ color:var(--muted); font-size:.78em; vertical-align:1px; }
+td a:hover .extlink{ color:var(--accent-ink); }
 .rowactions{ display:flex; gap:6px; justify-content:flex-end; }
+.iconbtn.on{ border-color:var(--accent); color:var(--accent-ink); background:var(--accent-soft); }
+
+/* ---------- Graf vývoje ceny (rozklik u pozice) ---------- */
+tr.chartrow > td{ padding:0; background:var(--surface-2); }
+.chartbox{ padding:16px 18px 18px; }
+.chart-empty{ color:var(--muted); font-style:italic; font-size:.88rem; padding:10px 0; }
+.chart-head{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:10px; }
+.chart-summary{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+.chart-summary b{ font-size:1.1rem; font-variant-numeric:tabular-nums; }
+.chart-change{ font-size:.9rem; font-weight:650; font-variant-numeric:tabular-nums; }
+.chart-period{ color:var(--muted); font-size:.8rem; }
+.chart-ranges{ display:flex; gap:6px; margin-left:auto; }
+.chart-range{ border:1px solid var(--border); background:var(--surface); color:var(--muted);
+  border-radius:999px; padding:4px 12px; font:inherit; font-size:.78rem; font-weight:600; cursor:pointer; }
+.chart-range:hover{ border-color:var(--border-strong); color:var(--text); }
+.chart-range.on{ background:var(--accent-soft); border-color:var(--accent); color:var(--accent-ink); }
+.chart-plot{ position:relative; }
+.chart-plot svg{ width:100%; height:220px; display:block; overflow:visible; }
+.chart-plot svg:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:8px; }
+.chart-line{ fill:none; stroke:var(--series-1); stroke-width:2; stroke-linejoin:round; stroke-linecap:round;
+  vector-effect:non-scaling-stroke; }
+.chart-area{ fill:var(--series-1); opacity:.10; stroke:none; }
+.chart-axis{ stroke:var(--border-strong); stroke-width:1; vector-effect:non-scaling-stroke; }
+.chart-tick{ fill:var(--muted); font-size:11px; font-family:inherit; }
+.chart-tick.end{ text-anchor:end; }
+.chart-crosshair{ stroke:var(--border-strong); stroke-width:1; stroke-dasharray:3 3; vector-effect:non-scaling-stroke; }
+.chart-dot{ fill:var(--series-1); stroke:var(--surface); stroke-width:2; }
+.chart-hit{ fill:transparent; }
+/* `hidden` na SVG prvku nezabírá přes vlastnost, jen přes atribut – a skrýt to musí CSS. */
+.chart-cursor[hidden], .chart-tip[hidden]{ display:none; }
+.chart-tip{ position:absolute; transform:translate(-50%, calc(-100% - 12px)); pointer-events:none;
+  background:var(--surface); border:1px solid var(--border); border-radius:9px; box-shadow:var(--shadow-md);
+  padding:6px 10px; display:flex; flex-direction:column; gap:1px; white-space:nowrap; z-index:2; }
+.chart-tip b{ font-size:.9rem; font-variant-numeric:tabular-nums; }
+.chart-tip span{ color:var(--muted); font-size:.76rem; }
+.chart-note{ color:var(--muted); font-size:.76rem; margin-top:8px; }
 .iconbtn{ border:1px solid var(--border); background:var(--surface); color:var(--muted); cursor:pointer;
   width:30px; height:30px; border-radius:8px; font-size:.9rem; display:inline-grid; place-items:center; }
 .iconbtn:hover{ border-color:var(--accent); color:var(--accent-ink); }

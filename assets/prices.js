@@ -169,6 +169,78 @@ async function fetchFxRate(from, to){
   throw new Error('Kurz ' + from + '→' + to + ' se nepodařilo načíst (' + problems.join('; ') + ')');
 }
 
+/* ---------- Historie cen pro graf ----------
+   Stahuje se AŽ na rozkliknutí grafu (u akcií stojí 1 kredit za symbol) a drží se
+   v localStorage – denní data nemá smysl tahat víckrát za den. Vždycky se načte celý
+   rok a kratší rozsahy se jen ořežou lokálně, ať jedno rozkliknutí = jeden dotaz. */
+const HISTORY_CACHE_KEY = 'portfolio-history-cache-v1';
+const HISTORY_TTL_MS = 12 * 60 * 60 * 1000;
+
+function loadHistoryCache(){
+  try { return JSON.parse(localStorage.getItem(HISTORY_CACHE_KEY)) || {}; } catch(e){ return {}; }
+}
+function saveHistoryCache(cache){
+  try { localStorage.setItem(HISTORY_CACHE_KEY, JSON.stringify(cache)); } catch(e){}
+}
+
+async function fetchCryptoHistory(id, currency){
+  const vs = (currency || 'CZK').toLowerCase();
+  const url = `https://api.coingecko.com/api/v3/coins/${encodeURIComponent(id)}/market_chart`
+    + `?vs_currency=${vs}&days=365&interval=daily`;
+  const res = await fetch(url);
+  if(!res.ok) throw new Error('CoinGecko HTTP ' + res.status);
+  const data = await res.json();
+  if(!data || !Array.isArray(data.prices)) throw new Error('CoinGecko: chybí data');
+  return data.prices.map(([t, c]) => ({ t, c })).filter(p => typeof p.c === 'number');
+}
+
+async function fetchStockHistory(symbol, apiKey){
+  if(!apiKey) throw new Error('Chybí API klíč pro akcie (vlož ho v Nastavení)');
+  const cool = cooldownLeftMs();
+  if(cool > 0) throw new Error(`Limit Twelve Data vyčerpán, zkus to za ${Math.ceil(cool / 1000)} s`);
+  if(spentLastMinute() + 1 > CREDIT_LIMIT_PER_MIN - CREDIT_RESERVE){
+    throw new Error('Šetřím kredity Twelve Data (limit 8/min), zkus to za chvíli');
+  }
+  recordCredits(1);
+
+  const url = `https://api.twelvedata.com/time_series?symbol=${encodeURIComponent(symbol)}`
+    + `&interval=1day&outputsize=400&apikey=${encodeURIComponent(apiKey)}`;
+  const res = await fetch(url);
+  const data = await res.json();
+  if(data && (data.status === 'error' || (data.code && !data.values))){
+    if(data.code === 429) startCooldown(70000);
+    throw new Error((data.message || 'neznámá chyba') + (data.code ? ' (kód ' + data.code + ')' : ''));
+  }
+  if(!data || !Array.isArray(data.values)) throw new Error('Twelve Data: chybí data');
+  return data.values
+    .map(v => ({ t: Date.parse(v.datetime), c: parseFloat(v.close) }))
+    .filter(p => !isNaN(p.t) && !isNaN(p.c))
+    .sort((a, b) => a.t - b.t);
+}
+
+/** Historie ceny pozice (rok denních dat) v měně pozice. Vrací { points } nebo { error }. */
+export async function fetchPriceHistory(position, apiKey){
+  const key = `${position.type}:${position.symbol}:${position.currency}`;
+  const cache = loadHistoryCache();
+  const hit = cache[key];
+  if(hit && hit.points && (Date.now() - hit.at) < HISTORY_TTL_MS){
+    return { points: hit.points, cached: true, at: hit.at };
+  }
+  try {
+    const points = position.type === 'krypto'
+      ? await fetchCryptoHistory(position.symbol, position.currency)
+      : await fetchStockHistory(position.symbol, apiKey);
+    if(!points.length) throw new Error('Zdroj nevrátil žádná data');
+    cache[key] = { points, at: Date.now() };
+    saveHistoryCache(cache);
+    return { points, at: Date.now() };
+  } catch(e){
+    // Radši ukaž starší graf než nic.
+    if(hit && hit.points) return { points: hit.points, cached: true, at: hit.at, error: String(e.message || e) };
+    return { error: String(e.message || e) };
+  }
+}
+
 /** Převod částky mezi měnami (zobrazovací měnu si volí uživatel, viz portfolio.js). */
 export async function convert(amount, from, to){
   const f = from || 'CZK', t = to || 'CZK';

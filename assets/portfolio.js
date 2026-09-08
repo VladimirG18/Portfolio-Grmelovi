@@ -1,6 +1,7 @@
 import { firebaseConfig, POSITIONS_COLLECTION } from './firebase-config.js?v=__CACHEBUST__';
-import { fetchAllPrices, convert, fxStatus } from './prices.js?v=__CACHEBUST__';
+import { fetchAllPrices, convert, fxStatus, fetchPriceHistory } from './prices.js?v=__CACHEBUST__';
 import { subscribeStockApiKey } from './settings.js?v=__CACHEBUST__';
+import { renderPriceChart } from './chart.js?v=__CACHEBUST__';
 
 const TYPE_LABEL = { akcie: 'Akcie / ETF', krypto: 'Kryptoměna', hotovost: 'Hotovost' };
 const CUR = ['CZK', 'USD', 'EUR', 'GBP'];
@@ -33,6 +34,7 @@ const fPrice = document.getElementById('f-price');
 const fCurrency = document.getElementById('f-currency');
 const fManual = document.getElementById('f-manual');
 const fTotalHint = document.getElementById('f-total-hint');
+const fUrl = document.getElementById('f-url');
 const fNote = document.getElementById('f-note');
 const saveBtn = document.getElementById('save-btn');
 const cancelBtn = document.getElementById('cancel-btn');
@@ -255,9 +257,14 @@ function renderTable(){
       : withSecondary(signed(c.gainNative, p.currency) + ' (' + fmtPct(c.gainPct) + ')',
           c.gain, p.currency, true);
 
+    const url = isCash ? null : infoUrl(p);
+    const nameHtml = url
+      ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" title="Otevřít detail titulu">${escapeHtml(p.name || p.symbol)} <span class="extlink">↗</span></a>`
+      : `<b>${escapeHtml(p.name || p.symbol)}</b>`;
+
     tr.innerHTML = `
       <td><span class="chip acc">${TYPE_LABEL[p.type] || p.type}</span></td>
-      <td><b>${escapeHtml(p.name || p.symbol)}</b>${isCash ? '' : '<span class="sub">' + escapeHtml(p.symbol) + '</span>'}</td>
+      <td><b>${nameHtml}</b>${isCash ? '' : '<span class="sub">' + escapeHtml(p.symbol) + '</span>'}</td>
       <td class="num">${fmtNum(p.quantity)}</td>
       <td class="num">${buyCell}</td>
       <td class="num">${priceCell}</td>
@@ -265,11 +272,28 @@ function renderTable(){
       <td class="num ${gainClassNative}">${gainCell}</td>
       <td>
         <div class="rowactions">
+          ${isCash ? '' : `<button class="iconbtn chart${openCharts.has(p.id) ? ' on' : ''}" title="Graf vývoje ceny">📈</button>`}
           ${isCash ? '' : '<button class="iconbtn sell" title="Označit jako prodané">💰</button>'}
           <button class="iconbtn edit" title="Upravit">✏️</button>
           <button class="iconbtn del" title="Smazat">🗑</button>
         </div>
       </td>`;
+
+    const chartBtn = tr.querySelector('.chart');
+    if(chartBtn){
+      chartBtn.addEventListener('click', () => {
+        if(openCharts.has(p.id)){
+          openCharts.delete(p.id);
+          chartBtn.classList.remove('on');
+          const next = tr.nextElementSibling;
+          if(next && next.classList.contains('chartrow')) next.remove();
+        } else {
+          openCharts.add(p.id);
+          chartBtn.classList.add('on');
+          tr.after(chartRow(p));
+        }
+      });
+    }
     const sellBtnEl = tr.querySelector('.sell');
     if(sellBtnEl){
       sellBtnEl.addEventListener('click', () => {
@@ -285,6 +309,8 @@ function renderTable(){
       if(confirm(`Smazat pozici "${p.name || p.symbol}"?`)) backend.remove(p.id);
     });
     tbody.appendChild(tr);
+    // Překreslení tabulky (nové ceny, změna měny) nesmí zavřít rozbalený graf.
+    if(openCharts.has(p.id)) tbody.appendChild(chartRow(p));
   });
 }
 
@@ -362,6 +388,51 @@ function renderAlloc(t){
       ${circles}
     </svg>
     <div class="alloclegend">${legend}</div>`;
+}
+
+/* ---------- Odkaz na detail titulu ----------
+   U krypta je uložené přímo CoinGecko id, takže odkaz sedí vždy. U akcií se skládá
+   z tickeru pro Yahoo Finance (`RHM.DE`, `HO.PA` sedí); když by u nějakého titulu
+   neseděl, jde vlastní adresu zadat do pole "Odkaz na detail" v editaci pozice. */
+function infoUrl(p){
+  if(p.infoUrl) return p.infoUrl;
+  if(p.type === 'krypto') return 'https://www.coingecko.com/en/coins/' + encodeURIComponent(p.symbol);
+  if(p.type === 'akcie') return 'https://finance.yahoo.com/quote/' + encodeURIComponent(p.symbol);
+  return null;
+}
+
+/* ---------- Graf vývoje ceny (rozklik) ---------- */
+const openCharts = new Set(); // id pozic s rozbaleným grafem – ať přežije překreslení
+
+async function fillChart(host, p){
+  host.innerHTML = '<div class="chart-empty">Načítám graf…</div>';
+  const res = await fetchPriceHistory(p, stockApiKey);
+  if(!res.points){
+    host.innerHTML = '';
+    const err = document.createElement('div');
+    err.className = 'pricerr';
+    err.textContent = '⚠️ ' + (res.error || 'Historii se nepodařilo načíst');
+    host.appendChild(err);
+    return;
+  }
+  const note = res.cached
+    ? 'Data z ' + new Date(res.at).toLocaleString('cs-CZ', { day: 'numeric', month: 'numeric', hour: '2-digit', minute: '2-digit' })
+      + (res.error ? ' · novější se nepodařilo načíst' : '')
+    : '';
+  renderPriceChart(host, res.points, p.currency, { note });
+}
+
+function chartRow(p){
+  const tr = document.createElement('tr');
+  tr.className = 'chartrow';
+  const td = document.createElement('td');
+  td.colSpan = 8;
+  const host = document.createElement('div');
+  host.className = 'chartbox';
+  td.appendChild(host);
+  tr.appendChild(td);
+  fillChart(host, p);
+  return tr;
 }
 
 function escapeHtml(s){
@@ -529,6 +600,7 @@ function openModal(pos){
   fCurrency.value = pos ? pos.currency : 'CZK';
   fManual.value = (pos && pos.manualPrice != null) ? pos.manualPrice : '';
   fNote.value = pos ? (pos.note || '') : '';
+  if(fUrl) fUrl.value = pos ? (pos.infoUrl || '') : '';
   updateSymbolHint();
   updateTotalHint();
   modal.classList.add('open');
@@ -553,6 +625,7 @@ form.addEventListener('submit', async e => {
     currency: fCurrency.value,
     manualPrice: (fType.value === 'hotovost' || isNaN(manual)) ? null : manual,
     note: fNote.value.trim(),
+    infoUrl: fUrl ? fUrl.value.trim() : '',
   };
   if(!data.symbol || !data.quantity || !data.avgBuyPrice){ return; }
   saveBtn.disabled = true;
