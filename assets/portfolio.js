@@ -37,14 +37,23 @@ const saveBtn = document.getElementById('save-btn');
 const cancelBtn = document.getElementById('cancel-btn');
 const closeBtn = document.getElementById('modal-close');
 
-const CUR_SUFFIX = { CZK: ' Kč', EUR: ' €', USD: ' $' };
+const CUR_SUFFIX = { CZK: ' Kč', EUR: ' €', USD: ' $', GBP: ' £' };
 // Velké částky bez haléřů, drobné se dvěma desetinnými místy (jinak by 9,45 € bylo "9 €").
-const fmtMoney = n => {
+const fmtIn = (n, cur) => {
   if(n == null || isNaN(n)) return '—';
   const dec = Math.abs(n) >= 100 ? 0 : 2;
   return n.toLocaleString('cs-CZ', { minimumFractionDigits: dec, maximumFractionDigits: dec })
-    + (CUR_SUFFIX[displayCur] || ' ' + displayCur);
+    + (CUR_SUFFIX[cur] || ' ' + cur);
 };
+const fmtMoney = n => fmtIn(n, displayCur); // součty a graf – tam se sčítají různé měny
+const signed = (n, cur) => (n == null || isNaN(n)) ? '—' : (n >= 0 ? '+' : '') + fmtIn(n, cur);
+
+/** Hlavní údaj v měně pozice + pod ním přepočet do zvolené měny (jen když se liší). */
+function withSecondary(primary, secondaryAmount, posCurrency, isSigned){
+  if(secondaryAmount == null || posCurrency === displayCur) return primary;
+  const txt = isSigned ? signed(secondaryAmount, displayCur) : fmtIn(secondaryAmount, displayCur);
+  return primary + '<span class="sub">' + txt + '</span>';
+}
 const fmtNum = (n, d = 4) => (n == null || isNaN(n)) ? '—' : n.toLocaleString('cs-CZ', { maximumFractionDigits: d });
 const fmtPct = n => (n == null || isNaN(n)) ? '—' : (n >= 0 ? '+' : '') + n.toLocaleString('cs-CZ', { maximumFractionDigits: 1 }) + ' %';
 
@@ -110,40 +119,56 @@ async function firebaseBackend(){
 let backend;
 const useFirebase = firebaseConfig && firebaseConfig.apiKey && firebaseConfig.apiKey.length > 10;
 
-/* ---------- Výpočty ---------- */
+/* ---------- Výpočty ----------
+   Každá hodnota se počítá dvakrát: `*Native` v měně dané pozice (to je to hlavní, co se
+   v tabulce ukazuje – souhlasí to s nákupní i aktuální cenou) a bez přípony v aktuálně
+   zvolené zobrazovací měně (druhý řádek pod tím a součty nahoře, kde se sčítají různé
+   měny dohromady). Když kurz zrovna není k dispozici, nativní hodnoty se zobrazí dál. */
+async function toDisplay(amount, from){
+  if(amount == null) return null;
+  try { return await convert(amount, from, displayCur); } catch(e){ return null; }
+}
+
 async function recompute(){
   computed = {};
   for(const p of positions){
     if(p.type === 'hotovost'){
-      let v = null;
-      try { v = await convert(p.quantity, p.currency, displayCur); } catch(e){ v = null; }
-      computed[p.id] = { value: v, invested: v, gain: v != null ? 0 : null, gainPct: v != null ? 0 : null };
+      const v = p.quantity;
+      computed[p.id] = {
+        valueNative: v, investedNative: v, gainNative: 0, gainPct: 0,
+        value: await toDisplay(v, p.currency), invested: await toDisplay(v, p.currency), gain: 0
+      };
       continue;
     }
     if(p.closed){
-      let cost = null, realized = null;
-      try { cost = await convert(p.quantity * p.avgBuyPrice, p.currency, displayCur); } catch(e){ cost = null; }
-      if(p.sellPrice != null){
-        try { realized = await convert(p.quantity * (p.sellPrice - p.avgBuyPrice), p.currency, displayCur); }
-        catch(e){ realized = null; }
-      }
+      const costNative = p.quantity * p.avgBuyPrice;
+      const realizedNative = p.sellPrice != null ? p.quantity * (p.sellPrice - p.avgBuyPrice) : null;
       // Uzavřené (prodané) pozice se nepočítají do aktuální hodnoty ani vloženého kapitálu –
       // jsou to jen historické záznamy s realizovaným ziskem/ztrátou (viz renderHistory).
-      computed[p.id] = { value: null, invested: null, gain: null, gainPct: null, cost, realized };
+      computed[p.id] = {
+        value: null, invested: null, gain: null, gainPct: null,
+        valueNative: null, investedNative: null, gainNative: null,
+        costNative, realizedNative,
+        cost: await toDisplay(costNative, p.currency),
+        realized: await toDisplay(realizedNative, p.currency)
+      };
       continue;
     }
     const price = pricesCache[p.id];
-    let value = null, invested = null;
-    try {
-      invested = await convert(p.quantity * p.avgBuyPrice, p.currency, displayCur);
-    } catch(e){ invested = null; }
+    const investedNative = p.quantity * p.avgBuyPrice;
+    let valueNative = null;
     if(price && price.priceNative != null){
-      try { value = await convert(p.quantity * price.priceNative, price.currency, displayCur); }
-      catch(e){ value = null; }
+      // Cena bývá v měně pozice; u krypta chodí z CoinGecka v CZK, proto pro jistotu převod.
+      try { valueNative = await convert(p.quantity * price.priceNative, price.currency, p.currency); }
+      catch(e){ valueNative = null; }
     }
+    const gainNative = valueNative != null ? valueNative - investedNative : null;
+    const gainPct = (gainNative != null && investedNative) ? (gainNative / investedNative) * 100 : null;
+
+    const invested = await toDisplay(investedNative, p.currency);
+    const value = await toDisplay(valueNative, p.currency);
     const gain = (value != null && invested != null) ? value - invested : null;
-    const gainPct = (gain != null && invested) ? (gain / invested) * 100 : null;
-    computed[p.id] = { value, invested, gain, gainPct };
+    computed[p.id] = { valueNative, investedNative, gainNative, gainPct, value, invested, gain };
   }
 }
 
@@ -203,7 +228,6 @@ function renderTable(){
     const price = pricesCache[p.id];
     const c = computed[p.id] || {};
     const tr = document.createElement('tr');
-    const gainClass = (c.gain == null || isCash) ? '' : (c.gain >= 0 ? 'gain' : 'loss');
     let priceCell;
     if(isCash){
       priceCell = '—';
@@ -221,15 +245,23 @@ function renderTable(){
       priceCell = '…';
     }
     const buyCell = isCash ? '—' : fmtNum(p.avgBuyPrice, 2) + ' ' + p.currency;
-    const gainCell = isCash ? '—' : (c.gain == null ? '—' : (c.gain >= 0 ? '+' : '') + fmtMoney(c.gain) + ' (' + fmtPct(c.gainPct) + ')');
+
+    // Hlavní údaj v měně pozice, pod ním (jen když se liší) přepočet do zvolené měny.
+    const gainClassNative = (c.gainNative == null || isCash) ? '' : (c.gainNative >= 0 ? 'gain' : 'loss');
+    const valueCell = withSecondary(fmtIn(c.valueNative, p.currency),
+      c.valueNative == null ? null : c.value, p.currency);
+    const gainCell = (isCash || c.gainNative == null) ? '—'
+      : withSecondary(signed(c.gainNative, p.currency) + ' (' + fmtPct(c.gainPct) + ')',
+          c.gain, p.currency, true);
+
     tr.innerHTML = `
       <td><span class="chip acc">${TYPE_LABEL[p.type] || p.type}</span></td>
       <td><b>${escapeHtml(p.name || p.symbol)}</b>${isCash ? '' : '<span class="sub">' + escapeHtml(p.symbol) + '</span>'}</td>
       <td class="num">${fmtNum(p.quantity)}</td>
       <td class="num">${buyCell}</td>
       <td class="num">${priceCell}</td>
-      <td class="num">${fmtMoney(c.value)}</td>
-      <td class="num ${gainClass}">${gainCell}</td>
+      <td class="num">${valueCell}</td>
+      <td class="num ${gainClassNative}">${gainCell}</td>
       <td>
         <div class="rowactions">
           ${isCash ? '' : '<button class="iconbtn sell" title="Označit jako prodané">💰</button>'}
@@ -265,14 +297,16 @@ function renderHistory(){
   closedList.slice().sort((a, b) => (b.closedAt || 0) - (a.closedAt || 0)).forEach(p => {
     const c = computed[p.id] || {};
     const tr = document.createElement('tr');
-    const gainClass = c.realized == null ? '' : (c.realized >= 0 ? 'gain' : 'loss');
+    const gainClass = c.realizedNative == null ? '' : (c.realizedNative >= 0 ? 'gain' : 'loss');
+    const realizedCell = c.realizedNative == null ? '—'
+      : withSecondary(signed(c.realizedNative, p.currency), c.realized, p.currency, true);
     tr.innerHTML = `
       <td><span class="chip acc">${TYPE_LABEL[p.type] || p.type}</span></td>
       <td><b>${escapeHtml(p.name || p.symbol)}</b><span class="sub">${escapeHtml(p.symbol)}</span></td>
       <td class="num">${fmtNum(p.quantity)}</td>
       <td class="num">${fmtNum(p.avgBuyPrice, 2)} ${p.currency}</td>
       <td class="num">${p.sellPrice != null ? fmtNum(p.sellPrice, 2) + ' ' + p.currency : '—'}</td>
-      <td class="num ${gainClass}">${c.realized == null ? '—' : (c.realized >= 0 ? '+' : '') + fmtMoney(c.realized)}</td>
+      <td class="num ${gainClass}">${realizedCell}</td>
       <td>
         <div class="rowactions">
           <button class="iconbtn del" title="Smazat záznam">🗑</button>

@@ -107,13 +107,21 @@ Uživatel si nahoře u tabulky přepíná, v jaké měně se přehled zobrazuje 
 každý může mít svou. Přepnutí **jen přepočítá už stažené ceny** (`recompute()` + `render()`),
 nespouští žádné nové dotazy na ceny.
 
-Co se přepočítává: hodnota, vloženo, zisk/ztráta, součty a alokace. Co **ne**: nákupní a
-aktuální cena v tabulce – ty zůstávají v měně dané pozice (je to skutečná cena titulu),
-a `avgBuyPrice`/`sellPrice`/`manualPrice` v databázi se nikdy nepřepočítávají.
+**V tabulce je hlavní údaj vždy v měně dané pozice** (souhlasí s nákupní i aktuální cenou)
+a zvolená měna je jen menší druhý řádek pod ním – a zobrazí se, **jen když se od měny
+pozice liší** (jinak by tam bylo dvakrát totéž). Dělá to helper `withSecondary()`.
+Součty nahoře a alokační graf jsou naopak celé ve zvolené měně, protože sčítají pozice
+v různých měnách dohromady.
 
-Přepočet dělá `convert(amount, from, to)` v `assets/prices.js` aktuálním kurzem, ne kurzem
-ke dni nákupu. Pole v `computed` (`value`, `invested`, `gain`, `cost`, `realized`) jsou
-proto vždy v **aktuálně zvolené zobrazovací měně** – nepojmenovávej je zpátky `...CZK`.
+Proto má `computed` od každé hodnoty dvě varianty:
+- `valueNative`, `investedNative`, `gainNative`, `costNative`, `realizedNative` – v měně
+  pozice (`p.currency`); počítají se **bez kurzu**, takže fungují i když je kurzová služba
+  mimo provoz,
+- `value`, `invested`, `gain`, `cost`, `realized` – převedené do zvolené měny přes
+  `toDisplay()` (aktuálním kurzem, ne kurzem ke dni nákupu).
+
+Nikdy nepřepočítávej `avgBuyPrice`/`sellPrice`/`manualPrice` v databázi – ty zůstávají
+v původní měně pozice.
 
 ### 4a) Typ `hotovost`
 

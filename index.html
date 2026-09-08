@@ -53,7 +53,7 @@
   <div class="frow" style="justify-content:space-between; align-items:center; margin-bottom:10px">
     <button class="btn primary" id="add-btn">➕ Přidat pozici</button>
     <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap">
-      <label class="curpick">Zobrazit v
+      <label class="curpick">Přepočet do
         <select id="display-currency">
           <option value="CZK">Kč</option>
           <option value="EUR">€</option>
@@ -81,8 +81,9 @@
   </div>
 
   <p class="note">Ceny akcií a ETF (Twelve Data) i kryptoměn (CoinGecko) jsou orientační a mohou mít
-    zpoždění. Kurzy měn (Frankfurter, případně náhradní zdroj) slouží jen k přepočtu hodnot a součtů
-    do zvolené zobrazovací měny – uložené pozice zůstávají v původní měně.</p>
+    zpoždění. Hodnota i zisk/ztráta jsou hlavně v měně dané pozice, menším písmem pod tím je přepočet
+    do zvolené měny (kurzy Frankfurter, případně náhradní zdroj). Součty a graf nahoře jsou
+    ve zvolené měně, protože sčítají pozice v různých měnách.</p>
 
   <div id="history-section" style="display:none">
     <h2>Historie uzavřených pozic</h2>
