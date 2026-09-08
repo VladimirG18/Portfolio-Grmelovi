@@ -593,7 +593,8 @@ async function refreshPrices({ force = false } = {}){
     const c = symCache[priceCacheKey(p)];
     if(!c || pricesCache[p.id]) return;
     if(c.priceNative != null){
-      pricesCache[p.id] = { priceNative: c.priceNative, currency: c.currency, cachedAt: c.at, staleError: c.error || null };
+      pricesCache[p.id] = { priceNative: c.priceNative, currency: c.currency, cachedAt: c.at,
+        altSymbol: c.altSymbol || null, gateway: c.gateway || null, staleError: c.error || null };
     } else if(p.manualPrice != null && !isNaN(p.manualPrice)){
       pricesCache[p.id] = { priceNative: p.manualPrice, currency: p.currency, manual: true, error: c.error };
     } else {
@@ -659,7 +660,10 @@ async function refreshPrices({ force = false } = {}){
         const key = priceCacheKey(p);
         const prev = symCache[key] || {};
         if(!r.manual && r.priceNative != null){
-          symCache[key] = { priceNative: r.priceNative, currency: r.currency, at: Date.now(), error: null, errAt: 0 };
+          // Ulož i původ ceny (brána, náhradní burza) – po reloadu se ceny berou z cache
+          // a bez toho by z tabulky zmizelo „burza BY6.F" a z diagnostiky „přes vlastní proxy".
+          symCache[key] = { priceNative: r.priceNative, currency: r.currency, at: Date.now(),
+            altSymbol: r.altSymbol || null, gateway: r.gateway || null, error: null, errAt: 0 };
         } else {
           // Chyba z API: poslední známou cenu si nech, jen si poznač chybu a její čas.
           symCache[key] = { ...prev, currency: r.currency || prev.currency, error: r.error || null, errAt: Date.now() };

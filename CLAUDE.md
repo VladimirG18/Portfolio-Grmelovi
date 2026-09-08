@@ -318,6 +318,10 @@ typický případ je BYD, který se v Německu obchoduje ve Frankfurtu (`BY6.F`)
 Funkční burza se zapamatuje (`portfolio-symbol-alias-v1`), takže se příště ptáme rovnou
 jí; v tabulce je u ceny poznámka `burza BY6.F`. Uložený symbol u pozice se **nepřepisuje**.
 
+Původ ceny (`gateway`, `altSymbol`) se ukládá i do localStorage cache – po reloadu se
+ceny berou z ní a bez toho by z tabulky zmizelo „burza BY6.F" a z diagnostiky
+„přes vlastní proxy", takže by to vypadalo, že se nic z toho neděje.
+
 U každé pozice se v diagnostice ukazuje i **která brána cenu doručila** (`gateway` se
 protahuje z `fetchYahooRace` až do `pricesCache`). Bez toho se pletlo „zapamatovaná
 brána" (poslední úspěšná) s tím, kdo obsloužil právě zobrazenou cenu.
