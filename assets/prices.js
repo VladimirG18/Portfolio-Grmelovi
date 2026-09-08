@@ -88,13 +88,31 @@ async function fetchCryptoPrices(ids){
    selže, veřejné CORS proxy. Ven jde jen ticker, žádné částky ani osobní údaje.
    Symboly proto pište v konvenci Yahoo (`RHM.DE`, `HO.PA`, `BY6.DE`). */
 const YAHOO_GATEWAYS = [
-  { name: 'přímo', wrap: u => u },
+  // Yahoo má dva rovnocenné hostitele – když jeden omezí provoz, druhý často jede dál.
+  { name: 'přímo q1', wrap: u => u },
+  { name: 'přímo q2', wrap: u => u.replace('query1.', 'query2.') },
   { name: 'allorigins', wrap: u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u) },
+  // /get vrací JSON obálku {contents:"<tělo jako text>"} – jiná cesta přes stejnou službu,
+  // hodí se, když /raw zlobí.
+  { name: 'allorigins/get', wrap: u => 'https://api.allorigins.win/get?url=' + encodeURIComponent(u),
+    unwrap: d => (d && typeof d.contents === 'string') ? JSON.parse(d.contents) : d },
   { name: 'codetabs', wrap: u => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u) },
   { name: 'corsproxy', wrap: u => 'https://corsproxy.io/?url=' + encodeURIComponent(u) },
 ];
 const yahooUrl = symbol => `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}`
   + '?range=1y&interval=1d';
+
+/* ---------- Diagnostika ----------
+   Když ceny nejdou, je potřeba vidět, CO přesně která cesta vrátila – jinak se to hádá
+   přes screenshoty. Poslední pokusy si proto držíme a `priceDiagnostics()` je vydá do
+   panelu na stránce (tlačítko „Diagnostika" u aktualizace cen). */
+let diagLog = [];
+export function priceDiagnostics(){ return diagLog.slice(); }
+function diagReset(){ diagLog = []; }
+function diagAdd(entry){
+  diagLog.push({ ...entry, at: Date.now() });
+  if(diagLog.length > 80) diagLog.shift();
+}
 
 function badSymbol(msg){
   const e = new Error(msg);
@@ -104,7 +122,22 @@ function badSymbol(msg){
 
 /** Jedním dotazem cena + roční denní historie přes jednu bránu. { price, currency, points } */
 async function fetchYahooVia(gw, symbol){
-  const data = await fetchJson(gw.wrap(yahooUrl(symbol)));
+  const t0 = Date.now();
+  try {
+    const r = await fetchYahooViaRaw(gw, symbol);
+    diagAdd({ symbol, gateway: gw.name, ok: true, ms: Date.now() - t0,
+      note: `${r.price} ${r.currency || '?'}, ${r.points.length} bodů` });
+    return r;
+  } catch(e){
+    diagAdd({ symbol, gateway: gw.name, ok: false, ms: Date.now() - t0,
+      note: (e.symbolIssue ? 'data: ' : '') + String(e.message || e) });
+    throw e;
+  }
+}
+
+async function fetchYahooViaRaw(gw, symbol){
+  const raw = await fetchJson(gw.wrap(yahooUrl(symbol)));
+  const data = gw.unwrap ? gw.unwrap(raw) : raw;
   const r = data && data.chart && data.chart.result && data.chart.result[0];
   if(!r){
     const msg = data && data.chart && data.chart.error && data.chart.error.description;
@@ -321,6 +354,7 @@ async function fetchStockPricesTwelveData(symbols, apiKey){
 async function fetchStockPrices(symbols, apiKey){
   const out = {};
   if(!symbols.length) return out;
+  diagReset();
 
   const results = await Promise.all(symbols.map(sym =>
     fetchYahoo(sym).then(y => ({ sym, y }), e => ({ sym, e }))));

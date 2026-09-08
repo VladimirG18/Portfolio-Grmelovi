@@ -1,5 +1,5 @@
 import { firebaseConfig, POSITIONS_COLLECTION } from './firebase-config.js?v=__CACHEBUST__';
-import { fetchAllPrices, convert, fxStatus, fetchPriceHistory } from './prices.js?v=__CACHEBUST__';
+import { fetchAllPrices, convert, fxStatus, fetchPriceHistory, priceDiagnostics } from './prices.js?v=__CACHEBUST__';
 import { startLivePrice, hasLiveSource } from './live.js?v=__CACHEBUST__';
 import { subscribeStockApiKey } from './settings.js?v=__CACHEBUST__';
 import { renderPriceChart } from './chart.js?v=__CACHEBUST__';
@@ -752,6 +752,69 @@ function startAutoRefresh(){
   });
 }
 
+/* ---------- Diagnostika cen ----------
+   Tlačítko 🩺 vypíše, co přesně vrátila každá cesta ke zdroji cen. Bez toho se problém
+   („nejdou ceny") dohaduje přes screenshoty, na kterých bývá status bar odstřižený. */
+function diagnosticsText(){
+  const t = new Date().toLocaleString('cs-CZ');
+  const version = (document.querySelector('meta[name="app-version"]') || {}).content || 'dev';
+  const ls = k => { try { return localStorage.getItem(k) || '—'; } catch(e){ return '?'; } };
+  const lines = [
+    `Portfolio – diagnostika cen · ${t} · verze ${version}`,
+    `Prohlížeč: ${navigator.userAgent}`,
+    `Zapamatovaná brána: ${ls('portfolio-yahoo-gateway-v1')}`,
+    `Náhradní burzy: ${ls('portfolio-symbol-alias-v1')}`,
+    `Kurzy měn: ${JSON.stringify(fxStatus())}`,
+    '',
+    'STAV POZIC:'
+  ];
+  positions.filter(p => !p.closed && p.type !== 'hotovost').forEach(p => {
+    const r = pricesCache[p.id] || {};
+    const parts = [];
+    if(r.priceNative != null) parts.push(`${r.priceNative} ${r.currency || '?'}`);
+    if(r.live) parts.push('živě z ' + r.live);
+    if(r.manual) parts.push('ruční cena');
+    if(r.altSymbol) parts.push('burza ' + r.altSymbol);
+    if(r.cachedAt) parts.push('čas ' + new Date(r.cachedAt).toLocaleTimeString('cs-CZ'));
+    const err = r.error || r.staleError;
+    lines.push(`  ${p.symbol}: ${parts.join(', ') || 'bez ceny'}${err ? '\n     CHYBA: ' + err : ''}`);
+  });
+  const diag = priceDiagnostics();
+  lines.push('', 'POSLEDNÍ POKUSY (Yahoo):');
+  if(!diag.length) lines.push('  (žádné – ceny se braly z cache, dej „Aktualizovat ceny")');
+  diag.forEach(d => {
+    lines.push(`  ${new Date(d.at).toLocaleTimeString('cs-CZ')} ${d.symbol} · ${d.gateway}`
+      + ` · ${d.ok ? 'OK' : 'chyba'} · ${d.ms} ms · ${d.note}`);
+  });
+  return lines.join('\n');
+}
+
+function setupDiagnostics(){
+  const btn = document.getElementById('diag-btn');
+  const box = document.getElementById('diagbox');
+  const text = document.getElementById('diagtext');
+  if(!btn || !box || !text) return;
+  const show = () => { text.textContent = diagnosticsText(); box.hidden = false; };
+  btn.addEventListener('click', () => { if(box.hidden) show(); else box.hidden = true; });
+  document.getElementById('diag-close').addEventListener('click', () => { box.hidden = true; });
+  document.getElementById('diag-copy').addEventListener('click', async () => {
+    const b = document.getElementById('diag-copy');
+    try {
+      await navigator.clipboard.writeText(text.textContent);
+      b.textContent = 'Zkopírováno ✓';
+    } catch(e){
+      // Bez schránky (starší prohlížeč, http) aspoň označ text, ať jde zkopírovat ručně.
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      const range = document.createRange();
+      range.selectNodeContents(text);
+      sel.addRange(range);
+      b.textContent = 'Označeno – Ctrl+C';
+    }
+    setTimeout(() => { b.textContent = 'Kopírovat'; }, 2500);
+  });
+}
+
 /* ---------- Formulář ---------- */
 function updateSymbolHint(){
   if(fType.value === 'hotovost'){
@@ -897,6 +960,7 @@ async function init(){
     syncLivePrices();
   });
   startAutoRefresh();
+  setupDiagnostics();
 }
 
 init();

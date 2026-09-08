@@ -308,3 +308,27 @@ html[data-gate="locked"] .site-header, html[data-gate="locked"] .content, html[d
   .content{ padding-top:26px; }
   .allocwrap{ flex-direction:column; align-items:flex-start; }
 }
+
+/* Diagnostika cen – panel pod tabulkou (tlačítko 🩺 u aktualizace).
+   Slouží k tomu, aby šlo poslat, co přesně který zdroj vrátil, místo hádání
+   podle screenshotů. */
+.diagbox{
+  margin: 12px 0 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+}
+.diaghead{ display:flex; align-items:center; gap:8px; margin-bottom:8px }
+.diaghead b{ flex:1 }
+.diaghead .btn{ padding:4px 10px; font-size:12px }
+.diagbox pre{
+  margin: 0;
+  max-height: 320px;
+  overflow: auto;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--muted);
+}

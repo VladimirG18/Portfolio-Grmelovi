@@ -68,6 +68,7 @@
       </label>
       <span class="note" id="last-update" style="margin:0"></span>
       <button class="btn" id="refresh-btn">🔄 Aktualizovat ceny</button>
+      <button class="btn" id="diag-btn" title="Ukázat, co přesně vrátily zdroje cen">🩺</button>
     </div>
   </div>
 
@@ -84,6 +85,15 @@
     <div class="empty" id="positions-empty" style="display:none; padding:20px; text-align:center; color:var(--muted); font-style:italic;">
       Zatím tu nejsou žádné pozice – přidej první tlačítkem výše.
     </div>
+  </div>
+
+  <div id="diagbox" class="diagbox" hidden>
+    <div class="diaghead">
+      <b>Diagnostika cen</b>
+      <button class="btn" id="diag-copy">Kopírovat</button>
+      <button class="btn" id="diag-close">Zavřít</button>
+    </div>
+    <pre id="diagtext"></pre>
   </div>
 
   <p class="note">Kryptoměny běží <b>živě z burzy</b> (Coinmate/Kraken/Binance – cena se mění sama).

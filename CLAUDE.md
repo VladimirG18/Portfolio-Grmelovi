@@ -282,6 +282,13 @@ typický případ je BYD, který se v Německu obchoduje ve Frankfurtu (`BY6.F`)
 Funkční burza se zapamatuje (`portfolio-symbol-alias-v1`), takže se příště ptáme rovnou
 jí; v tabulce je u ceny poznámka `burza BY6.F`. Uložený symbol u pozice se **nepřepisuje**.
 
+**Diagnostika (tlačítko 🩺 u „Aktualizovat ceny")** vypíše, co přesně vrátila každá brána
+u každého symbolu (`priceDiagnostics()` v `prices.js`, panel skládá `diagnosticsText()`
+v `portfolio.js`): zapamatovaná brána, náhradní burzy, stav kurzů, stav každé pozice a
+posledních ~80 pokusů s časem a hláškou. **Používej to místo hádání ze screenshotů** –
+status bar na nich bývá odstřižený. Log se plní jen při skutečném stahování, takže když
+je prázdný, ceny se braly z cache (dej „Aktualizovat ceny").
+
 **Cena chodí v měně burzy**, ne v měně pozice (Saab `SAAB-B.ST` kotuje ve SEK, pozice je
 v EUR). `fetchAllPrices` proto vrací `currency` z Yahoo a `recompute()` v `portfolio.js`
 z ní počítá `priceInPos` (přepočet do měny pozice) – v tabulce je hlavní údaj v měně pozice
