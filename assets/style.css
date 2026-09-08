@@ -75,7 +75,7 @@ a:hover{ text-decoration:underline; }
   border-bottom:1px solid var(--border);
 }
 .nav{
-  max-width:1080px; margin:0 auto; padding:10px 20px;
+  max-width:min(1600px, 96vw); margin:0 auto; padding:10px 20px;
   display:flex; align-items:center; gap:14px;
 }
 .brand{
@@ -108,7 +108,8 @@ a:hover{ text-decoration:underline; }
 
 /* ---------- Layout ---------- */
 .content{ max-width:880px; margin:0 auto; padding:36px 20px 90px; }
-.content.wide{ max-width:1080px; }
+/* Přehled portfolia: na velkém monitoru ať se tabulka vejde bez vodorovného rolování. */
+.content.wide{ max-width:min(1600px, 96vw); }
 .eyebrow{
   display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.09em;
   text-transform:uppercase; color:var(--accent-ink); background:var(--accent-soft);

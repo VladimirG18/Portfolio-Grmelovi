@@ -66,7 +66,12 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
   když je Firestore zrovna nedostupný.
 - `assets/prices.js` – stahování cen: kryptoměny přes CoinGecko (bez klíče, `vs_currencies=czk`),
   akcie/ETF přes Twelve Data (`fetchAllPrices(positions, apiKey)` – klíč se předává jako parametr,
-  bere se z `assets/settings.js`), kurzy měn přes Frankfurter (bez klíče).
+  bere se z `assets/settings.js`), kurzy měn přes několik zdrojů za sebou (`FX_SOURCES`:
+  frankfurter.dev → frankfurter.app → open.er-api.com), s cache v `localStorage`.
+  **Na kurzu závisí hodnota všeho v cizí měně**, takže když všechny zdroje selžou, použije se
+  poslední známý kurz (i starý) a `fxStatus()` to ohlásí – `updateFxWarning()` v `portfolio.js`
+  to vypíše do status baru. Dřív se selhání kurzu jen tiše projevilo pomlčkami v celé tabulce
+  a nedalo se poznat proč.
 - `assets/portfolio.js` – hlavní logika dashboardu: Firestore CRUD (kolekce `portfolio_pozice`),
   přihlášení k odběru sdíleného API klíče, přepočty na CZK, vykreslení tabulky a alokačního
   grafu (inline SVG donut).

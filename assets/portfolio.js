@@ -1,5 +1,5 @@
 import { firebaseConfig, POSITIONS_COLLECTION } from './firebase-config.js?v=__CACHEBUST__';
-import { fetchAllPrices, convertToCZK } from './prices.js?v=__CACHEBUST__';
+import { fetchAllPrices, convertToCZK, fxStatus } from './prices.js?v=__CACHEBUST__';
 import { subscribeStockApiKey } from './settings.js?v=__CACHEBUST__';
 
 const TYPE_LABEL = { akcie: 'Akcie / ETF', krypto: 'Kryptoměna', hotovost: 'Hotovost' };
@@ -45,6 +45,7 @@ let pricesCache = {}; // id -> { priceNative, currency, error }
 let computed = {};    // id -> { valueCZK, investedCZK, gainCZK, gainPct }
 let editingId = null;
 let stockApiKey = ''; // sdílený Twelve Data klíč (viz assets/settings.js)
+let fxWarnEl = null;  // hláška o nedostupných kurzech měn (viz updateFxWarning)
 
 /* ---------- Backend (Firestore realtime, s fallbackem na localStorage) ---------- */
 const LOCAL_KEY = 'portfolio-pozice-v1';
@@ -151,6 +152,21 @@ function render(){
   renderTable();
   renderHistory();
   renderAlloc(t);
+  updateFxWarning();
+}
+
+// Bez kurzu měn nejde spočítat hodnota nic v cizí měně – neschovávej to do pomlčky,
+// ale řekni to nahlas, jinak uživatel netuší, proč je tabulka poloprázdná.
+function updateFxWarning(){
+  if(!fxWarnEl) return;
+  const s = fxStatus();
+  if(s.ok){
+    fxWarnEl.innerHTML = '';
+  } else if(s.stale){
+    fxWarnEl.innerHTML = ' · ⚠️ Kurzy měn se nepodařilo obnovit – počítám s posledním známým kurzem.';
+  } else {
+    fxWarnEl.innerHTML = ' · ⚠️ Kurz měn není dostupný, hodnoty v cizích měnách zatím nejdou přepočítat na Kč.';
+  }
 }
 
 function renderTable(){
@@ -504,6 +520,8 @@ async function init(){
 
   const apiKeyWarnEl = document.createElement('span');
   statusEl.appendChild(apiKeyWarnEl);
+  fxWarnEl = document.createElement('span');
+  statusEl.appendChild(fxWarnEl);
   subscribeStockApiKey(key => {
     const changed = key !== stockApiKey;
     stockApiKey = key;

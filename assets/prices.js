@@ -111,23 +111,62 @@ async function fetchStockPrices(symbols, apiKey){
   return out;
 }
 
-/* ---------- Kurzy měn (Frankfurter) ---------- */
+/* ---------- Kurzy měn ----------
+   Bez kurzu se nedá spočítat hodnota ničeho v cizí měně (a to je většina portfolia),
+   takže nespoléhej na jediný zdroj: zkoušej je popořadě, kurz drž v localStorage a
+   když všechny zdroje selžou, radši použij poslední známý kurz (označený jako starý)
+   než abys nezobrazil vůbec nic. */
+const FX_FRESH_MS = 12 * 60 * 60 * 1000; // kurz starší než půl dne zkus obnovit
+const FX_SOURCES = [
+  { name: 'frankfurter.dev', url: (f, t) => `https://api.frankfurter.dev/v1/latest?base=${f}&symbols=${t}`,
+    pick: (d, t) => d && d.rates && d.rates[t] },
+  { name: 'frankfurter.app', url: (f, t) => `https://api.frankfurter.app/latest?from=${f}&to=${t}`,
+    pick: (d, t) => d && d.rates && d.rates[t] },
+  { name: 'open.er-api.com', url: (f) => `https://open.er-api.com/v6/latest/${f}`,
+    pick: (d, t) => d && d.rates && d.rates[t] },
+];
+
+let fxState = { ok: true, stale: false, error: null };
+export function fxStatus(){ return { ...fxState }; }
+
+function loadFxCache(){
+  try { return JSON.parse(localStorage.getItem(FX_CACHE_STORAGE)) || {}; } catch(e){ return {}; }
+}
+function saveFxCache(cache){
+  try { localStorage.setItem(FX_CACHE_STORAGE, JSON.stringify(cache)); } catch(e){}
+}
+
 async function fetchFxRate(from, to){
   if(from === to) return 1;
-  let cache = {};
-  try { cache = JSON.parse(sessionStorage.getItem(FX_CACHE_STORAGE)) || {}; } catch(e){}
   const key = from + '_' + to;
+  const cache = loadFxCache();
   const now = Date.now();
-  if(cache[key] && (now - cache[key].ts) < 15 * 60 * 1000) return cache[key].rate;
+  const cached = cache[key];
+  if(cached && (now - cached.ts) < FX_FRESH_MS) return cached.rate;
 
-  const res = await fetch(`https://api.frankfurter.app/latest?from=${from}&to=${to}`);
-  if(!res.ok) throw new Error('Frankfurter HTTP ' + res.status);
-  const data = await res.json();
-  const rate = data.rates && data.rates[to];
-  if(typeof rate !== 'number') throw new Error('Chybí kurz ' + key);
-  cache[key] = { rate, ts: now };
-  try { sessionStorage.setItem(FX_CACHE_STORAGE, JSON.stringify(cache)); } catch(e){}
-  return rate;
+  const problems = [];
+  for(const src of FX_SOURCES){
+    try {
+      const res = await fetch(src.url(from, to));
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      const rate = src.pick(await res.json(), to);
+      if(typeof rate !== 'number' || !isFinite(rate)) throw new Error('kurz v odpovědi chybí');
+      cache[key] = { rate, ts: now };
+      saveFxCache(cache);
+      fxState = { ok: true, stale: false, error: null };
+      return rate;
+    } catch(e){
+      problems.push(`${src.name}: ${e.message || e}`);
+    }
+  }
+
+  // Žádný zdroj nedostupný – ber poslední známý kurz, i když je starý.
+  if(cached){
+    fxState = { ok: false, stale: true, error: problems.join('; ') };
+    return cached.rate;
+  }
+  fxState = { ok: false, stale: false, error: problems.join('; ') };
+  throw new Error('Kurz ' + from + '→' + to + ' se nepodařilo načíst (' + problems.join('; ') + ')');
 }
 
 export async function convertToCZK(amount, currency){
