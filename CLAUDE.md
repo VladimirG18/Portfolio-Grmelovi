@@ -172,9 +172,10 @@ neodpovídá, jde vlastní adresu uložit do pole `infoUrl` (v editaci "Odkaz na
 ta má přednost.
 
 Tlačítko 📈 rozbalí pod řádkem graf vývoje ceny (`fetchPriceHistory` v `assets/prices.js`):
-- **u akcií je historie zadarmo spolu s cenou** – Yahoo vrací v jednom dotazu `meta` i roční
-  denní řadu, takže `fetchStockPrices()` ji rovnou uloží (`cacheStockHistory`) a rozkliknutí
-  grafu nevolá vůbec nic; u krypta se řada stáhne z CoinGecku až na rozkliknutí,
+- **historie se stahuje až na rozkliknutí** (u akcií `range=1y`, u krypta z CoinGecku).
+  Dřív se roční řada tahala rovnou s cenou, ale je to ~50–100 kB na titul a veřejné proxy
+  to nestíhaly přenést (padalo to na časový limit) – proto se pro cenu stahuje jen
+  `range=5d` (pár kB) a celý rok jen tehdy, když ho někdo opravdu chce vidět,
 - vždy se drží **celý rok denních dat** a kratší rozsahy se ořezávají lokálně
   (přepínání rozsahu je zadarmo),
 - cache 12 h v `localStorage` (`portfolio-history-cache-v1`); klíč je `akcie:<symbol>`
@@ -280,6 +281,12 @@ Nevracej to na obyčejný `rel="stylesheet"`.
   volání z prohlížeče vrátí 401. Jiná burza s tím nic neudělá – je potřeba jiná cesta.
 Kód to rozlišuje v `fetchYahooViaRaw()`; neznámý tvar odpovědi hlásí i kus těla, ať je
 podle diagnostiky poznat, co přesně přišlo.
+
+**Změřeno v anonymním okně (bez rozšíření), co která cesta dělá** – nehádej to znovu:
+`přímo q1/q2` = „Failed to fetch" (Yahoo prohlížeči CORS hlavičky neposílá, přímá cesta
+je slepá), `corsproxy.io` = HTTP 401 (chce registraci), `cors.lol` = nedostupné,
+`whateverorigin` = vrací HTML. Funkční, ale **pomalé** jsou `allorigins` a `codetabs` →
+mají delší limit (`slow: true`, 20 s) a hlavně jim posíláme malé odpovědi (`range=5d`).
 
 **Vlastní CORS proxy (`corsProxy` ve sdíleném nastavení) je nejspolehlivější cesta.**
 Veřejné proxy bývají zablokované rozšířeními v prohlížeči nebo DNS filtrem („Failed to

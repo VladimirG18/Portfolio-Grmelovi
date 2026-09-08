@@ -106,23 +106,34 @@ function customGateway(){
   };
 }
 
+/* Ověřeno v anonymním okně (bez rozšíření), co které cesty dělají:
+     přímo q1/q2   – „Failed to fetch": Yahoo z prohlížeče CORS hlavičky neposílá,
+                     přímá cesta je tedy slepá (necháváme ji, selže během ms)
+     corsproxy.io  – HTTP 401, chce registraci
+     cors.lol      – nedostupné, whateverorigin – vrací HTML místo dat (mrtvé)
+     allorigins /
+     codetabs      – fungují, ale jsou POMALÉ → potřebují delší limit (viz `slow`)
+   Spolehlivé je jen vlastní proxy z Nastavení (Cloudflare Worker). */
 const YAHOO_GATEWAYS = [
   // Yahoo má dva rovnocenné hostitele – když jeden omezí provoz, druhý často jede dál.
   { name: 'přímo q1', wrap: u => u },
   { name: 'přímo q2', wrap: u => u.replace('query1.', 'query2.') },
-  { name: 'allorigins', wrap: u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u) },
+  { name: 'allorigins', slow: true, wrap: u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u) },
   // /get vrací JSON obálku {contents:"<tělo jako text>"} – jiná cesta přes stejnou službu,
   // hodí se, když /raw zlobí.
-  { name: 'allorigins/get', wrap: u => 'https://api.allorigins.win/get?url=' + encodeURIComponent(u),
+  { name: 'allorigins/get', slow: true, wrap: u => 'https://api.allorigins.win/get?url=' + encodeURIComponent(u),
     unwrap: d => (d && typeof d.contents === 'string') ? JSON.parse(d.contents) : d },
-  { name: 'codetabs', wrap: u => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u) },
-  { name: 'corsproxy', wrap: u => 'https://corsproxy.io/?url=' + encodeURIComponent(u) },
-  { name: 'cors.lol', wrap: u => 'https://api.cors.lol/?url=' + encodeURIComponent(u) },
-  { name: 'whateverorigin', wrap: u => 'https://www.whateverorigin.org/get?url=' + encodeURIComponent(u),
-    unwrap: d => (d && typeof d.contents === 'string') ? JSON.parse(d.contents) : d },
+  { name: 'codetabs', slow: true, wrap: u => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u) },
+  // Veřejný Cloudflare Worker (stejný princip jako ten, co si jde postavit v Nastavení).
+  { name: 'cors.workers.dev', slow: true, wrap: u => 'https://test.cors.workers.dev/?' + u },
 ];
-const yahooUrl = symbol => `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}`
-  + '?range=1y&interval=1d';
+const SLOW_TIMEOUT_MS = 20000;
+/* POZOR na velikost odpovědi: rok denních dat je ~50–100 kB na titul a veřejné proxy
+   to nestíhaly přenést (padalo to na časový limit). Pro CENU proto stahujeme jen pár
+   dní (pár kB) a celý rok až při rozkliknutí grafu. */
+const yahooUrl = (symbol, range) =>
+  `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}`
+  + `?range=${range || '5d'}&interval=1d`;
 
 /* ---------- Diagnostika ----------
    Když ceny nejdou, je potřeba vidět, CO přesně která cesta vrátila – jinak se to hádá
@@ -143,10 +154,10 @@ function badSymbol(msg){
 }
 
 /** Jedním dotazem cena + roční denní historie přes jednu bránu. { price, currency, points } */
-async function fetchYahooVia(gw, symbol){
+async function fetchYahooVia(gw, symbol, range){
   const t0 = Date.now();
   try {
-    const r = await fetchYahooViaRaw(gw, symbol);
+    const r = await fetchYahooViaRaw(gw, symbol, range);
     diagAdd({ symbol, gateway: gw.name, ok: true, ms: Date.now() - t0,
       note: `${r.price} ${r.currency || '?'}, ${r.points.length} bodů` });
     return r;
@@ -157,8 +168,8 @@ async function fetchYahooVia(gw, symbol){
   }
 }
 
-async function fetchYahooViaRaw(gw, symbol){
-  const raw = await fetchJson(gw.wrap(yahooUrl(symbol)));
+async function fetchYahooViaRaw(gw, symbol, range){
+  const raw = await fetchJson(gw.wrap(yahooUrl(symbol, range)), gw.slow ? SLOW_TIMEOUT_MS : TIMEOUT_MS);
   const data = gw.unwrap ? gw.unwrap(raw) : raw;
   const r = data && data.chart && data.chart.result && data.chart.result[0];
   if(!r){
@@ -194,9 +205,9 @@ function unknownSymbolMsg(symbol, detail){
 }
 
 /** Zkusí zadané brány NAJEDNOU a vezme první, která odpoví. */
-async function fetchYahooRace(symbol, gws){
+async function fetchYahooRace(symbol, gws, range){
   try {
-    const r = await Promise.any(gws.map(gw => fetchYahooVia(gw, symbol).then(v => ({ gw, v }))));
+    const r = await Promise.any(gws.map(gw => fetchYahooVia(gw, symbol, range).then(v => ({ gw, v }))));
     rememberGateway(r.gw.name);
     return r.v;
   } catch(agg){
@@ -228,12 +239,12 @@ function allGateways(){
   return mine ? [mine, ...YAHOO_GATEWAYS] : YAHOO_GATEWAYS;
 }
 
-async function fetchYahooSymbol(symbol){
+async function fetchYahooSymbol(symbol, range){
   const pref = preferredGateway();
   let firstErr = null;
   if(pref){
     try {
-      return await fetchYahooRace(symbol, [pref]);
+      return await fetchYahooRace(symbol, [pref], range);
     } catch(e){
       if(e && e.symbolIssue) throw e;
       firstErr = e;
@@ -241,7 +252,7 @@ async function fetchYahooSymbol(symbol){
   }
   const rest = allGateways().filter(g => g !== pref);
   try {
-    return await fetchYahooRace(symbol, rest);
+    return await fetchYahooRace(symbol, rest, range);
   } catch(e){
     if(e && e.symbolIssue) throw e;
     throw new Error('Yahoo se nepodařilo načíst – přímo ani přes proxy ('
@@ -293,12 +304,12 @@ function venueAlternatives(symbol){
 }
 
 /** Cena + roční historie. Když Yahoo ticker nezná, zkusí stejný titul na jiné burze. */
-async function fetchYahoo(symbol){
+async function fetchYahoo(symbol, range){
   // 1) Burza, která u tohohle tickeru zabrala minule.
   const alias = loadAliases()[symbol];
   if(alias && alias !== symbol){
     try {
-      return { ...await fetchYahooSymbol(alias), usedSymbol: alias };
+      return { ...await fetchYahooSymbol(alias, range), usedSymbol: alias };
     } catch(e){
       if(!e || !e.symbolIssue) throw e;
       forgetAlias(symbol); // přestala platit, zkus to znovu od začátku
@@ -308,7 +319,7 @@ async function fetchYahoo(symbol){
   // 2) Ticker tak, jak je uložený u pozice.
   let firstErr;
   try {
-    const r = await fetchYahooSymbol(symbol);
+    const r = await fetchYahooSymbol(symbol, range);
     forgetAlias(symbol);
     return { ...r, usedSymbol: symbol };
   } catch(e){
@@ -321,7 +332,7 @@ async function fetchYahoo(symbol){
   if(!alts.length) throw new Error(unknownSymbolMsg(symbol, firstErr.message));
   try {
     const r = await Promise.any(alts.map(alt =>
-      fetchYahooSymbol(alt).then(v => ({ ...v, usedSymbol: alt }))));
+      fetchYahooSymbol(alt, range).then(v => ({ ...v, usedSymbol: alt }))));
     rememberAlias(symbol, r.usedSymbol);
     return r;
   } catch(agg){
@@ -401,8 +412,6 @@ async function fetchStockPrices(symbols, apiKey){
       out[sym] = { price: y.price, currency: y.currency };
       // Cena přišla z jiné burzy, než jaká je u pozice uložená – ať je to vidět.
       if(y.usedSymbol && y.usedSymbol !== sym) out[sym].altSymbol = y.usedSymbol;
-      // Historie přišla stejným dotazem – ulož ji, ať se graf otevře bez dalšího volání.
-      if(y.points && y.points.length > 2) cacheStockHistory(sym, y.points, y.currency);
     } else {
       missing.push({ sym, error: String(e.message || e) });
     }
@@ -501,13 +510,6 @@ function historyKey(position){
     : `akcie:${position.symbol}`;
 }
 
-/** Uloží roční řadu, která přišla „zadarmo" spolu s cenou z Yahoo. */
-function cacheStockHistory(symbol, points, currency){
-  const cache = loadHistoryCache();
-  cache[`akcie:${symbol}`] = { points, currency: currency || null, at: Date.now() };
-  saveHistoryCache(cache);
-}
-
 async function fetchCryptoHistory(id, currency){
   const vs = (currency || 'CZK').toLowerCase();
   const url = `https://api.coingecko.com/api/v3/coins/${encodeURIComponent(id)}/market_chart`
@@ -546,7 +548,7 @@ async function fetchStockHistoryTwelveData(symbol, apiKey){
 async function fetchStockHistory(symbol, apiKey){
   let firstErr;
   try {
-    const y = await fetchYahoo(symbol);
+    const y = await fetchYahoo(symbol, '1y');
     if(y.points && y.points.length > 2) return { points: y.points, currency: y.currency };
     firstErr = new Error('Yahoo nevrátil dost dat pro graf');
   } catch(e){
