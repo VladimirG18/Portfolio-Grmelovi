@@ -1,5 +1,6 @@
 import { firebaseConfig, POSITIONS_COLLECTION } from './firebase-config.js?v=__CACHEBUST__';
 import { fetchAllPrices, convert, fxStatus, fetchPriceHistory } from './prices.js?v=__CACHEBUST__';
+import { startLivePrice, hasLiveSource } from './live.js?v=__CACHEBUST__';
 import { subscribeStockApiKey } from './settings.js?v=__CACHEBUST__';
 import { renderPriceChart } from './chart.js?v=__CACHEBUST__';
 
@@ -291,7 +292,8 @@ function renderTable(){
     } else if(price && price.priceNative != null){
       // Máme cenu → chybu z posledního (neúspěšného) pokusu nekřič, jen naznač stáří.
       let note = '';
-      if(price.manual) note = price.error ? 'ručně zadaná · živá cena selhala' : 'ručně zadaná';
+      if(price.live) note = 'živě · ' + price.live;
+      else if(price.manual) note = price.error ? 'ručně zadaná · živá cena selhala' : 'ručně zadaná';
       else if(price.staleError && price.cachedAt) note = 'z ' + new Date(price.cachedAt).toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit' });
       else if(price.staleError) note = 'poslední známá';
       // Cena se ukazuje v měně pozice, ať se dá porovnat s nákupní cenou; když burza
@@ -511,7 +513,9 @@ function escapeHtml(s){
    (localStorage) a stahují se jen symboly, které v cache nejsou nebo už jsou staré.
    Bez toho jedno otevření stránky spálilo několikanásobek limitu a API vracelo 429. */
 const PRICE_CACHE_KEY = 'portfolio-price-cache-v1';
-const PRICE_TTL_MS = 15 * 60 * 1000;
+// Ceny akcií zdarma jsou zpožděné ~15 min, takže častější dotazy nic nepřinesou –
+// dvě minuty jsou kompromis mezi svěžestí a šetrností k veřejným proxy.
+const PRICE_TTL_MS = 115 * 1000;
 // Chyby (typicky 429 – vyčerpané kredity za minutu) drž kratší dobu, ať se to samo
 // zkusí znovu, jakmile se limit obnoví, ale ne hned při každém překreslení.
 const PRICE_ERR_TTL_MS = 45 * 1000;
@@ -537,6 +541,8 @@ function setBusy(busy){
 function applyFetched(fetched){
   Object.entries(fetched).forEach(([id, r]) => {
     const prev = pricesCache[id];
+    // Živá cena z burzy je čerstvější než cokoli staženého dotazem – tu nepřepisuj.
+    if(prev && prev.live) return;
     const gotPrice = r && r.priceNative != null && !r.manual;
     if(gotPrice){
       pricesCache[id] = { ...r, cachedAt: Date.now() };
@@ -644,6 +650,94 @@ async function refreshPrices({ force = false } = {}){
     }
   })();
   return priceFetchInFlight;
+}
+
+/* ---------- Živá cena krypta (WebSocket / burza) ----------
+   Kryptoburzy posílají cenu samy, takže se na ni neptáme v intervalu. Běží to vedle
+   běžného stahování cen: když živé spojení nechytne (nebo vypadne), stránka funguje
+   dál na CoinGecku. Vykreslení se schválně omezuje na jednou za sekundu – cena se
+   může měnit několikrát za vteřinu a překreslovat kvůli tomu celou tabulku nemá smysl. */
+const LIVE_RENDER_MS = 1000;
+const liveStops = new Map();   // symbol -> funkce pro zastavení
+let liveRenderTimer = null;
+let livePending = false;
+
+function scheduleLiveRender(){
+  if(liveRenderTimer){ livePending = true; return; }
+  const run = async () => {
+    await recompute();
+    render();
+    liveRenderTimer = setTimeout(() => {
+      liveRenderTimer = null;
+      if(livePending){ livePending = false; run(); }
+    }, LIVE_RENDER_MS);
+  };
+  run();
+}
+
+function syncLivePrices(){
+  const wanted = new Set(positions
+    .filter(p => !p.closed && p.type === 'krypto' && hasLiveSource(p.symbol))
+    .map(p => p.symbol));
+
+  liveStops.forEach((stop, symbol) => {
+    if(wanted.has(symbol)) return;
+    stop();
+    liveStops.delete(symbol);
+  });
+
+  wanted.forEach(symbol => {
+    if(liveStops.has(symbol)) return;
+    const stop = startLivePrice(symbol, ({ price, currency, source }) => {
+      let touched = false;
+      positions.forEach(p => {
+        if(p.closed || p.type !== 'krypto' || p.symbol !== symbol) return;
+        pricesCache[p.id] = { priceNative: price, currency, cachedAt: Date.now(), live: source };
+        touched = true;
+      });
+      if(touched) scheduleLiveRender();
+    }, st => {
+      if(st.live) return;
+      // Spojení stojí – ceny zůstávají poslední známé, jen se přestanou hýbat.
+      positions.forEach(p => {
+        const r = pricesCache[p.id];
+        if(r && r.live && p.symbol === symbol) delete r.live;
+      });
+      scheduleLiveRender();
+    });
+    liveStops.set(symbol, stop);
+  });
+}
+
+/* ---------- Automatická obnova cen akcií ----------
+   Zdarma dostupné ceny evropských burz jsou zpožděné (~15 min), takže častěji než
+   jednou za minutu nemá smysl se ptát – a mimo obchodní hodiny vůbec, protože se
+   stejně nic nemění. Burzy, kde uživatel drží tituly (XETRA, Paříž, Milán, Madrid,
+   Stockholm), obchodují 9:00–17:30 středoevropského času. */
+const AUTO_REFRESH_MS = 120 * 1000;
+
+function marketOpen(now = new Date()){
+  // Časy ber ve středoevropském čase, ať to sedí i když má někdo v mobilu jinou zónu.
+  const parts = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Europe/Prague', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false
+  }).formatToParts(now).reduce((a, x) => (a[x.type] = x.value, a), {});
+  if(parts.weekday === 'Sat' || parts.weekday === 'Sun') return false;
+  const mins = parseInt(parts.hour, 10) * 60 + parseInt(parts.minute, 10);
+  return mins >= 9 * 60 && mins <= 17 * 60 + 35;
+}
+
+function startAutoRefresh(){
+  setInterval(() => {
+    if(document.hidden) return;      // na skryté záložce se ptát nemusíme
+    if(!marketOpen()) return;
+    if(!positions.some(p => !p.closed && p.type === 'akcie')) return;
+    refreshPrices();                 // respektuje TTL cache, takže nic nepřetěžuje
+  }, AUTO_REFRESH_MS);
+
+  // Návrat na záložku po delší době = ceny jsou nejspíš staré, dotáhni je.
+  document.addEventListener('visibilitychange', () => {
+    if(!document.hidden) refreshPrices();
+  });
 }
 
 /* ---------- Formulář ---------- */
@@ -788,7 +882,9 @@ async function init(){
     await recompute();
     render();
     refreshPrices();
+    syncLivePrices();
   });
+  startAutoRefresh();
 }
 
 init();

@@ -74,6 +74,9 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
   poslední známý kurz (i starý) a `fxStatus()` to ohlásí – `updateFxWarning()` v `portfolio.js`
   to vypíše do status baru. Dřív se selhání kurzu jen tiše projevilo pomlčkami v celé tabulce
   a nedalo se poznat proč.
+- `assets/live.js` – **živá cena kryptoměn z burzy** (viz §4g): Coinmate (REST po 10 s,
+  cena v CZK) → Kraken (WebSocket v2, EUR) → Binance (WebSocket, EUR), první funkční
+  vyhrává. `startLivePrice(symbol, onPrice, onStatus)` vrací funkci pro zastavení.
 - `assets/chart.js` – spojnicový graf vývoje ceny (inline SVG, bez knihovny): rozsahy
   1 měsíc / 3 měsíce / 1 rok, hover zaměřovač s bublinou, ovládání i šipkami z klávesnice.
   **viewBox je v reálných pixelech šířky kontejneru** (a překresluje se přes `ResizeObserver`) –
@@ -289,6 +292,31 @@ opravdu zaplatil (koruny), přepočet se dělá až při vykreslení aktuálním
 zisk v % vychází stejně jako v původní měně (na obě strany se použije stejný kurz),
 ale absolutní čísla se s pohybem kurzu mění. Nesnaž se to „zjednodušit" přepsáním
 `avgBuyPrice` na eura – tím by se ztratil skutečný nákupní základ v korunách.
+
+### 4g) Živé ceny krypta a automatická obnova akcií
+
+**Krypto jede živě z burzy** (`assets/live.js`). Burzy dávají cenu zdarma, bez klíče a
+**WebSocket nepodléhá CORS** – žádná proxy, žádné dotazování v intervalu, cena přijde sama.
+Zdroje se zkoušejí popořadě (Coinmate v CZK → Kraken → Binance v EUR); když neprojde ani
+jeden, stránka běží dál na CoinGecku a jen zmizí popisek „živě". V tabulce je u ceny
+`živě · <burza>`. Vykreslení je omezené na **jednou za sekundu** (`LIVE_RENDER_MS`) – cena
+se mění i vícekrát za vteřinu a překreslovat kvůli tomu celou tabulku nemá smysl.
+Živou cenu **nesmí přebít** cena z běžného dotazu – hlídá to `if(prev.live) return;`
+v `applyFetched()`.
+
+**Akcie se obnovují samy každé 2 minuty, ale jen když jsou burzy otevřené**
+(`startAutoRefresh()` + `marketOpen()`, po–pá 9:00–17:35 podle `Europe/Prague`, ať to sedí
+i při jiné časové zóně zařízení a v zimním/letním čase). Mimo obchodní hodiny a na skryté
+záložce se neptá vůbec; návrat na záložku ceny dotáhne.
+
+**Rychleji než po 2 minutách to nemá smysl a je to i nebezpečné:** zdarma dostupné ceny
+evropských burz jsou **zpožděné ~15 min** (licencovaná data – real-time je placený), takže
+častější dotazy vrací pořád stejné číslo, jen by hrozilo, že nás veřejná CORS proxy
+odstřihne. `PRICE_TTL_MS` (115 s) je proto sladěné s intervalem obnovy.
+
+Co **nedělat**: tahat ceny z DEGIRO (žádné veřejné API, vyžadovalo by přihlašovací údaje
+na veřejně hostovaném webu, jejich kurzy jsou stejně zpožděné) ani z Anycoinu (směnárna,
+ne burza – její cena je burzovní kurz + marže).
 
 ## 5) Známá omezení / co dodělat příště, když si to řeknou
 
