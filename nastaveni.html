@@ -11,7 +11,13 @@
 <script>(function(){try{var u=localStorage.getItem('portfolio-unlock-v1');document.documentElement.setAttribute('data-gate', u==='1'?'open':'locked');}catch(e){document.documentElement.setAttribute('data-gate','locked');}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<!-- Písmo se načítá NEBLOKUJÍCÍ cestou: stylesheet v hlavičce zdržuje spuštění skriptů,
+     dokud nedorazí, takže pomalé (nebo nedostupné) fonts.googleapis.com dokázalo odložit
+     celý start stránky o desítky sekund. Přes media="print" se stáhne na pozadí
+     a teprve po dotažení se použije; do té doby se text vykreslí náhradním písmem. -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" media="print" onload="this.media='all'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
 <link rel="stylesheet" href="assets/style.css?v=__CACHEBUST__" />
 <script src="assets/site.js?v=__CACHEBUST__"></script>
 <script src="assets/gate.js?v=__CACHEBUST__"></script>

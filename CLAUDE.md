@@ -184,6 +184,11 @@ změna měny) graf nezavřelo.
 
 ### 4c) Chyby cen a ruční cena
 
+Když se živou cenu nepodaří stáhnout, je to vidět i tehdy, když se místo ní použije ruční
+cena: v tabulce je poznámka „ručně zadaná · živá cena selhala" a ve status baru vypíše
+`updatePriceWarning()` celý důvod (seskupeně podle hlášky). Bez toho vypadala stará ruční
+cena jako v pořádku a nešlo poznat, že zdroj cen nefunguje.
+
 `fetchStockPrices()` v `assets/prices.js` propouští **skutečnou hlášku ze zdroje**
 (neznámý ticker, nedostupné Yahoo i proxy, u zálohy chyba Twelve Data) až do tabulky, kde se
 vypíše viditelně červeně (`.pricerr`) – dřív se schovávala do `title` tooltipu, který je
@@ -247,6 +252,23 @@ přímé volání → `api.allorigins.win` → `corsproxy.io` (ven jde jen ticke
 Když Yahoo ticker **nezná** (`chart.error`), další brána to nespraví – hlásí se to rovnou
 (u symbolu bez tečky s nápovědou doplnit příponu burzy).
 Twelve Data zůstává jen jako záloha, když je klíč uložený; jinak se ani nevolá.
+
+**Rychlost (POZOR – tady se to už jednou rozbilo):**
+- **každý dotaz má časový limit** (`fetchJson`, 7 s; kurzy 6 s). Bez něj visel jeden mrtvý
+  zdroj klidně minuty a stránka jen ukazovala „…";
+- symboly se stahují **paralelně** a brány se **závodí** (`Promise.any`), takže načtení
+  trvá nejvýš jeden limit, ne (počet symbolů × počet bran);
+- vítězná brána se pamatuje (`portfolio-yahoo-gateway-v1`) a příště se zkusí první –
+  jinak by se při každém načtení čekalo, až vyprší limit u cesty, kterou prohlížeč
+  stejně blokuje kvůli CORS;
+- akcie a krypto se v `refreshPrices()` stahují jako **dvě nezávislé skupiny** a každá se
+  vykreslí hned, jak dorazí (dřív bitcoin čekal na zaseknuté akcie);
+- ceny z cache se vykreslí **hned po načtení stránky**, ještě před dotazy.
+
+**Písmo z fonts.googleapis.com se načítá neblokující cestou** (`media="print" onload=…`).
+Stylesheet v hlavičce totiž blokuje spuštění skriptů – při pomalém/nedostupném Google
+Fonts se start stránky odkládal o desítky sekund a vypadalo to jako pomalé ceny.
+Nevracej to na obyčejný `rel="stylesheet"`.
 
 **Cena chodí v měně burzy**, ne v měně pozice (Saab `SAAB-B.ST` kotuje ve SEK, pozice je
 v EUR). `fetchAllPrices` proto vrací `currency` z Yahoo a `recompute()` v `portfolio.js`

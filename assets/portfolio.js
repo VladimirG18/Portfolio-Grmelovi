@@ -67,6 +67,7 @@ let computed = {};    // id -> { value, invested, gain, gainPct }
 let editingId = null;
 let stockApiKey = ''; // sdílený Twelve Data klíč (viz assets/settings.js)
 let fxWarnEl = null;  // hláška o nedostupných kurzech měn (viz updateFxWarning)
+let priceWarnEl = null; // hláška, proč se nepodařilo stáhnout ceny (viz updatePriceWarning)
 
 /* ---------- Zobrazovací měna ----------
    V jaké měně se ukazují hodnoty a součty. Je to jen předvolba zobrazení, takže ji
@@ -233,10 +234,30 @@ function render(){
   renderHistory();
   renderAlloc(t);
   updateFxWarning();
+  updatePriceWarning();
 }
 
 // Bez kurzu měn nejde spočítat hodnota nic v cizí měně – neschovávej to do pomlčky,
 // ale řekni to nahlas, jinak uživatel netuší, proč je tabulka poloprázdná.
+/* Když se u nějaké pozice nepodaří stáhnout živou cenu, ukaž DŮVOD – i když se místo ní
+   použije ruční cena. Bez toho vypadá stará ruční cena jako v pořádku a nedá se poznat,
+   že zdroj cen nefunguje. */
+function updatePriceWarning(){
+  if(!priceWarnEl) return;
+  const msgs = new Map();
+  positions.forEach(p => {
+    if(p.closed || p.type === 'hotovost') return;
+    const r = pricesCache[p.id];
+    const err = r && (r.error || r.staleError);
+    if(!err) return;
+    if(!msgs.has(err)) msgs.set(err, []);
+    msgs.get(err).push(p.symbol);
+  });
+  if(!msgs.size){ priceWarnEl.innerHTML = ''; return; }
+  priceWarnEl.innerHTML = ' · ⚠️ ' + [...msgs.entries()]
+    .map(([err, syms]) => escapeHtml(syms.join(', ') + ': ' + err)).join(' · ');
+}
+
 function updateFxWarning(){
   if(!fxWarnEl) return;
   const s = fxStatus();
@@ -270,7 +291,7 @@ function renderTable(){
     } else if(price && price.priceNative != null){
       // Máme cenu → chybu z posledního (neúspěšného) pokusu nekřič, jen naznač stáří.
       let note = '';
-      if(price.manual) note = 'ručně zadaná';
+      if(price.manual) note = price.error ? 'ručně zadaná · živá cena selhala' : 'ručně zadaná';
       else if(price.staleError && price.cachedAt) note = 'z ' + new Date(price.cachedAt).toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit' });
       else if(price.staleError) note = 'poslední známá';
       // Cena se ukazuje v měně pozice, ať se dá porovnat s nákupní cenou; když burza
@@ -510,6 +531,23 @@ function setBusy(busy){
   refreshBtn.textContent = busy ? '⏳ Aktualizuji…' : '🔄 Aktualizovat ceny';
 }
 
+/* Zapsání stažených cen do pricesCache. Neúspěšný pokus NESMÍ zahodit dřív načtenou
+   platnou cenu – jinak by po kliknutí na aktualizaci tabulka spadla z živých cen
+   zpátky na ruční/prázdné. */
+function applyFetched(fetched){
+  Object.entries(fetched).forEach(([id, r]) => {
+    const prev = pricesCache[id];
+    const gotPrice = r && r.priceNative != null && !r.manual;
+    if(gotPrice){
+      pricesCache[id] = { ...r, cachedAt: Date.now() };
+    } else if(!prev || prev.priceNative == null){
+      pricesCache[id] = r;
+    } else {
+      pricesCache[id] = { ...prev, staleError: r.error || null };
+    }
+  });
+}
+
 async function refreshPrices({ force = false } = {}){
   if(priceFetchInFlight) return priceFetchInFlight;   // už běží – nezakládej druhý dotaz
   const priceable = positions.filter(p => !p.closed && p.type !== 'hotovost');
@@ -542,6 +580,12 @@ async function refreshPrices({ force = false } = {}){
   };
   const needed = force ? priceable : priceable.filter(p => !isFresh(p));
 
+  // Co víme z cache, ukaž HNED – ať se během stahování nekouká na samá „…".
+  if(Object.keys(pricesCache).length){
+    await recompute();
+    render();
+  }
+
   if(!needed.length){
     await recompute();
     const newest = Math.max(...priceable.map(p => (symCache[priceCacheKey(p)] || {}).at || 0));
@@ -553,22 +597,24 @@ async function refreshPrices({ force = false } = {}){
   setBusy(true);
   priceFetchInFlight = (async () => {
     try {
-      const fetched = await fetchAllPrices(needed, stockApiKey);
+      // Akcie a krypto se stahují z jiných zdrojů, takže je pouštíme jako dvě nezávislé
+      // skupiny a každou zobrazíme, jakmile dorazí. Dřív se čekalo na obě naráz – když
+      // se zasekly akcie, tabulka neukázala ani bitcoin a jen svítilo „…".
+      const groups = [needed.filter(p => p.type === 'krypto'), needed.filter(p => p.type !== 'krypto')]
+        .filter(g => g.length);
+      const fetched = {};
+      await Promise.all(groups.map(async group => {
+        const part = await fetchAllPrices(group, stockApiKey);
+        Object.assign(fetched, part);
+        applyFetched(part);
+        await recompute();
+        render();
+      }));
 
       // Neúspěšný pokus NESMÍ zahodit dřív načtenou platnou cenu – jinak by po
       // kliknutí na aktualizaci (nebo po zásahu hlídače kreditů) tabulka spadla
       // z živých cen zpátky na ruční/prázdné.
-      Object.entries(fetched).forEach(([id, r]) => {
-        const prev = pricesCache[id];
-        const gotPrice = r && r.priceNative != null && !r.manual;
-        if(gotPrice){
-          pricesCache[id] = { ...r, cachedAt: Date.now() };
-        } else if(!prev || prev.priceNative == null){
-          pricesCache[id] = r;
-        } else {
-          pricesCache[id] = { ...prev, staleError: r.error || null };
-        }
-      });
+      applyFetched(fetched);
 
       // Ulož i chyby – ať se při dalším překreslení hned neopakuje dotaz do limitu.
       // Výjimka: hlášky označené `local` (chybí klíč, šetření kreditů) nejsou odpovědí
@@ -724,6 +770,8 @@ async function init(){
 
   fxWarnEl = document.createElement('span');
   statusEl.appendChild(fxWarnEl);
+  priceWarnEl = document.createElement('span');
+  statusEl.appendChild(priceWarnEl);
   // Klíč už není potřeba (ceny akcií jdou z Yahoo), takže se na jeho chybějící hodnotu
   // neupozorňuje – jen se zaznamená pro případ, že by Yahoo u některého titulu selhalo.
   subscribeStockApiKey(key => {
