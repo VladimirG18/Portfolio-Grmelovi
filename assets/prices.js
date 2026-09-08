@@ -1,6 +1,7 @@
-/* Stahování aktuálních cen – kryptoměny (CoinGecko, bez klíče) a akcie/ETF
-   (Twelve Data, potřebuje API klíč – spravuje se sdíleně přes assets/settings.js).
-   Kurzy měn (USD/EUR → CZK) přes Frankfurter (bez klíče). */
+/* Stahování aktuálních cen – kryptoměny (CoinGecko) a akcie/ETF (Yahoo Finance).
+   Obojí je bez klíče. Twelve Data zůstává jen jako záloha pro akcie, když je klíč
+   uložený v nastavení (assets/settings.js) – jeho free tarif ale evropské burzy
+   nepokrývá, takže hlavní zdroj je Yahoo. Kurzy měn přes Frankfurter (bez klíče). */
 
 const FX_CACHE_STORAGE = 'portfolio-fx-cache-v1';
 
@@ -52,11 +53,68 @@ async function fetchCryptoPrices(ids){
   return out;
 }
 
-/* ---------- Akcie / ETF (Twelve Data) ----------
-   Vrací mapu symbol -> { price } nebo { error }. Chybovou hlášku z API
-   propouštíme dál, ať je v tabulce vidět skutečný důvod (neplatný ticker,
-   symbol mimo tarif, vyčerpané kredity…), ne jen "chyba". */
-async function fetchStockPrices(symbols, apiKey){
+/* ---------- Akcie / ETF ----------
+   HLAVNÍ ZDROJ JE YAHOO FINANCE, ne Twelve Data: free tarif Twelve Data nepokrývá
+   evropské burzy (XETRA, Euronext…) a na tyhle tituly vrací "This symbol is available
+   starting with the Grow or Venture plan" – tedy přesně to, co uživatel drží. Yahoo je
+   bez klíče, bez kreditů a jedním dotazem vrátí cenu i roční historii pro graf.
+   Twelve Data zůstává jako záloha (má-li uživatel klíč, hodí se pro americké tituly).
+
+   Yahoo neposílá CORS hlavičky spolehlivě, takže se zkouší přímé volání a teprve když
+   selže, veřejné CORS proxy. Ven jde jen ticker, žádné částky ani osobní údaje.
+   Symboly proto pište v konvenci Yahoo (`RHM.DE`, `HO.PA`, `BY6.DE`). */
+const YAHOO_GATEWAYS = [
+  { name: 'přímo', wrap: u => u },
+  { name: 'allorigins', wrap: u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u) },
+  { name: 'corsproxy', wrap: u => 'https://corsproxy.io/?url=' + encodeURIComponent(u) },
+];
+
+function badSymbol(msg){
+  const e = new Error(msg);
+  e.symbolIssue = true; // chyba dat, ne spojení – zkoušet další proxy nemá smysl
+  return e;
+}
+
+/** Jedním dotazem cena + roční denní historie. Vrací { price, currency, points }. */
+async function fetchYahoo(symbol){
+  const target = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}`
+    + '?range=1y&interval=1d';
+  const problems = [];
+  for(const gw of YAHOO_GATEWAYS){
+    try {
+      const res = await fetch(gw.wrap(target));
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      const r = data && data.chart && data.chart.result && data.chart.result[0];
+      if(!r){
+        const msg = data && data.chart && data.chart.error && data.chart.error.description;
+        throw badSymbol(msg || 'symbol nenalezen');
+      }
+      const meta = r.meta || {};
+      const stamps = r.timestamp || [];
+      const closes = (r.indicators && r.indicators.quote && r.indicators.quote[0] || {}).close || [];
+      const points = stamps
+        .map((t, i) => ({ t: t * 1000, c: closes[i] }))
+        .filter(p => typeof p.c === 'number');
+      const price = meta.regularMarketPrice != null ? meta.regularMarketPrice
+        : (points.length ? points[points.length - 1].c : null);
+      if(price == null) throw badSymbol('odpověď bez ceny');
+      return { price, currency: meta.currency || null, points };
+    } catch(e){
+      // Odpověď dorazila, ale Yahoo ten ticker nezná → další brána to nespraví.
+      if(e && e.symbolIssue){
+        // Nejčastější příčina: chybí přípona burzy (Yahoo chce RHM.DE, BY6.DE, HO.PA…).
+        const hint = symbol.includes('.') ? '' : ' – doplň příponu burzy, např. ' + symbol + '.DE';
+        throw new Error('Yahoo nezná ticker "' + symbol + '"' + hint);
+      }
+      problems.push(`${gw.name}: ${e.message || e}`);
+    }
+  }
+  throw new Error('Ceny z Yahoo se nepodařilo načíst – přímo ani přes proxy (' + problems[0] + ')');
+}
+
+/* Twelve Data – záloha, když Yahoo selže. Vrací mapu symbol -> { price } | { error }. */
+async function fetchStockPricesTwelveData(symbols, apiKey){
   const out = {};
   if(!symbols.length) return out;
   if(!apiKey){
@@ -107,6 +165,38 @@ async function fetchStockPrices(symbols, apiKey){
     } else {
       out[sym] = { error: 'Symbol nenalezen na Twelve Data' };
     }
+  });
+  return out;
+}
+
+/** Ceny akcií: nejdřív Yahoo (zdarma, pokrývá evropské burzy), pak případně Twelve Data. */
+async function fetchStockPrices(symbols, apiKey){
+  const out = {};
+  if(!symbols.length) return out;
+
+  const missing = [];
+  for(const sym of symbols){
+    try {
+      const y = await fetchYahoo(sym);
+      out[sym] = { price: y.price, currency: y.currency };
+      // Historie přišla stejným dotazem – ulož ji, ať se graf otevře bez dalšího volání.
+      if(y.points && y.points.length > 2) cacheStockHistory(sym, y.points, y.currency);
+    } catch(e){
+      missing.push({ sym, error: String(e.message || e) });
+    }
+  }
+  if(!missing.length) return out;
+
+  // Záloha přes Twelve Data (jen když je klíč; jinak vrať chybu z Yahoo).
+  if(!apiKey){
+    missing.forEach(m => { out[m.sym] = { error: m.error }; });
+    return out;
+  }
+  const td = await fetchStockPricesTwelveData(missing.map(m => m.sym), apiKey);
+  missing.forEach(m => {
+    const r = td[m.sym];
+    out[m.sym] = (r && r.price != null) ? r
+      : { error: m.error + (r && r.error ? ' · záložní Twelve Data taky ne' : ''), local: !!(r && r.local) };
   });
   return out;
 }
@@ -183,6 +273,21 @@ function saveHistoryCache(cache){
   try { localStorage.setItem(HISTORY_CACHE_KEY, JSON.stringify(cache)); } catch(e){}
 }
 
+/* Akcie se cachují jen podle symbolu (Yahoo posílá cenu v měně burzy, ne v měně pozice),
+   krypto podle symbolu a měny (CoinGecko umí vrátit řadu rovnou v CZK). */
+function historyKey(position){
+  return position.type === 'krypto'
+    ? `krypto:${position.symbol}:${position.currency || 'CZK'}`
+    : `akcie:${position.symbol}`;
+}
+
+/** Uloží roční řadu, která přišla „zadarmo" spolu s cenou z Yahoo. */
+function cacheStockHistory(symbol, points, currency){
+  const cache = loadHistoryCache();
+  cache[`akcie:${symbol}`] = { points, currency: currency || null, at: Date.now() };
+  saveHistoryCache(cache);
+}
+
 async function fetchCryptoHistory(id, currency){
   const vs = (currency || 'CZK').toLowerCase();
   const url = `https://api.coingecko.com/api/v3/coins/${encodeURIComponent(id)}/market_chart`
@@ -191,10 +296,12 @@ async function fetchCryptoHistory(id, currency){
   if(!res.ok) throw new Error('CoinGecko HTTP ' + res.status);
   const data = await res.json();
   if(!data || !Array.isArray(data.prices)) throw new Error('CoinGecko: chybí data');
-  return data.prices.map(([t, c]) => ({ t, c })).filter(p => typeof p.c === 'number');
+  const points = data.prices.map(([t, c]) => ({ t, c })).filter(p => typeof p.c === 'number');
+  return { points, currency: (currency || 'CZK') };
 }
 
-async function fetchStockHistory(symbol, apiKey){
+/* Twelve Data – záloha historie, když Yahoo selže (stojí 1 kredit za symbol). */
+async function fetchStockHistoryTwelveData(symbol, apiKey){
   if(!apiKey) throw new Error('Chybí API klíč pro akcie (vlož ho v Nastavení)');
   const cool = cooldownLeftMs();
   if(cool > 0) throw new Error(`Limit Twelve Data vyčerpán, zkus to za ${Math.ceil(cool / 1000)} s`);
@@ -218,25 +325,45 @@ async function fetchStockHistory(symbol, apiKey){
     .sort((a, b) => a.t - b.t);
 }
 
-/** Historie ceny pozice (rok denních dat) v měně pozice. Vrací { points } nebo { error }. */
+/** Historie akcie: nejdřív Yahoo (stejný dotaz jako cena), Twelve Data jen jako záloha. */
+async function fetchStockHistory(symbol, apiKey){
+  let firstErr;
+  try {
+    const y = await fetchYahoo(symbol);
+    if(y.points && y.points.length > 2) return { points: y.points, currency: y.currency };
+    firstErr = new Error('Yahoo nevrátil dost dat pro graf');
+  } catch(e){
+    firstErr = e;
+  }
+  if(!apiKey) throw firstErr;
+  try {
+    return { points: await fetchStockHistoryTwelveData(symbol, apiKey), currency: null };
+  } catch(e){
+    throw new Error(String(firstErr.message || firstErr) + ' · Twelve Data: ' + String(e.message || e));
+  }
+}
+
+/** Historie ceny pozice (rok denních dat). Vrací { points, currency } nebo { error }. */
 export async function fetchPriceHistory(position, apiKey){
-  const key = `${position.type}:${position.symbol}:${position.currency}`;
+  const key = historyKey(position);
   const cache = loadHistoryCache();
   const hit = cache[key];
   if(hit && hit.points && (Date.now() - hit.at) < HISTORY_TTL_MS){
-    return { points: hit.points, cached: true, at: hit.at };
+    return { points: hit.points, currency: hit.currency || null, cached: true, at: hit.at };
   }
   try {
-    const points = position.type === 'krypto'
+    const r = position.type === 'krypto'
       ? await fetchCryptoHistory(position.symbol, position.currency)
       : await fetchStockHistory(position.symbol, apiKey);
-    if(!points.length) throw new Error('Zdroj nevrátil žádná data');
-    cache[key] = { points, at: Date.now() };
+    if(!r.points.length) throw new Error('Zdroj nevrátil žádná data');
+    cache[key] = { points: r.points, currency: r.currency || null, at: Date.now() };
     saveHistoryCache(cache);
-    return { points, at: Date.now() };
+    return { points: r.points, currency: r.currency || null, at: Date.now() };
   } catch(e){
     // Radši ukaž starší graf než nic.
-    if(hit && hit.points) return { points: hit.points, cached: true, at: hit.at, error: String(e.message || e) };
+    if(hit && hit.points){
+      return { points: hit.points, currency: hit.currency || null, cached: true, at: hit.at, error: String(e.message || e) };
+    }
     return { error: String(e.message || e) };
   }
 }
@@ -281,7 +408,7 @@ export async function fetchAllPrices(positions, apiKey){
       else error = cryptoErr || 'Symbol nenalezen na CoinGecko';
     } else {
       const r = stockResults[p.symbol];
-      if(r && r.price != null) auto = { priceNative: r.price, currency: p.currency };
+      if(r && r.price != null) auto = { priceNative: r.price, currency: r.currency || p.currency };
       else {
         error = (r && r.error) || stockErr || 'Symbol nenalezen';
         local = !!(r && r.local); // naše vlastní hláška, ne odpověď API – necachovat

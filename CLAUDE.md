@@ -40,7 +40,8 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
 
 - `index.html` – dashboard: statistiky (hodnota/vloženo/zisk), alokační donut graf,
   tabulka pozic s formulářem pro přidání/úpravu/smazání.
-- `nastaveni.html` – nastavení API klíče pro ceny akcií/ETF (Twelve Data).
+- `nastaveni.html` – nastavení **nepovinného** záložního API klíče (Twelve Data); ceny
+  akcií i krypta jdou bez klíče (viz §4e).
 - `assets/style.css` – design systém (světlý/tmavý režim), vychází ze stejného systému
   jako RD Modřice, jen s vlastními accent/series barvami.
 - `assets/site.js` – přepínač vzhledu + aktivní odkaz v nav (storage klíč `portfolio-theme`).
@@ -65,8 +66,9 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
   jako pozice) – nemusí ho zadávat každý zvlášť. `localStorage` slouží jen jako rychlý fallback,
   když je Firestore zrovna nedostupný.
 - `assets/prices.js` – stahování cen: kryptoměny přes CoinGecko (bez klíče, `vs_currencies=czk`),
-  akcie/ETF přes Twelve Data (`fetchAllPrices(positions, apiKey)` – klíč se předává jako parametr,
-  bere se z `assets/settings.js`), kurzy měn přes několik zdrojů za sebou (`FX_SOURCES`:
+  akcie/ETF přes **Yahoo Finance** (bez klíče, jedním dotazem cena i roční historie – viz §4e;
+  Twelve Data je jen záloha, `fetchAllPrices(positions, apiKey)` klíč jen předává),
+  kurzy měn přes několik zdrojů za sebou (`FX_SOURCES`:
   frankfurter.dev → frankfurter.app → open.er-api.com), s cache v `localStorage`.
   **Na kurzu závisí hodnota všeho v cizí měně**, takže když všechny zdroje selžou, použije se
   poslední známý kurz (i starý) a `fxStatus()` to ohlásí – `updateFxWarning()` v `portfolio.js`
@@ -87,7 +89,8 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
 ```
 {
   type: 'akcie' | 'krypto' | 'hotovost',
-  symbol: string,       // ticker pro Twelve Data (akcie) nebo CoinGecko id (krypto);
+  symbol: string,       // ticker v konvenci Yahoo (akcie: RHM.DE, HO.PA, SAAB-B.ST, BY6.DE)
+                         // nebo CoinGecko id (krypto);
                          // u hotovosti jen popisek (typicky = měna), cena se nefetchuje
   name: string,         // volitelný lidský název
   quantity: number,     // u hotovosti = částka
@@ -161,21 +164,24 @@ V tabulce je název pozice odkaz na detail titulu: u krypta `coingecko.com/en/co
 neodpovídá, jde vlastní adresu uložit do pole `infoUrl` (v editaci "Odkaz na detail") –
 ta má přednost.
 
-Tlačítko 📈 rozbalí pod řádkem graf vývoje ceny. **Historie se stahuje až na rozkliknutí**
-(`fetchPriceHistory` v `assets/prices.js`) – u akcií stojí 1 kredit Twelve Data, takže:
-- vždy se načte **celý rok denních dat** a kratší rozsahy se ořezávají lokálně
-  (jedno rozkliknutí = jeden dotaz, přepínání rozsahu je zadarmo),
-- výsledek se drží 12 h v `localStorage` (`portfolio-history-cache-v1`),
-- platí stejný hlídač kreditů i cooldown po 429 jako u cen,
-- při selhání se ukáže starší graf z cache (s poznámkou), ne prázdno.
+Tlačítko 📈 rozbalí pod řádkem graf vývoje ceny (`fetchPriceHistory` v `assets/prices.js`):
+- **u akcií je historie zadarmo spolu s cenou** – Yahoo vrací v jednom dotazu `meta` i roční
+  denní řadu, takže `fetchStockPrices()` ji rovnou uloží (`cacheStockHistory`) a rozkliknutí
+  grafu nevolá vůbec nic; u krypta se řada stáhne z CoinGecku až na rozkliknutí,
+- vždy se drží **celý rok denních dat** a kratší rozsahy se ořezávají lokálně
+  (přepínání rozsahu je zadarmo),
+- cache 12 h v `localStorage` (`portfolio-history-cache-v1`); klíč je `akcie:<symbol>`
+  (Yahoo kotuje v měně burzy, ne v měně pozice) a `krypto:<symbol>:<měna>`,
+- při selhání se ukáže starší graf z cache (s poznámkou), ne prázdno; poznámka „Data z…"
+  se ukazuje jen u dat starších než 3 h nebo když se obnova nepovedla.
 
 Rozbalené grafy si drží `openCharts` (Set id pozic), aby překreslení tabulky (nové ceny,
 změna měny) graf nezavřelo.
 
 ### 4c) Chyby cen a ruční cena
 
-`fetchStockPrices()` v `assets/prices.js` propouští **skutečnou hlášku z Twelve Data**
-(např. neplatný ticker, symbol mimo tarif, vyčerpané kredity) až do tabulky, kde se
+`fetchStockPrices()` v `assets/prices.js` propouští **skutečnou hlášku ze zdroje**
+(neznámý ticker, nedostupné Yahoo i proxy, u zálohy chyba Twelve Data) až do tabulky, kde se
 vypíše viditelně červeně (`.pricerr`) – dřív se schovávala do `title` tooltipu, který je
 na mobilu nedostupný, takže uživatel viděl jen "chyba" a nedalo se to diagnostikovat.
 **Nevracej se k tomu.**
@@ -185,6 +191,9 @@ je označená popiskem "ručně zadaná". Automatická cena má vždy přednost 
 ruční je jen záchranná brzda pro tituly, které daný zdroj cen neumí.
 
 ### 4d) Kredity Twelve Data a cache cen (POZOR – tady se to už jednou rozbilo)
+
+> Od přechodu na Yahoo (§4e) se kredity běžně vůbec neutrácejí – hlídač zůstává jen pro
+> záložní cestu. Cache cen v `portfolio.js` ale platí dál a pořád má stejný smysl.
 
 Twelve Data účtuje **1 kredit za každý symbol**, ne za dotaz, a free tarif má jen
 **8 kreditů/minutu** (800/den). Uživatel drží 3 akcie → jedno stažení = 3 kredity.
@@ -220,14 +229,31 @@ V patičce se zobrazuje **verze nasazení** (7 znaků commit SHA, `assets/site.j
 z `<meta name="app-version">`) – při hlášení "nefunguje to" si tím ověř, jestli uživatel
 nemá v prohlížeči starou verzi.
 
-Pokud by v budoucnu hlášky ukázaly i omezení pokrytí burz (XETRA/Euronext/HKEX na free
-tarifu), řeš to ručními cenami nebo jiným zdrojem – pozor, většina alternativ (Yahoo,
-Stooq) nemá CORS a z čistě statického webu bez backendu je přímo nepoužiješ.
+### 4e) Zdroj cen akcií: Yahoo Finance (a proč ne Twelve Data)
+
+Free tarif Twelve Data **nepokrývá evropské burzy** – na XETRA/Euronext/Borsa/Madrid/Stockholm
+(tedy na všechny tituly, které uživatel drží) vrací
+`This symbol is available starting with the Grow or Venture plan` (kód 404). Rate limit tuhle
+příčinu zpočátku maskoval; ceny akcií a grafy proto nikdy nefungovaly.
+
+Hlavním zdrojem je proto `https://query1.finance.yahoo.com/v8/finance/chart/<ticker>?range=1y&interval=1d`:
+bez klíče, bez kreditů a **jedním dotazem cena (`meta.regularMarketPrice`) i roční denní řada**
+pro graf. Yahoo neposílá CORS hlavičky spolehlivě, takže `YAHOO_GATEWAYS` zkouší popořadě
+přímé volání → `api.allorigins.win` → `corsproxy.io` (ven jde jen ticker, žádné částky).
+Když Yahoo ticker **nezná** (`chart.error`), další brána to nespraví – hlásí se to rovnou
+(u symbolu bez tečky s nápovědou doplnit příponu burzy).
+Twelve Data zůstává jen jako záloha, když je klíč uložený; jinak se ani nevolá.
+
+**Cena chodí v měně burzy**, ne v měně pozice (Saab `SAAB-B.ST` kotuje ve SEK, pozice je
+v EUR). `fetchAllPrices` proto vrací `currency` z Yahoo a `recompute()` v `portfolio.js`
+z ní počítá `priceInPos` (přepočet do měny pozice) – v tabulce je hlavní údaj v měně pozice
+a původní burzovní kurz drobně pod ním. Graf zůstává v měně burzy.
 
 ## 5) Známá omezení / co dodělat příště, když si to řeknou
 
-- Twelve Data free tarif má rate limit (~8 req/min, 800/den) – při velkém počtu pozic
-  zvážit dávkování nebo cache.
+- Yahoo Finance není oficiální API – kdyby přestalo fungovat i přes proxy, dalšími
+  kandidáty jsou Stooq (CSV, bez CORS → přes proxy) nebo placený tarif Twelve Data.
+  Ruční ceny (`manualPrice`) fungují jako záchranná brzda vždy.
 - Currency konverze je jen k okamžiku zobrazení, ne historická k datu nákupu (týká se i
   realizovaného zisku/ztráty u uzavřených pozic).
 - Nemovitosti/spoření zatím nejsou v datovém modelu (uživatel zatím chtěl akcie/ETF,

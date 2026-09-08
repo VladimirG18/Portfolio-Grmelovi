@@ -159,11 +159,14 @@ async function recompute(){
     }
     const price = pricesCache[p.id];
     const investedNative = p.quantity * p.avgBuyPrice;
-    let valueNative = null;
+    let valueNative = null, priceInPos = null;
     if(price && price.priceNative != null){
-      // Cena bývá v měně pozice; u krypta chodí z CoinGecka v CZK, proto pro jistotu převod.
-      try { valueNative = await convert(p.quantity * price.priceNative, price.currency, p.currency); }
-      catch(e){ valueNative = null; }
+      // Cena chodí v měně burzy (Saab se obchoduje ve SEK, krypto z CoinGecka v CZK),
+      // kdežto nákupní cena je v měně pozice – proto se vždy přepočítá.
+      try {
+        priceInPos = await convert(price.priceNative, price.currency, p.currency);
+        valueNative = p.quantity * priceInPos;
+      } catch(e){ valueNative = null; priceInPos = null; }
     }
     const gainNative = valueNative != null ? valueNative - investedNative : null;
     const gainPct = (gainNative != null && investedNative) ? (gainNative / investedNative) * 100 : null;
@@ -171,7 +174,7 @@ async function recompute(){
     const invested = await toDisplay(investedNative, p.currency);
     const value = await toDisplay(valueNative, p.currency);
     const gain = (value != null && invested != null) ? value - invested : null;
-    computed[p.id] = { valueNative, investedNative, gainNative, gainPct, value, invested, gain };
+    computed[p.id] = { valueNative, investedNative, gainNative, gainPct, value, invested, gain, priceInPos };
   }
 }
 
@@ -240,8 +243,14 @@ function renderTable(){
       if(price.manual) note = 'ručně zadaná';
       else if(price.staleError && price.cachedAt) note = 'z ' + new Date(price.cachedAt).toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit' });
       else if(price.staleError) note = 'poslední známá';
-      priceCell = fmtNum(price.priceNative, 2) + ' ' + price.currency
-        + (note ? '<span class="sub">' + note + '</span>' : '');
+      // Cena se ukazuje v měně pozice, ať se dá porovnat s nákupní cenou; když burza
+      // kotuje v jiné měně (Saab ve SEK), je původní kurz pod tím drobným písmem.
+      const otherCur = price.currency !== p.currency && c.priceInPos != null;
+      const main = otherCur ? fmtNum(c.priceInPos, 2) + ' ' + p.currency
+                            : fmtNum(price.priceNative, 2) + ' ' + price.currency;
+      const sub = [otherCur ? fmtNum(price.priceNative, 2) + ' ' + price.currency : '', note]
+        .filter(Boolean).join(' · ');
+      priceCell = main + (sub ? '<span class="sub">' + sub + '</span>' : '');
     } else if(price && price.error){
       priceCell = '<span class="pricerr">⚠️ ' + escapeHtml(price.error) + '</span>';
     } else {
@@ -415,11 +424,14 @@ async function fillChart(host, p){
     host.appendChild(err);
     return;
   }
-  const note = res.cached
+  // Data z posledních hodin jsou normální stav (přišla spolu s cenou) – hlásit se má
+  // jen graf, který je opravdu starý nebo se ho nepovedlo obnovit.
+  const ageMs = Date.now() - (res.at || 0);
+  const note = (res.cached && (res.error || ageMs > 3 * 60 * 60 * 1000))
     ? 'Data z ' + new Date(res.at).toLocaleString('cs-CZ', { day: 'numeric', month: 'numeric', hour: '2-digit', minute: '2-digit' })
       + (res.error ? ' · novější se nepodařilo načíst' : '')
     : '';
-  renderPriceChart(host, res.points, p.currency, { note });
+  renderPriceChart(host, res.points, res.currency || p.currency, { note });
 }
 
 function chartRow(p){
@@ -566,7 +578,7 @@ function updateSymbolHint(){
     fPrice.readOnly = false;
     fSymbolHint.textContent = fType.value === 'krypto'
       ? 'ID z CoinGecko, např. "bitcoin", "ethereum", "solana" (najdeš v URL na coingecko.com/en/coins/…).'
-      : 'Ticker pro Twelve Data, např. "AAPL", "MSFT", "CSPX.L" (najdeš na twelvedata.com).';
+      : 'Ticker v konvenci Yahoo Finance, např. "AAPL", "RHM.DE" (XETRA), "HO.PA" (Paříž) – ověříš na finance.yahoo.com.';
   }
 }
 fType.addEventListener('change', updateSymbolHint);
@@ -674,17 +686,16 @@ async function init(){
     statusEl.className = 'statusbar';
   }
 
-  const apiKeyWarnEl = document.createElement('span');
-  statusEl.appendChild(apiKeyWarnEl);
   fxWarnEl = document.createElement('span');
   statusEl.appendChild(fxWarnEl);
+  // Klíč už není potřeba (ceny akcií jdou z Yahoo), takže se na jeho chybějící hodnotu
+  // neupozorňuje – jen se zaznamená pro případ, že by Yahoo u některého titulu selhalo.
   subscribeStockApiKey(key => {
     const changed = key !== stockApiKey;
     stockApiKey = key;
-    apiKeyWarnEl.innerHTML = stockApiKey ? '' : ' · ⚠️ Pro ceny akcií/ETF nejdřív nastav API klíč v <a href="nastaveni.html">Nastavení</a>.';
     // Klíč mohl dorazit až po prvním pokusu o ceny. Vynucovat se to nesmí (spálilo by
-    // to kredity při každém načtení) – stav "chybí klíč" se necachuje, takže se ceny
-    // dotáhnou i tímhle běžným, cache-respektujícím voláním.
+    // to kredity při každém načtení) – chybové stavy se necachují nadlouho, takže se
+    // ceny dotáhnou i tímhle běžným, cache-respektujícím voláním.
     if(changed && positions.length) refreshPrices();
   });
 

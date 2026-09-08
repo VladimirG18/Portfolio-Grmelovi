@@ -31,26 +31,25 @@
 
 <div class="content">
   <span class="eyebrow">Nastavení</span>
-  <h1>API klíč pro ceny akcií a ETF</h1>
-  <p class="lead">Kryptoměny se stahují automaticky bez klíče (CoinGecko). Pro akcie a ETF je potřeba
-    vlastní zdarma klíč od Twelve Data – stačí ho zadat <b>jednou, uloží se sdíleně</b> (do stejné
-    databáze jako pozice), takže ho druhý z vás nemusí zadávat znovu.</p>
+  <h1>API klíč pro ceny akcií (nepovinný)</h1>
+  <p class="lead">Ceny i grafy se stahují <b>bez klíče</b> – kryptoměny z CoinGecku, akcie a ETF
+    z Yahoo Finance. Klíč od Twelve Data je tu už jen jako <b>záloha</b>, kdyby Yahoo u nějakého
+    titulu selhalo. Když ho zadáš, uloží se <b>sdíleně</b> (do stejné databáze jako pozice),
+    takže ho druhý z vás nemusí zadávat znovu.</p>
 
   <div class="callout info">
-    <b>Jak získat klíč (cca 2 minuty, zdarma):</b>
-    <ol style="margin:8px 0 0; padding-left:20px">
-      <li>Jdi na <a href="https://twelvedata.com" target="_blank" rel="noopener">twelvedata.com</a> a zaregistruj se (stačí e-mail).</li>
-      <li>Po přihlášení najdeš v sekci <b>API Keys / Dashboard</b> svůj klíč (dlouhý řetězec znaků).</li>
-      <li>Zkopíruj ho, vlož do pole níže a klikni na Uložit – od teď ho uvidí a použije kdokoli
-        na stránce (je chráněná stejným heslem jako zbytek webu).</li>
-    </ol>
-    <p style="margin:8px 0 0">Zdarma tarif má limit cca 800 dotazů/den a 8/minutu – pro rodinné
-      portfolio to bohatě stačí, protože ho sdílí jeden účet pro oba.</p>
+    <b>Nemusíš nic vyplňovat.</b>
+    <p style="margin:8px 0 0">Free tarif Twelve Data nepokrývá evropské burzy (XETRA, Euronext…) –
+      na tyhle tituly vrací „This symbol is available starting with the Grow or Venture plan“.
+      Proto se ceny berou primárně z Yahoo Finance, kde jsou zdarma a bez limitu kreditů.</p>
+    <p style="margin:8px 0 0">Kdybys klíč přesto chtěl (hodí se pro americké tituly jako záloha):
+      zaregistruj se na <a href="https://twelvedata.com" target="_blank" rel="noopener">twelvedata.com</a>,
+      v sekci <b>API Keys / Dashboard</b> zkopíruj klíč, vlož ho níže a ulož.</p>
   </div>
 
   <div class="formcard">
     <div class="field grow2">
-      <label for="td-key">Twelve Data API klíč (sdílený)</label>
+      <label for="td-key">Twelve Data API klíč (sdílený, nepovinný)</label>
       <input type="text" id="td-key" placeholder="např. 0123456789abcdef0123456789abcdef" autocomplete="off" />
     </div>
     <div class="formactions" style="justify-content:flex-start; margin-top:10px">
