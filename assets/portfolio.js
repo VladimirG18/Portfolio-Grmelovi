@@ -32,6 +32,7 @@ const fQty = document.getElementById('f-qty');
 const fPrice = document.getElementById('f-price');
 const fCurrency = document.getElementById('f-currency');
 const fManual = document.getElementById('f-manual');
+const fTotalHint = document.getElementById('f-total-hint');
 const fNote = document.getElementById('f-note');
 const saveBtn = document.getElementById('save-btn');
 const cancelBtn = document.getElementById('cancel-btn');
@@ -501,6 +502,22 @@ fType.addEventListener('change', updateSymbolHint);
 fCurrency.addEventListener('change', () => { if(fType.value === 'hotovost') fSymbol.value = fCurrency.value; });
 updateSymbolHint();
 
+/* Pole chce cenu za JEDEN kus, ne celkovou investici – tenhle živý přepočet tu záměnu
+   odhalí hned při psaní (jednou se stala a portfolio pak ukazovalo nesmyslný zisk). */
+function updateTotalHint(){
+  if(!fTotalHint) return;
+  if(fType.value === 'hotovost'){ fTotalHint.textContent = ''; return; }
+  const q = parseFloat(fQty.value), pr = parseFloat(fPrice.value);
+  fTotalHint.textContent = (isNaN(q) || isNaN(pr))
+    ? 'Cena za jeden kus, ne celkem investovaná částka.'
+    : 'Celkem investováno: ' + fmtIn(q * pr, fCurrency.value);
+}
+[fQty, fPrice, fCurrency, fType].forEach(el => {
+  if(!el) return;
+  el.addEventListener('input', updateTotalHint);
+  el.addEventListener('change', updateTotalHint);
+});
+
 function openModal(pos){
   editingId = pos ? pos.id : null;
   modalTitle.textContent = pos ? 'Upravit pozici' : 'Přidat pozici';
@@ -513,6 +530,7 @@ function openModal(pos){
   fManual.value = (pos && pos.manualPrice != null) ? pos.manualPrice : '';
   fNote.value = pos ? (pos.note || '') : '';
   updateSymbolHint();
+  updateTotalHint();
   modal.classList.add('open');
   setTimeout(() => fSymbol.focus(), 50);
 }
