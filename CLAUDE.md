@@ -99,8 +99,21 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
 }
 ```
 
-Součty v dashboardu jsou vždy v CZK – cizí měny se přepočítávají aktuálním kurzem
-(Frankfurter), ne historickým kurzem ke dni nákupu.
+### Zobrazovací měna
+
+Uživatel si nahoře u tabulky přepíná, v jaké měně se přehled zobrazuje (`CZK`/`EUR`/`USD`,
+`DISPLAY_CURRENCIES` v `assets/portfolio.js`). Volba se drží v `localStorage`
+(`portfolio-display-currency-v1`) – je to předvolba zobrazení, ne sdílená data, takže
+každý může mít svou. Přepnutí **jen přepočítá už stažené ceny** (`recompute()` + `render()`),
+nespouští žádné nové dotazy na ceny.
+
+Co se přepočítává: hodnota, vloženo, zisk/ztráta, součty a alokace. Co **ne**: nákupní a
+aktuální cena v tabulce – ty zůstávají v měně dané pozice (je to skutečná cena titulu),
+a `avgBuyPrice`/`sellPrice`/`manualPrice` v databázi se nikdy nepřepočítávají.
+
+Přepočet dělá `convert(amount, from, to)` v `assets/prices.js` aktuálním kurzem, ne kurzem
+ke dni nákupu. Pole v `computed` (`value`, `invested`, `gain`, `cost`, `realized`) jsou
+proto vždy v **aktuálně zvolené zobrazovací měně** – nepojmenovávej je zpátky `...CZK`.
 
 ### 4a) Typ `hotovost`
 

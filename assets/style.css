@@ -255,6 +255,13 @@ html[data-gate="locked"] .site-header, html[data-gate="locked"] .content, html[d
 .site-footer a{ color:var(--muted); text-decoration:underline; }
 .appver{ opacity:.65; font-size:.74rem; }
 
+/* Přepínač zobrazovací měny */
+.curpick{ display:inline-flex; align-items:center; gap:7px; font-size:.82rem; color:var(--muted); }
+.curpick select{ background:var(--surface); color:var(--text); border:1px solid var(--border);
+  border-radius:9px; padding:7px 10px; font:inherit; font-size:.86rem; font-weight:600; cursor:pointer; }
+.curpick select:hover{ border-color:var(--border-strong); }
+.curpick select:focus{ outline:2px solid var(--accent); outline-offset:0; border-color:var(--accent); }
+
 /* ---------- Responsivita ---------- */
 @media (max-width:560px){
   .brand small{ display:none; }

@@ -169,9 +169,11 @@ async function fetchFxRate(from, to){
   throw new Error('Kurz ' + from + '→' + to + ' se nepodařilo načíst (' + problems.join('; ') + ')');
 }
 
-export async function convertToCZK(amount, currency){
-  if(!currency || currency === 'CZK') return amount;
-  const rate = await fetchFxRate(currency, 'CZK');
+/** Převod částky mezi měnami (zobrazovací měnu si volí uživatel, viz portfolio.js). */
+export async function convert(amount, from, to){
+  const f = from || 'CZK', t = to || 'CZK';
+  if(f === t) return amount;
+  const rate = await fetchFxRate(f, t);
   return amount * rate;
 }
 

@@ -1,5 +1,5 @@
 import { firebaseConfig, POSITIONS_COLLECTION } from './firebase-config.js?v=__CACHEBUST__';
-import { fetchAllPrices, convertToCZK, fxStatus } from './prices.js?v=__CACHEBUST__';
+import { fetchAllPrices, convert, fxStatus } from './prices.js?v=__CACHEBUST__';
 import { subscribeStockApiKey } from './settings.js?v=__CACHEBUST__';
 
 const TYPE_LABEL = { akcie: 'Akcie / ETF', krypto: 'Kryptoměna', hotovost: 'Hotovost' };
@@ -19,6 +19,7 @@ const historyBody = document.getElementById('history-body');
 const allocWrap = document.getElementById('alloc-wrap');
 const refreshBtn = document.getElementById('refresh-btn');
 const lastUpdateEl = document.getElementById('last-update');
+const displayCurEl = document.getElementById('display-currency');
 const addBtn = document.getElementById('add-btn');
 const modal = document.getElementById('position-modal');
 const modalTitle = document.getElementById('modal-title');
@@ -36,16 +37,35 @@ const saveBtn = document.getElementById('save-btn');
 const cancelBtn = document.getElementById('cancel-btn');
 const closeBtn = document.getElementById('modal-close');
 
-const fmtCZK = n => (n == null || isNaN(n)) ? '—' : n.toLocaleString('cs-CZ', { maximumFractionDigits: 0 }) + ' Kč';
+const CUR_SUFFIX = { CZK: ' Kč', EUR: ' €', USD: ' $' };
+// Velké částky bez haléřů, drobné se dvěma desetinnými místy (jinak by 9,45 € bylo "9 €").
+const fmtMoney = n => {
+  if(n == null || isNaN(n)) return '—';
+  const dec = Math.abs(n) >= 100 ? 0 : 2;
+  return n.toLocaleString('cs-CZ', { minimumFractionDigits: dec, maximumFractionDigits: dec })
+    + (CUR_SUFFIX[displayCur] || ' ' + displayCur);
+};
 const fmtNum = (n, d = 4) => (n == null || isNaN(n)) ? '—' : n.toLocaleString('cs-CZ', { maximumFractionDigits: d });
 const fmtPct = n => (n == null || isNaN(n)) ? '—' : (n >= 0 ? '+' : '') + n.toLocaleString('cs-CZ', { maximumFractionDigits: 1 }) + ' %';
 
 let positions = [];
 let pricesCache = {}; // id -> { priceNative, currency, error }
-let computed = {};    // id -> { valueCZK, investedCZK, gainCZK, gainPct }
+let computed = {};    // id -> { value, invested, gain, gainPct }
 let editingId = null;
 let stockApiKey = ''; // sdílený Twelve Data klíč (viz assets/settings.js)
 let fxWarnEl = null;  // hláška o nedostupných kurzech měn (viz updateFxWarning)
+
+/* ---------- Zobrazovací měna ----------
+   V jaké měně se ukazují hodnoty a součty. Je to jen předvolba zobrazení, takže ji
+   držíme v prohlížeči (každý si může přehled zobrazit po svém) – uložené pozice se
+   nemění, jen se přepočítávají aktuálním kurzem. */
+const DISPLAY_CUR_KEY = 'portfolio-display-currency-v1';
+const DISPLAY_CURRENCIES = ['CZK', 'EUR', 'USD'];
+let displayCur = 'CZK';
+try {
+  const saved = localStorage.getItem(DISPLAY_CUR_KEY);
+  if(DISPLAY_CURRENCIES.includes(saved)) displayCur = saved;
+} catch(e){}
 
 /* ---------- Backend (Firestore realtime, s fallbackem na localStorage) ---------- */
 const LOCAL_KEY = 'portfolio-pozice-v1';
@@ -96,34 +116,34 @@ async function recompute(){
   for(const p of positions){
     if(p.type === 'hotovost'){
       let v = null;
-      try { v = await convertToCZK(p.quantity, p.currency); } catch(e){ v = null; }
-      computed[p.id] = { valueCZK: v, investedCZK: v, gainCZK: v != null ? 0 : null, gainPct: v != null ? 0 : null };
+      try { v = await convert(p.quantity, p.currency, displayCur); } catch(e){ v = null; }
+      computed[p.id] = { value: v, invested: v, gain: v != null ? 0 : null, gainPct: v != null ? 0 : null };
       continue;
     }
     if(p.closed){
-      let costCZK = null, realizedCZK = null;
-      try { costCZK = await convertToCZK(p.quantity * p.avgBuyPrice, p.currency); } catch(e){ costCZK = null; }
+      let cost = null, realized = null;
+      try { cost = await convert(p.quantity * p.avgBuyPrice, p.currency, displayCur); } catch(e){ cost = null; }
       if(p.sellPrice != null){
-        try { realizedCZK = await convertToCZK(p.quantity * (p.sellPrice - p.avgBuyPrice), p.currency); }
-        catch(e){ realizedCZK = null; }
+        try { realized = await convert(p.quantity * (p.sellPrice - p.avgBuyPrice), p.currency, displayCur); }
+        catch(e){ realized = null; }
       }
       // Uzavřené (prodané) pozice se nepočítají do aktuální hodnoty ani vloženého kapitálu –
       // jsou to jen historické záznamy s realizovaným ziskem/ztrátou (viz renderHistory).
-      computed[p.id] = { valueCZK: null, investedCZK: null, gainCZK: null, gainPct: null, costCZK, realizedCZK };
+      computed[p.id] = { value: null, invested: null, gain: null, gainPct: null, cost, realized };
       continue;
     }
     const price = pricesCache[p.id];
-    let valueCZK = null, investedCZK = null;
+    let value = null, invested = null;
     try {
-      investedCZK = await convertToCZK(p.quantity * p.avgBuyPrice, p.currency);
-    } catch(e){ investedCZK = null; }
+      invested = await convert(p.quantity * p.avgBuyPrice, p.currency, displayCur);
+    } catch(e){ invested = null; }
     if(price && price.priceNative != null){
-      try { valueCZK = await convertToCZK(p.quantity * price.priceNative, price.currency); }
-      catch(e){ valueCZK = null; }
+      try { value = await convert(p.quantity * price.priceNative, price.currency, displayCur); }
+      catch(e){ value = null; }
     }
-    const gainCZK = (valueCZK != null && investedCZK != null) ? valueCZK - investedCZK : null;
-    const gainPct = (gainCZK != null && investedCZK) ? (gainCZK / investedCZK) * 100 : null;
-    computed[p.id] = { valueCZK, investedCZK, gainCZK, gainPct };
+    const gain = (value != null && invested != null) ? value - invested : null;
+    const gainPct = (gain != null && invested) ? (gain / invested) * 100 : null;
+    computed[p.id] = { value, invested, gain, gainPct };
   }
 }
 
@@ -131,8 +151,8 @@ function totals(){
   let value = 0, invested = 0, any = false;
   positions.forEach(p => {
     const c = computed[p.id];
-    if(c && c.valueCZK != null){ value += c.valueCZK; any = true; }
-    if(c && c.investedCZK != null) invested += c.investedCZK;
+    if(c && c.value != null){ value += c.value; any = true; }
+    if(c && c.invested != null) invested += c.invested;
   });
   const gain = value - invested;
   const gainPct = invested ? (gain / invested) * 100 : null;
@@ -142,9 +162,9 @@ function totals(){
 /* ---------- Vykreslení ---------- */
 function render(){
   const t = totals();
-  statEls.value.textContent = fmtCZK(t.value);
-  statEls.invested.textContent = fmtCZK(t.invested);
-  statEls.gain.textContent = (t.gain == null ? '—' : (t.gain >= 0 ? '+' : '') + fmtCZK(t.gain));
+  statEls.value.textContent = fmtMoney(t.value);
+  statEls.invested.textContent = fmtMoney(t.invested);
+  statEls.gain.textContent = (t.gain == null ? '—' : (t.gain >= 0 ? '+' : '') + fmtMoney(t.gain));
   statEls.gain.className = (t.gain == null ? '' : (t.gain >= 0 ? 'up' : 'down'));
   statEls.gainPct.textContent = fmtPct(t.gainPct);
   statEls.gainPct.className = (t.gainPct == null ? '' : (t.gainPct >= 0 ? 'up' : 'down'));
@@ -165,7 +185,7 @@ function updateFxWarning(){
   } else if(s.stale){
     fxWarnEl.innerHTML = ' · ⚠️ Kurzy měn se nepodařilo obnovit – počítám s posledním známým kurzem.';
   } else {
-    fxWarnEl.innerHTML = ' · ⚠️ Kurz měn není dostupný, hodnoty v cizích měnách zatím nejdou přepočítat na Kč.';
+    fxWarnEl.innerHTML = ' · ⚠️ Kurz měn není dostupný, hodnoty v jiných měnách zatím nejdou přepočítat.';
   }
 }
 
@@ -183,7 +203,7 @@ function renderTable(){
     const price = pricesCache[p.id];
     const c = computed[p.id] || {};
     const tr = document.createElement('tr');
-    const gainClass = (c.gainCZK == null || isCash) ? '' : (c.gainCZK >= 0 ? 'gain' : 'loss');
+    const gainClass = (c.gain == null || isCash) ? '' : (c.gain >= 0 ? 'gain' : 'loss');
     let priceCell;
     if(isCash){
       priceCell = '—';
@@ -201,14 +221,14 @@ function renderTable(){
       priceCell = '…';
     }
     const buyCell = isCash ? '—' : fmtNum(p.avgBuyPrice, 2) + ' ' + p.currency;
-    const gainCell = isCash ? '—' : (c.gainCZK == null ? '—' : (c.gainCZK >= 0 ? '+' : '') + fmtCZK(c.gainCZK) + ' (' + fmtPct(c.gainPct) + ')');
+    const gainCell = isCash ? '—' : (c.gain == null ? '—' : (c.gain >= 0 ? '+' : '') + fmtMoney(c.gain) + ' (' + fmtPct(c.gainPct) + ')');
     tr.innerHTML = `
       <td><span class="chip acc">${TYPE_LABEL[p.type] || p.type}</span></td>
       <td><b>${escapeHtml(p.name || p.symbol)}</b>${isCash ? '' : '<span class="sub">' + escapeHtml(p.symbol) + '</span>'}</td>
       <td class="num">${fmtNum(p.quantity)}</td>
       <td class="num">${buyCell}</td>
       <td class="num">${priceCell}</td>
-      <td class="num">${fmtCZK(c.valueCZK)}</td>
+      <td class="num">${fmtMoney(c.value)}</td>
       <td class="num ${gainClass}">${gainCell}</td>
       <td>
         <div class="rowactions">
@@ -245,14 +265,14 @@ function renderHistory(){
   closedList.slice().sort((a, b) => (b.closedAt || 0) - (a.closedAt || 0)).forEach(p => {
     const c = computed[p.id] || {};
     const tr = document.createElement('tr');
-    const gainClass = c.realizedCZK == null ? '' : (c.realizedCZK >= 0 ? 'gain' : 'loss');
+    const gainClass = c.realized == null ? '' : (c.realized >= 0 ? 'gain' : 'loss');
     tr.innerHTML = `
       <td><span class="chip acc">${TYPE_LABEL[p.type] || p.type}</span></td>
       <td><b>${escapeHtml(p.name || p.symbol)}</b><span class="sub">${escapeHtml(p.symbol)}</span></td>
       <td class="num">${fmtNum(p.quantity)}</td>
       <td class="num">${fmtNum(p.avgBuyPrice, 2)} ${p.currency}</td>
       <td class="num">${p.sellPrice != null ? fmtNum(p.sellPrice, 2) + ' ' + p.currency : '—'}</td>
-      <td class="num ${gainClass}">${c.realizedCZK == null ? '—' : (c.realizedCZK >= 0 ? '+' : '') + fmtCZK(c.realizedCZK)}</td>
+      <td class="num ${gainClass}">${c.realized == null ? '—' : (c.realized >= 0 ? '+' : '') + fmtMoney(c.realized)}</td>
       <td>
         <div class="rowactions">
           <button class="iconbtn del" title="Smazat záznam">🗑</button>
@@ -269,7 +289,7 @@ function renderAlloc(t){
   const byType = { akcie: 0, krypto: 0, hotovost: 0 };
   positions.forEach(p => {
     const c = computed[p.id];
-    if(c && c.valueCZK != null) byType[p.type] = (byType[p.type] || 0) + c.valueCZK;
+    if(c && c.value != null) byType[p.type] = (byType[p.type] || 0) + c.value;
   });
   const total = byType.akcie + byType.krypto + byType.hotovost;
   if(!total){
@@ -299,7 +319,7 @@ function renderAlloc(t){
     <div class="aleg-row">
       <span class="aleg-dot" style="background:${s.color}"></span>
       <span class="aleg-label">${s.label}</span>
-      <span class="aleg-val">${fmtCZK(s.val)} · ${((s.val / total) * 100).toFixed(0)} %</span>
+      <span class="aleg-val">${fmtMoney(s.val)} · ${((s.val / total) * 100).toFixed(0)} %</span>
     </div>`).join('');
 
   allocWrap.innerHTML = `
@@ -498,6 +518,17 @@ form.addEventListener('submit', async e => {
 });
 
 refreshBtn.addEventListener('click', () => refreshPrices({ force: true }));
+
+// Změna zobrazovací měny je jen přepočet už stažených cen – žádné nové dotazy do API.
+if(displayCurEl){
+  displayCurEl.value = displayCur;
+  displayCurEl.addEventListener('change', async () => {
+    displayCur = DISPLAY_CURRENCIES.includes(displayCurEl.value) ? displayCurEl.value : 'CZK';
+    try { localStorage.setItem(DISPLAY_CUR_KEY, displayCur); } catch(e){}
+    await recompute();
+    render();
+  });
+}
 
 /* ---------- Inicializace ---------- */
 async function init(){

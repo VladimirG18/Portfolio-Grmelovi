@@ -52,7 +52,14 @@
   <h2>Pozice</h2>
   <div class="frow" style="justify-content:space-between; align-items:center; margin-bottom:10px">
     <button class="btn primary" id="add-btn">➕ Přidat pozici</button>
-    <div style="display:flex; align-items:center; gap:10px">
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap">
+      <label class="curpick">Zobrazit v
+        <select id="display-currency">
+          <option value="CZK">Kč</option>
+          <option value="EUR">€</option>
+          <option value="USD">$</option>
+        </select>
+      </label>
       <span class="note" id="last-update" style="margin:0"></span>
       <button class="btn" id="refresh-btn">🔄 Aktualizovat ceny</button>
     </div>
@@ -74,8 +81,8 @@
   </div>
 
   <p class="note">Ceny akcií a ETF (Twelve Data) i kryptoměn (CoinGecko) jsou orientační a mohou mít
-    zpoždění. Kurzy cizích měn na CZK (Frankfurter, případně náhradní zdroj) slouží jen k přepočtu
-    hodnot a součtů v tomto přehledu.</p>
+    zpoždění. Kurzy měn (Frankfurter, případně náhradní zdroj) slouží jen k přepočtu hodnot a součtů
+    do zvolené zobrazovací měny – uložené pozice zůstávají v původní měně.</p>
 
   <div id="history-section" style="display:none">
     <h2>Historie uzavřených pozic</h2>
