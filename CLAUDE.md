@@ -273,6 +273,21 @@ Stylesheet v hlavičce totiž blokuje spuštění skriptů – při pomalém/ned
 Fonts se start stránky odkládal o desítky sekund a vypadalo to jako pomalé ceny.
 Nevracej to na obyčejný `rel="stylesheet"`.
 
+**POZOR – Yahoo hlásí problémy DVĚMA různými tvary a splést si je stálo hodně času:**
+- `chart.error` = titul neexistuje → má smysl zkusit jinou burzu (viz níž),
+- `finance.error` (typicky HTTP 401 `Invalid Cookie`/`Invalid Crumb`, nebo 429) =
+  **dotaz odmítnut**. Yahoo z evropských IP často chce souhlas s cookies, takže přímé
+  volání z prohlížeče vrátí 401. Jiná burza s tím nic neudělá – je potřeba jiná cesta.
+Kód to rozlišuje v `fetchYahooViaRaw()`; neznámý tvar odpovědi hlásí i kus těla, ať je
+podle diagnostiky poznat, co přesně přišlo.
+
+**Vlastní CORS proxy (`corsProxy` ve sdíleném nastavení) je nejspolehlivější cesta.**
+Veřejné proxy bývají zablokované rozšířeními v prohlížeči nebo DNS filtrem („Failed to
+fetch" během pár desítek ms) a občas prostě přestanou fungovat. Na `nastaveni.html` je
+proto návod na 15řádkový Cloudflare Worker (zdarma, 100k dotazů/den), který propouští
+**jen Yahoo Finance**; adresa se uloží sdíleně a `setCustomProxy()` ji zařadí jako první
+bránu. Když je nastavená, ostatní brány slouží jen jako záloha.
+
 **Neznámý ticker → zkus jinou burzu téhož titulu.** Yahoo u neznámého symbolu vrací
 **HTTP 404 s JSON tělem**, ve kterém je popis (`chart.error.description`) – proto `fetchJson`
 u chybové odpovědi **nejdřív zkusí přečíst tělo** a teprve pak hlásí HTTP chybu. Bez toho

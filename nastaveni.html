@@ -66,6 +66,58 @@
     <p class="note" id="td-status"></p>
   </div>
 
+  <h2>Vlastní proxy pro ceny akcií (nepovinné, ale spolehlivé)</h2>
+  <p>Ceny akcií se berou z Yahoo Finance. Prohlížeč tam ale nesmí sáhnout přímo (pravidlo
+    CORS) a Yahoo navíc z evropských adres často dotaz odmítne, dokud nedostane souhlas
+    s cookies. Stránka proto zkouší veřejné přeposílací služby – ty ale bývají blokované
+    rozšířeními v prohlížeči nebo DNS filtrem a občas přestanou fungovat.</p>
+  <p><b>Vlastní proxy tenhle problém odstraní natrvalo.</b> Zdarma a za pár minut si ji
+    postavíš na Cloudflare Workers:</p>
+  <div class="callout info">
+    <ol style="margin:8px 0 0; padding-left:20px">
+      <li>Přihlas se na <a href="https://dash.cloudflare.com" target="_blank" rel="noopener">dash.cloudflare.com</a>
+        → <b>Workers &amp; Pages</b> → <b>Create</b> → <b>Start with Hello World</b>.</li>
+      <li>Celý obsah editoru nahraď tímhle kódem a dej <b>Deploy</b>:</li>
+    </ol>
+<pre style="margin:10px 0 0; padding:10px; overflow:auto; background:var(--bg); border-radius:8px; font-size:12px">export default {
+  async fetch(request) {
+    const target = new URL(request.url).searchParams.get('url');
+    if (!target) return new Response('chybí ?url=', { status: 400 });
+    if (!/^https:\/\/query[12]\.finance\.yahoo\.com\//.test(target))
+      return new Response('jen Yahoo Finance', { status: 403 });
+    const r = await fetch(target, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+    return new Response(r.body, {
+      status: r.status,
+      headers: {
+        'Content-Type': r.headers.get('Content-Type') || 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Cache-Control': 'public, max-age=60'
+      }
+    });
+  }
+};</pre>
+    <p style="margin:8px 0 0">Worker pustí dál <b>jen dotazy na Yahoo Finance</b>, takže ho
+      nikdo nemůže zneužít k něčemu jinému. Zdarma zvládne 100 000 dotazů denně, což je
+      řádově víc, než tahle stránka potřebuje.</p>
+    <ol start="3" style="margin:8px 0 0; padding-left:20px">
+      <li>Zkopíruj adresu workeru (např. <code>https://neco.tvuj-ucet.workers.dev</code>),
+        vlož ji níže a ulož – uloží se sdíleně, takže ji stačí zadat jednou.</li>
+    </ol>
+  </div>
+
+  <div class="formcard">
+    <div class="field grow2">
+      <label for="proxy-url">Adresa vlastní proxy (sdílená)</label>
+      <input type="url" id="proxy-url" placeholder="https://neco.tvuj-ucet.workers.dev" autocomplete="off" />
+    </div>
+    <div class="formactions" style="justify-content:flex-start; margin-top:10px">
+      <button class="btn primary" id="proxy-save">Uložit a sdílet</button>
+      <button class="btn" id="proxy-test">Otestovat (RHM.DE)</button>
+      <button class="btn" id="proxy-clear">Smazat</button>
+    </div>
+    <p class="note" id="proxy-status"></p>
+  </div>
+
   <h2>Heslo pro vstup na stránku</h2>
   <p>Heslo je zašité (jako hash) přímo v kódu stránky – nejde o silné zabezpečení, jen odradí
     náhodné návštěvníky. Změnu hesla si řekni Claude Code v repozitáři (přepočítá hash a nahradí ho
@@ -92,14 +144,61 @@
 </footer>
 
 <script type="module">
-import { subscribeStockApiKey, saveStockApiKey } from './assets/settings.js?v=__CACHEBUST__';
+import { subscribeSettings, saveStockApiKey, saveCorsProxy } from './assets/settings.js?v=__CACHEBUST__';
 
 const input = document.getElementById('td-key');
 const statusEl = document.getElementById('td-status');
 
+const proxyInput = document.getElementById('proxy-url');
+const proxyStatus = document.getElementById('proxy-status');
+
 let loaded = false;
-subscribeStockApiKey(key => {
-  if(!loaded){ input.value = key; loaded = true; }
+subscribeSettings(({ twelveDataKey, corsProxy }) => {
+  if(loaded) return;
+  input.value = twelveDataKey;
+  proxyInput.value = corsProxy;
+  loaded = true;
+});
+
+const proxyUrlFor = (base, target) => base.includes('?')
+  ? base + encodeURIComponent(target)
+  : base.replace(/\/+$/, '') + '/?url=' + encodeURIComponent(target);
+
+document.getElementById('proxy-save').addEventListener('click', async () => {
+  proxyStatus.textContent = '⏳ Ukládám…';
+  try {
+    await saveCorsProxy(proxyInput.value);
+    proxyStatus.textContent = '✅ Uloženo a sdíleno – ceny akcií teď půjdou přes tvou proxy.';
+  } catch(e){
+    proxyStatus.textContent = '⚠️ Uložení se nepodařilo: ' + e;
+  }
+});
+
+document.getElementById('proxy-clear').addEventListener('click', async () => {
+  await saveCorsProxy('');
+  proxyInput.value = '';
+  proxyStatus.textContent = 'Smazáno – ceny půjdou zase přes veřejné služby.';
+});
+
+document.getElementById('proxy-test').addEventListener('click', async () => {
+  const base = proxyInput.value.trim();
+  if(!base){ proxyStatus.textContent = '⚠️ Nejdřív vlož adresu proxy.'; return; }
+  proxyStatus.textContent = '⏳ Testuji…';
+  try {
+    const target = 'https://query1.finance.yahoo.com/v8/finance/chart/RHM.DE?range=5d&interval=1d';
+    const res = await fetch(proxyUrlFor(base, target));
+    const data = await res.json();
+    const meta = data && data.chart && data.chart.result && data.chart.result[0] && data.chart.result[0].meta;
+    if(meta && meta.regularMarketPrice != null){
+      proxyStatus.textContent = `✅ Funguje – Rheinmetall: ${meta.regularMarketPrice} ${meta.currency || ''}.`;
+    } else {
+      const err = (data && data.chart && data.chart.error) || (data && data.finance && data.finance.error);
+      proxyStatus.textContent = '⚠️ Proxy odpověděla, ale bez ceny: '
+        + (err ? (err.description || err.code) : JSON.stringify(data).slice(0, 160));
+    }
+  } catch(e){
+    proxyStatus.textContent = '⚠️ Nepodařilo se: ' + e;
+  }
 });
 
 document.getElementById('td-save').addEventListener('click', async () => {

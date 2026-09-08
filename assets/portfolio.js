@@ -1,7 +1,7 @@
 import { firebaseConfig, POSITIONS_COLLECTION } from './firebase-config.js?v=__CACHEBUST__';
-import { fetchAllPrices, convert, fxStatus, fetchPriceHistory, priceDiagnostics } from './prices.js?v=__CACHEBUST__';
+import { fetchAllPrices, convert, fxStatus, fetchPriceHistory, priceDiagnostics, setCustomProxy } from './prices.js?v=__CACHEBUST__';
 import { startLivePrice, hasLiveSource } from './live.js?v=__CACHEBUST__';
-import { subscribeStockApiKey } from './settings.js?v=__CACHEBUST__';
+import { subscribeSettings } from './settings.js?v=__CACHEBUST__';
 import { renderPriceChart } from './chart.js?v=__CACHEBUST__';
 
 const TYPE_LABEL = { akcie: 'Akcie / ETF', krypto: 'Kryptoměna', hotovost: 'Hotovost' };
@@ -67,6 +67,7 @@ let pricesCache = {}; // id -> { priceNative, currency, error }
 let computed = {};    // id -> { value, invested, gain, gainPct }
 let editingId = null;
 let stockApiKey = ''; // sdílený Twelve Data klíč (viz assets/settings.js)
+let lastProxy = '';   // sdílená adresa vlastní CORS proxy
 let fxWarnEl = null;  // hláška o nedostupných kurzech měn (viz updateFxWarning)
 let priceWarnEl = null; // hláška, proč se nepodařilo stáhnout ceny (viz updatePriceWarning)
 
@@ -763,6 +764,7 @@ function diagnosticsText(){
     `Portfolio – diagnostika cen · ${t} · verze ${version}`,
     `Prohlížeč: ${navigator.userAgent}`,
     `Zapamatovaná brána: ${ls('portfolio-yahoo-gateway-v1')}`,
+    `Vlastní proxy: ${lastProxy || '—'}`,
     `Náhradní burzy: ${ls('portfolio-symbol-alias-v1')}`,
     `Kurzy měn: ${JSON.stringify(fxStatus())}`,
     '',
@@ -943,9 +945,11 @@ async function init(){
   statusEl.appendChild(priceWarnEl);
   // Klíč už není potřeba (ceny akcií jdou z Yahoo), takže se na jeho chybějící hodnotu
   // neupozorňuje – jen se zaznamená pro případ, že by Yahoo u některého titulu selhalo.
-  subscribeStockApiKey(key => {
-    const changed = key !== stockApiKey;
-    stockApiKey = key;
+  subscribeSettings(({ twelveDataKey, corsProxy }) => {
+    const changed = twelveDataKey !== stockApiKey || corsProxy !== lastProxy;
+    stockApiKey = twelveDataKey;
+    lastProxy = corsProxy;
+    setCustomProxy(corsProxy);
     // Klíč mohl dorazit až po prvním pokusu o ceny. Vynucovat se to nesmí (spálilo by
     // to kredity při každém načtení) – chybové stavy se necachují nadlouho, takže se
     // ceny dotáhnou i tímhle běžným, cache-respektujícím voláním.

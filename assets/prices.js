@@ -21,7 +21,10 @@ async function fetchJson(url, ms = TIMEOUT_MS){
       // chyba dat (špatný symbol – opraví se jinam) tvářila jako výpadek spojení.
       let body = null;
       try { body = await res.json(); } catch(e){}
-      if(body) return body;
+      if(body){
+        try { Object.defineProperty(body, '__httpStatus', { value: res.status, enumerable: false }); } catch(e){}
+        return body;
+      }
       throw new Error('HTTP ' + res.status);
     }
     return await res.json();
@@ -87,6 +90,22 @@ async function fetchCryptoPrices(ids){
    Yahoo neposílá CORS hlavičky spolehlivě, takže se zkouší přímé volání a teprve když
    selže, veřejné CORS proxy. Ven jde jen ticker, žádné částky ani osobní údaje.
    Symboly proto pište v konvenci Yahoo (`RHM.DE`, `HO.PA`, `BY6.DE`). */
+/* Vlastní proxy (např. Cloudflare Worker) z Nastavení. Veřejné CORS proxy bývají
+   zablokované rozšířeními nebo DNS filtrem a Yahoo z evropských IP často vyžaduje
+   souhlas s cookies – vlastní proxy obojí obchází a je spolehlivá. Očekává se adresa,
+   na kterou se připojí cílové URL (…/?url= nebo …/ – doplní se automaticky). */
+let customProxy = '';
+export function setCustomProxy(url){ customProxy = (url || '').trim(); }
+function customGateway(){
+  if(!customProxy) return null;
+  const base = customProxy;
+  return {
+    name: 'vlastní proxy',
+    wrap: u => base.includes('?') ? base + encodeURIComponent(u)
+                                  : base.replace(/\/+$/, '') + '/?url=' + encodeURIComponent(u)
+  };
+}
+
 const YAHOO_GATEWAYS = [
   // Yahoo má dva rovnocenné hostitele – když jeden omezí provoz, druhý často jede dál.
   { name: 'přímo q1', wrap: u => u },
@@ -98,6 +117,9 @@ const YAHOO_GATEWAYS = [
     unwrap: d => (d && typeof d.contents === 'string') ? JSON.parse(d.contents) : d },
   { name: 'codetabs', wrap: u => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u) },
   { name: 'corsproxy', wrap: u => 'https://corsproxy.io/?url=' + encodeURIComponent(u) },
+  { name: 'cors.lol', wrap: u => 'https://api.cors.lol/?url=' + encodeURIComponent(u) },
+  { name: 'whateverorigin', wrap: u => 'https://www.whateverorigin.org/get?url=' + encodeURIComponent(u),
+    unwrap: d => (d && typeof d.contents === 'string') ? JSON.parse(d.contents) : d },
 ];
 const yahooUrl = symbol => `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}`
   + '?range=1y&interval=1d';
@@ -140,8 +162,18 @@ async function fetchYahooViaRaw(gw, symbol){
   const data = gw.unwrap ? gw.unwrap(raw) : raw;
   const r = data && data.chart && data.chart.result && data.chart.result[0];
   if(!r){
-    const msg = data && data.chart && data.chart.error && data.chart.error.description;
-    throw badSymbol(msg || 'symbol nenalezen');
+    const status = data && data.__httpStatus;
+    // Yahoo hlásí problémy dvěma různými tvary a splést si je stálo hodně času:
+    //   chart.error   = titul neexistuje → má smysl zkusit jinou burzu
+    //   finance.error = dotaz odmítnut (401 Invalid Cookie/Crumb, souhlas s cookies
+    //                   v EU, 429 limit) → jiná burza nepomůže, je potřeba jiná cesta
+    const fin = data && data.finance && data.finance.error;
+    if(fin) throw new Error('Yahoo dotaz odmítl: ' + (fin.description || fin.code || '?')
+      + (status ? ' (HTTP ' + status + ')' : ''));
+    const ch = data && data.chart && data.chart.error;
+    if(ch) throw badSymbol(ch.description || ch.code || 'symbol nenalezen');
+    if(status && status >= 400) throw new Error('HTTP ' + status);
+    throw new Error('neznámá odpověď: ' + JSON.stringify(data).slice(0, 140));
   }
   const meta = r.meta || {};
   const stamps = r.timestamp || [];
@@ -186,11 +218,16 @@ function rememberGateway(name){
 function preferredGateway(){
   try {
     const name = localStorage.getItem(YAHOO_GW_KEY);
-    return YAHOO_GATEWAYS.find(g => g.name === name) || null;
+    return allGateways().find(g => g.name === name) || null;
   } catch(e){ return null; }
 }
 
 /** Cena + roční historie jednoho tickeru. Osvědčená brána, jinak všechny naráz. */
+function allGateways(){
+  const mine = customGateway();
+  return mine ? [mine, ...YAHOO_GATEWAYS] : YAHOO_GATEWAYS;
+}
+
 async function fetchYahooSymbol(symbol){
   const pref = preferredGateway();
   let firstErr = null;
@@ -202,7 +239,7 @@ async function fetchYahooSymbol(symbol){
       firstErr = e;
     }
   }
-  const rest = YAHOO_GATEWAYS.filter(g => g !== pref);
+  const rest = allGateways().filter(g => g !== pref);
   try {
     return await fetchYahooRace(symbol, rest);
   } catch(e){
