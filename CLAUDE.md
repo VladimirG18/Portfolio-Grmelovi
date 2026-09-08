@@ -186,6 +186,13 @@ Tlačítko 📈 rozbalí pod řádkem graf vývoje ceny (`fetchPriceHistory` v `
 Rozbalené grafy si drží `openCharts` (Set id pozic), aby překreslení tabulky (nové ceny,
 změna měny) graf nezavřelo.
 
+### 4bbb) Alokace (donut)
+
+Legenda u donutu ukazuje u každé skupiny **hodnotu, podíl a zisk/ztrátu** (v zobrazovací
+měně, protože skupina sčítá pozice v různých měnách). U hotovosti se zisk neukazuje –
+nákupní cena je vždy 1, takže by to bylo vždy nula a jen by to mátlo. `renderAlloc()`
+si kvůli tomu sčítá i `invested` po typech.
+
 ### 4c) Chyby cen a ruční cena
 
 Když se živou cenu nepodaří stáhnout, je to vidět i tehdy, když se místo ní použije ruční
@@ -310,6 +317,10 @@ nezná, zkusí se sourozenecké burzy (`VENUE_ALTS`: `.DE` → `.F`, `.SG`, `.BE
 typický případ je BYD, který se v Německu obchoduje ve Frankfurtu (`BY6.F`), ne na XETRA.
 Funkční burza se zapamatuje (`portfolio-symbol-alias-v1`), takže se příště ptáme rovnou
 jí; v tabulce je u ceny poznámka `burza BY6.F`. Uložený symbol u pozice se **nepřepisuje**.
+
+U každé pozice se v diagnostice ukazuje i **která brána cenu doručila** (`gateway` se
+protahuje z `fetchYahooRace` až do `pricesCache`). Bez toho se pletlo „zapamatovaná
+brána" (poslední úspěšná) s tím, kdo obsloužil právě zobrazenou cenu.
 
 **Diagnostika (tlačítko 🩺 u „Aktualizovat ceny")** vypíše, co přesně vrátila každá brána
 u každého symbolu (`priceDiagnostics()` v `prices.js`, panel skládá `diagnosticsText()`

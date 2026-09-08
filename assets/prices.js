@@ -209,7 +209,7 @@ async function fetchYahooRace(symbol, gws, range){
   try {
     const r = await Promise.any(gws.map(gw => fetchYahooVia(gw, symbol, range).then(v => ({ gw, v }))));
     rememberGateway(r.gw.name);
-    return r.v;
+    return { ...r.v, gateway: r.gw.name };
   } catch(agg){
     const errs = (agg && agg.errors) || [agg];
     // Odpověď dorazila, ale Yahoo ten ticker nezná → jiná brána to nespraví.
@@ -414,7 +414,7 @@ async function fetchStockPrices(symbols, apiKey){
   const missing = [];
   results.forEach(({ sym, y, e }) => {
     if(y){
-      out[sym] = { price: y.price, currency: y.currency };
+      out[sym] = { price: y.price, currency: y.currency, gateway: y.gateway };
       // Cena přišla z jiné burzy, než jaká je u pozice uložená – ať je to vidět.
       if(y.usedSymbol && y.usedSymbol !== sym) out[sym].altSymbol = y.usedSymbol;
     } else {
@@ -632,7 +632,8 @@ export async function fetchAllPrices(positions, apiKey){
       else error = cryptoErr || 'Symbol nenalezen na CoinGecko';
     } else {
       const r = stockResults[p.symbol];
-      if(r && r.price != null) auto = { priceNative: r.price, currency: r.currency || p.currency, altSymbol: r.altSymbol };
+      if(r && r.price != null) auto = { priceNative: r.price, currency: r.currency || p.currency,
+        altSymbol: r.altSymbol, gateway: r.gateway };
       else {
         error = (r && r.error) || stockErr || 'Symbol nenalezen';
         local = !!(r && r.local); // naše vlastní hláška, ne odpověď API – necachovat

@@ -415,20 +415,31 @@ function renderHistory(){
 }
 
 function renderAlloc(t){
+  // Vedle podílu na portfoliu sčítáme i vložený kapitál, ať jde u každé skupiny ukázat
+  // zisk/ztrátu – jinak je z rozpadu vidět jen „kolik toho je", ne „jak si to vede".
   const byType = { akcie: 0, krypto: 0, hotovost: 0 };
+  const investedByType = { akcie: 0, krypto: 0, hotovost: 0 };
   positions.forEach(p => {
     const c = computed[p.id];
-    if(c && c.value != null) byType[p.type] = (byType[p.type] || 0) + c.value;
+    if(!c || c.value == null) return;
+    byType[p.type] = (byType[p.type] || 0) + c.value;
+    if(c.invested != null) investedByType[p.type] = (investedByType[p.type] || 0) + c.invested;
   });
   const total = byType.akcie + byType.krypto + byType.hotovost;
   if(!total){
     allocWrap.innerHTML = '<div class="donut-empty">Zatím nejsou žádné pozice s načtenou cenou.</div>';
     return;
   }
+  const seg = (label, type, color) => {
+    const val = byType[type], inv = investedByType[type];
+    // U hotovosti nemá zisk smysl (nákupní cena = 1), tak ho neukazuj.
+    const gain = (type === 'hotovost' || !inv) ? null : val - inv;
+    return { label, val, color, gain, gainPct: gain == null ? null : (gain / inv) * 100 };
+  };
   const segs = [
-    { label: 'Akcie & ETF', val: byType.akcie, color: 'var(--series-1)' },
-    { label: 'Kryptoměny', val: byType.krypto, color: 'var(--series-2)' },
-    { label: 'Hotovost', val: byType.hotovost, color: 'var(--series-3)' }
+    seg('Akcie & ETF', 'akcie', 'var(--series-1)'),
+    seg('Kryptoměny', 'krypto', 'var(--series-2)'),
+    seg('Hotovost', 'hotovost', 'var(--series-3)')
   ].filter(s => s.val > 0);
 
   const r = 60, cx = 70, cy = 70, circumference = 2 * Math.PI * r;
@@ -449,6 +460,8 @@ function renderAlloc(t){
       <span class="aleg-dot" style="background:${s.color}"></span>
       <span class="aleg-label">${s.label}</span>
       <span class="aleg-val">${fmtMoney(s.val)} · ${((s.val / total) * 100).toFixed(0)} %</span>
+      <span class="aleg-gain ${s.gain == null ? '' : (s.gain >= 0 ? 'gain' : 'loss')}">${
+        s.gain == null ? '' : signed(s.gain, displayCur) + ' (' + fmtPct(s.gainPct) + ')'}</span>
     </div>`).join('');
 
   allocWrap.innerHTML = `
@@ -790,6 +803,7 @@ function diagnosticsText(){
     if(r.live) parts.push('živě z ' + r.live);
     if(r.manual) parts.push('ruční cena');
     if(r.altSymbol) parts.push('burza ' + r.altSymbol);
+    if(r.gateway) parts.push('přes ' + r.gateway);
     if(r.cachedAt) parts.push('čas ' + new Date(r.cachedAt).toLocaleTimeString('cs-CZ'));
     const err = r.error || r.staleError;
     lines.push(`  ${p.symbol}: ${parts.join(', ') || 'bez ceny'}${err ? '\n     CHYBA: ' + err : ''}`);
