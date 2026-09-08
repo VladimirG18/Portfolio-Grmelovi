@@ -293,9 +293,11 @@ function renderTable(){
       // Máme cenu → chybu z posledního (neúspěšného) pokusu nekřič, jen naznač stáří.
       let note = '';
       if(price.live) note = 'živě · ' + price.live;
-      else if(price.manual) note = price.error ? 'ručně zadaná · živá cena selhala' : 'ručně zadaná';
+      else if(price.manual) note = 'ručně zadaná' + (price.error ? ' · ' + shortReason(price.error) : '');
       else if(price.staleError && price.cachedAt) note = 'z ' + new Date(price.cachedAt).toLocaleTimeString('cs-CZ', { hour: '2-digit', minute: '2-digit' });
       else if(price.staleError) note = 'poslední známá';
+      // Cena dorazila z jiné burzy téhož titulu (uložený ticker Yahoo nezná).
+      if(price.altSymbol) note = (note ? note + ' · ' : '') + 'burza ' + price.altSymbol;
       // Cena se ukazuje v měně pozice, ať se dá porovnat s nákupní cenou; když burza
       // kotuje v jiné měně (Saab ve SEK), je původní kurz pod tím drobným písmem.
       const otherCur = price.currency !== cur && c.priceInPos != null;
@@ -501,6 +503,16 @@ function chartRow(p){
   tr.appendChild(td);
   fillChart(host, p);
   return tr;
+}
+
+/* Krátké zařazení chyby přímo do řádku – celá hláška je ve status baru, ale ta je
+   dlouhá a na screenshotu bývá odstřižená. Tohle napoví, jestli je problém v tickeru
+   (opraví se změnou symbolu) nebo ve zdroji dat (opraví se sám). */
+function shortReason(err){
+  const e = String(err || '');
+  if(/nezná ticker/i.test(e)) return 'neplatný ticker';
+  if(/přímo ani přes proxy|nedostupn|limit/i.test(e)) return 'zdroj cen nedostupný';
+  return 'živá cena selhala';
 }
 
 function escapeHtml(s){

@@ -273,6 +273,15 @@ Stylesheet v hlavičce totiž blokuje spuštění skriptů – při pomalém/ned
 Fonts se start stránky odkládal o desítky sekund a vypadalo to jako pomalé ceny.
 Nevracej to na obyčejný `rel="stylesheet"`.
 
+**Neznámý ticker → zkus jinou burzu téhož titulu.** Yahoo u neznámého symbolu vrací
+**HTTP 404 s JSON tělem**, ve kterém je popis (`chart.error.description`) – proto `fetchJson`
+u chybové odpovědi **nejdřív zkusí přečíst tělo** a teprve pak hlásí HTTP chybu. Bez toho
+se „špatný symbol" tvářil jako výpadek spojení a nešlo na to reagovat. Když Yahoo ticker
+nezná, zkusí se sourozenecké burzy (`VENUE_ALTS`: `.DE` → `.F`, `.SG`, `.BE`, `.MU`…) –
+typický případ je BYD, který se v Německu obchoduje ve Frankfurtu (`BY6.F`), ne na XETRA.
+Funkční burza se zapamatuje (`portfolio-symbol-alias-v1`), takže se příště ptáme rovnou
+jí; v tabulce je u ceny poznámka `burza BY6.F`. Uložený symbol u pozice se **nepřepisuje**.
+
 **Cena chodí v měně burzy**, ne v měně pozice (Saab `SAAB-B.ST` kotuje ve SEK, pozice je
 v EUR). `fetchAllPrices` proto vrací `currency` z Yahoo a `recompute()` v `portfolio.js`
 z ní počítá `priceInPos` (přepočet do měny pozice) – v tabulce je hlavní údaj v měně pozice

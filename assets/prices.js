@@ -15,7 +15,15 @@ async function fetchJson(url, ms = TIMEOUT_MS){
   const timer = setTimeout(() => ctrl.abort(), ms);
   try {
     const res = await fetch(url, { signal: ctrl.signal, cache: 'no-store' });
-    if(!res.ok) throw new Error('HTTP ' + res.status);
+    if(!res.ok){
+      // Chybové odpovědi často nesou vysvětlení v těle: Yahoo u neznámého tickeru vrací
+      // 404 s popisem, Twelve Data 429 se zprávou o kreditech. Bez přečtení těla by se
+      // chyba dat (špatný symbol – opraví se jinam) tvářila jako výpadek spojení.
+      let body = null;
+      try { body = await res.json(); } catch(e){}
+      if(body) return body;
+      throw new Error('HTTP ' + res.status);
+    }
     return await res.json();
   } catch(e){
     if(e && e.name === 'AbortError') throw new Error(`nestihl odpovědět do ${Math.round(ms / 1000)} s`);
@@ -149,15 +157,15 @@ function preferredGateway(){
   } catch(e){ return null; }
 }
 
-/** Cena + roční historie. Nejdřív osvědčená brána, jinak všechny naráz (první vyhrává). */
-async function fetchYahoo(symbol){
+/** Cena + roční historie jednoho tickeru. Osvědčená brána, jinak všechny naráz. */
+async function fetchYahooSymbol(symbol){
   const pref = preferredGateway();
   let firstErr = null;
   if(pref){
     try {
       return await fetchYahooRace(symbol, [pref]);
     } catch(e){
-      if(e && e.symbolIssue) throw new Error(unknownSymbolMsg(symbol, e.message));
+      if(e && e.symbolIssue) throw e;
       firstErr = e;
     }
   }
@@ -165,9 +173,90 @@ async function fetchYahoo(symbol){
   try {
     return await fetchYahooRace(symbol, rest);
   } catch(e){
-    if(e && e.symbolIssue) throw new Error(unknownSymbolMsg(symbol, e.message));
+    if(e && e.symbolIssue) throw e;
     throw new Error('Yahoo se nepodařilo načíst – přímo ani přes proxy ('
       + (firstErr ? firstErr.message + '; ' : '') + e.message + ')');
+  }
+}
+
+/* ---------- Náhradní burzy ----------
+   Tentýž titul bývá na Yahoo jen na některém parkete: BYD se v Německu obchoduje spíš
+   ve Frankfurtu/Stuttgartu než na XETRA, takže „BY6.DE" nemusí existovat, i když
+   „BY6.F" ano. Když Yahoo ticker nezná, zkusíme sourozenecké burzy téhož titulu –
+   jde o stejnou akcii ve stejné měně, jen jiné místo obchodování. */
+const VENUE_ALTS = {
+  '.DE': ['.F', '.SG', '.BE', '.MU', '.DU', '.HM'],   // Německo: XETRA × regionální burzy
+  '.F':  ['.DE', '.SG', '.BE', '.MU', '.DU', '.HM'],
+  '.SG': ['.DE', '.F', '.BE', '.MU'],
+  '.MI': ['.F', '.DE'],                                // Milán → německé listingy
+  '.MC': ['.F', '.DE'],                                // Madrid
+  '.PA': ['.F', '.DE'],                                // Paříž
+  '.ST': ['.F', '.DE'],                                // Stockholm
+};
+/* Která burza u daného tickeru zabrala. Bez toho by se při každé obnově znovu ptalo na
+   symbol, o kterém už víme, že ho Yahoo nezná (a k tomu na všechny náhradní burzy). */
+const ALIAS_KEY = 'portfolio-symbol-alias-v1';
+function loadAliases(){
+  try { return JSON.parse(localStorage.getItem(ALIAS_KEY)) || {}; } catch(e){ return {}; }
+}
+function saveAliases(map){
+  try { localStorage.setItem(ALIAS_KEY, JSON.stringify(map)); } catch(e){}
+}
+function rememberAlias(from, to){
+  const map = loadAliases();
+  if(map[from] === to) return;
+  map[from] = to;
+  saveAliases(map);
+}
+function forgetAlias(from){
+  const map = loadAliases();
+  if(!(from in map)) return;
+  delete map[from];
+  saveAliases(map);
+}
+
+function venueAlternatives(symbol){
+  const dot = symbol.lastIndexOf('.');
+  if(dot < 1) return [];
+  const base = symbol.slice(0, dot), suffix = symbol.slice(dot).toUpperCase();
+  return (VENUE_ALTS[suffix] || []).map(s => base + s);
+}
+
+/** Cena + roční historie. Když Yahoo ticker nezná, zkusí stejný titul na jiné burze. */
+async function fetchYahoo(symbol){
+  // 1) Burza, která u tohohle tickeru zabrala minule.
+  const alias = loadAliases()[symbol];
+  if(alias && alias !== symbol){
+    try {
+      return { ...await fetchYahooSymbol(alias), usedSymbol: alias };
+    } catch(e){
+      if(!e || !e.symbolIssue) throw e;
+      forgetAlias(symbol); // přestala platit, zkus to znovu od začátku
+    }
+  }
+
+  // 2) Ticker tak, jak je uložený u pozice.
+  let firstErr;
+  try {
+    const r = await fetchYahooSymbol(symbol);
+    forgetAlias(symbol);
+    return { ...r, usedSymbol: symbol };
+  } catch(e){
+    if(!e || !e.symbolIssue) throw e;
+    firstErr = e;
+  }
+
+  // 3) Tentýž titul na jiné burze.
+  const alts = venueAlternatives(symbol);
+  if(!alts.length) throw new Error(unknownSymbolMsg(symbol, firstErr.message));
+  try {
+    const r = await Promise.any(alts.map(alt =>
+      fetchYahooSymbol(alt).then(v => ({ ...v, usedSymbol: alt }))));
+    rememberAlias(symbol, r.usedSymbol);
+    return r;
+  } catch(agg){
+    throw new Error(unknownSymbolMsg(symbol, firstErr.message)
+      + ' – nepomohly ani jiné burzy (' + alts.join(', ') + ')');
   }
 }
 
@@ -239,6 +328,8 @@ async function fetchStockPrices(symbols, apiKey){
   results.forEach(({ sym, y, e }) => {
     if(y){
       out[sym] = { price: y.price, currency: y.currency };
+      // Cena přišla z jiné burzy, než jaká je u pozice uložená – ať je to vidět.
+      if(y.usedSymbol && y.usedSymbol !== sym) out[sym].altSymbol = y.usedSymbol;
       // Historie přišla stejným dotazem – ulož ji, ať se graf otevře bez dalšího volání.
       if(y.points && y.points.length > 2) cacheStockHistory(sym, y.points, y.currency);
     } else {
@@ -463,7 +554,7 @@ export async function fetchAllPrices(positions, apiKey){
       else error = cryptoErr || 'Symbol nenalezen na CoinGecko';
     } else {
       const r = stockResults[p.symbol];
-      if(r && r.price != null) auto = { priceNative: r.price, currency: r.currency || p.currency };
+      if(r && r.price != null) auto = { priceNative: r.price, currency: r.currency || p.currency, altSymbol: r.altSymbol };
       else {
         error = (r && r.error) || stockErr || 'Symbol nenalezen';
         local = !!(r && r.local); // naše vlastní hláška, ne odpověď API – necachovat
