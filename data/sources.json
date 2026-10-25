@@ -1,0 +1,51 @@
+{
+  "_comment": "Zdroje pro zprávy a výhledy. Používá je skript scripts/update_news.py (varianta 1) i skill aktualizace-zprav (varianta 2).",
+
+  "queries": {
+    "RHM.DE": "Rheinmetall",
+    "HO.PA": "Thales defence",
+    "BY6.DE": "BYD",
+    "bitcoin": "bitcoin"
+  },
+
+  "feeds": {
+    "akcie": [
+      { "name": "Yahoo Finance", "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s={symbol}&region=US&lang=en-US" },
+      { "name": "Google News", "url": "https://news.google.com/rss/search?q={query}+when:14d&hl=en-US&gl=US&ceid=US:en" }
+    ],
+    "krypto": [
+      { "name": "CoinDesk", "url": "https://www.coindesk.com/arc/outboundfeeds/rss/", "filter": true },
+      { "name": "Cointelegraph", "url": "https://cointelegraph.com/rss", "filter": true },
+      { "name": "Google News", "url": "https://news.google.com/rss/search?q={query}+when:14d&hl=en-US&gl=US&ceid=US:en" }
+    ]
+  },
+
+  "trusted": [
+    "reuters.com", "ft.com", "bloomberg.com", "wsj.com", "cnbc.com", "barrons.com",
+    "defensenews.com", "breakingdefense.com", "janes.com", "caixin.com", "cnevpost.com",
+    "coindesk.com", "theblock.co", "cointelegraph.com", "marketscreener.com", "finance.yahoo.com"
+  ],
+
+  "manual": {
+    "akcie": [
+      "Reuters (reuters.com) – zpravodajství, volně čitelné",
+      "Firemní IR stránky a tiskové zprávy – primární zdroj (výsledky, zakázky, výhled)",
+      "MarketScreener (marketscreener.com) – konsensus analytiků a cílové ceny",
+      "Yahoo Finance – analytici, doporučení, zprávy k tickeru",
+      "Defense News, Breaking Defense, Janes – kontext obranných rozpočtů a zakázek",
+      "NATO, SIPRI, Evropská komise – data o výdajích na obranu",
+      "BYD: Reuters, Caixin, CnEVPosts (měsíční prodeje)"
+    ],
+    "krypto": [
+      "CoinDesk, The Block, Reuters Crypto – zprávy",
+      "Farside (farside.co.uk) – toky do spotových BTC ETF",
+      "Glassnode, CryptoQuant – on-chain data (volná část)",
+      "Coinglass – deriváty (funding, likvidace)",
+      "Research Fidelity, Bitwise, VanEck, ARK, Galaxy – predikce s odůvodněním"
+    ],
+    "makro": [
+      "Fed a ECB – sazby, zápisy ze zasedání",
+      "Reuters Markets – makro kontext"
+    ]
+  }
+}

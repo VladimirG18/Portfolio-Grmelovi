@@ -3,6 +3,7 @@ import { fetchAllPrices, convert, fxStatus, fetchPriceHistory, priceDiagnostics,
 import { startLivePrice, hasLiveSource } from './live.js?v=__CACHEBUST__';
 import { subscribeSettings } from './settings.js?v=__CACHEBUST__';
 import { renderPriceChart } from './chart.js?v=__CACHEBUST__';
+import { fillNews } from './news.js?v=__CACHEBUST__';
 
 const TYPE_LABEL = { akcie: 'Akcie / ETF', krypto: 'Kryptoměna', hotovost: 'Hotovost' };
 const CUR = ['CZK', 'USD', 'EUR', 'GBP'];
@@ -340,6 +341,7 @@ function renderTable(){
       <td>
         <div class="rowactions">
           ${isCash ? '' : `<button class="iconbtn chart${openCharts.has(p.id) ? ' on' : ''}" title="Graf vývoje ceny">📈</button>`}
+          ${isCash ? '' : `<button class="iconbtn news${openNews.has(p.id) ? ' on' : ''}" title="Zprávy, komentář a výhled">📰</button>`}
           ${isCash ? '' : '<button class="iconbtn sell" title="Označit jako prodané">💰</button>'}
           <button class="iconbtn edit" title="Upravit">✏️</button>
           <button class="iconbtn del" title="Smazat">🗑</button>
@@ -352,12 +354,25 @@ function renderTable(){
         if(openCharts.has(p.id)){
           openCharts.delete(p.id);
           chartBtn.classList.remove('on');
-          const next = tr.nextElementSibling;
-          if(next && next.classList.contains('chartrow')) next.remove();
+          removeSubRow(tr, '.chartbox:not(.newsbox)');
         } else {
           openCharts.add(p.id);
           chartBtn.classList.add('on');
           tr.after(chartRow(p));
+        }
+      });
+    }
+    const newsBtn = tr.querySelector('.news');
+    if(newsBtn){
+      newsBtn.addEventListener('click', () => {
+        if(openNews.has(p.id)){
+          openNews.delete(p.id);
+          newsBtn.classList.remove('on');
+          removeSubRow(tr, '.newsbox');
+        } else {
+          openNews.add(p.id);
+          newsBtn.classList.add('on');
+          lastSubRow(tr).after(newsRow(p));
         }
       });
     }
@@ -378,6 +393,7 @@ function renderTable(){
     tbody.appendChild(tr);
     // Překreslení tabulky (nové ceny, změna měny) nesmí zavřít rozbalený graf.
     if(openCharts.has(p.id)) tbody.appendChild(chartRow(p));
+    if(openNews.has(p.id)) tbody.appendChild(newsRow(p));
   });
 }
 
@@ -517,6 +533,35 @@ function chartRow(p){
   tr.appendChild(td);
   fillChart(host, p);
   return tr;
+}
+
+/* ---------- Zprávy a výhled (rozklik) ---------- */
+const openNews = new Set();
+
+function newsRow(p){
+  const tr = document.createElement('tr');
+  tr.className = 'chartrow';
+  const td = document.createElement('td');
+  td.colSpan = 8;
+  const host = document.createElement('div');
+  host.className = 'chartbox newsbox';
+  td.appendChild(host);
+  tr.appendChild(td);
+  fillNews(host, p);
+  return tr;
+}
+
+// Pod řádkem pozice může být rozbalený graf i zprávy – řádky se proto hledají
+// podle obsahu, ne podle toho, co je zrovna hned pod tlačítkem.
+function lastSubRow(tr){
+  let last = tr;
+  while(last.nextElementSibling && last.nextElementSibling.classList.contains('chartrow')) last = last.nextElementSibling;
+  return last;
+}
+function removeSubRow(tr, selector){
+  for(let r = tr.nextElementSibling; r && r.classList.contains('chartrow'); r = r.nextElementSibling){
+    if(r.querySelector(selector)){ r.remove(); return; }
+  }
 }
 
 /* Krátké zařazení chyby přímo do řádku – celá hláška je ve status baru, ale ta je

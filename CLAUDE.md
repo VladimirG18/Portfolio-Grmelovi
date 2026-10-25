@@ -83,6 +83,7 @@ Web: `https://vladimirg18.github.io/Portfolio-Grmelovi/`
   s pevným viewBoxem a `preserveAspectRatio="none"` se roztahoval i text popisků.
   **Pozor:** `el.hidden = true/false` na SVG prvku nefunguje (není to HTML prvek) – skrývání
   zaměřovače jde přes `setAttribute('hidden')` + vlastní CSS pravidlo.
+- `assets/news.js` + `data/news.json` + `data/sources.json` + `scripts/update_news.py` – zprávy a výhledy (viz §4h).
 - `assets/portfolio.js` – hlavní logika dashboardu: Firestore CRUD (kolekce `portfolio_pozice`),
   přihlášení k odběru sdíleného API klíče, přepočty na CZK, vykreslení tabulky a alokačního
   grafu (inline SVG donut).
@@ -377,6 +378,22 @@ odstřihne. `PRICE_TTL_MS` (115 s) je proto sladěné s intervalem obnovy.
 Co **nedělat**: tahat ceny z DEGIRO (žádné veřejné API, vyžadovalo by přihlašovací údaje
 na veřejně hostovaném webu, jejich kurzy jsou stejně zpožděné) ani z Anycoinu (směnárna,
 ne burza – její cena je burzovní kurz + marže).
+
+### 4h) Zprávy, komentář a výhledy (📰 u řádku pozice)
+
+Po rozkliku 📰 se pod řádkem ukáže souhrn „co se děje a proč", body „co to pohání", výhledy
+třetích stran, rizika a titulky. Stránka **jen čte statický `data/news.json`** (`assets/news.js`),
+nestahuje nic z cizích webů – žádné CORS ani proxy. Klíč záznamu = `symbol` pozice. Plní ho dvě cesty:
+- **Varianta 1 – automat**: `.github/workflows/news.yml` (po–pá ráno) spustí `scripts/update_news.py`:
+  pozice z Firestore → titulky z RSS (`data/sources.json`: Yahoo Finance, Google News, CoinDesk,
+  Cointelegraph) → souhrn přes Anthropic API (secret `ANTHROPIC_API_KEY`, nepovinný; bez něj se
+  obnoví jen titulky) → commit → `gh workflow run deploy.yml` (push z `GITHUB_TOKEN` nasazení
+  nespouští sám). Souhrn smí vycházet jen z titulků, predikce jen z těch, kde je uveden zdroj.
+- **Varianta 2 – ručně v chatu**: skill `.claude/skills/aktualizace-zprav` (uživatel řekne
+  „aktualizuj zprávy"). Záznamy s `mode: "claude"` mladší 3 dnů automat nepřepisuje.
+
+Predikce jsou vždy názory třetích stran se zdrojem a datem, ne naše. Žádná doporučení kup/prodej.
+Zdroje za paywallem (FT, Bloomberg, WSJ) jdou číst jen na úrovni titulku.
 
 ## 5) Známá omezení / co dodělat příště, když si to řeknou
 

@@ -340,3 +340,14 @@ html[data-gate="locked"] .site-header, html[data-gate="locked"] .content, html[d
 /* Čas poslední aktualizace, když nová cena vůbec nedorazila – ať to nevypadá,
    že jsou ceny čerstvé. */
 #last-update.warn{ color: var(--danger); font-weight: 600 }
+
+/* ---------- Zprávy a výhled (rozklik u pozice) ---------- */
+.news-head{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:8px; }
+.news-date, .news-meta{ color:var(--muted); font-size:.78rem; }
+.news-meta{ margin-left:8px; }
+.news-summary{ margin:0 0 6px; max-width:80ch; line-height:1.55; }
+.newsbox h4{ margin:14px 0 6px; font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
+.newsbox h4 small{ text-transform:none; letter-spacing:0; font-weight:500; }
+.news-list, .news-heads{ margin:0; padding-left:18px; max-width:90ch; font-size:.9rem; line-height:1.5; }
+.news-list li, .news-heads li{ margin:3px 0; }
+.news-heads{ list-style:none; padding-left:0; }
