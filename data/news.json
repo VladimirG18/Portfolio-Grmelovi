@@ -1,64 +1,37 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-25T20:27:12+00:00",
+  "updatedAt": "2026-10-25T21:00:00+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "auto",
+      "mode": "claude",
       "asOf": "2026-10-25",
-      "summary": "",
-      "drivers": [],
-      "outlook": [],
-      "risks": [],
+      "summary": "BYD za září 2026 prodal 463 561 vozidel (+17,0 % meziročně, nejvíc letos); třetí čtvrtletí poprvé po čtyřech čtvrtletích meziročně vyrostlo (+18,8 %). Růst táhne zahraničí, domácí prodeje meziročně klesají. Za prvních devět měsíců je prodej stále o necelá 4 % pod loňskem. Říjnová čísla vyjdou kolem 1. listopadu.",
+      "drivers": [
+        "Zahraniční prodeje 180 700 ks (+153,6 % meziročně), tvoří cca 39 % celku",
+        "Rekordní čistě elektrické osobní vozy (273 143 ks, +33,2 %)",
+        "Domácí trh meziročně −13 %; plug-in hybridy −2,4 % (konec čtyřměsíčního růstu)"
+      ],
+      "outlook": [
+        {
+          "source": "Deutsche Bank (podle CnEVPost, odkazuje na vedení BYD)",
+          "view": "BYD zvýšil výhled zahraničních prodejů na 2026 na 1,9–2,0 mil. vozidel a míří přes 2,5 mil. v roce 2027",
+          "target": "",
+          "date": "2026-10-01",
+          "url": "https://cnevpost.com/2026/10/01/byd-sept-2026-sales/"
+        }
+      ],
+      "risks": [
+        "Slabý domácí trh (−30 % za devět měsíců)",
+        "Pokles plug-in hybridů po čtyřech měsících růstu"
+      ],
       "headlines": [
         {
-          "title": "BYD Stock Has The Bull Case Changed After Global SUV Sales Strength - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNS0MzbWNLeXZMc2lfUWtaUU5VX3REdW51UHd5dkVEcmx5Y2JIT0NScjBnNUJhYlhjNXpjdEVOM0tsOTVPSy04eExEeFFmdW1tVFVCT0J4MUV2Q1BnZVFBUVpXQnBQS3U4c0l6bUtyUXlPUm92SUZtRHZneFh6enJUWi12WE9RVno5bmZfdXpDR1FGM2ZYYTBB?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-24"
-        },
-        {
-          "title": "Boyd Gaming (BYD) Could Be 23% Below Fair Value After Q3 Earnings - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOME5MNGVpY3l1MENMTGRPV0NPN3B3UzhidjVqOW1peFFnUjBKc3BQM2ZqN0c4dkZSaExqa1JBMGZnRmVUTEVnbXBQczBzZ09uVWZfRkg1TnhxckdnRHgyYXhTYXFieVpWSzZUQlhWNEhqdzR2VjFvUkd5X2p4aGM0VmhIMFFXb2wxYWhHOUMydUxzV1E?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-24"
-        },
-        {
-          "title": "BYD (SEHK:1211) Stock Sees Modest Fair Value Cut As Analysts Weigh Growth And Risks - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNHR1QmRRU1F4dFBZUUQ3S0hoXy16YnF2QzhfdVBGNGRHTXJzT0tYNm9qa1lhcjJNVzl5RDB1Z01sZW5FdVZsa1lMd2pDV0dHZVJHc2o0ZVJfSE5MMVlFZC1DS1dXcGNYWjFGNTRiRFFOanAxMDhrNGhkZnRKSzV0ajhwcFhEZVJRdzNMazFrZ1NURjQ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-24"
-        },
-        {
-          "title": "Is Boyd Gaming (BYD) Trading At A Discount After Mixed Q3 Results? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQR2w3VEw2Q1JOSktMN0Z3WnJHNXl5RlFpQ0JNVVZoSEJncG9RdmJyb1ZzR25ZbVJCQURuWk1HSGZ3d0doekxkSENUbkdkb25IUXV1Wkd5N015amxBQzd4VG1RcjV3dmxndlRveHJrYkhQYnhNcXpha2ZTM1FHQkN5RTdLRElYRl9NNFVzdDNZTi16ejV1c25HVkhfM3JGQQ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-24"
-        },
-        {
-          "title": "Boyd Gaming (BYD) Stock Price Drifts After Q3 Results Squeeze Margins - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeDRKY2REbkt0cFpjaThRakRWUktXdk5kOGJ1UVlraDFxT3FBeFZwRV9NTFluRzA1MmNrelROMm9tU1o1a3psaU1rZ0RIX1RCMlpCT1Z3R3VTdktwd2NvektXem9jV2Z2cFBBWGdkODlubDBsakRuUUJfZzhXT3NYOEYzb24zTDJSY08wRnVjbXRqcERNZWpZ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-24"
-        },
-        {
-          "title": "BYD Q3 deep dive: property investments offset Las Vegas destination softness - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPeGZqSXZfTWNQYzczY1J3cFBaMU9vY3RsNGE3OUZpVTlVRFBQQkxMTl9lV1Nxc0ZuSWxvNzFoYTAzOTJNb1VRRGhrbHRCcVM2S3JFa3Zjc1hjN1dfdlF0QkRUaTBfSUxQWFJSU2N3alZ0eDFOTlNxNS1Qa0w3RjYzU0pRMTI2UUtNajVQS0dwU0ZTOEp1?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-23"
-        },
-        {
-          "title": "China's BYD plans to double capacity at Brazilian plant - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQ1h3TllLVUNrZm92UTlQOUh4b0NRTjlkWndJYjFOWk9IWFBQd2lpd2UtVnMweVFFOGZBcWV0MTEzRG5qeThCVk8zdE9uUlJNQ29YX2ZOTThVcVl2ZlhGSS1yaGdGREh5Z1ZVYmlhdHJxY2RSakxkeDZHSzVrZmt4YTV5OFRGWmtkOHlOVHppcGF4c3F4VXlid1BVSW5DMGxEVDJ3bkFsVC0wS25rY0psR21OSUY?oc=5",
-          "source": "Reuters",
-          "date": "2026-10-23"
-        },
-        {
-          "title": "BYD's third-gen Qin Plus to launch on October 27 with larger dimensions - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0yT21aSUl3Z1pQMXRyNlYwMEMwTXpYNlNJVjZkNmZJbnVuV0tXOFA3NmNLVXlyVWRiM2lRWmlFcUF1Q0hpdUdaZXpMSmF2WFZ4Mnk2NXBjaDJnVlF0M1U1RmFReEMzQUNJeWk0NFVUazBpWVFVbnc?oc=5",
+          "title": "BYD Monthly NEV Sales – září 2026",
+          "url": "https://cnevpost.com/2026/10/01/byd-sept-2026-sales/",
           "source": "CnEVPost",
-          "date": "2026-10-23"
+          "date": "2026-10-01"
         }
       ]
     },
@@ -185,60 +158,25 @@
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "auto",
+      "mode": "claude",
       "asOf": "2026-10-25",
-      "summary": "",
-      "drivers": [],
+      "summary": "Rheinmetall 6. 10. potvrdil cíle na rok 2026 (růst tržeb 37–42 %, marže kolem 19 %); akcie přesto klesla o 1 % a od začátku roku je zhruba o 40 % níž. Podle zdrojů investory drží zdrženlivé dřívější snížení výhledu tržeb. Čtvrtletní výsledky se čekají v listopadu.",
+      "drivers": [
+        "Potvrzení cílů 2026 (6. 10.), Jefferies označil signály k tempu zakázek a programu Arminius za uklidňující",
+        "Obnovená a zdvojnásobená syndikovaná úvěrová linka na 1,5 mld. € (8. 10.)",
+        "Nový závod v Norsku (Skoppum), 6. 10."
+      ],
       "outlook": [],
-      "risks": [],
+      "risks": [
+        "Dřívější snížení výhledu tržeb a nižší cíl nových zakázek (JPMorgan, srpen 2026)",
+        "Odstup investorů – akcie je výrazně pod začátkem roku"
+      ],
       "headlines": [
         {
-          "title": "Rheinmetall and MSC to acquire Mangalia shipyard - Janes",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxONEJaQ2dJanZwVkZneEZ5UXNkcWJZTXJxZk02MWdLVFpYd3JqT3dfUldzaXZkN3hRZ0UtbFNnQ3F1OFZkYjNIWXMxX1FGb2JfREYzVm1xVDdTdXJhYmtKd1FOMkROY0d4S2ZUdmFmblVHOWV1TEwweFA5YmNoMXd6NjVUa3dacDI0cld6Q3A0RUZDeDFzMDA4bnJjaG5UTk4zREFPMmlaWnlhWVVOd09GalY5RnF6dlJS?oc=5",
-          "source": "Janes",
-          "date": "2026-10-23"
-        },
-        {
-          "title": "Rheinmetall opens UK Gun Hall in Telford - Janes",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVkN2YlZCQjMxNDlaQy0yclctQ1liM0EyanV2UFllYllsQzM4eWFMRWpBcER1TTFYV0tVbEF5dlJpZ2N3SEpRMFBSMU1sX1ZHaDhGVGdfTVA2cWlmQXpXV2xRYmZMVXBRSU5oVGVYLU9HQ2IzSjVKeUh2YVRDUlpubElqVjFsZ1ZldlowdFF6dkxfZUQ5eEwyVlVnejFPVVJFSUxkWDNJT1pLVzZndzVlX2otTQ?oc=5",
-          "source": "Janes",
-          "date": "2026-10-23"
-        },
-        {
-          "title": "Leonardo, Rheinmetall secure $4 billion contracts with Italian Army, report says - Defense News",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVjNNVC1EMnVQMmYwWXlhWmQyZXNDSzJRcXNoSkFmYi1VcnJuNmtJb3R3d1RFTl9ZM0RNaC1EZ04ycVNzcE8xUUEtYlItbHpmNnRTWWlaRXRPb19hQS1EamZ3dF9fNno3SHY0ZS1xMTNUMVdUeFlHNXZUbUdjcTVzVzFVaHZwVzlhcUpMUUc5UUJGOGpocF9UTklTSXBxNmJpaWxNUWdhWWF0aEducWNNRVVLZjRFSGVMVklVRjBTS3AxQVI3UEc0bTItcw?oc=5",
-          "source": "Defense News",
-          "date": "2026-10-23"
-        },
-        {
-          "title": "Land-Based C4ISR Market Forecasts Growth from $36.6 Billion (2025) to $67.7 Billion by 2035, Profiling Lockheed Martin, Rheinmetall, Thales, Elbit Systems & 14 Other Key Players",
-          "url": "https://finance.yahoo.com/technology/articles/land-based-c4isr-market-forecasts-131200785.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-10-23"
-        },
-        {
-          "title": "Rheinmetall AG (1RHM.MI) Analyst insights, Price targets and Recommendations - Yahoo Finance - Yahoo Finance Singapore",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5uZ25aY0hUWjdLeF9zVWJ2NzRsVXhWRkhjXy1tZS1aMjA2RWdVeXhMX2pjMVlDMVhjd1FXdHl4SjZDUEtBdEdhUXFmVEUyWFA2cTMxMl9VamxDV0l3RGNaUENUdHp2QzRFWEl6Uw?oc=5",
-          "source": "Yahoo Finance Singapore",
-          "date": "2026-10-23"
-        },
-        {
-          "title": "Rheinmetall Stock And Europe’s Defence Factory Buildout",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/rheinmetall-stock-europe-defence-factory-021724474.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-10-23"
-        },
-        {
-          "title": "Rheinmetall Stock And Europe’s Defence Factory Buildout - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQV01jSlZJU2hmWEo2emlXRHJfa1l0T3BXZWFjWG5fR3pmWDdXcW1CLXYzQnN3M0JDNl9LZUhmYUR4NlRIbXJmRTdtZWI5ZFNpNHJOWDhwSE1wYlJ6RUk2RE9mTnF1S3docjh0aXZkTWpCMEVpb1UzOUpqV1Eyc2wyZnZwTFpvbTVzSl9OTXdKMG9kT0NvTnFKWkRRNzd2enZRaXEzY19YbW4?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-23"
-        },
-        {
-          "title": "Rheinmetall UK Begins Production at Telford Gun Hall in England - www.marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZ2MzcmhUY3hVMFUxWWJCcUFYc3pMejV4eC1NUlN3akJIUjhDdG9wSDV0THdyeGNMR3I1VDBCcWlnOFhGNWxSRHJKQ2JsdFlJeU1SQ2E1b01fRXA1dHRxaUQ1dUJwa1lYV09PVFhwRnZobjJGVTNzdmQ0T1hEeHhsUGZVdktZdzdVMFRWdFRhSVp6VDJSNVFXNlY2ODR3YnNEVmU0S3ozdlA2Yk44Q3BZWTc0QkxmVUU?oc=5",
-          "source": "www.marketscreener.com",
-          "date": "2026-10-22"
+          "title": "Rheinmetall confirme ses objectifs 2026, Arminius reste sur les rails",
+          "url": "https://www.optionfinance.fr/info-financiere-en-continu/d/2026-10-06-rheinmetall-confirme-ses-objectifs-2026-arminius-reste-sur-les-rails.html",
+          "source": "Option Finance",
+          "date": "2026-10-06"
         }
       ]
     }
