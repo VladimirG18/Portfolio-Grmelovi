@@ -1,5 +1,246 @@
 {
   "version": 1,
-  "updatedAt": null,
-  "entries": {}
+  "updatedAt": "2026-10-25T20:27:12+00:00",
+  "entries": {
+    "BY6.DE": {
+      "name": "BYD Company Limited",
+      "symbol": "BY6.DE",
+      "mode": "auto",
+      "asOf": "2026-10-25",
+      "summary": "",
+      "drivers": [],
+      "outlook": [],
+      "risks": [],
+      "headlines": [
+        {
+          "title": "BYD Stock Has The Bull Case Changed After Global SUV Sales Strength - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNS0MzbWNLeXZMc2lfUWtaUU5VX3REdW51UHd5dkVEcmx5Y2JIT0NScjBnNUJhYlhjNXpjdEVOM0tsOTVPSy04eExEeFFmdW1tVFVCT0J4MUV2Q1BnZVFBUVpXQnBQS3U4c0l6bUtyUXlPUm92SUZtRHZneFh6enJUWi12WE9RVno5bmZfdXpDR1FGM2ZYYTBB?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-24"
+        },
+        {
+          "title": "Boyd Gaming (BYD) Could Be 23% Below Fair Value After Q3 Earnings - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOME5MNGVpY3l1MENMTGRPV0NPN3B3UzhidjVqOW1peFFnUjBKc3BQM2ZqN0c4dkZSaExqa1JBMGZnRmVUTEVnbXBQczBzZ09uVWZfRkg1TnhxckdnRHgyYXhTYXFieVpWSzZUQlhWNEhqdzR2VjFvUkd5X2p4aGM0VmhIMFFXb2wxYWhHOUMydUxzV1E?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-24"
+        },
+        {
+          "title": "BYD (SEHK:1211) Stock Sees Modest Fair Value Cut As Analysts Weigh Growth And Risks - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNHR1QmRRU1F4dFBZUUQ3S0hoXy16YnF2QzhfdVBGNGRHTXJzT0tYNm9qa1lhcjJNVzl5RDB1Z01sZW5FdVZsa1lMd2pDV0dHZVJHc2o0ZVJfSE5MMVlFZC1DS1dXcGNYWjFGNTRiRFFOanAxMDhrNGhkZnRKSzV0ajhwcFhEZVJRdzNMazFrZ1NURjQ?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-24"
+        },
+        {
+          "title": "Is Boyd Gaming (BYD) Trading At A Discount After Mixed Q3 Results? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQR2w3VEw2Q1JOSktMN0Z3WnJHNXl5RlFpQ0JNVVZoSEJncG9RdmJyb1ZzR25ZbVJCQURuWk1HSGZ3d0doekxkSENUbkdkb25IUXV1Wkd5N015amxBQzd4VG1RcjV3dmxndlRveHJrYkhQYnhNcXpha2ZTM1FHQkN5RTdLRElYRl9NNFVzdDNZTi16ejV1c25HVkhfM3JGQQ?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-24"
+        },
+        {
+          "title": "Boyd Gaming (BYD) Stock Price Drifts After Q3 Results Squeeze Margins - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeDRKY2REbkt0cFpjaThRakRWUktXdk5kOGJ1UVlraDFxT3FBeFZwRV9NTFluRzA1MmNrelROMm9tU1o1a3psaU1rZ0RIX1RCMlpCT1Z3R3VTdktwd2NvektXem9jV2Z2cFBBWGdkODlubDBsakRuUUJfZzhXT3NYOEYzb24zTDJSY08wRnVjbXRqcERNZWpZ?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-24"
+        },
+        {
+          "title": "BYD Q3 deep dive: property investments offset Las Vegas destination softness - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPeGZqSXZfTWNQYzczY1J3cFBaMU9vY3RsNGE3OUZpVTlVRFBQQkxMTl9lV1Nxc0ZuSWxvNzFoYTAzOTJNb1VRRGhrbHRCcVM2S3JFa3Zjc1hjN1dfdlF0QkRUaTBfSUxQWFJSU2N3alZ0eDFOTlNxNS1Qa0w3RjYzU0pRMTI2UUtNajVQS0dwU0ZTOEp1?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "China's BYD plans to double capacity at Brazilian plant - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQ1h3TllLVUNrZm92UTlQOUh4b0NRTjlkWndJYjFOWk9IWFBQd2lpd2UtVnMweVFFOGZBcWV0MTEzRG5qeThCVk8zdE9uUlJNQ29YX2ZOTThVcVl2ZlhGSS1yaGdGREh5Z1ZVYmlhdHJxY2RSakxkeDZHSzVrZmt4YTV5OFRGWmtkOHlOVHppcGF4c3F4VXlid1BVSW5DMGxEVDJ3bkFsVC0wS25rY0psR21OSUY?oc=5",
+          "source": "Reuters",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "BYD's third-gen Qin Plus to launch on October 27 with larger dimensions - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0yT21aSUl3Z1pQMXRyNlYwMEMwTXpYNlNJVjZkNmZJbnVuV0tXOFA3NmNLVXlyVWRiM2lRWmlFcUF1Q0hpdUdaZXpMSmF2WFZ4Mnk2NXBjaDJnVlF0M1U1RmFReEMzQUNJeWk0NFVUazBpWVFVbnc?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-10-23"
+        }
+      ]
+    },
+    "bitcoin": {
+      "name": "Bitcoin",
+      "symbol": "bitcoin",
+      "mode": "auto",
+      "asOf": "2026-10-25",
+      "summary": "",
+      "drivers": [],
+      "outlook": [],
+      "risks": [],
+      "headlines": [
+        {
+          "title": "Bitcoin Analysis: BTC Slipped Below $80,000 Again. Is $77,600 the Next Stop? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUldzQTQycWptZDdQUVJrcVJLckw1cWNlTUtZQTgtREY3SVVmQzZaXy1IeTF6RG1sTGlQc0xMcWJpZXFIZDlONVFBb1NPbWF4QVd6dkxNQ1oxR0VyVWxreE5uQWEzUTVBbm0xTWJJZ1VmM1BSczIyTkFsNnZhcW1mQndGbDMzV1BNOHB1eTNRNnpfUDctTTRDcXAzc21OUExm?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-25"
+        },
+        {
+          "title": "Strategy Booked an $8.3 Billion Bitcoin Loss Last Quarter. Could Q3 Show a Gain? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNSVVJMERmUXF6NTFsTHFFV1V0WG1KcnJuWk41b1BNOEFNRTRVeTQ0T0wzN2Raa0VvSVNlWUs1NEFwa3Jtbnd2MlBYXzhKSkxuZExKMGxXWU5paEZHOG8zZ1QydWZvcUVBVGJSejg1U1dDNlo4U1hnakVwQnlvMi03YmwxYjdqdHZ4MTg5aVdTRnFqNURDalJN?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-25"
+        },
+        {
+          "title": "JPMorgan projects 10% annual Bitcoin returns over the next decade — but won't recommend buying it - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPU3EtWnZ6WHo2Zm83emc4RklNdVE1d3RYUWxYbUhvczVlQzRIajRxOTdKTnpPTXkwajUya0ZvWWFjY3VoSDlxRkxvdGVWbkxvZGxVNXZPUUt5ZWVkYjIzS214NmFmVm9CM052UnFOZE8yLUFmcEw2aGdlcmwwUTNIODlfZmVZd0hLajJUS0xORHVmMzNJejdRMTZJWDhHQURhS0E?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-25"
+        },
+        {
+          "title": "Can Bitcoin Get Back Above $85,000 in November? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPNlhsWE5fQl85bGV5RFlhZHRUNVFFdU9jVUpOUTJIV21FYm9xZy0zZWE5WldzVm5URlR4UE5oVzJMdVktSElIa3hVSU9WX1JKak5oWmFGS01DdzZhNlBQSWY3WU51M1haR2EtS3JjYlVXWHdPdUF2TEUxc2VQbjJKRU9ScmFyRUlTekFJRVNTZmVKaEYy?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-24"
+        },
+        {
+          "title": "Bitcoin’s wealthy holders are moving from trading to private banking, Xapo CEO says - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNa2pUb1VaQThvM3RscnZLWU93d0ZQSkttNnVLTmhzWUlzSmZ4SVV4Y1hPQlNfNXVySVkxelh5LV9TVnhkUU1uZEQ3TUluYWMwc0xCWDJVVVUyXzdvUUp1aDR5YkJTdnpfSTVtYklTNmRPSVlIU0pwQ3V0bVZCajJuVEEzcEhLWUxmRnhkSVZpTktFVURRM3dEd2luNFFOM3BKQnNqZER0UEt5WlVUSVBab0w5OVJoa3hqOWd0ZUNWcUhGUUtUSnB6ZXJ5STFWVkU?oc=5",
+          "source": "CoinDesk",
+          "date": "2026-10-24"
+        },
+        {
+          "title": "Inflation Is Running Hotter Than Expected. That Could Be Bullish for Bitcoin. - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQX0lBTW5NUUdGY2FiaWF4WFNHMFJsdUdwM1cxdTJ0c1hmZENqa3BtNXAxWEE3bWxkVE45X0F6NHJUN1FwOU9abWN3VjdxaHcwdU1oUUM5YXBHN2drcGwtRV9vZDktN3djLWRjc2pES21BaGhwN2Z1ZkQ2V0tDUDcyM25HYU1XcjFlS01vcmpkV1VkN2xkTWJXclJjWG5YZkVmbkRXTHdzVQ?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-24"
+        },
+        {
+          "title": "Strategy, Strive face balancing act between bitcoin buying and preferred stock dividends",
+          "url": "https://www.coindesk.com/business/2026/10/24/strategy-strive-face-balancing-act-between-bitcoin-buying-and-preferred-stock-dividends",
+          "source": "CoinDesk",
+          "date": "2026-10-24"
+        },
+        {
+          "title": "Strategy (MSTR), Strive (ASST) must balance bitcoin (BTC) purchases, preferred stock dividends - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOZHh1bXQxbngxTUNGWmNxZmxfYWlISGs1U2xULThnNDdsdVIyXzI0WnF5Y1FmUlZFYVYtbnZyQV9HQTN0eEJSakdCV29tYm80ZFN6Q3RkM2JiVzVaSlpzN0twZE1oZjFUWGtRV1VIQ2FPVnJSNUluNHNsemwtOTRtQlZrTjhwcWJsQmZQbDQ0U0JSLXNwSVMyWnlXYTNieGlRUy1SNTRtNTc4bm5TcmJ6LXlpd3BtTDh3cnAxcnBKTDNrMG1oWHBiSUVmUXE?oc=5",
+          "source": "CoinDesk",
+          "date": "2026-10-24"
+        }
+      ]
+    },
+    "HO.PA": {
+      "name": "Thales SA",
+      "symbol": "HO.PA",
+      "mode": "auto",
+      "asOf": "2026-10-25",
+      "summary": "",
+      "drivers": [],
+      "outlook": [],
+      "risks": [],
+      "headlines": [
+        {
+          "title": "Naval C4ISR Market Size, Share, Growth Trends, and Forecast 2026-2035 | USD 51.2 Billion Opportunity as AI-Enabled Systems Accelerate Fleet Modernization",
+          "url": "https://finance.yahoo.com/technology/articles/naval-c4isr-market-size-share-132000181.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Land-Based C4ISR Market Forecasts Growth from $36.6 Billion (2025) to $67.7 Billion by 2035, Profiling Lockheed Martin, Rheinmetall, Thales, Elbit Systems & 14 Other Key Players",
+          "url": "https://finance.yahoo.com/technology/articles/land-based-c4isr-market-forecasts-131200785.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Thales nine-month sales and orders top forecasts on arms and space contracts - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNZG9sWHQySDdtMWY4eTI5bW1pMnotU1M0a1FNbWQyRFR3N0tVMllWQmppWV90UlY1bGU2ZHA0dGpmNHFobGM3anlLMWJzMjhNOGwxRDBtb2lINXlXeTRGbnJaQlRCVW5hLWVIcldfV3M3Skhjajk2a1ZfM05FcHJTdm9rS1UzcXJwVFJvTTg4U3lDVHhRWUFXcnU5VWlXdW8tb0hCZXFfM0N6enlYMmZKYXFYZmJUeC04UlVzM3RuU1oyd2V1ZG9MMUlTX280cHdPRVE?oc=5",
+          "source": "Reuters",
+          "date": "2026-10-22"
+        },
+        {
+          "title": "France has political consensus on higher defence spending, Thales CFO says - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVUFybGRYTTlPaTI1dFExTWltVW5Hb0ZsMlpVQlRlXzk1RmtpaHNVcC1pQkF1dWdhbFNRWGtkQ0dPc3VITkw2UTZsVTJGY1ZGVkJKeGR2SXpLVWFJdU5CLTkyR2NxU09vSXdXYmVLY3IxRDNaMnJNZ3d2OFZ1Q01ySnBzMU9FYnl3U3RaNi1NR3U2RTE1MHZqY0V0TG1zcW5TUHhheFNqSkJjbTFxVnBpZC1pN2ZpV2w2eGlqUUpqSTc3VDBf?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-10-22"
+        },
+        {
+          "title": "Thales beats expectations in the third quarter, analysts hail Defense momentum - www.marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPWms2VHNTT0xCY1JHeG1UVEVxdDdrLV9CUW9POWE2dHBLWnA1enZVQ0pEWlhnU0dXR09xZ2NOLXV6VG5uNUNrNkQ0X2dUTDBKV1lhTGJ3eklSa3BoZV9sYlRucGo0R1JoN0p1ak1sc0NNd0FYXzdocG93M2FrdGVaRVhsamxscmktNlFCbVQ3bnJsQTFFSmdyRnd2bWVUekNtdTZKWW9FT1NJWGxJNWNRd0JBcEx3aS1TRDRJOXVOU01JM1Q5bTdTSWtR?oc=5",
+          "source": "www.marketscreener.com",
+          "date": "2026-10-22"
+        },
+        {
+          "title": "French defence group Thales lifts sales outlook on strong order growth - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQc1A5YUkxOFQ5cW40bkJ4U1ZZSk5FaVgxSHpkX0pSSUkzOC04UHNHcjFZcC1WNHcyZHhLbmRzaG5rUnN1Y0hBY3VRallIcmloOTJJMVB1MVQweGR6T250QjU1TUJXMUo2OVRCQVhKU3dCZjB3SUg0R3owUnZ5LW81d0hGVzJKTTVkVHdaWXRubDVOU0NidXo1YnZNZktJSjA?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-22"
+        },
+        {
+          "title": "Thales sales jump on European rearmament, satellite systems",
+          "url": "https://finance.yahoo.com/technology/articles/thales-sales-jump-european-rearmament-072143420.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-10-22"
+        },
+        {
+          "title": "Thales sales jump on European rearmament, satellite systems - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWFkzcE9QbnJuUXB4R184amplN2g2ZnVxazZqcTFQUEkyRkpESnZJRUxSQmFWbXFwYVBRZ0pWYy1DOFRDTWt5dGcwWGZXU3YxRnJnMjN1N0psTm5QVGY2ZFdGSXZQNUFDRGI5Y29qeThKakNpelNpcWhULUdwTGZfWFJLMEctazhVd1UyWHZVcExZamREaV9neHpRVkJYQjA?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-22"
+        }
+      ]
+    },
+    "RHM.DE": {
+      "name": "Rheinmetall AG",
+      "symbol": "RHM.DE",
+      "mode": "auto",
+      "asOf": "2026-10-25",
+      "summary": "",
+      "drivers": [],
+      "outlook": [],
+      "risks": [],
+      "headlines": [
+        {
+          "title": "Rheinmetall and MSC to acquire Mangalia shipyard - Janes",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxONEJaQ2dJanZwVkZneEZ5UXNkcWJZTXJxZk02MWdLVFpYd3JqT3dfUldzaXZkN3hRZ0UtbFNnQ3F1OFZkYjNIWXMxX1FGb2JfREYzVm1xVDdTdXJhYmtKd1FOMkROY0d4S2ZUdmFmblVHOWV1TEwweFA5YmNoMXd6NjVUa3dacDI0cld6Q3A0RUZDeDFzMDA4bnJjaG5UTk4zREFPMmlaWnlhWVVOd09GalY5RnF6dlJS?oc=5",
+          "source": "Janes",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Rheinmetall opens UK Gun Hall in Telford - Janes",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVkN2YlZCQjMxNDlaQy0yclctQ1liM0EyanV2UFllYllsQzM4eWFMRWpBcER1TTFYV0tVbEF5dlJpZ2N3SEpRMFBSMU1sX1ZHaDhGVGdfTVA2cWlmQXpXV2xRYmZMVXBRSU5oVGVYLU9HQ2IzSjVKeUh2YVRDUlpubElqVjFsZ1ZldlowdFF6dkxfZUQ5eEwyVlVnejFPVVJFSUxkWDNJT1pLVzZndzVlX2otTQ?oc=5",
+          "source": "Janes",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Leonardo, Rheinmetall secure $4 billion contracts with Italian Army, report says - Defense News",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVjNNVC1EMnVQMmYwWXlhWmQyZXNDSzJRcXNoSkFmYi1VcnJuNmtJb3R3d1RFTl9ZM0RNaC1EZ04ycVNzcE8xUUEtYlItbHpmNnRTWWlaRXRPb19hQS1EamZ3dF9fNno3SHY0ZS1xMTNUMVdUeFlHNXZUbUdjcTVzVzFVaHZwVzlhcUpMUUc5UUJGOGpocF9UTklTSXBxNmJpaWxNUWdhWWF0aEducWNNRVVLZjRFSGVMVklVRjBTS3AxQVI3UEc0bTItcw?oc=5",
+          "source": "Defense News",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Land-Based C4ISR Market Forecasts Growth from $36.6 Billion (2025) to $67.7 Billion by 2035, Profiling Lockheed Martin, Rheinmetall, Thales, Elbit Systems & 14 Other Key Players",
+          "url": "https://finance.yahoo.com/technology/articles/land-based-c4isr-market-forecasts-131200785.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Rheinmetall AG (1RHM.MI) Analyst insights, Price targets and Recommendations - Yahoo Finance - Yahoo Finance Singapore",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5uZ25aY0hUWjdLeF9zVWJ2NzRsVXhWRkhjXy1tZS1aMjA2RWdVeXhMX2pjMVlDMVhjd1FXdHl4SjZDUEtBdEdhUXFmVEUyWFA2cTMxMl9VamxDV0l3RGNaUENUdHp2QzRFWEl6Uw?oc=5",
+          "source": "Yahoo Finance Singapore",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Rheinmetall Stock And Europe’s Defence Factory Buildout",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rheinmetall-stock-europe-defence-factory-021724474.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Rheinmetall Stock And Europe’s Defence Factory Buildout - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQV01jSlZJU2hmWEo2emlXRHJfa1l0T3BXZWFjWG5fR3pmWDdXcW1CLXYzQnN3M0JDNl9LZUhmYUR4NlRIbXJmRTdtZWI5ZFNpNHJOWDhwSE1wYlJ6RUk2RE9mTnF1S3docjh0aXZkTWpCMEVpb1UzOUpqV1Eyc2wyZnZwTFpvbTVzSl9OTXdKMG9kT0NvTnFKWkRRNzd2enZRaXEzY19YbW4?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Rheinmetall UK Begins Production at Telford Gun Hall in England - www.marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZ2MzcmhUY3hVMFUxWWJCcUFYc3pMejV4eC1NUlN3akJIUjhDdG9wSDV0THdyeGNMR3I1VDBCcWlnOFhGNWxSRHJKQ2JsdFlJeU1SQ2E1b01fRXA1dHRxaUQ1dUJwa1lYV09PVFhwRnZobjJGVTNzdmQ0T1hEeHhsUGZVdktZdzdVMFRWdFRhSVp6VDJSNVFXNlY2ODR3YnNEVmU0S3ozdlA2Yk44Q3BZWTc0QkxmVUU?oc=5",
+          "source": "www.marketscreener.com",
+          "date": "2026-10-22"
+        }
+      ]
+    }
+  }
 }
