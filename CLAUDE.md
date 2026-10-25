@@ -384,13 +384,14 @@ ne burza – její cena je burzovní kurz + marže).
 Po rozkliku 📰 se pod řádkem ukáže souhrn „co se děje a proč", body „co to pohání", výhledy
 třetích stran, rizika a titulky. Stránka **jen čte statický `data/news.json`** (`assets/news.js`),
 nestahuje nic z cizích webů – žádné CORS ani proxy. Klíč záznamu = `symbol` pozice. Plní ho dvě cesty:
-- **Varianta 1 – automat**: `.github/workflows/news.yml` (po–pá ráno) spustí `scripts/update_news.py`:
+- **Záloha – automat**: `.github/workflows/news.yml` (denně 05:17 UTC) spustí `scripts/update_news.py`:
   pozice z Firestore → titulky z RSS (`data/sources.json`: Yahoo Finance, Google News, CoinDesk,
-  Cointelegraph) → souhrn přes Anthropic API (secret `ANTHROPIC_API_KEY`, nepovinný; bez něj se
-  obnoví jen titulky) → commit → `gh workflow run deploy.yml` (push z `GITHUB_TOKEN` nasazení
+  Cointelegraph) → souhrn přes bezplatné GitHub Models (`GITHUB_TOKEN`, oprávnění `models: read`; bez klíče
+  a plateb) nebo přes Anthropic API, když je secret `ANTHROPIC_API_KEY`; bez obojího jen titulky) → commit → `gh workflow run deploy.yml` (push z `GITHUB_TOKEN` nasazení
   nespouští sám). Souhrn smí vycházet jen z titulků, predikce jen z těch, kde je uveden zdroj.
-- **Varianta 2 – ručně v chatu**: skill `.claude/skills/aktualizace-zprav` (uživatel řekne
-  „aktualizuj zprávy"). Záznamy s `mode: "claude"` mladší 3 dnů automat nepřepisuje.
+- **Hlavní cesta – Claude (ručně i plánovaně)**: skill `.claude/skills/aktualizace-zprav` (uživatel řekne
+  „aktualizuj zprávy"; běží i jako denní plánovaný úkol ~04:07 UTC). Záznam s `mode: "claude"`
+  z dneška automat nepřepíše; když plánovaný úkol nedoběhne, automat zaplní den sám.
 
 Predikce jsou vždy názory třetích stran se zdrojem a datem, ne naše. Žádná doporučení kup/prodej.
 Zdroje za paywallem (FT, Bloomberg, WSJ) jdou číst jen na úrovni titulku.

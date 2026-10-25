@@ -2,10 +2,12 @@
 """Denní sběr zpráv k pozicím → data/news.json (varianta 1, spouští GitHub Action).
 
 Postup: pozice z Firestore (otevřené akcie a krypto) → titulky z RSS (data/sources.json)
-→ krátký souhrn přes Anthropic API → data/news.json.
+→ krátký souhrn → data/news.json.
 
-Souhrn smí vycházet JEN z dodaných titulků; nic si nedomýšlí. Bez ANTHROPIC_API_KEY se
-obnoví jen seznam titulků (souhrn zůstane z minula). Jen standardní knihovna.
+Souhrn smí vycházet JEN z dodaných titulků; nic si nedomýšlí. Poskytovatel souhrnu:
+ANTHROPIC_API_KEY (Anthropic API) → jinak GITHUB_TOKEN (bezplatné GitHub Models, bez klíče
+a bez plateb) → jinak se obnoví jen seznam titulků (souhrn zůstane z minula).
+Jen standardní knihovna.
 """
 import json
 import os
@@ -24,8 +26,10 @@ FIRESTORE = ('https://firestore.googleapis.com/v1/projects/rd-modrice-e9477/'
              'databases/(default)/documents/portfolio_pozice?pageSize=200')
 MODEL = os.environ.get('NEWS_MODEL', 'claude-sonnet-5-5')
 API_KEY = os.environ.get('ANTHROPIC_API_KEY', '')
+GH_TOKEN = os.environ.get('GITHUB_TOKEN', '')
+GH_MODEL = os.environ.get('NEWS_GH_MODEL', 'openai/gpt-4o-mini')
 MAX_AGE = timedelta(days=14)
-KEEP_CLAUDE_DAYS = 3   # čerstvější ruční záznam (mode "claude") se nepřepisuje
+KEEP_CLAUDE_DAYS = 1   # záznam od Claude z dneška (mode "claude") se nepřepisuje; starší ano (záloha)
 UA = {'User-Agent': 'Mozilla/5.0 (portfolio-news-bot)'}
 
 
@@ -144,15 +148,21 @@ def summarize(pos, items):
     lines = '\n'.join(
         f"{n}. [{i['source']}, {i['dt'].date() if i['dt'] else '?'}] {i['title']}  <{i['url']}>"
         for n, i in enumerate(items, 1))
-    body = json.dumps({
-        'model': MODEL, 'max_tokens': 1500,
-        'messages': [{'role': 'user', 'content': PROMPT.format(
-            name=pos['name'], symbol=pos['symbol'], type=pos['type'],
-            today=datetime.now(timezone.utc).date(), headlines=lines)}],
-    }).encode()
-    raw = get('https://api.anthropic.com/v1/messages', timeout=90, data=body, headers={
-        'x-api-key': API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json'})
-    text = ''.join(b.get('text', '') for b in json.loads(raw).get('content', []))
+    prompt = PROMPT.format(name=pos['name'], symbol=pos['symbol'], type=pos['type'],
+                           today=datetime.now(timezone.utc).date(), headlines=lines)
+    if API_KEY:
+        raw = get('https://api.anthropic.com/v1/messages', timeout=90, headers={
+            'x-api-key': API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json'},
+            data=json.dumps({'model': MODEL, 'max_tokens': 1500,
+                             'messages': [{'role': 'user', 'content': prompt}]}).encode())
+        text = ''.join(b.get('text', '') for b in json.loads(raw).get('content', []))
+    else:  # GitHub Models: bezplatné, stačí GITHUB_TOKEN s oprávněním models: read
+        raw = get('https://models.github.ai/inference/chat/completions', timeout=90, headers={
+            'Authorization': f'Bearer {GH_TOKEN}', 'Accept': 'application/vnd.github+json',
+            'X-GitHub-Api-Version': '2022-11-28', 'content-type': 'application/json'},
+            data=json.dumps({'model': GH_MODEL, 'temperature': 0.2,
+                             'messages': [{'role': 'user', 'content': prompt}]}).encode())
+        text = json.loads(raw)['choices'][0]['message']['content']
     return json.loads(text[text.index('{'):text.rindex('}') + 1])
 
 
@@ -185,7 +195,7 @@ def main():
         entry = {'name': pos['name'], 'symbol': sym, 'mode': 'auto', 'asOf': today.isoformat(),
                  'summary': '', 'drivers': [], 'outlook': [], 'risks': [], 'headlines': []}
         picked = items[:8]
-        if API_KEY:
+        if API_KEY or GH_TOKEN:
             try:
                 r = summarize(pos, items)
                 entry.update({k: r.get(k) or [] for k in ('drivers', 'outlook', 'risks')})

@@ -1,14 +1,17 @@
 name: Update news
 
-# Varianta 1: denní automatický sběr zpráv → data/news.json → nasazení webu.
+# Denní automatický sběr zpráv → data/news.json → nasazení webu.
+# Souhrn: Anthropic API (když je secret), jinak bezplatné GitHub Models. Záznam od Claude
+# z dneška (ranní plánovaný úkol) se nepřepisuje – tohle je záloha, kdyby nedoběhl.
 on:
   schedule:
-    - cron: '17 5 * * 1-5'   # po–pá ráno (UTC), před otevřením burz
+    - cron: '17 5 * * *'   # denně ráno (UTC), až po plánovaném úkolu Claude (~04:07 UTC)
   workflow_dispatch:
 
 permissions:
   contents: write
   actions: write
+  models: read
 
 concurrency:
   group: news
@@ -21,8 +24,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch news and summarize
         env:
-          # Nepovinné: bez klíče se obnoví jen titulky, souhrn zůstane z minula.
+          # Nepovinné: bez klíče píše souhrn bezplatný model z GitHub Models.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: python3 scripts/update_news.py
       - name: Commit and deploy
         env:

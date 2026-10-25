@@ -25,7 +25,7 @@ Odpovídej česky. Nejde o investiční doporučení.
    - když příčina vývoje není jasná, napiš to; žádné domýšlení,
    - žádné "kup/prodej".
 4. **Zapiš** do `data/news.json` (zachovej ostatní záznamy, nastav `updatedAt` na aktuální ISO čas),
-   `mode: "claude"`. Záznamy s `mode: "claude"` mladší 3 dnů denní automat nepřepisuje.
+   `mode: "claude"`. Záznam s `mode: "claude"` z dneška denní automat nepřepisuje.
 5. **Nasaď** podle CLAUDE.md (§2): commit a push do `main`, ověř workflow Deploy. Do commitu žádné částky.
 
 ## Schéma záznamu
