@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-25T21:00:00+00:00",
+  "updatedAt": "2026-10-26T04:30:00+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -159,19 +159,35 @@
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
       "mode": "claude",
-      "asOf": "2026-10-25",
+      "asOf": "2026-10-26",
       "summary": "Rheinmetall 6. 10. potvrdil cíle na rok 2026 (růst tržeb 37–42 %, marže kolem 19 %); akcie přesto klesla o 1 % a od začátku roku je zhruba o 40 % níž. Podle zdrojů investory drží zdrženlivé dřívější snížení výhledu tržeb. Čtvrtletní výsledky se čekají v listopadu.",
       "drivers": [
+        "Berenberg 8.–9. 10. snížil doporučení na Hold a cíl na 1 020 € kvůli nejistotě zakázek po roce 2030",
         "Potvrzení cílů 2026 (6. 10.), Jefferies označil signály k tempu zakázek a programu Arminius za uklidňující",
         "Obnovená a zdvojnásobená syndikovaná úvěrová linka na 1,5 mld. € (8. 10.)",
         "Nový závod v Norsku (Skoppum), 6. 10."
       ],
-      "outlook": [],
+      "outlook": [
+        {
+          "source": "Berenberg (George McWhirter, podle dpa-AFX)",
+          "view": "Snížil doporučení z Buy na Hold: střednědobý růst je nejistý, po roce 2030 by firma potřebovala výrazně víc zakázek; tržby 2030 odhaduje na 37,6 mld. € (konsensus 41,0 mld. €), smluvně pokryto jen 29 %",
+          "target": "1 020 € (dříve 1 600 €)",
+          "date": "2026-10-08",
+          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-berenberg-stuft-auf-hold-ab-und-senkt-kursziel-auf-1020-euro"
+        }
+      ],
       "risks": [
         "Dřívější snížení výhledu tržeb a nižší cíl nových zakázek (JPMorgan, srpen 2026)",
-        "Odstup investorů – akcie je výrazně pod začátkem roku"
+        "Odstup investorů – akcie je výrazně pod začátkem roku",
+        "Slabé smluvní pokrytí tržeb 2030 (zejména munice) podle Berenberg"
       ],
       "headlines": [
+        {
+          "title": "Berenberg senkt Rheinmetall auf Hold und Ziel auf 1020 Euro",
+          "url": "https://live.deutsche-boerse.com/news/ANALYSE-FLASH-Berenberg-senkt-Rheinmetall-auf-Hold-und-Ziel-auf-1020-Euro-72b2799a-ee8b-420a-8527-1baea3cf3323",
+          "source": "dpa-AFX",
+          "date": "2026-10-08"
+        },
         {
           "title": "Rheinmetall confirme ses objectifs 2026, Arminius reste sur les rails",
           "url": "https://www.optionfinance.fr/info-financiere-en-continu/d/2026-10-06-rheinmetall-confirme-ses-objectifs-2026-arminius-reste-sur-les-rails.html",
