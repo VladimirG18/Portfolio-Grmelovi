@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-26T04:30:00+00:00",
+  "updatedAt": "2026-10-26T11:11:08+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "claude",
-      "asOf": "2026-10-25",
+      "mode": "auto",
+      "asOf": "2026-10-26",
       "summary": "BYD za září 2026 prodal 463 561 vozidel (+17,0 % meziročně, nejvíc letos); třetí čtvrtletí poprvé po čtyřech čtvrtletích meziročně vyrostlo (+18,8 %). Růst táhne zahraničí, domácí prodeje meziročně klesají. Za prvních devět měsíců je prodej stále o necelá 4 % pod loňskem. Říjnová čísla vyjdou kolem 1. listopadu.",
       "drivers": [
         "Zahraniční prodeje 180 700 ks (+153,6 % meziročně), tvoří cca 39 % celku",
@@ -28,10 +28,52 @@
       ],
       "headlines": [
         {
-          "title": "BYD Monthly NEV Sales – září 2026",
-          "url": "https://cnevpost.com/2026/10/01/byd-sept-2026-sales/",
+          "title": "Chinese Carmakers Overtake Japan in Europe for First Time - Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeEdOOS1SSnVzY0U0dmVmSEI2dmRDYmdaSXRrV1hfY0dZR2swakc0a2drNU5TUEJ6N2kzaFc2WXV5N3BTdy1hQXU5U3BSRTBjcmhqWDYySG5KbkR4TXl2MFJncGNWbUtWRmEyQ0NjU0FiNjZWRzFpTjVwUmcyYkZuNWxVX3VkSERISVZra1VITU5GenlLY2lsaVY2X3FwNVNJc1dLa0NqekpjRHNVaHhzTG9NOS0?oc=5",
+          "source": "Bloomberg.com",
+          "date": "2026-10-26"
+        },
+        {
+          "title": "BYD opens reservations for second-gen Seal 07 with Blade Battery and flash charging - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1uWWxGUnZiZFpMVVNXSGtuazc1ZEpFWVdyUlloMHVOeW8zd3JiOEVYTU9FVS1ocThPUEFTaU5YMUtva2VKM2pNdDVHbDBMaWRUR2x5YnNRLU1zcERXU0FlUUpYMEFsT19hRjVyam9nYWFXTW13MXIzaWRRSQ?oc=5",
           "source": "CnEVPost",
-          "date": "2026-10-01"
+          "date": "2026-10-26"
+        },
+        {
+          "title": "BYD Denza brings flash charging to Hong Kong with Z9GT launch - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE45U2k2VXd4VW9hbnNEMDU2UnBQbFg1V2NrQkxzY1lkWFJudF9sdVRBSlI3QXN0a0xBQ1VwTXFQTVlfTmtJSmJvWGl5UnBFTTVsZnpkaWgtMGhrcVotOUlybHNGQ1d2aXpY?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-10-26"
+        },
+        {
+          "title": "BYD Plans More European Factories to Expand Market Share - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQamFMcWpPaWxqQURqZmsyX0J5WU5uVVZVQTRtYVZWTUdPTUtIYThNdGZkblFzWjByX1IzaGdsa0tWMnlLUHdaVW9OTXFmUjZfZEduNmFaWWhKS0ZyYnZkSnBMT3JUX19CTDVUNkNzQXg0S2J1cl9FMVNaTVJzR0hya0ZSY2J1aUw1a29HNVNRTWRNVlBkUGN6RGpkTzVZZHBOZllWZ1RnWXgzS09SX1E?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-10-26"
+        },
+        {
+          "title": "BYD Seeks Approval to Double Brazil Plant Capacity to 600,000 Vehicles - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVFhuTjVGRGJtSE82dzBaeVdud3VaSTJOclNxdmtCdi1JZWhFUE5WLUJQTDhUVXNSdUZBSXBoTEk2M0pqQmZKMnlyZEUyZVp0LVlKT3JPVjh2TkcxOWhfMFA5aVFPYUg5Um9IRjlIS0hBVElhLVdYd2FHV2IyOW43UXNrMDdFV0hnOVRhVDVubV8wU0pSWFZrclFVU0prMUhxRGNobTYwbzZBNldUNWhmTWpJWktJY1VFN2dZM2VfbVg?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-10-26"
+        },
+        {
+          "title": "BYD Denza opens reservations for revamped N8 SUV with up to 1,003 km of electric range - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5ha2ZzNDVYRU43SnhBSnNnLS1uclpaNFBKbEZ6TG05NEo5aEpZYlF6ZUw1TlVELXREOWRzVkJDYVZveWpubE43ZG85YkJKQTh6MzRLVUkxNVZ4ckdBbmR1MjJYN2ljX2drcV9lM09LT09iUW8xMnpTTkpmSU5EZw?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-10-26"
+        },
+        {
+          "title": "BYD’s Korea Expansion Challenges Hyundai Dominance on Home Turf - Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZmhSYzh5RElOMV85c3lqZmo1WURBd25RWUtqLVF3NVJrUnRYM05mOGFKZGlOemxuazNrRm5OZkxjbEFya21ZMXFpYXJER1VmRGZEV0FoMkUtTkkydlI0N0czdnphc0xfUDN2aV85TGhyZGdsQ1FBaGpRX184MWxHVmFmejJSTjNKWHVRaThGcmZTWUFKRXI4N1R4VFBkd2gxOGt6ZDBtWF9mN0NjeFRQQklrLVM?oc=5",
+          "source": "Bloomberg.com",
+          "date": "2026-10-25"
+        },
+        {
+          "title": "BYD Stock Has The Bull Case Changed After Global SUV Sales Strength - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNS0MzbWNLeXZMc2lfUWtaUU5VX3REdW51UHd5dkVEcmx5Y2JIT0NScjBnNUJhYlhjNXpjdEVOM0tsOTVPSy04eExEeFFmdW1tVFVCT0J4MUV2Q1BnZVFBUVpXQnBQS3U4c0l6bUtyUXlPUm92SUZtRHZneFh6enJUWi12WE9RVno5bmZfdXpDR1FGM2ZYYTBB?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-24"
         }
       ]
     },
@@ -39,59 +81,59 @@
       "name": "Bitcoin",
       "symbol": "bitcoin",
       "mode": "auto",
-      "asOf": "2026-10-25",
+      "asOf": "2026-10-26",
       "summary": "",
       "drivers": [],
       "outlook": [],
       "risks": [],
       "headlines": [
         {
-          "title": "Bitcoin Analysis: BTC Slipped Below $80,000 Again. Is $77,600 the Next Stop? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUldzQTQycWptZDdQUVJrcVJLckw1cWNlTUtZQTgtREY3SVVmQzZaXy1IeTF6RG1sTGlQc0xMcWJpZXFIZDlONVFBb1NPbWF4QVd6dkxNQ1oxR0VyVWxreE5uQWEzUTVBbm0xTWJJZ1VmM1BSczIyTkFsNnZhcW1mQndGbDMzV1BNOHB1eTNRNnpfUDctTTRDcXAzc21OUExm?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-25"
-        },
-        {
-          "title": "Strategy Booked an $8.3 Billion Bitcoin Loss Last Quarter. Could Q3 Show a Gain? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNSVVJMERmUXF6NTFsTHFFV1V0WG1KcnJuWk41b1BNOEFNRTRVeTQ0T0wzN2Raa0VvSVNlWUs1NEFwa3Jtbnd2MlBYXzhKSkxuZExKMGxXWU5paEZHOG8zZ1QydWZvcUVBVGJSejg1U1dDNlo4U1hnakVwQnlvMi03YmwxYjdqdHZ4MTg5aVdTRnFqNURDalJN?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-25"
-        },
-        {
-          "title": "JPMorgan projects 10% annual Bitcoin returns over the next decade — but won't recommend buying it - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPU3EtWnZ6WHo2Zm83emc4RklNdVE1d3RYUWxYbUhvczVlQzRIajRxOTdKTnpPTXkwajUya0ZvWWFjY3VoSDlxRkxvdGVWbkxvZGxVNXZPUUt5ZWVkYjIzS214NmFmVm9CM052UnFOZE8yLUFmcEw2aGdlcmwwUTNIODlfZmVZd0hLajJUS0xORHVmMzNJejdRMTZJWDhHQURhS0E?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-25"
-        },
-        {
-          "title": "Can Bitcoin Get Back Above $85,000 in November? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPNlhsWE5fQl85bGV5RFlhZHRUNVFFdU9jVUpOUTJIV21FYm9xZy0zZWE5WldzVm5URlR4UE5oVzJMdVktSElIa3hVSU9WX1JKak5oWmFGS01DdzZhNlBQSWY3WU51M1haR2EtS3JjYlVXWHdPdUF2TEUxc2VQbjJKRU9ScmFyRUlTekFJRVNTZmVKaEYy?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-24"
-        },
-        {
-          "title": "Bitcoin’s wealthy holders are moving from trading to private banking, Xapo CEO says - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNa2pUb1VaQThvM3RscnZLWU93d0ZQSkttNnVLTmhzWUlzSmZ4SVV4Y1hPQlNfNXVySVkxelh5LV9TVnhkUU1uZEQ3TUluYWMwc0xCWDJVVVUyXzdvUUp1aDR5YkJTdnpfSTVtYklTNmRPSVlIU0pwQ3V0bVZCajJuVEEzcEhLWUxmRnhkSVZpTktFVURRM3dEd2luNFFOM3BKQnNqZER0UEt5WlVUSVBab0w5OVJoa3hqOWd0ZUNWcUhGUUtUSnB6ZXJ5STFWVkU?oc=5",
+          "title": "Live news: Brent Crude slides below $110 as Iran deal hopes grow and Brazil stocks sink",
+          "url": "https://www.coindesk.com/tech/2026/10/26/live-news-brent-crude-slides-below-usd110-as-iran-deal-hopes-grow-and-brazil-stocks-sink",
           "source": "CoinDesk",
-          "date": "2026-10-24"
+          "date": "2026-10-26"
         },
         {
-          "title": "Inflation Is Running Hotter Than Expected. That Could Be Bullish for Bitcoin. - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQX0lBTW5NUUdGY2FiaWF4WFNHMFJsdUdwM1cxdTJ0c1hmZENqa3BtNXAxWEE3bWxkVE45X0F6NHJUN1FwOU9abWN3VjdxaHcwdU1oUUM5YXBHN2drcGwtRV9vZDktN3djLWRjc2pES21BaGhwN2Z1ZkQ2V0tDUDcyM25HYU1XcjFlS01vcmpkV1VkN2xkTWJXclJjWG5YZkVmbkRXTHdzVQ?oc=5",
+          "title": "BTC price risks $80K loss into FOMC, earnings: Three things to know in Bitcoin this week",
+          "url": "https://cointelegraph.com/markets/btc-price-risks-80k-loss-into-fomc-earnings-three-things-to-know-in-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "source": "Cointelegraph",
+          "date": "2026-10-26"
+        },
+        {
+          "title": "Bitcoin Slips Ahead Of Fed Week, Big Tech Earnings: Analysts Divided On Where BTC Is Headed Next - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPalhwZV9xMk91ZzRiTkI3ZE40eUx3aFhFOGtCb1A4YkZDdE5HeWxaTU1xd2lUbkU4MlpNUGN5RG4yUWRNSlhzUGE2V0FvcmlvRlRRTFpwWldkYkpSQm5INzZuaE5TQXFIZF95czRPTmEtUzV5c2xsX01kMF94Z3A0N2h0bU5JY0h2QjNYNnktYXdrSmJSZWhlQQ?oc=5",
           "source": "Yahoo Finance",
-          "date": "2026-10-24"
+          "date": "2026-10-26"
         },
         {
-          "title": "Strategy, Strive face balancing act between bitcoin buying and preferred stock dividends",
-          "url": "https://www.coindesk.com/business/2026/10/24/strategy-strive-face-balancing-act-between-bitcoin-buying-and-preferred-stock-dividends",
-          "source": "CoinDesk",
-          "date": "2026-10-24"
+          "title": "Bitcoin Dips Below $80,000 as AI-Related Market Selloff Deepens - Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNT1RlX3A3ZENOMTJhNU5CRi12a0swUnlCSmtzbnJYQnRfQ1Z5NnpBVU9GdkRSUHNEXzZwSS0xc1FGRTlId3FnTWYzY1RCSWZHbkltc1dVRWMtSWNfSXFyLUJkcTRHSUV4MndxNVdONjRkSzBfRU44X1k4YjZqTVFfaWgzWE9QMHd1VWZsS1RUUmpxWTZBcHlHMXMxX25vNzhrOXViWGxXTUlVMUtoV05HQkhUZw?oc=5",
+          "source": "Bloomberg.com",
+          "date": "2026-10-26"
         },
         {
-          "title": "Strategy (MSTR), Strive (ASST) must balance bitcoin (BTC) purchases, preferred stock dividends - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOZHh1bXQxbngxTUNGWmNxZmxfYWlISGs1U2xULThnNDdsdVIyXzI0WnF5Y1FmUlZFYVYtbnZyQV9HQTN0eEJSakdCV29tYm80ZFN6Q3RkM2JiVzVaSlpzN0twZE1oZjFUWGtRV1VIQ2FPVnJSNUluNHNsemwtOTRtQlZrTjhwcWJsQmZQbDQ0U0JSLXNwSVMyWnlXYTNieGlRUy1SNTRtNTc4bm5TcmJ6LXlpd3BtTDh3cnAxcnBKTDNrMG1oWHBiSUVmUXE?oc=5",
+          "title": "Bitcoin ETFs break 2-week outflow streak with $301M comeback",
+          "url": "https://cointelegraph.com/markets/bitcoin-etfs-rebound-weekly-inflow-301-million?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "source": "Cointelegraph",
+          "date": "2026-10-26"
+        },
+        {
+          "title": "Over 11 million bitcoin has no known owner. Here's what it means",
+          "url": "https://www.coindesk.com/markets/2026/10/26/over-11-million-btc-can-t-be-linked-to-any-known-owner-even-after-wall-street-buying",
           "source": "CoinDesk",
-          "date": "2026-10-24"
+          "date": "2026-10-26"
+        },
+        {
+          "title": "Over 11 million BTC can't be linked to any known owner - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPcWxSckhpMG9CRTRWaGJvb2dwazlWRENWcThLUm1SaXk0THR3anNsR3BsMk5pNmpvT0t0OXdkQXNoc2EyUUlBRXVWNnVjZ3Q1R0Noc3ZXR3cwZEF1eFRKUXZsOTNNZjFOc1BwTmZoWUZNNGlfbWxQbmo1QnVqSjRSVHlNVWFOMHpSb2JoZ00yWVVyRUtqb3RPcHZScURSdzJjR2k5bHdsS0gtRWZ1RlhqRjd5Ml9BNlVjRERIREdrR3FmelVsSkY4?oc=5",
+          "source": "CoinDesk",
+          "date": "2026-10-26"
+        },
+        {
+          "title": "Bitcoin pinned at $80.2k as oil, rate jitters dent crypto appetite - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMmFHN3NVV3E3R2JCc2xITjBZZkNveTc0MUlNMmlZanRMTW9DcEFtenBRVkVCbkEyZzZOODNFWmxPY0daOVdVbWszdm82RVNxMm0yVldMQVA0WUo4MFc2dER6QTBuUjFjMFNGZmE5QWlDY3Nhd0RpT1pPWXF2aFVNeDltZ0YtWFhuMjRDanNSVmpIUlE?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-26"
         }
       ]
     },
@@ -99,7 +141,7 @@
       "name": "Thales SA",
       "symbol": "HO.PA",
       "mode": "auto",
-      "asOf": "2026-10-25",
+      "asOf": "2026-10-26",
       "summary": "",
       "drivers": [],
       "outlook": [],
@@ -118,6 +160,12 @@
           "date": "2026-10-23"
         },
         {
+          "title": "Thales S.A. (THLEF) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB4NE5FS0NpeFZUZXJHUzZycXFVeTdMNGpRaE1DVFNLUHFDcGxrcnM2RE42LVh5U0JOSC0xV3RQaTBVbmJGU2Q5ZklmTXp5WmhmLU5v?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-10-22"
+        },
+        {
           "title": "Thales nine-month sales and orders top forecasts on arms and space contracts - Reuters",
           "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNZG9sWHQySDdtMWY4eTI5bW1pMnotU1M0a1FNbWQyRFR3N0tVMllWQmppWV90UlY1bGU2ZHA0dGpmNHFobGM3anlLMWJzMjhNOGwxRDBtb2lINXlXeTRGbnJaQlRCVW5hLWVIcldfV3M3Skhjajk2a1ZfM05FcHJTdm9rS1UzcXJwVFJvTTg4U3lDVHhRWUFXcnU5VWlXdW8tb0hCZXFfM0N6enlYMmZKYXFYZmJUeC04UlVzM3RuU1oyd2V1ZG9MMUlTX280cHdPRVE?oc=5",
           "source": "Reuters",
@@ -127,12 +175,6 @@
           "title": "France has political consensus on higher defence spending, Thales CFO says - marketscreener.com",
           "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVUFybGRYTTlPaTI1dFExTWltVW5Hb0ZsMlpVQlRlXzk1RmtpaHNVcC1pQkF1dWdhbFNRWGtkQ0dPc3VITkw2UTZsVTJGY1ZGVkJKeGR2SXpLVWFJdU5CLTkyR2NxU09vSXdXYmVLY3IxRDNaMnJNZ3d2OFZ1Q01ySnBzMU9FYnl3U3RaNi1NR3U2RTE1MHZqY0V0TG1zcW5TUHhheFNqSkJjbTFxVnBpZC1pN2ZpV2w2eGlqUUpqSTc3VDBf?oc=5",
           "source": "marketscreener.com",
-          "date": "2026-10-22"
-        },
-        {
-          "title": "Thales beats expectations in the third quarter, analysts hail Defense momentum - www.marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPWms2VHNTT0xCY1JHeG1UVEVxdDdrLV9CUW9POWE2dHBLWnA1enZVQ0pEWlhnU0dXR09xZ2NOLXV6VG5uNUNrNkQ0X2dUTDBKV1lhTGJ3eklSa3BoZV9sYlRucGo0R1JoN0p1ak1sc0NNd0FYXzdocG93M2FrdGVaRVhsamxscmktNlFCbVQ3bnJsQTFFSmdyRnd2bWVUekNtdTZKWW9FT1NJWGxJNWNRd0JBcEx3aS1TRDRJOXVOU01JM1Q5bTdTSWtR?oc=5",
-          "source": "www.marketscreener.com",
           "date": "2026-10-22"
         },
         {
