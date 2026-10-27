@@ -1,32 +1,28 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-26T11:11:08+00:00",
+  "updatedAt": "2026-10-27T05:00:00+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "auto",
-      "asOf": "2026-10-26",
-      "summary": "BYD za září 2026 prodal 463 561 vozidel (+17,0 % meziročně, nejvíc letos); třetí čtvrtletí poprvé po čtyřech čtvrtletích meziročně vyrostlo (+18,8 %). Růst táhne zahraničí, domácí prodeje meziročně klesají. Za prvních devět měsíců je prodej stále o necelá 4 % pod loňskem. Říjnová čísla vyjdou kolem 1. listopadu.",
+      "mode": "claude",
+      "asOf": "2026-10-27",
+      "summary": "BYD v září 2026 prodalo 456 713 osobních aut (podle CarNewsChina), z toho asi 180 700 na export; za leden–září 3,08 mil. vozů. Podle statistiky MarkLines šlo o 463 561 vozidel celkem, +17,0 % meziročně. Říjnové prodeje vyjdou obvykle v prvních dnech listopadu. Příčinu pohybu ceny akcie ze zdrojů nelze určit.",
       "drivers": [
-        "Zahraniční prodeje 180 700 ks (+153,6 % meziročně), tvoří cca 39 % celku",
-        "Rekordní čistě elektrické osobní vozy (273 143 ks, +33,2 %)",
-        "Domácí trh meziročně −13 %; plug-in hybridy −2,4 % (konec čtyřměsíčního růstu)"
+        "Silný export (téměř 40 % zářijových prodejů)",
+        "Meziroční růst prodejů po slabším podzimu 2025"
       ],
-      "outlook": [
-        {
-          "source": "Deutsche Bank (podle CnEVPost, odkazuje na vedení BYD)",
-          "view": "BYD zvýšil výhled zahraničních prodejů na 2026 na 1,9–2,0 mil. vozidel a míří přes 2,5 mil. v roce 2027",
-          "target": "",
-          "date": "2026-10-01",
-          "url": "https://cnevpost.com/2026/10/01/byd-sept-2026-sales/"
-        }
-      ],
+      "outlook": [],
       "risks": [
-        "Slabý domácí trh (−30 % za devět měsíců)",
-        "Pokles plug-in hybridů po čtyřech měsících růstu"
+        "Říjnová čísla zatím nevyšla; cena akcie ve Frankfurtu v průběhu října mírně klesala (zdroj stockanalysis.com, neověřeno z primárního zdroje)"
       ],
       "headlines": [
+        {
+          "title": "Chinese NEV sales rankings in September 2026: BYD, Leapmotor, Changan, Nevo",
+          "url": "https://www.carnewschina.com/2026/10/01/chinese-nev-sales-rankings-in-september-2026-byd-leapmotor-changan-nevo/",
+          "source": "CarNewsChina",
+          "date": "2026-10-01"
+        },
         {
           "title": "Chinese Carmakers Overtake Japan in Europe for First Time - Bloomberg.com",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeEdOOS1SSnVzY0U0dmVmSEI2dmRDYmdaSXRrV1hfY0dZR2swakc0a2drNU5TUEJ6N2kzaFc2WXV5N3BTdy1hQXU5U3BSRTBjcmhqWDYySG5KbkR4TXl2MFJncGNWbUtWRmEyQ0NjU0FiNjZWRzFpTjVwUmcyYkZuNWxVX3VkSERISVZra1VITU5GenlLY2lsaVY2X3FwNVNJc1dLa0NqekpjRHNVaHhzTG9NOS0?oc=5",
@@ -68,25 +64,46 @@
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZmhSYzh5RElOMV85c3lqZmo1WURBd25RWUtqLVF3NVJrUnRYM05mOGFKZGlOemxuazNrRm5OZkxjbEFya21ZMXFpYXJER1VmRGZEV0FoMkUtTkkydlI0N0czdnphc0xfUDN2aV85TGhyZGdsQ1FBaGpRX184MWxHVmFmejJSTjNKWHVRaThGcmZTWUFKRXI4N1R4VFBkd2gxOGt6ZDBtWF9mN0NjeFRQQklrLVM?oc=5",
           "source": "Bloomberg.com",
           "date": "2026-10-25"
-        },
-        {
-          "title": "BYD Stock Has The Bull Case Changed After Global SUV Sales Strength - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNS0MzbWNLeXZMc2lfUWtaUU5VX3REdW51UHd5dkVEcmx5Y2JIT0NScjBnNUJhYlhjNXpjdEVOM0tsOTVPSy04eExEeFFmdW1tVFVCT0J4MUV2Q1BnZVFBUVpXQnBQS3U4c0l6bUtyUXlPUm92SUZtRHZneFh6enJUWi12WE9RVno5bmZfdXpDR1FGM2ZYYTBB?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-24"
         }
       ]
     },
     "bitcoin": {
       "name": "Bitcoin",
       "symbol": "bitcoin",
-      "mode": "auto",
-      "asOf": "2026-10-26",
-      "summary": "",
-      "drivers": [],
-      "outlook": [],
-      "risks": [],
+      "mode": "claude",
+      "asOf": "2026-10-27",
+      "summary": "Bitcoin se v říjnu 2026 pohybuje kolem 80–85 tis. USD, tedy hluboko pod loňským maximem 126 tis. USD. 12. 10. klesl o ~2 % na ~82 tis. USD. Zdroje uvádějí tlak vysokých cen ropy a obavy z růstu sazeb Fedu; jiní analytici vidí možné dno nebo konec medvědího trhu. Jednoznačná příčina není.",
+      "drivers": [
+        "Ropa kolem 103–110 USD → obavy ze zvyšování sazeb Fedu",
+        "Sezónnost: 8 z posledních 10 říjnů skončilo v plusu (Coinglass)"
+      ],
+      "outlook": [
+        {
+          "source": "XWIN / CryptoQuant",
+          "view": "mohou se objevovat signály dna v říjnu",
+          "target": "",
+          "date": "2026-10-13",
+          "url": "https://www.kucoin.com/news/flash/bitcoin-falls-2-amid-uncertainty-over-october-2026-performance"
+        },
+        {
+          "source": "BGeometrics (předpověď z poloviny října)",
+          "view": "základní scénář 85 500 USD, rozpětí 80 000–87 300 USD",
+          "target": "85 500 USD",
+          "date": "2026-10-11",
+          "url": "https://bgeometrics.com/reports/weekly/2026-10-11.html"
+        }
+      ],
+      "risks": [
+        "Zvýšení sazeb Fedu",
+        "Pokračování medvědího trhu"
+      ],
       "headlines": [
+        {
+          "title": "Bitcoin falls 2% amid uncertainty over October 2026 performance",
+          "url": "https://www.kucoin.com/news/flash/bitcoin-falls-2-amid-uncertainty-over-october-2026-performance",
+          "source": "KuCoin News",
+          "date": "2026-10-13"
+        },
         {
           "title": "Live news: Brent Crude slides below $110 as Iran deal hopes grow and Brazil stocks sink",
           "url": "https://www.coindesk.com/tech/2026/10/26/live-news-brent-crude-slides-below-usd110-as-iran-deal-hopes-grow-and-brazil-stocks-sink",
@@ -128,25 +145,40 @@
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPcWxSckhpMG9CRTRWaGJvb2dwazlWRENWcThLUm1SaXk0THR3anNsR3BsMk5pNmpvT0t0OXdkQXNoc2EyUUlBRXVWNnVjZ3Q1R0Noc3ZXR3cwZEF1eFRKUXZsOTNNZjFOc1BwTmZoWUZNNGlfbWxQbmo1QnVqSjRSVHlNVWFOMHpSb2JoZ00yWVVyRUtqb3RPcHZScURSdzJjR2k5bHdsS0gtRWZ1RlhqRjd5Ml9BNlVjRERIREdrR3FmelVsSkY4?oc=5",
           "source": "CoinDesk",
           "date": "2026-10-26"
-        },
-        {
-          "title": "Bitcoin pinned at $80.2k as oil, rate jitters dent crypto appetite - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMmFHN3NVV3E3R2JCc2xITjBZZkNveTc0MUlNMmlZanRMTW9DcEFtenBRVkVCbkEyZzZOODNFWmxPY0daOVdVbWszdm82RVNxMm0yVldMQVA0WUo4MFc2dER6QTBuUjFjMFNGZmE5QWlDY3Nhd0RpT1pPWXF2aFVNeDltZ0YtWFhuMjRDanNSVmpIUlE?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-26"
         }
       ]
     },
     "HO.PA": {
       "name": "Thales SA",
       "symbol": "HO.PA",
-      "mode": "auto",
-      "asOf": "2026-10-26",
-      "summary": "",
-      "drivers": [],
-      "outlook": [],
-      "risks": [],
+      "mode": "claude",
+      "asOf": "2026-10-27",
+      "summary": "Thales 22. 10. 2026 oznámil výsledky za 9 měsíců: objednávky 19,1 mld. € (+14 %), tržby 16,4 mld. € (+7,6 %, organicky +8,1 %). Tahounem je obrana (tržby +13,3 %, objednávky +14 %), digitální divize mírně klesá. Firma potvrdila všechny cíle na 2026 a organický růst tržeb čeká na horní hranici 6–7 %, případně výš. Reakci ceny akcie jsem u zdrojů neověřil.",
+      "drivers": [
+        "Obrana: námořní systémy, efektory a protivzdušná obrana",
+        "Objednávky na Blízkém a Středním východě organicky +210 %",
+        "29 velkých zakázek nad 100 mil. € v souhrnu 7,6 mld. € (+42 %)"
+      ],
+      "outlook": [
+        {
+          "source": "Thales (vlastní výhled)",
+          "view": "organický růst tržeb 2026 na horní hranici 6–7 %, upravená EBIT marže 12,6–12,8 %, book-to-bill nad 1,1",
+          "target": "",
+          "date": "2026-10-22",
+          "url": "https://www.webdisclosure.com/press-release/thales-reports-its-order-intake-and-sales-as-of-september-30-2026-press-release-22-october-2026-gqnPtiEdIOv"
+        }
+      ],
+      "risks": [
+        "Výhled předpokládá, že nedojde k novým makroekonomickým či geopolitickým šokům",
+        "Pokles divize Cyber & Digital (objednávky −3 %)"
+      ],
       "headlines": [
+        {
+          "title": "Thales reports its order intake and sales as of September 30, 2026",
+          "url": "https://www.webdisclosure.com/press-release/thales-reports-its-order-intake-and-sales-as-of-september-30-2026-press-release-22-october-2026-gqnPtiEdIOv",
+          "source": "Thales (tisková zpráva)",
+          "date": "2026-10-22"
+        },
         {
           "title": "Naval C4ISR Market Size, Share, Growth Trends, and Forecast 2026-2035 | USD 51.2 Billion Opportunity as AI-Enabled Systems Accelerate Fleet Modernization",
           "url": "https://finance.yahoo.com/technology/articles/naval-c4isr-market-size-share-132000181.html?.tsrc=rss",
@@ -186,12 +218,6 @@
         {
           "title": "Thales sales jump on European rearmament, satellite systems",
           "url": "https://finance.yahoo.com/technology/articles/thales-sales-jump-european-rearmament-072143420.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-10-22"
-        },
-        {
-          "title": "Thales sales jump on European rearmament, satellite systems - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWFkzcE9QbnJuUXB4R184amplN2g2ZnVxazZqcTFQUEkyRkpESnZJRUxSQmFWbXFwYVBRZ0pWYy1DOFRDTWt5dGcwWGZXU3YxRnJnMjN1N0psTm5QVGY2ZFdGSXZQNUFDRGI5Y29qeThKakNpelNpcWhULUdwTGZfWFJLMEctazhVd1UyWHZVcExZamREaV9neHpRVkJYQjA?oc=5",
           "source": "Yahoo Finance",
           "date": "2026-10-22"
         }
