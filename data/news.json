@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-27T05:00:00+00:00",
+  "updatedAt": "2026-10-27T10:39:19+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -226,8 +226,8 @@
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "claude",
-      "asOf": "2026-10-26",
+      "mode": "auto",
+      "asOf": "2026-10-27",
       "summary": "Rheinmetall 6. 10. potvrdil cíle na rok 2026 (růst tržeb 37–42 %, marže kolem 19 %); akcie přesto klesla o 1 % a od začátku roku je zhruba o 40 % níž. Podle zdrojů investory drží zdrženlivé dřívější snížení výhledu tržeb. Čtvrtletní výsledky se čekají v listopadu.",
       "drivers": [
         "Berenberg 8.–9. 10. snížil doporučení na Hold a cíl na 1 020 € kvůli nejistotě zakázek po roce 2030",
@@ -251,16 +251,52 @@
       ],
       "headlines": [
         {
-          "title": "Berenberg senkt Rheinmetall auf Hold und Ziel auf 1020 Euro",
-          "url": "https://live.deutsche-boerse.com/news/ANALYSE-FLASH-Berenberg-senkt-Rheinmetall-auf-Hold-und-Ziel-auf-1020-Euro-72b2799a-ee8b-420a-8527-1baea3cf3323",
-          "source": "dpa-AFX",
-          "date": "2026-10-08"
+          "title": "Rheinmetall AG : Gets a Buy rating from Deutsche Bank - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORVFPTmNNOHdxU0d5a2RXTEUyUS1qNy0yZWNVTURWY0tPT1dETFVPRE45Wm9Tdm1Vajhvc1cxZUVmaUN4UURyRENSZElSajVIVEpYalF6V2N2WVF4QjVmSXBtU3FqZEZYeFpGaXk2ZWo4ZUh4NEFfWmYxNzR2Q3JFZF96T2FfYmRJQ2FnUWZEM1M1RF9OMmgtV3dmWGRMamJfVFp0ZVYzaw?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-10-27"
         },
         {
-          "title": "Rheinmetall confirme ses objectifs 2026, Arminius reste sur les rails",
-          "url": "https://www.optionfinance.fr/info-financiere-en-continu/d/2026-10-06-rheinmetall-confirme-ses-objectifs-2026-arminius-reste-sur-les-rails.html",
-          "source": "Option Finance",
-          "date": "2026-10-06"
+          "title": "Rheinmetall AG (RHM.DE) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1kalp2ZzIxY2RuOFJ2SW45UlkwWDJyWU5aZ2JHZFFqUURnNXNPY3k1MUUyNHBPeGFpcWg5VEZvVmFHT3pRVnpOZ01SR0VHejluVG04Yg?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-10-24"
+        },
+        {
+          "title": "Rheinmetall AG (RNMBY) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAxbzkzTDExckFpNHdJNktXTUZhdGRONzhQLXBOTEVvX1RmMGFpVVdFT1BVQTR4SmNvV2VPRkJoelJwWWhMWldoTzRNd1Rad3JqUWxn?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-10-24"
+        },
+        {
+          "title": "Rheinmetall and MSC to acquire Mangalia shipyard - Janes",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxONEJaQ2dJanZwVkZneEZ5UXNkcWJZTXJxZk02MWdLVFpYd3JqT3dfUldzaXZkN3hRZ0UtbFNnQ3F1OFZkYjNIWXMxX1FGb2JfREYzVm1xVDdTdXJhYmtKd1FOMkROY0d4S2ZUdmFmblVHOWV1TEwweFA5YmNoMXd6NjVUa3dacDI0cld6Q3A0RUZDeDFzMDA4bnJjaG5UTk4zREFPMmlaWnlhWVVOd09GalY5RnF6dlJS?oc=5",
+          "source": "Janes",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Rheinmetall opens UK Gun Hall in Telford - Janes",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVkN2YlZCQjMxNDlaQy0yclctQ1liM0EyanV2UFllYllsQzM4eWFMRWpBcER1TTFYV0tVbEF5dlJpZ2N3SEpRMFBSMU1sX1ZHaDhGVGdfTVA2cWlmQXpXV2xRYmZMVXBRSU5oVGVYLU9HQ2IzSjVKeUh2YVRDUlpubElqVjFsZ1ZldlowdFF6dkxfZUQ5eEwyVlVnejFPVVJFSUxkWDNJT1pLVzZndzVlX2otTQ?oc=5",
+          "source": "Janes",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Leonardo, Rheinmetall secure $4 billion contracts with Italian Army, report says - Defense News",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVjNNVC1EMnVQMmYwWXlhWmQyZXNDSzJRcXNoSkFmYi1VcnJuNmtJb3R3d1RFTl9ZM0RNaC1EZ04ycVNzcE8xUUEtYlItbHpmNnRTWWlaRXRPb19hQS1EamZ3dF9fNno3SHY0ZS1xMTNUMVdUeFlHNXZUbUdjcTVzVzFVaHZwVzlhcUpMUUc5UUJGOGpocF9UTklTSXBxNmJpaWxNUWdhWWF0aEducWNNRVVLZjRFSGVMVklVRjBTS3AxQVI3UEc0bTItcw?oc=5",
+          "source": "Defense News",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Land-Based C4ISR Market Forecasts Growth from $36.6 Billion (2025) to $67.7 Billion by 2035, Profiling Lockheed Martin, Rheinmetall, Thales, Elbit Systems & 14 Other Key Players",
+          "url": "https://finance.yahoo.com/technology/articles/land-based-c4isr-market-forecasts-131200785.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Rheinmetall AG (1RHM.MI) Analyst insights, Price targets and Recommendations - Yahoo Finance - Yahoo Finance Singapore",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5uZ25aY0hUWjdLeF9zVWJ2NzRsVXhWRkhjXy1tZS1aMjA2RWdVeXhMX2pjMVlDMVhjd1FXdHl4SjZDUEtBdEdhUXFmVEUyWFA2cTMxMl9VamxDV0l3RGNaUENUdHp2QzRFWEl6Uw?oc=5",
+          "source": "Yahoo Finance Singapore",
+          "date": "2026-10-23"
         }
       ]
     }
