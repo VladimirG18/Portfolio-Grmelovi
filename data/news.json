@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-29T04:09:04+00:00",
+  "updatedAt": "2026-10-29T11:34:19+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -81,7 +81,7 @@
       "name": "Bitcoin",
       "symbol": "bitcoin",
       "mode": "auto",
-      "asOf": "2026-10-28",
+      "asOf": "2026-10-29",
       "summary": "Bitcoin se v říjnu 2026 pohybuje kolem 80–85 tis. USD, tedy hluboko pod loňským maximem 126 tis. USD. 12. 10. klesl o ~2 % na ~82 tis. USD. Zdroje uvádějí tlak vysokých cen ropy a obavy z růstu sazeb Fedu; jiní analytici vidí možné dno nebo konec medvědího trhu. Jednoznačná příčina není.",
       "drivers": [
         "Ropa kolem 103–110 USD → obavy ze zvyšování sazeb Fedu",
@@ -109,52 +109,52 @@
       ],
       "headlines": [
         {
-          "title": "Live updates: Bitcoin climbs above $81,000 as majors rally ahead of Fed decision",
-          "url": "https://www.coindesk.com/business/2026/10/28/live-updates-bitcoin-climbs-above-usd81-000-as-majors-rally-ahead-of-fed-decision",
+          "title": "Bitcoin drops to $80,000 on Fed dissent, Samsung, Alphabet earnings; AI tokens slump",
+          "url": "https://www.coindesk.com/markets/2026/10/29/bitcoin-drops-to-usd80-000-on-fed-dissent-samsung-alphabet-earnings-ai-tokens-slump",
           "source": "CoinDesk",
-          "date": "2026-10-28"
+          "date": "2026-10-29"
         },
         {
-          "title": "Bitcoin price eyes $82K as Morgan Stanley strategist says most of correction is over",
-          "url": "https://cointelegraph.com/markets/bitcoin-price-eyes-82k-as-morgan-stanley-strategist-says-most-of-correction-is-over?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Crypto declines as Samsung and Alphabet earnings rattle tech and Fed holds with two dissenters seeking hike - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVm1yYlh5VnI1RmwwRG8wNmF3d0djMEJGU2tyckhsal9zYVZOXzM1RDZGV2tua0ZJOTVGRzludm1KOHZfN0hSdTJIM3M3U0NRbjVkWXlqMHUxdUJlMENwZ01BZkx6Y3JsQ0FQTmJvNkotQWc2Vmlod1lRTjYwdGRwSmxQbFhKbm42VWV0NmhkMWRJclNoNmpBSUxkMmdxdDVBYmZqNHpxbkZvMXdqZUE0aUNaZEhhODZSNjZyNWQzNHJadlpqSmc?oc=5",
+          "source": "CoinDesk",
+          "date": "2026-10-29"
+        },
+        {
+          "title": "Bitcoin long-term resistance in focus as analysis sees selling risk above $85K",
+          "url": "https://cointelegraph.com/markets/bitcoin-long-term-resistance-in-focus-as-analysis-sees-selling-risk-above-85k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "source": "Cointelegraph",
-          "date": "2026-10-28"
+          "date": "2026-10-29"
         },
         {
-          "title": "Here's how much bitcoin and the S&P 500 could rally after midterms",
-          "url": "https://www.coindesk.com/markets/2026/10/28/bitcoin-averages-over-50-in-the-12-months-after-midterms-s-and-p-500-gains-15",
+          "title": "How to Get Offered $3 Million in Bitcoin Bets: Call It a ‘Dead Network’ on X - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQT25TYWxNZDd2VV9NVEZ6Yzc0QU1YVUdaS2dVOFZrN1k4Qi1pZUxJcFp6WndXbGZYZUh5YVRoREl5NXJfTGxfZmFDbU5UaU9fZURPWjFrbk9adUdNYTBsQXZWTS1tN2pMX0ZOSnB2SThKZEl4SU5DTG82eDM2OW1MMVplZTg4aGFUdXBlOHpXSU1wdHA5bTNBWnVtVQ?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-29"
+        },
+        {
+          "title": "Live updates: Bitcoin clings to $80,000 as Strategy’s cushion thins before earnings",
+          "url": "https://www.coindesk.com/business/2026/10/29/live-updates-bitcoin-clings-to-usd80-000-as-strategy-s-cushion-thins-before-earnings",
           "source": "CoinDesk",
-          "date": "2026-10-28"
+          "date": "2026-10-29"
         },
         {
-          "title": "Bitcoin has soared 50% on average after midterms. The S&P 500 has gained 15%. - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPVW1uLUNLX0ZRV3BPSmhCRWxPTXR2UjZCTTJ5ZE9GaWdwX0h6YlAzaFFCT1NvaGNrYThIOGkwZnk1OWdfODZVWEdFVjNjLXVLWDNkRExUaGhrLXlIS3ZWUDktbFVMUVhrUDN4dWZMZlc1ZDNBNlNGRENPUUZJR0NERUJhY2oxRUdpd2pUaFVabFFaUTd6SHZXa25fcEhrOEFaSk5wRzNJSHdGVmhiRDZGYkZkaHE5LWk3aUo1QXNR?oc=5",
+          "title": "Thai Supreme Court rules bitcoin is property after thief challenges conviction",
+          "url": "https://www.coindesk.com/policy/2026/10/29/thai-supreme-court-rules-bitcoin-is-property-after-thief-challenges-conviction",
           "source": "CoinDesk",
-          "date": "2026-10-28"
+          "date": "2026-10-29"
         },
         {
-          "title": "Bitcoin ETF inflows climb to $176M as BTC rebounds above $80K",
-          "url": "https://cointelegraph.com/markets/bitcoin-etf-176-million-inflow-sentiment-rebounds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "source": "Cointelegraph",
-          "date": "2026-10-28"
+          "title": "Prediction: This Cryptocurrency Will Outperform Bitcoin in 2027 - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVFlYZ2lnMkNlbVREV25fR1VZbUhvWTZqbGtwRkZRS2lmWGhWemF2YXlRRkhucE5GUVJkanlCV055eWFsb1R3eS15aTMtZXRwSTR6eXE4LUlHZW5RZ1FxbTNqTDhiQUJEbXJHVk1fUlFvWTgtNFcxQ3ZpVE9kTHVvUGhNZ21FbkRBNjVoem1nUnd3ZkQ0Q0g4Z1FVejlFUzRXSFBxbXdZdmlIZ0c1MlQ0andzcUg?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-29"
         },
         {
-          "title": "Here’s what happened in crypto today",
-          "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "source": "Cointelegraph",
-          "date": "2026-10-28"
-        },
-        {
-          "title": "Bitcoin treasury Datavault AI plunges 50% after firm says it can’t access its BTC",
-          "url": "https://www.coindesk.com/markets/2026/10/28/bitcoin-treasury-datavault-ai-plunges-50-after-firm-says-it-can-t-access-its-btc",
+          "title": "Bitcoin analysis: The chart that could make or break BTC - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORzI3aWRvVldraEo2UE9UUXpURDVOaVotS1VIMS1iMkdNU3BXelVXQUpjSmFSX1lSbVd3eHU3dTNNMlNWQVNzWTBiUXdLdVJfcWJQYlZFYTNoMDhacW1KekVVaXFobDQwV2RfRVdBMWpyZFNzUC12Q1hFWmlLZFhxeTRXaEZvUXhLd3k5UnNmTjJhMnV1cWZlaXA3UUtiODFV?oc=5",
           "source": "CoinDesk",
-          "date": "2026-10-28"
-        },
-        {
-          "title": "Bitcoin nears $81,000 ahead of Fed decision as ZEC jumps 8%",
-          "url": "https://www.coindesk.com/markets/2026/10/28/bitcoin-nears-usd81-000-ahead-of-fed-decision-as-zec-jumps-8",
-          "source": "CoinDesk",
-          "date": "2026-10-28"
+          "date": "2026-10-29"
         }
       ]
     },
@@ -259,7 +259,7 @@
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
       "mode": "auto",
-      "asOf": "2026-10-28",
+      "asOf": "2026-10-29",
       "summary": "Rheinmetall 6. 10. potvrdil cíle na rok 2026 (růst tržeb 37–42 %, marže kolem 19 %); akcie přesto klesla o 1 % a od začátku roku je zhruba o 40 % níž. Podle zdrojů investory drží zdrženlivé dřívější snížení výhledu tržeb. Čtvrtletní výsledky se čekají v listopadu.",
       "drivers": [
         "Berenberg 8.–9. 10. snížil doporučení na Hold a cíl na 1 020 € kvůli nejistotě zakázek po roce 2030",
@@ -282,6 +282,12 @@
         "Slabé smluvní pokrytí tržeb 2030 (zejména munice) podle Berenberg"
       ],
       "headlines": [
+        {
+          "title": "Italy seeks support from state-controlled groups, Germany's Rheinmetall over former Ilva steelworks - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQQS01VGhWLTdwMTFzS1BQSk8tbDlIWllrSGJfTDhyY2FoYk0yTHNVbzhCRDhiUlNva2hXamtjZzl2XzgtZmIwX0NHX21DX1N2Y25uUjIxUVo4TkFZbGdERnFIMGJqNEFoTXh6MGxEMi01S1FkMko2TEw1cnJ6Q1dDNllKNGh6V0llblhlZnY3dE85UjYwTFd6WnJCdm4xSHk0TTNOTFFzV0JCX2t1VGNXTEl1dVBIUGw5M1AzeG0teXVKbllQT05WQi1vMFd1QWkzSzZMajVCdXB6dmJXdE5yWDJyTFdkdw?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-10-27"
+        },
         {
           "title": "Deutsche Bank Research Lowers Rheinmetall PT, Maintains Buy Rating - marketscreener.com",
           "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQel90OURMRmpNMU1VenBPbGN2S0F6aEJLbDc0MFNjZ1VadzhFUDRWTm82MHVZM2FJWHBQand1WlRLdldZbjZuXzhCU1hVb2hwYjRvamFEQXc5aDU0V3AwTmFBV3pxdF8za01FTUFrdTdPQzZfM3dESTdnQUlCSExiVlB0aTQxT0NWeDdhRXNVeENEQ3VXZzBPMnRscjZ3aHVVNmJpRkl5WkhiRWJDeTJYcHVhWW5iUGdOQXc?oc=5",
@@ -307,27 +313,21 @@
           "date": "2026-10-24"
         },
         {
-          "title": "Rheinmetall AG (RHM.DE) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1kalp2ZzIxY2RuOFJ2SW45UlkwWDJyWU5aZ2JHZFFqUURnNXNPY3k1MUUyNHBPeGFpcWg5VEZvVmFHT3pRVnpOZ01SR0VHejluVG04Yg?oc=5",
-          "source": "Yahoo! Finance Canada",
-          "date": "2026-10-24"
-        },
-        {
           "title": "Leonardo, Rheinmetall secure $4 billion contracts with Italian Army, report says - Defense News",
           "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVjNNVC1EMnVQMmYwWXlhWmQyZXNDSzJRcXNoSkFmYi1VcnJuNmtJb3R3d1RFTl9ZM0RNaC1EZ04ycVNzcE8xUUEtYlItbHpmNnRTWWlaRXRPb19hQS1EamZ3dF9fNno3SHY0ZS1xMTNUMVdUeFlHNXZUbUdjcTVzVzFVaHZwVzlhcUpMUUc5UUJGOGpocF9UTklTSXBxNmJpaWxNUWdhWWF0aEducWNNRVVLZjRFSGVMVklVRjBTS3AxQVI3UEc0bTItcw?oc=5",
           "source": "Defense News",
           "date": "2026-10-23"
         },
         {
-          "title": "Rheinmetall opens UK Gun Hall in Telford - Janes",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVkN2YlZCQjMxNDlaQy0yclctQ1liM0EyanV2UFllYllsQzM4eWFMRWpBcER1TTFYV0tVbEF5dlJpZ2N3SEpRMFBSMU1sX1ZHaDhGVGdfTVA2cWlmQXpXV2xRYmZMVXBRSU5oVGVYLU9HQ2IzSjVKeUh2YVRDUlpubElqVjFsZ1ZldlowdFF6dkxfZUQ5eEwyVlVnejFPVVJFSUxkWDNJT1pLVzZndzVlX2otTQ?oc=5",
+          "title": "Rheinmetall and MSC to acquire Mangalia shipyard - Janes",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxONEJaQ2dJanZwVkZneEZ5UXNkcWJZTXJxZk02MWdLVFpYd3JqT3dfUldzaXZkN3hRZ0UtbFNnQ3F1OFZkYjNIWXMxX1FGb2JfREYzVm1xVDdTdXJhYmtKd1FOMkROY0d4S2ZUdmFmblVHOWV1TEwweFA5YmNoMXd6NjVUa3dacDI0cld6Q3A0RUZDeDFzMDA4bnJjaG5UTk4zREFPMmlaWnlhWVVOd09GalY5RnF6dlJS?oc=5",
           "source": "Janes",
           "date": "2026-10-23"
         },
         {
-          "title": "Land-Based C4ISR Market Forecasts Growth from $36.6 Billion (2025) to $67.7 Billion by 2035, Profiling Lockheed Martin, Rheinmetall, Thales, Elbit Systems & 14 Other Key Players",
-          "url": "https://finance.yahoo.com/technology/articles/land-based-c4isr-market-forecasts-131200785.html?.tsrc=rss",
-          "source": "Yahoo Finance",
+          "title": "Rheinmetall opens UK Gun Hall in Telford - Janes",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVkN2YlZCQjMxNDlaQy0yclctQ1liM0EyanV2UFllYllsQzM4eWFMRWpBcER1TTFYV0tVbEF5dlJpZ2N3SEpRMFBSMU1sX1ZHaDhGVGdfTVA2cWlmQXpXV2xRYmZMVXBRSU5oVGVYLU9HQ2IzSjVKeUh2YVRDUlpubElqVjFsZ1ZldlowdFF6dkxfZUQ5eEwyVlVnejFPVVJFSUxkWDNJT1pLVzZndzVlX2otTQ?oc=5",
+          "source": "Janes",
           "date": "2026-10-23"
         }
       ]
