@@ -1,22 +1,38 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-28T11:24:08+00:00",
+  "updatedAt": "2026-10-29T04:09:04+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "auto",
-      "asOf": "2026-10-28",
-      "summary": "BYD v září 2026 prodalo 456 713 osobních aut (podle CarNewsChina), z toho asi 180 700 na export; za leden–září 3,08 mil. vozů. Podle statistiky MarkLines šlo o 463 561 vozidel celkem, +17,0 % meziročně. Říjnové prodeje vyjdou obvykle v prvních dnech listopadu. Příčinu pohybu ceny akcie ze zdrojů nelze určit.",
+      "mode": "claude",
+      "asOf": "2026-10-29",
+      "summary": "BYD v září 2026 prodal 463 561 NEV (+17 % meziročně, nejvíc letos); za 3. čtvrtletí 1,32 mil. vozů (+18,8 %), tedy první meziroční růst po čtyřech čtvrtletích poklesu. Za 9 měsíců je prodej stále o 3,9 % níž. Růst táhne export (září +154 % meziročně), domácí čínský trh dál klesá. Reakci ceny akcie jsem u zdrojů neověřil.",
       "drivers": [
-        "Silný export (téměř 40 % zářijových prodejů)",
-        "Meziroční růst prodejů po slabším podzimu 2025"
+        "Export v září 180,7 tis. vozů (+154 % meziročně), 39 % prodejů",
+        "Rekordní BEV (273 tis. v září, +33 %)",
+        "Domácí prodeje v Číně −13 % meziročně (9 měsíců −30 %)"
       ],
-      "outlook": [],
+      "outlook": [
+        {
+          "source": "Deutsche Bank (poznámka z 7. 9. 2026, dle CnEVPost)",
+          "view": "vedení zvýšilo cíl exportu na 1,9–2,0 mil. vozidel pro 2026 a přes 2,5 mil. pro 2027",
+          "target": "",
+          "date": "2026-09-07",
+          "url": "https://cnevpost.com/2026/10/01/byd-sept-2026-sales/"
+        }
+      ],
       "risks": [
-        "Říjnová čísla zatím nevyšla; cena akcie ve Frankfurtu v průběhu října mírně klesala (zdroj stockanalysis.com, neověřeno z primárního zdroje)"
+        "Propad domácí poptávky v Číně",
+        "Slábnoucí PHEV (−2,4 % meziročně)"
       ],
       "headlines": [
+        {
+          "title": "BYD Sept 2026 sales: 463,561 NEVs, +16.98% YoY",
+          "url": "https://cnevpost.com/2026/10/01/byd-sept-2026-sales/",
+          "source": "CnEVPost",
+          "date": "2026-10-01"
+        },
         {
           "title": "BYD launches third-gen Qin Plus DM-i with larger body and longer electric range - CnEVPost",
           "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1tRWlETTRKZEFURDNRXzhwN3BKam5jT3hrU1F0eThDNm5PS21rYkJjNkJrbGVIRk5JMFZzYlZxVmtZMlhUbFVvMGpVZmVWdzZiUERHOThBZHo2Z2t4OHZYVTJ3bllJN2FwU19McGRVQ3RUZHlDLXc?oc=5",
@@ -58,12 +74,6 @@
           "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5ha2ZzNDVYRU43SnhBSnNnLS1uclpaNFBKbEZ6TG05NEo5aEpZYlF6ZUw1TlVELXREOWRzVkJDYVZveWpubE43ZG85YkJKQTh6MzRLVUkxNVZ4ckdBbmR1MjJYN2ljX2drcV9lM09LT09iUW8xMnpTTkpmSU5EZw?oc=5",
           "source": "CnEVPost",
           "date": "2026-10-26"
-        },
-        {
-          "title": "BYD’s Korea Expansion Challenges Hyundai Dominance on Home Turf - Bloomberg",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZmhSYzh5RElOMV85c3lqZmo1WURBd25RWUtqLVF3NVJrUnRYM05mOGFKZGlOemxuazNrRm5OZkxjbEFya21ZMXFpYXJER1VmRGZEV0FoMkUtTkkydlI0N0czdnphc0xfUDN2aV85TGhyZGdsQ1FBaGpRX184MWxHVmFmejJSTjNKWHVRaThGcmZTWUFKRXI4N1R4VFBkd2gxOGt6ZDBtWF9mN0NjeFRQQklrLVM?oc=5",
-          "source": "Bloomberg",
-          "date": "2026-10-25"
         }
       ]
     },
@@ -151,15 +161,36 @@
     "HO.PA": {
       "name": "Thales SA",
       "symbol": "HO.PA",
-      "mode": "auto",
-      "asOf": "2026-10-28",
-      "summary": "Thales 22. 10. 2026 oznámil výsledky za 9 měsíců: objednávky 19,1 mld. € (+14 %), tržby 16,4 mld. € (+7,6 %, organicky +8,1 %). Tahounem je obrana (tržby +13,3 %, objednávky +14 %), digitální divize mírně klesá. Firma potvrdila všechny cíle na 2026 a organický růst tržeb čeká na horní hranici 6–7 %, případně výš. Reakci ceny akcie jsem u zdrojů neověřil.",
+      "mode": "claude",
+      "asOf": "2026-10-29",
+      "summary": "Thales 22. 10. 2026 oznámil výsledky za 3. čtvrtletí: tržby 5,47 mld. € (organicky +8,7 %), objednávky 6,65 mld. € vč. zakázky ~500 mil. € k družicové konstelaci IRIS². Tržby byly zhruba o 2 % a objednávky o 9 % nad konsensem, slabší byla divize Cyber & Digital. Akcie přesto ten den klesla o ~1,3 % na ~227 €; analytici podle zdroje vidí omezený prostor pro zvyšování odhadů.",
       "drivers": [
-        "Obrana: námořní systémy, efektory a protivzdušná obrana",
-        "Objednávky na Blízkém a Středním východě organicky +210 %",
-        "29 velkých zakázek nad 100 mil. € v souhrnu 7,6 mld. € (+42 %)"
+        "Obrana: organický růst tržeb +12,8 %",
+        "Letectví a kosmonautika: +7,8 %",
+        "Objednávky nad očekáváním (+9 % oproti konsensu)"
       ],
       "outlook": [
+        {
+          "source": "Citi",
+          "view": "Buy, čeká mírný růst akcie",
+          "target": "317 €",
+          "date": "2026-10-22",
+          "url": "https://www.easybourse.com/aeronautique/news/1539895/thales-fait-mieux-quattendu-3e-trimestre-analystes-saluent-dynamique-defense.html"
+        },
+        {
+          "source": "Jefferies",
+          "view": "Buy, sleduje marže ve 2. pololetí",
+          "target": "290 €",
+          "date": "2026-10-22",
+          "url": "https://www.easybourse.com/aeronautique/news/1539895/thales-fait-mieux-quattendu-3e-trimestre-analystes-saluent-dynamique-defense.html"
+        },
+        {
+          "source": "Berenberg",
+          "view": "Hold, odhady už počítají s ~7,6% organickým růstem",
+          "target": "275 €",
+          "date": "2026-10-22",
+          "url": "https://www.easybourse.com/aeronautique/news/1539895/thales-fait-mieux-quattendu-3e-trimestre-analystes-saluent-dynamique-defense.html"
+        },
         {
           "source": "Thales (vlastní výhled)",
           "view": "organický růst tržeb 2026 na horní hranici 6–7 %, upravená EBIT marže 12,6–12,8 %, book-to-bill nad 1,1",
@@ -169,10 +200,17 @@
         }
       ],
       "risks": [
-        "Výhled předpokládá, že nedojde k novým makroekonomickým či geopolitickým šokům",
-        "Pokles divize Cyber & Digital (objednávky −3 %)"
+        "Cyber & Digital zaostává za konsensem",
+        "Omezený prostor pro zvyšování odhadů (AlphaValue)",
+        "Výhled předpokládá, že nedojde k novým makroekonomickým či geopolitickým šokům"
       ],
       "headlines": [
+        {
+          "title": "Thales fait mieux qu'attendu au 3e trimestre, les analystes saluent la dynamique de la Défense",
+          "url": "https://www.easybourse.com/aeronautique/news/1539895/thales-fait-mieux-quattendu-3e-trimestre-analystes-saluent-dynamique-defense.html",
+          "source": "EasyBourse",
+          "date": "2026-10-22"
+        },
         {
           "title": "SIMPL Wireless and Thales Publish Joint White Paper: \"Beyond Connectivity Management\"",
           "url": "https://finance.yahoo.com/technology/articles/simpl-wireless-thales-publish-joint-110000024.html?.tsrc=rss",
@@ -214,12 +252,6 @@
           "url": "https://finance.yahoo.com/technology/articles/land-based-c4isr-market-forecasts-131200785.html?.tsrc=rss",
           "source": "Yahoo Finance",
           "date": "2026-10-23"
-        },
-        {
-          "title": "Thales nine-month sales and orders top forecasts on arms and space contracts - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNZG9sWHQySDdtMWY4eTI5bW1pMnotU1M0a1FNbWQyRFR3N0tVMllWQmppWV90UlY1bGU2ZHA0dGpmNHFobGM3anlLMWJzMjhNOGwxRDBtb2lINXlXeTRGbnJaQlRCVW5hLWVIcldfV3M3Skhjajk2a1ZfM05FcHJTdm9rS1UzcXJwVFJvTTg4U3lDVHhRWUFXcnU5VWlXdW8tb0hCZXFfM0N6enlYMmZKYXFYZmJUeC04UlVzM3RuU1oyd2V1ZG9MMUlTX280cHdPRVE?oc=5",
-          "source": "Reuters",
-          "date": "2026-10-22"
         }
       ]
     },
