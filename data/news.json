@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-29T11:34:19+00:00",
+  "updatedAt": "2026-10-30T04:09:02+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -80,12 +80,14 @@
     "bitcoin": {
       "name": "Bitcoin",
       "symbol": "bitcoin",
-      "mode": "auto",
-      "asOf": "2026-10-29",
-      "summary": "Bitcoin se v říjnu 2026 pohybuje kolem 80–85 tis. USD, tedy hluboko pod loňským maximem 126 tis. USD. 12. 10. klesl o ~2 % na ~82 tis. USD. Zdroje uvádějí tlak vysokých cen ropy a obavy z růstu sazeb Fedu; jiní analytici vidí možné dno nebo konec medvědího trhu. Jednoznačná příčina není.",
+      "mode": "claude",
+      "asOf": "2026-10-30",
+      "summary": "Bitcoin se 29. 10. 2026 pohyboval kolem 80 tis. USD (−1,4 % od půlnoci UTC, v průběhu dne zasáhl ~79,6 tis.). CoinDesk to spojuje s propadem technologických akcií po výsledcích Alphabetu a Samsungu a s nejistotou kolem Fedu: ten 28. 10. nechal sazby beze změny, dva členové ale hlasovali pro zvýšení o 0,25 p. b. a předseda Warsh nenaznačil kroky na prosinec. Americké spotové BTC ETF tři dny po sobě přibíraly (celkem 423,7 mil. USD). Jednoznačná příčina to není, jde o výklad zdroje.",
       "drivers": [
-        "Ropa kolem 103–110 USD → obavy ze zvyšování sazeb Fedu",
-        "Sezónnost: 8 z posledních 10 říjnů skončilo v plusu (Coinglass)"
+        "Fed 28. 10. držel sazby, dva hlasy pro zvýšení (CoinDesk)",
+        "Slabé výsledky Alphabetu a pokles Samsungu zatížily rizikové aktiva (CoinDesk, 29. 10.)",
+        "Likvidace na derivátech vzrostly o 84 % na 337 mil. USD (CoinDesk)",
+        "Přítoky do spotových BTC ETF 3 dny po sobě (Farside, přes CoinDesk)"
       ],
       "outlook": [
         {
@@ -104,8 +106,9 @@
         }
       ],
       "risks": [
-        "Zvýšení sazeb Fedu",
-        "Pokračování medvědího trhu"
+        "Možné zvýšení sazeb Fedu v prosinci",
+        "Pokračování medvědího trhu",
+        "Další likvidace na derivátech"
       ],
       "headlines": [
         {
@@ -258,9 +261,9 @@
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "auto",
-      "asOf": "2026-10-29",
-      "summary": "Rheinmetall 6. 10. potvrdil cíle na rok 2026 (růst tržeb 37–42 %, marže kolem 19 %); akcie přesto klesla o 1 % a od začátku roku je zhruba o 40 % níž. Podle zdrojů investory drží zdrženlivé dřívější snížení výhledu tržeb. Čtvrtletní výsledky se čekají v listopadu.",
+      "mode": "claude",
+      "asOf": "2026-10-30",
+      "summary": "Rheinmetall 6. 10. potvrdil cíle na rok 2026 (růst tržeb 37–42 %, marže kolem 19 %); akcie přesto klesla o 1 % a od začátku roku je zhruba o 40 % níž. Podle zdrojů investory drží zdrženlivé dřívější snížení výhledu tržeb. Čtvrtletní výsledky se čekají v listopadu. Deutsche Bank 27. 10. snížila cíl na 1 650 € a ponechala Buy (jen dle titulku). Zprávy o výsledcích za 3. čtvrtletí se čekají 5. 11. 2026.",
       "drivers": [
         "Berenberg 8.–9. 10. snížil doporučení na Hold a cíl na 1 020 € kvůli nejistotě zakázek po roce 2030",
         "Potvrzení cílů 2026 (6. 10.), Jefferies označil signály k tempu zakázek a programu Arminius za uklidňující",
@@ -274,6 +277,13 @@
           "target": "1 020 € (dříve 1 600 €)",
           "date": "2026-10-08",
           "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-berenberg-stuft-auf-hold-ab-und-senkt-kursziel-auf-1020-euro"
+        },
+        {
+          "source": "Deutsche Bank (podle titulku MarketScreener)",
+          "view": "snížil cílovou cenu, doporučení Buy ponecháno; detaily jsem neověřil (článek nedostupný)",
+          "target": "1 650 €",
+          "date": "2026-10-27",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQUtPT3hQRFNfUldZekNpVm92TklsRURXWEZDRG9hVDlnX1Y2QTBJcV8ySjE5ZTh1UkhWa3FBcGUtU0F6Mk5tb3VKNHk2cEptNHZCTkV1ZkRHcktMczBFalFvSTd2bUk1YkZDa3dkd09zQkpwTFpIMGpmRHEtd1JjMjVyRmVGWjYyMGV6ak80aDRwWjhHa1N3QWhLOTF4RGRhcldReUxDSWVOTnM?oc=5"
         }
       ],
       "risks": [
