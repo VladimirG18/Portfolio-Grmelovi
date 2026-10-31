@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-31T04:08:59+00:00",
+  "updatedAt": "2026-10-31T10:57:31+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
       "mode": "auto",
-      "asOf": "2026-10-30",
+      "asOf": "2026-10-31",
       "summary": "BYD v září 2026 prodal 463 561 NEV (+17 % meziročně, nejvíc letos); za 3. čtvrtletí 1,32 mil. vozů (+18,8 %), tedy první meziroční růst po čtyřech čtvrtletích poklesu. Za 9 měsíců je prodej stále o 3,9 % níž. Růst táhne export (září +154 % meziročně), domácí čínský trh dál klesá. Reakci ceny akcie jsem u zdrojů neověřil.",
       "drivers": [
         "Export v září 180,7 tis. vozů (+154 % meziročně), 39 % prodejů",
@@ -34,33 +34,21 @@
           "date": "2026-10-30"
         },
         {
-          "title": "BYD Profit Misses Estimates as Export-Led Recovery Loses Steam - Bloomberg.com",
+          "title": "BYD Profit Misses Estimates as Export-Led Recovery Loses Steam - Bloomberg",
           "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPalJfZ0I1eUxFaS1acnNmbG0yTDdnTXhTWXk4WWFXcDdGZjFTdkVZNkl3RG1BSnU5OGd5QUNvSmlLS2hjaHcxX25zN0dVTTNVaDhTM0oxMlJFSXc1Y0VubDFJT21QU2VlRVViT1YzcUlVb1dWTUFuOEVKMVVIekdtcFprUDlYdm1BRV9GQnZTaUN5QWl6eENsbmhWb3ZLWkdSY3dzd0RERlhaSnczN2h5ajFFOA?oc=5",
-          "source": "Bloomberg.com",
+          "source": "Bloomberg",
           "date": "2026-10-30"
+        },
+        {
+          "title": "Chinese EVs win over some in South Korea, but Japan is proving to be a rougher road - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQeHUyYjM0LWdIc1R1UmFmY1NCYkQ1YTB4eWVlSFdqNTVUZFZ5X2dSbWp3cXRKTENxZmRzQjRyZ0dYbHVzTmVpZXUtcjltTEtKWXRkcTRrYXZiWDFLWjFXN0ZPVWxBajhRVmRZTlRXNWtfNkpfalAwU19jRFA1T2FTVHA5RU5JSFV4OHlJc1h3MmhKaXdKclpIQTNqekMwV1h1ek1aMkg3dDgwc1RucUI0LVdYaXBIUEFSc0Q5MzdKSGJQS28?oc=5",
+          "source": "Reuters",
+          "date": "2026-10-29"
         },
         {
           "title": "BYD Earnings Miss Estimates as China's EV Price War Takes Its Toll - Yahoo Finance",
           "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTnlMV2NJQndoUGdWb09mbUNQcDJiTGtfRUM0ODV4Z2JXTENLamFrMzliNUlyVVlqOTZyVnV4bkRpMzB4RnhvWGRRaWM5SUI2TmRhb0ppSVhkUUt4ZlRscThoUEtncGFyYm1qaTktVDVFNS1WMU5zajgyTG1xR2x0azExeExwSkU5cV9fSG9OemZUUXlnZXNETW5QdXlmTVk3?oc=5",
           "source": "Yahoo Finance",
-          "date": "2026-10-29"
-        },
-        {
-          "title": "BYD's third-quarter profit growth slows, misses forecasts - www.marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOaF9uSFM1d19ULWU4WjFTdHZwclVkckVmRkczQ1RneVBJTUM3d0JCRFVUczJlYm1HYzR1UG9oQmlVMW5NLUlNNWxKVnRsWllZcjhDcncyOEhMTmFLTU1IM1FtY0hCd01NWGdnQkpxX1RPUWhrZ09lWXY0Skc1a0dvZjFGX2xNR2FtZHdkOFNKdllKY0FpVHBuRkYxc29SQWNBSURnZG9rZXJVZ0QzY1E?oc=5",
-          "source": "www.marketscreener.com",
-          "date": "2026-10-29"
-        },
-        {
-          "title": "BYD's third-quarter profit growth slows, falling short of forecasts - www.marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd256dTZ4SlFvOFBBX2MtWUZLaUhyVWt5aGsxYXJUMU4zaFd0SlMxenlOWjhhM21VN3IxUWZpSVNWUFNYaHJvcU1IQW5CbFlMLWUxaERvS182RVFtZFhWanNndmlaRkhySlVFWDZPZk5qajhIWmdBZlZURjB2cHhGLUpGakctQ0ZfTXBsYnZkZFFuN3o5ZVZPaENHb3VmMm9NSTh1Qm5IX0JnaEpKNm5OOWY1UTdtZzRKd3RR?oc=5",
-          "source": "www.marketscreener.com",
-          "date": "2026-10-29"
-        },
-        {
-          "title": "BYD's third-quarter profit growth slows, misses forecasts - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZWMyMWJzZnR1c3lOT2tfVVV5ME5ZN0dqZzVPeG9Fcjlkemc5cWRuUjBGRjRBTWlkS2lwNWdjRjJ0c3kyREQ2bTRFWUxtY3ZRS2tGdU4xNW9Tb0pyWFpOd3hpSWJLWEtodWNzUVl2MzYwcjNNd3h3OXYwend6OGl3dndTdmMxSHFQSHFJbFQ3RlMydVNvaENnYWJ6d3ZsWGpsdGxjUXRSdUh2aEZZX3NLMDhRSDR0aUtHdXVUeUJEdEJtempxbWtB?oc=5",
-          "source": "Reuters",
           "date": "2026-10-29"
         },
         {
@@ -74,14 +62,26 @@
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZ1BNR29zVjRocjd5RTJCOU5FcmxBSl92U2s5clhHcnh0S1BiUG1fQ3JjZDhsdjJtbmNFNUhVQlhCR3hQZVZQUW5xUVVYdHduN1dfcUwwSnltSnZXdXdzOXduRHVmeURZSzZwYnpQZExDSXVxWWNyZ1VIdkNqN3JrOWJIa3dFa3dDQmtMazJOMVM0WWt4SGxTSnZ5NDdxRXdVMlZmag?oc=5",
           "source": "WSJ",
           "date": "2026-10-29"
+        },
+        {
+          "title": "BYD net profit jumps 28% in third quarter - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQLTFIbC02Vk1WTVMtWUZzNlhVQjVyZ2FvTFd6MzVhVVN1RURKRVA2eDdkVGxWRnd3WVo5M1JaYXlIZk9SbFhBU0gzS1FZRFlZQUVsamRJVzRiSEZFV01zaUVLNlJqS0VjWUdHRkxyMUlGdjZOdklkMk9LUGNXYTJYaDZOX1pUaHpWMnBENHVab2tHdw?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-29"
+        },
+        {
+          "title": "BYD's third-quarter profit growth slows, falling short of forecasts - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZWMyMWJzZnR1c3lOT2tfVVV5ME5ZN0dqZzVPeG9Fcjlkemc5cWRuUjBGRjRBTWlkS2lwNWdjRjJ0c3kyREQ2bTRFWUxtY3ZRS2tGdU4xNW9Tb0pyWFpOd3hpSWJLWEtodWNzUVl2MzYwcjNNd3h3OXYwend6OGl3dndTdmMxSHFQSHFJbFQ3RlMydVNvaENnYWJ6d3ZsWGpsdGxjUXRSdUh2aEZZX3NLMDhRSDR0aUtHdXVUeUJEdEJtempxbWtB?oc=5",
+          "source": "Reuters",
+          "date": "2026-10-29"
         }
       ]
     },
     "bitcoin": {
       "name": "Bitcoin",
       "symbol": "bitcoin",
-      "mode": "claude",
-      "asOf": "2026-10-30",
+      "mode": "auto",
+      "asOf": "2026-10-31",
       "summary": "Bitcoin se 29. 10. 2026 pohyboval kolem 80 tis. USD (−1,4 % od půlnoci UTC, v průběhu dne zasáhl ~79,6 tis.). CoinDesk to spojuje s propadem technologických akcií po výsledcích Alphabetu a Samsungu a s nejistotou kolem Fedu: ten 28. 10. nechal sazby beze změny, dva členové ale hlasovali pro zvýšení o 0,25 p. b. a předseda Warsh nenaznačil kroky na prosinec. Americké spotové BTC ETF tři dny po sobě přibíraly (celkem 423,7 mil. USD). Jednoznačná příčina to není, jde o výklad zdroje.",
       "drivers": [
         "Fed 28. 10. držel sazby, dva hlasy pro zvýšení (CoinDesk)",
@@ -112,52 +112,52 @@
       ],
       "headlines": [
         {
-          "title": "Bitcoin drops to $80,000 on Fed dissent, Samsung, Alphabet earnings; AI tokens slump",
-          "url": "https://www.coindesk.com/markets/2026/10/29/bitcoin-drops-to-usd80-000-on-fed-dissent-samsung-alphabet-earnings-ai-tokens-slump",
-          "source": "CoinDesk",
-          "date": "2026-10-29"
+          "title": "Here's Why I'm Buying Bitcoin Right Now - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWGFDZ0tkMl9lYnBNUU9HMFNsVlR6MFBPN0U2WjhfdVVSdXhsRkZvOUl3QldIbVR6MEUzWGZQQXMzSzl5V3kwLVI0ZFVLTFVQSnNiQkFaWHRzV21ndkVkREVWRnFkZEhWUUlhUmdfLVpLNzdGOXB6anFxY2F4eXI2aGFOeU5UbzA1aWRxU3dFOVlXS1lGNkNJ?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-31"
         },
         {
-          "title": "Crypto declines as Samsung and Alphabet earnings rattle tech and Fed holds with two dissenters seeking hike - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVm1yYlh5VnI1RmwwRG8wNmF3d0djMEJGU2tyckhsal9zYVZOXzM1RDZGV2tua0ZJOTVGRzludm1KOHZfN0hSdTJIM3M3U0NRbjVkWXlqMHUxdUJlMENwZ01BZkx6Y3JsQ0FQTmJvNkotQWc2Vmlod1lRTjYwdGRwSmxQbFhKbm42VWV0NmhkMWRJclNoNmpBSUxkMmdxdDVBYmZqNHpxbkZvMXdqZUE0aUNaZEhhODZSNjZyNWQzNHJadlpqSmc?oc=5",
+          "title": "Bitcoin stolen from Binance tops Tesla’s holdings and is over twice El Salvador’s reserve",
+          "url": "https://www.coindesk.com/markets/2026/10/31/bitcoin-stolen-from-binance-tops-tesla-s-holdings-and-is-over-twice-el-salvador-s-reserve",
           "source": "CoinDesk",
-          "date": "2026-10-29"
+          "date": "2026-10-31"
         },
         {
-          "title": "Bitcoin long-term resistance in focus as analysis sees selling risk above $85K",
-          "url": "https://cointelegraph.com/markets/bitcoin-long-term-resistance-in-focus-as-analysis-sees-selling-risk-above-85k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "BTC news: Bitcoin stolen from Binance tops Tesla’s holdings and is over twice El Salvador’s reserve - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOSXpTTENaaWs4VGtuVWdtbUxHWWlWdEQ2LXkwZ0R6c2hmRE5UYUVSX0RCXzhtUklINlpJMWdBd0hzX05XRk1MQ01fQ3BZejkwVW84LWxDUnFzUTZUWWRUbmcxQ0c0Z1ZwNXFLWTJENE5ycVlsRjhMdXhzd1hDdUg4QWhjbUdzU1U5M1ZQdWItRWRMZlNuNEF1NWdwS3dxS21CQUhBaFdESUZqYUk2bzI3T21OY2JDdVBSb3pXdUlMX3JLbU53T2xpd213WEwyUQ?oc=5",
+          "source": "CoinDesk",
+          "date": "2026-10-31"
+        },
+        {
+          "title": "Bitwise's Matt Hougan: $6.3 billion Binance hack won't hurt Bitcoin long-term - CNBC",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPajFCREZZWjlidFVPY29BUU4zcm10UmhxdUgxeVZfbERKYVYxVnlRQjFNOVUyeURZUnRVdFdYa3pnUFF2TnBsc2tCb0dZNjVXTjRvLUF4ckxTY0dlNkxBNU9XWTc4Q1VlRHlGUXVkQ3ZEMjVfSzh5TXNaRXFtdVlfdl9ReXZuRVhNcE9PaldfQ05xRklSTllIV1J1WTJEMmtsekJYQzZqR3dLc21reGtieDZhLVE?oc=5",
+          "source": "CNBC",
+          "date": "2026-10-30"
+        },
+        {
+          "title": "Bitcoin Drops on Binance Hack as Stock Selloff Also Weighs - Bloomberg",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb0NVZVAyRjB3SE5wZEVtS0dCaWcwdDJrcGczSElDR2l0QXpMV0N2UkN5MFkyMFUySzFUTTBwekx5UEY1d3V4NnZsZy1vTGwtNjhWUnVhMWxpYTBSVVIyeHp5RExWY3Fick9OZS14RWZYUkxPYkdtSFZkNHM5eWctOHFjOTVfaG1CdVlXX0pNdl9JMHcyRTNOTUdnTmdtd2VJbEZWcWJSSmhGeG5Zemc?oc=5",
+          "source": "Bloomberg",
+          "date": "2026-10-30"
+        },
+        {
+          "title": "'Sentiment will take a hit': Binance $6.3 billion hack rattles bitcoin, crypto market - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNdXEteERGNzZqUkNkZnl6WkJCamVlMExXMWlVWkh6blllVnJJVHg1a0tFdWFBR3N4a2VUZmUwY0cybDhDRGtPbm1tT3lzcHZKRVN4VHRwS1dsM0J5VUJnS0trd1dpX292VWJtUlZINW0xeVBjZUpldG10dUdHQ0txNGdRclRtbW1GRE1RWUVPdERCRmdvS055S3dQRlpiRm12RWR1UWtJUU1qd180Qk1KY1FLSnFtM0NyQ05sN0FnV2JIZTY3b0RydkdLeUJCNnItbVJlc0tXeV80dWZpblhIc2U1dnB2VkZLMHZwMFZ2MEQ?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-10-30"
+        },
+        {
+          "title": "Tether’s excess reserves nearly double to $8B as Q3 profit hits $1.5B",
+          "url": "https://cointelegraph.com/news/tethers-excess-reserves-nearly-double-to-8b-as-q3-profit-hits-15b?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "source": "Cointelegraph",
-          "date": "2026-10-29"
+          "date": "2026-10-30"
         },
         {
-          "title": "How to Get Offered $3 Million in Bitcoin Bets: Call It a ‘Dead Network’ on X - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQT25TYWxNZDd2VV9NVEZ6Yzc0QU1YVUdaS2dVOFZrN1k4Qi1pZUxJcFp6WndXbGZYZUh5YVRoREl5NXJfTGxfZmFDbU5UaU9fZURPWjFrbk9adUdNYTBsQXZWTS1tN2pMX0ZOSnB2SThKZEl4SU5DTG82eDM2OW1MMVplZTg4aGFUdXBlOHpXSU1wdHA5bTNBWnVtVQ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-29"
-        },
-        {
-          "title": "Live updates: Bitcoin clings to $80,000 as Strategy’s cushion thins before earnings",
-          "url": "https://www.coindesk.com/business/2026/10/29/live-updates-bitcoin-clings-to-usd80-000-as-strategy-s-cushion-thins-before-earnings",
-          "source": "CoinDesk",
-          "date": "2026-10-29"
-        },
-        {
-          "title": "Thai Supreme Court rules bitcoin is property after thief challenges conviction",
-          "url": "https://www.coindesk.com/policy/2026/10/29/thai-supreme-court-rules-bitcoin-is-property-after-thief-challenges-conviction",
-          "source": "CoinDesk",
-          "date": "2026-10-29"
-        },
-        {
-          "title": "Prediction: This Cryptocurrency Will Outperform Bitcoin in 2027 - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVFlYZ2lnMkNlbVREV25fR1VZbUhvWTZqbGtwRkZRS2lmWGhWemF2YXlRRkhucE5GUVJkanlCV055eWFsb1R3eS15aTMtZXRwSTR6eXE4LUlHZW5RZ1FxbTNqTDhiQUJEbXJHVk1fUlFvWTgtNFcxQ3ZpVE9kTHVvUGhNZ21FbkRBNjVoem1nUnd3ZkQ0Q0g4Z1FVejlFUzRXSFBxbXdZdmlIZ0c1MlQ0andzcUg?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-29"
-        },
-        {
-          "title": "Bitcoin analysis: The chart that could make or break BTC - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORzI3aWRvVldraEo2UE9UUXpURDVOaVotS1VIMS1iMkdNU3BXelVXQUpjSmFSX1lSbVd3eHU3dTNNMlNWQVNzWTBiUXdLdVJfcWJQYlZFYTNoMDhacW1KekVVaXFobDQwV2RfRVdBMWpyZFNzUC12Q1hFWmlLZFhxeTRXaEZvUXhLd3k5UnNmTjJhMnV1cWZlaXA3UUtiODFV?oc=5",
-          "source": "CoinDesk",
-          "date": "2026-10-29"
+          "title": "Why bitcoin held up better after the record Binance hack - CNBC",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9BVTNTUE5pZ2JEMjNpbGdNLWk2bWtKRmdsOWk0UnIxM19xcTZJOFdpQTRHUUtIY0w0N2lnSk5jclRzbTMzaFF2QlZpZmd5bU0xMmwxVFY1dmNtbXVUQzh4MW5pTFM4dzBOcHlWYkdLUE_SAXZBVV95cUxOd2xaRHdBVkgycHg0eTBYRE9DdGR5Z3I3M3p3SG9pbUR3THRPNEhVRGstaXZlQ3VQX1BRUFRrQWY2WXdkTjdlMENFNTZkVFVKOVlJOGxlRm9vLWZZOHh2c2w1aEZEdWZVRHc2YVFZRVBCWGYyY3d3?oc=5",
+          "source": "CNBC",
+          "date": "2026-10-30"
         }
       ]
     },
@@ -268,8 +268,8 @@
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "claude",
-      "asOf": "2026-10-30",
+      "mode": "auto",
+      "asOf": "2026-10-31",
       "summary": "Rheinmetall 6. 10. potvrdil cíle na rok 2026 (růst tržeb 37–42 %, marže kolem 19 %); akcie přesto klesla o 1 % a od začátku roku je zhruba o 40 % níž. Podle zdrojů investory drží zdrženlivé dřívější snížení výhledu tržeb. Čtvrtletní výsledky se čekají v listopadu. Deutsche Bank 27. 10. snížila cíl na 1 650 € a ponechala Buy (jen dle titulku). Zprávy o výsledcích za 3. čtvrtletí se čekají 5. 11. 2026.",
       "drivers": [
         "Berenberg 8.–9. 10. snížil doporučení na Hold a cíl na 1 020 € kvůli nejistotě zakázek po roce 2030",
@@ -300,6 +300,24 @@
       ],
       "headlines": [
         {
+          "title": "3 Eurozone Stocks To Watch For AI And Defence Spending",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-eurozone-stocks-watch-ai-131334166.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-10-30"
+        },
+        {
+          "title": "Citi remains a buyer as Rheinmetall shares rise after \"Schakal\" contract - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQOVRnMENqRmpNUnJCTk8yeXZGMkYtUDFrNUJGMWFubm1zNTUwbDJfVVBKaDliVDBycGdGbDFKWmhOWjZvckhKWDNqOFE1SzZ6Q0p5dFJOVGNnYmY4eU43YVNybjZ5dTdBMUJSXzctNVBhcWdRcC1yWXhFZDZEZURpWDFjclUzY3RXRDhMQlV4ZzdUWFFCWWtrNXd5SEVfZDZtdGUzaF90MzZTY1ZMTGx5N2pyWW5pQlZWTTJodG05MlQ?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-10-30"
+        },
+        {
+          "title": "Rheinmetall wins option order for 69 more Schakal combat vehicles - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPMWpaeG8zSExmbWw5cGw5ZlctblFFT0lBWlhpbzhFczd5UUhsRmEtb2VGc1FPelhKUThncDc2aHFJZ0RIaHRCcXpmV2RQeHJnR2xJSXAwR1pTQjAwT1lta3dIMDAwRDdvSzd5dld1Q2ljSC1hSmZTVFdzZWVlRkpncUVjZC1BRzVPMnRjVHg5MTEwWjlSRnYtR3pqb21UU1pWLTZjZkdCUFJxTFZiNHVCYW5PWkpXcFg2TGc?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-10-29"
+        },
+        {
           "title": "Italy seeks support from state-controlled groups, Germany's Rheinmetall over former Ilva steelworks - marketscreener.com",
           "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQQS01VGhWLTdwMTFzS1BQSk8tbDlIWllrSGJfTDhyY2FoYk0yTHNVbzhCRDhiUlNva2hXamtjZzl2XzgtZmIwX0NHX21DX1N2Y25uUjIxUVo4TkFZbGdERnFIMGJqNEFoTXh6MGxEMi01S1FkMko2TEw1cnJ6Q1dDNllKNGh6V0llblhlZnY3dE85UjYwTFd6WnJCdm4xSHk0TTNOTFFzV0JCX2t1VGNXTEl1dVBIUGw5M1AzeG0teXVKbllQT05WQi1vMFd1QWkzSzZMajVCdXB6dmJXdE5yWDJyTFdkdw?oc=5",
           "source": "marketscreener.com",
@@ -324,27 +342,9 @@
           "date": "2026-10-27"
         },
         {
-          "title": "Rheinmetall AG (RNMBY) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAxbzkzTDExckFpNHdJNktXTUZhdGRONzhQLXBOTEVvX1RmMGFpVVdFT1BVQTR4SmNvV2VPRkJoelJwWWhMWldoTzRNd1Rad3JqUWxn?oc=5",
-          "source": "Yahoo! Finance Canada",
-          "date": "2026-10-24"
-        },
-        {
           "title": "Leonardo, Rheinmetall secure $4 billion contracts with Italian Army, report says - Defense News",
           "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVjNNVC1EMnVQMmYwWXlhWmQyZXNDSzJRcXNoSkFmYi1VcnJuNmtJb3R3d1RFTl9ZM0RNaC1EZ04ycVNzcE8xUUEtYlItbHpmNnRTWWlaRXRPb19hQS1EamZ3dF9fNno3SHY0ZS1xMTNUMVdUeFlHNXZUbUdjcTVzVzFVaHZwVzlhcUpMUUc5UUJGOGpocF9UTklTSXBxNmJpaWxNUWdhWWF0aEducWNNRVVLZjRFSGVMVklVRjBTS3AxQVI3UEc0bTItcw?oc=5",
           "source": "Defense News",
-          "date": "2026-10-23"
-        },
-        {
-          "title": "Rheinmetall and MSC to acquire Mangalia shipyard - Janes",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxONEJaQ2dJanZwVkZneEZ5UXNkcWJZTXJxZk02MWdLVFpYd3JqT3dfUldzaXZkN3hRZ0UtbFNnQ3F1OFZkYjNIWXMxX1FGb2JfREYzVm1xVDdTdXJhYmtKd1FOMkROY0d4S2ZUdmFmblVHOWV1TEwweFA5YmNoMXd6NjVUa3dacDI0cld6Q3A0RUZDeDFzMDA4bnJjaG5UTk4zREFPMmlaWnlhWVVOd09GalY5RnF6dlJS?oc=5",
-          "source": "Janes",
-          "date": "2026-10-23"
-        },
-        {
-          "title": "Rheinmetall opens UK Gun Hall in Telford - Janes",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVkN2YlZCQjMxNDlaQy0yclctQ1liM0EyanV2UFllYllsQzM4eWFMRWpBcER1TTFYV0tVbEF5dlJpZ2N3SEpRMFBSMU1sX1ZHaDhGVGdfTVA2cWlmQXpXV2xRYmZMVXBRSU5oVGVYLU9HQ2IzSjVKeUh2YVRDUlpubElqVjFsZ1ZldlowdFF6dkxfZUQ5eEwyVlVnejFPVVJFSUxkWDNJT1pLVzZndzVlX2otTQ?oc=5",
-          "source": "Janes",
           "date": "2026-10-23"
         }
       ]
