@@ -1,162 +1,90 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-01T11:52:44+00:00",
+  "updatedAt": "2026-11-02T04:09:06+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "auto",
-      "asOf": "2026-11-01",
-      "summary": "BYD v září 2026 prodal 463 561 NEV (+17 % meziročně, nejvíc letos); za 3. čtvrtletí 1,32 mil. vozů (+18,8 %), tedy první meziroční růst po čtyřech čtvrtletích poklesu. Za 9 měsíců je prodej stále o 3,9 % níž. Růst táhne export (září +154 % meziročně), domácí čínský trh dál klesá. Reakci ceny akcie jsem u zdrojů neověřil.",
+      "mode": "claude",
+      "asOf": "2026-11-02",
+      "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV, o ~11 % více meziročně (šestý měsíc růstu v řadě) a poprvé přes 300 tis. čistě elektrických. Za 9 měsíců zámořský prodej výrazně rostl (+92,7 %), tuzemský klesl (−30,2 %) podle CnEVPost. Firma uvádí nové modely (Seal 07 2. gen. 5. 11., Qin Plus DM-i). Příčinu pohybu akcie zdroje neuvádějí.",
       "drivers": [
-        "Export v září 180,7 tis. vozů (+154 % meziročně), 39 % prodejů",
-        "Rekordní BEV (273 tis. v září, +33 %)",
-        "Domácí prodeje v Číně −13 % meziročně (9 měsíců −30 %)"
+        "Říjnový prodej 490 168 NEV (CnEVPost, 1. 11.)",
+        "Zámořský prodej +92,7 % za 9 měsíců, tuzemský −30,2 % (CnEVPost)",
+        "Nové modely: Seal 07 2. gen., Qin Plus DM-i",
+        "2. místo na světě v bateriích pro EV, podíl 15,2 % (CnEVPost, 2. 11.)"
       ],
-      "outlook": [
-        {
-          "source": "Deutsche Bank (poznámka z 7. 9. 2026, dle CnEVPost)",
-          "view": "vedení zvýšilo cíl exportu na 1,9–2,0 mil. vozidel pro 2026 a přes 2,5 mil. pro 2027",
-          "target": "",
-          "date": "2026-09-07",
-          "url": "https://cnevpost.com/2026/10/01/byd-sept-2026-sales/"
-        }
-      ],
+      "outlook": [],
       "risks": [
-        "Propad domácí poptávky v Číně",
-        "Slábnoucí PHEV (−2,4 % meziročně)"
+        "Slabý tuzemský trh (−30 % za 9 měsíců)",
+        "Odhad celočínského prodeje NEV na říjen −16,5 % meziročně (odhad, CnEVPost/Carnewschina)"
       ],
       "headlines": [
         {
-          "title": "China's BYD extends sales growth streak on strong exports - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOS21scll6NjBGOTVLUm15YmNsNE9saEN4SE1oLU4zV0VCWFA3dWlVV0tHM09hcUtKMmdsOGVHZGtSVzNvenVmRndlMml1eHVSUzBsR0JPNFI3SjVTdFRncURKX1RRdV95T2s3bzdKMmFtNUNNalVzaTNpdkpzYVZoVHVBYTItSWV1VXpmVTdZRmZyN3NZQnExcnlpYmlCTmNMQ3cxQVRwSE9oODJsLUF6Q0xfMk1JZy1VTWpF?oc=5",
-          "source": "Reuters",
-          "date": "2026-11-01"
-        },
-        {
-          "title": "BYD sales rise 11% to year-to-date high in October as BEVs top 300,000 for first time - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1TOGp5RzhsQ0V6ZXVPTE9PS3ZTZ21uOXcteC02aW5UMkRUZThEaDJkSzlQaHh5ckRNMVpBTjZFeTRETkdJODJ3dndiUlZ3VldlOURWdzI4cUZfZHh2U3JqMQ?oc=5",
+          "title": "BYD sales rise 11% to year-to-date high in October as BEVs top 300,000 for first time",
+          "url": "https://cnevpost.com/2026/11/01/byd-oct-2026-sales/",
           "source": "CnEVPost",
           "date": "2026-11-01"
         },
         {
-          "title": "BYD Fang Cheng Bao reaches 600,000 cumulative sales, plans faster deliveries in November - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPUF9pQk5PdElLMERfb1VqbWg3ZWNNWEVEYmhFQzJJZ1E4RUlaMVBHVlY4bWRqdHM3UUswSi1hQTRuR0hRM2tfMGZFTXVDTTZNaEpzX0VFcWlHbHRHeEczUW9LQWpIUmMxdkp6dDh5YTctY1ZjNno0d2Q1Wmd6cXFSWg?oc=5",
+          "title": "BYD to launch second-gen Seal 07 sedan on November 5",
+          "url": "https://cnevpost.com/2026/11/01/byd-to-launch-2nd-gen-seal-07-nov-5/",
           "source": "CnEVPost",
           "date": "2026-11-01"
         },
         {
-          "title": "BYD to launch second-gen Seal 07 sedan on November 5 - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5OMVdmcWF3eElFdkp5RzRvS3BlR3UwbnE3Tkp0Tjl0Tm85REU3RmJ2MHhHQk05bF9QVEpFRDlqeVdLWGlIbExUTHNXT3BSdVBKZTlrc0VTdC13OEdPSkJCOWdjNlBFd1hvdXlYNE5RNXFEMUM3bDd3?oc=5",
+          "title": "Global EV battery market share Jan-Sept 2026: CATL 39.1%, BYD 15.2%",
+          "url": "https://cnevpost.com/2026/11/02/global-ev-battery-market-share-in-jan-sept-2026/",
           "source": "CnEVPost",
-          "date": "2026-11-01"
+          "date": "2026-11-02"
         },
         {
-          "title": "BYD shares dip as Q3 earnings disappoint - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOX3pXeDJQNFAwLTVoVElnTnJpUTRIZW1MRHlGdWJuajBIU3hzX09XeDI4blhqbXVaUFAwU3ZpbDZFbGtlUFA1LXlNajZmaEJUMkstU0RIZEZCX3dUVmJ4c20tdFRVdlBFOFFCVDdOYnFCWnpMZmRRb1hpRWdoZnlYQk9tQmZuVG1fRVc5WlR2UmppX0k2QWc?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-30"
-        },
-        {
-          "title": "BYD Profit Misses Estimates as Export-Led Recovery Loses Steam - Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPalJfZ0I1eUxFaS1acnNmbG0yTDdnTXhTWXk4WWFXcDdGZjFTdkVZNkl3RG1BSnU5OGd5QUNvSmlLS2hjaHcxX25zN0dVTTNVaDhTM0oxMlJFSXc1Y0VubDFJT21QU2VlRVViT1YzcUlVb1dWTUFuOEVKMVVIekdtcFprUDlYdm1BRV9GQnZTaUN5QWl6eENsbmhWb3ZLWkdSY3dzd0RERlhaSnczN2h5ajFFOA?oc=5",
-          "source": "Bloomberg.com",
-          "date": "2026-10-30"
-        },
-        {
-          "title": "Chinese EVs win over some in South Korea, but Japan is proving to be a rougher road - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQeHUyYjM0LWdIc1R1UmFmY1NCYkQ1YTB4eWVlSFdqNTVUZFZ5X2dSbWp3cXRKTENxZmRzQjRyZ0dYbHVzTmVpZXUtcjltTEtKWXRkcTRrYXZiWDFLWjFXN0ZPVWxBajhRVmRZTlRXNWtfNkpfalAwU19jRFA1T2FTVHA5RU5JSFV4OHlJc1h3MmhKaXdKclpIQTNqekMwV1h1ek1aMkg3dDgwc1RucUI0LVdYaXBIUEFSc0Q5MzdKSGJQS28?oc=5",
-          "source": "Reuters",
-          "date": "2026-10-29"
-        },
-        {
-          "title": "BYD Earnings Miss Estimates as China's EV Price War Takes Its Toll - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTnlMV2NJQndoUGdWb09mbUNQcDJiTGtfRUM0ODV4Z2JXTENLamFrMzliNUlyVVlqOTZyVnV4bkRpMzB4RnhvWGRRaWM5SUI2TmRhb0ppSVhkUUt4ZlRscThoUEtncGFyYm1qaTktVDVFNS1WMU5zajgyTG1xR2x0azExeExwSkU5cV9fSG9OemZUUXlnZXNETW5QdXlmTVk3?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-29"
+          "title": "BYD launches third-gen Qin Plus DM-i",
+          "url": "https://cnevpost.com/2026/10/27/byd-launches-3rd-gen-qin-plus-dm-i/",
+          "source": "CnEVPost",
+          "date": "2026-10-27"
         }
       ]
     },
     "bitcoin": {
       "name": "Bitcoin",
       "symbol": "bitcoin",
-      "mode": "auto",
-      "asOf": "2026-11-01",
-      "summary": "Bitcoin se 29. 10. 2026 pohyboval kolem 80 tis. USD (−1,4 % od půlnoci UTC, v průběhu dne zasáhl ~79,6 tis.). CoinDesk to spojuje s propadem technologických akcií po výsledcích Alphabetu a Samsungu a s nejistotou kolem Fedu: ten 28. 10. nechal sazby beze změny, dva členové ale hlasovali pro zvýšení o 0,25 p. b. a předseda Warsh nenaznačil kroky na prosinec. Americké spotové BTC ETF tři dny po sobě přibíraly (celkem 423,7 mil. USD). Jednoznačná příčina to není, jde o výklad zdroje.",
+      "mode": "claude",
+      "asOf": "2026-11-02",
+      "summary": "Trh s kryptem sleduje únik z Binance: podle CoinDesku šlo o ~6,3 mld. USD, FBI potvrdila podíl Severní Koreje a Binance 1. 11. po etapách znovu otevírá výběry, začíná bitcoinem. Společnost Next Technology Holding zvažuje prodej části svých BTC s odkazem na útok a kvantová rizika. Aktuální cenu a reakci trhu ze zdrojů, které se podařilo číst, nelze spolehlivě uvést.",
       "drivers": [
-        "Fed 28. 10. držel sazby, dva hlasy pro zvýšení (CoinDesk)",
-        "Slabé výsledky Alphabetu a pokles Samsungu zatížily rizikové aktiva (CoinDesk, 29. 10.)",
-        "Likvidace na derivátech vzrostly o 84 % na 337 mil. USD (CoinDesk)",
-        "Přítoky do spotových BTC ETF 3 dny po sobě (Farside, přes CoinDesk)"
+        "Hack Binance ~6,3 mld. USD, 18 270 BTC (CoinDesk, 31. 10.)",
+        "FBI připisuje útok Severní Koreji (CoinDesk, 31. 10.)",
+        "Binance fázově otevírá výběry (CoinDesk, 1. 11.)"
       ],
-      "outlook": [
-        {
-          "source": "XWIN / CryptoQuant",
-          "view": "mohou se objevovat signály dna v říjnu",
-          "target": "",
-          "date": "2026-10-13",
-          "url": "https://www.kucoin.com/news/flash/bitcoin-falls-2-amid-uncertainty-over-october-2026-performance"
-        },
-        {
-          "source": "BGeometrics (předpověď z poloviny října)",
-          "view": "základní scénář 85 500 USD, rozpětí 80 000–87 300 USD",
-          "target": "85 500 USD",
-          "date": "2026-10-11",
-          "url": "https://bgeometrics.com/reports/weekly/2026-10-11.html"
-        }
-      ],
+      "outlook": [],
       "risks": [
-        "Možné zvýšení sazeb Fedu v prosinci",
-        "Pokračování medvědího trhu",
-        "Další likvidace na derivátech"
+        "Důvěra v burzy po hacku",
+        "Možné prodeje firemních držitelů BTC"
       ],
       "headlines": [
         {
-          "title": "Binance opens crypto withdrawals in phases starting with bitcoin following $6.3 billion hack",
+          "title": "Binance opens crypto withdrawals in phases, starting with bitcoin",
           "url": "https://www.coindesk.com/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack",
           "source": "CoinDesk",
           "date": "2026-11-01"
         },
         {
-          "title": "Binance resumes bitcoin, ether withdrawals after covering bulk of stolen $6.3 billion - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQ042d3hwbUp6LXNrZ2JEY2RSVEgzX0xJbGZ0QTFsVnM1X0tYUFBONzljRXRIbFJCRlRWeUkyeEJwaElZZnN6Tnluc1h3ZURja0tMTHhjSDkyb2FnUHRPejdmUjZmaU10ZlBuTW82bVZmV0hKNFJMbmZ2VjFyS2h2NUVZRnVtZVdIQVo3VnRPVFhsX1ptRzJQaklyXzZIU0hxN1lyQ3lTNjYtMGZvQ1Q1T0laQzBHU1dHdEk1RXJXMGhRSVJT?oc=5",
-          "source": "Reuters",
-          "date": "2026-11-01"
-        },
-        {
-          "title": "J.P. Morgan Just Made a Bold Prediction About Bitcoin. Should You Buy It? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPN0ZNdUp5MGxmQ2tjbUF1VGFkNUp2azNLZU55cENIVWZCcENVVl9LdTRHUlJoTm5XRkVjdkIwWWFSR01kMTFJcmhEQjhyQzFLeklxYU53RlJ3SHcyUnRjVjZZNVZOQVhES2xaSHVISW5MZi04VWtIVVpiSzVtWExZOVlNa1ZMY2hoR3FOQVBn?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-01"
-        },
-        {
-          "title": "18 Years of Satoshi’s Paradox: Can Bitcoin Survive What Comes Next? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQT0xCZ3dRdTVDYjVVWWVNakIyMnY2bDV0OHg2UFRuc3NrTmxfdGhQZGthZ2N2SmFDRGJOSFpURGxPNTBpU1BwWWpWOUU4Q1JEWFJaMTFpbnFIOWlwQXViU0htaWIxcThvQVFuOTVSTWhUbGFkeVozWm9DZkc0cFJHVkk0a3hYWnNEZjhWdEo0SHFmdGZZbDZtZ2JwRVZ6Zw?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-31"
-        },
-        {
-          "title": "Bitcoin's white paper turns 18, and small businesses are still paying for the bailouts it answered",
-          "url": "https://www.coindesk.com/opinion/2026/10/31/bitcoin-s-white-paper-turns-18-and-small-businesses-are-still-paying-for-the-bailouts-it-answered",
+          "title": "FBI confirms North Korea's role in $6 billion Binance hack",
+          "url": "https://www.coindesk.com/policy/2026/10/31/fbi-confirms-north-korea-s-role-in-usd6-billion-binance-hack-asks-defi-community-to-block-btc-eth-sol-addresses",
           "source": "CoinDesk",
           "date": "2026-10-31"
         },
         {
-          "title": "Bitcoin held up better than expected after Binance hack, Strive CEO says",
-          "url": "https://cointelegraph.com/markets/bitcoin-binance-hack-strive-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "source": "Cointelegraph",
+          "title": "A Nasdaq-listed company may sell $450 million bitcoin, citing Binance hack and quantum fears",
+          "url": "https://www.coindesk.com/markets/2026/10/31/a-nasdaq-listed-company-may-sell-usd450-million-bitcoin-citing-binance-hack-and-quantum-fears",
+          "source": "CoinDesk",
           "date": "2026-10-31"
         },
         {
-          "title": "Bitcoin Fatigue Is Real: James Lavish Says Early Holders Have Moved On As Young Investors Turn To Betting - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQclVxUC1pUWtqUjVNdXh2cnpMbHdBc1dvb0d3U3ZPdC1teXQ2b1BpQk5GZEY4V2ZiandwWGs3dU5HS19yQU1zeXlRNE9FVklyR1NCTlNIZVI3RC1WZFktUmNuNjJYeHJCemd1cWhQNXRyLTlPc2dBYjJ5VlNVQWwyTm1MTXp0REhNUkp3UE5UNDBMR1VZbmhFc1dnc3RFSnc?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-10-31"
-        },
-        {
-          "title": "Here’s what happened in crypto today",
-          "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "source": "Cointelegraph",
+          "title": "Bitcoin stolen from Binance tops Tesla's holdings",
+          "url": "https://www.coindesk.com/markets/2026/10/31/bitcoin-stolen-from-binance-tops-tesla-s-holdings-and-is-over-twice-el-salvador-s-reserve",
+          "source": "CoinDesk",
           "date": "2026-10-31"
         }
       ]
@@ -164,188 +92,104 @@
     "HO.PA": {
       "name": "Thales SA",
       "symbol": "HO.PA",
-      "mode": "auto",
-      "asOf": "2026-11-01",
-      "summary": "Thales 22. 10. 2026 oznámil výsledky za 3. čtvrtletí: tržby 5,47 mld. € (organicky +8,7 %), objednávky 6,65 mld. € vč. zakázky ~500 mil. € k družicové konstelaci IRIS². Tržby byly zhruba o 2 % a objednávky o 9 % nad konsensem, slabší byla divize Cyber & Digital. Akcie přesto ten den klesla o ~1,3 % na ~227 €; analytici podle zdroje vidí omezený prostor pro zvyšování odhadů.",
+      "mode": "claude",
+      "asOf": "2026-11-02",
+      "summary": "Thales 22. 10. oznámil za 9 měsíců 2026 přijaté zakázky 19,1 mld. EUR (+15 % organicky) a tržby 16,4 mld. EUR (+8,1 % organicky). Obrana: zakázky 11,3 mld. EUR (+14 %), tržby +13 % organicky; třetí čtvrtletí ale přineslo zakázky o 6 % nižší organicky. Firma zvýšila výhled organického růstu tržeb na horní hranici pásma +6 až +7 %.",
       "drivers": [
-        "Obrana: organický růst tržeb +12,8 %",
-        "Letectví a kosmonautika: +7,8 %",
-        "Objednávky nad očekáváním (+9 % oproti konsensu)"
+        "Námořní systémy, efektory a protivzdušná obrana (Thales)",
+        "22 zakázek nad 100 mil. EUR od začátku roku, 9 z nich ve 3. čtvrtletí",
+        "Zakázka na mobilní radar pro rumunské letectvo (27. 10.)",
+        "Rozjezd výroby táhne tržby obrany"
       ],
-      "outlook": [
-        {
-          "source": "Citi",
-          "view": "Buy, čeká mírný růst akcie",
-          "target": "317 €",
-          "date": "2026-10-22",
-          "url": "https://www.easybourse.com/aeronautique/news/1539895/thales-fait-mieux-quattendu-3e-trimestre-analystes-saluent-dynamique-defense.html"
-        },
-        {
-          "source": "Jefferies",
-          "view": "Buy, sleduje marže ve 2. pololetí",
-          "target": "290 €",
-          "date": "2026-10-22",
-          "url": "https://www.easybourse.com/aeronautique/news/1539895/thales-fait-mieux-quattendu-3e-trimestre-analystes-saluent-dynamique-defense.html"
-        },
-        {
-          "source": "Berenberg",
-          "view": "Hold, odhady už počítají s ~7,6% organickým růstem",
-          "target": "275 €",
-          "date": "2026-10-22",
-          "url": "https://www.easybourse.com/aeronautique/news/1539895/thales-fait-mieux-quattendu-3e-trimestre-analystes-saluent-dynamique-defense.html"
-        },
-        {
-          "source": "DZ Bank",
-          "view": "Kaufen, snížila férovou hodnotu",
-          "target": "286 € (dříve 298 €)",
-          "date": "2026-10-22",
-          "url": "https://goldesel.de/aktien/news/thales-aktie-umsatzprognose-steigt-nach-starkem-auftragseingang"
-        },
-        {
-          "source": "Thales (vlastní výhled)",
-          "view": "organický růst tržeb 2026 na horní hranici 6–7 %, upravená EBIT marže 12,6–12,8 %, book-to-bill nad 1,1",
-          "target": "",
-          "date": "2026-10-22",
-          "url": "https://www.webdisclosure.com/press-release/thales-reports-its-order-intake-and-sales-as-of-september-30-2026-press-release-22-october-2026-gqnPtiEdIOv"
-        }
-      ],
+      "outlook": [],
       "risks": [
-        "Cyber & Digital zaostává za konsensem",
-        "Omezený prostor pro zvyšování odhadů (AlphaValue)",
-        "Výhled předpokládá, že nedojde k novým makroekonomickým či geopolitickým šokům"
+        "Slabší čtvrtletní zakázky obrany (−6 % org. ve 3Q)",
+        "Výhled platí za předpokladu bez nových makro/geopolitických otřesů (Thales)"
       ],
       "headlines": [
         {
-          "title": "IRIS² CONSTELLATION: MDA SPACE TO PROVIDE THALES ALENIA SPACE WITH DIGITAL ANTENNA SUBSYSTEMS FOR 66 EARLY-DELIVERY SATELLITES",
-          "url": "https://finance.yahoo.com/technology/articles/iris-constellation-mda-space-thales-121500893.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-10-30"
-        },
-        {
-          "title": "Romania signs contract with Thales for four ground controlled approach radars - Janes Defence Intelligence",
-          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNZEprdkpLRlltcTFBSmpPQ0ZNRHUtbER0UXBjUm9wNVBMTWhPcHNVVjdua2pscFpXQ25iWDFBR0NfVDdkWFVGNzNpdGtJcVY5T3pjN2psSkFyRjVWRVhJRzgwU29zVTVIUENSVlMyNGRXNURBTGppOWlqaHNCM05faF9wczduRUkteGk2U2taTExKRC04eTkzQk0yUEhWZ1Z2NlAxYUZLRTBqMHdqMV9RdEdyYjljSURqT2ZlUGs4R1R3ZnNQV0YycmE3dGNRZzkySmh5aWVsSFdkMGppUnFGT1ZB?oc=5",
-          "source": "Janes Defence Intelligence",
-          "date": "2026-10-29"
-        },
-        {
-          "title": "BlackLine Expands into Europe’s Trusted Cloud Market with S3NS",
-          "url": "https://finance.yahoo.com/technology/ai/articles/blackline-expands-europe-trusted-cloud-120000158.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-10-29"
-        },
-        {
-          "title": "SIMPL Wireless and Thales Publish Joint White Paper: \"Beyond Connectivity Management\"",
-          "url": "https://finance.yahoo.com/technology/articles/simpl-wireless-thales-publish-joint-110000024.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-10-28"
-        },
-        {
-          "title": "Elbit Systems Stock And Defense Shares Facing Middle East Election Risk",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/elbit-systems-stock-defense-shares-051455376.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-10-28"
-        },
-        {
-          "title": "Romania selects Thales for civil and military radar systems - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPU0d4ZnRRaGdIQ3N4VmZ6VEcxTjlSWUlkakdZVTgwYU1paWh0bTg1dlZtQl9wS3pGUVF2U2t0UzJKR3VPeWRuejdoRzRqYjczWDFubk84TDdWWDJabzViYnloZFZld2pyYU1BSlJtSGtTbFFTcXluUzZScHlsWElZZEhKSzBfaUZheGtDcnpYUVA1Zk1yR3F6bk9Ja1JyYWp1dkFiTnhOenNqWnV1TjBLVnNVSTE?oc=5",
-          "source": "Reuters",
-          "date": "2026-10-27"
-        },
-        {
-          "title": "Thales opens sonar manufacturing facility in Australia - Janes Defence Intelligence",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNblR0RGV0cUcxVkktMVJmS2xQTlkxMWtnZjNOUWJkc2ZQR3dpLTB3NEtuOTR0d2ZlWWdaQ0FGb3dicGM2T0daRzgtckRnUjRsaUxMSTFNNzJLMG1uRU05eFlJNmlZOEx0UExqZHBYVzhOZ2NTeHY4VkxvaS03UzRBcFQ5ZGRESldpbjFNVU5iRUdFYU5BeVpWRVI1Q0tkdWhpMFg5STlfa25mQXVOY2RJMVRtN3lZaXB3X0FZWHVHX3IzakU?oc=5",
-          "source": "Janes Defence Intelligence",
-          "date": "2026-10-27"
-        },
-        {
-          "title": "Naval C4ISR Market Size, Share, Growth Trends, and Forecast 2026-2035 | USD 51.2 Billion Opportunity as AI-Enabled Systems Accelerate Fleet Modernization",
-          "url": "https://finance.yahoo.com/technology/articles/naval-c4isr-market-size-share-132000181.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-10-23"
+          "title": "Thales reports its order intake and sales as of September 30, 2026",
+          "url": "https://www.webdisclosure.com/press-release/thales-reports-its-order-intake-and-sales-as-of-september-30-2026-press-release-22-october-2026-gqnPtiEdIOv",
+          "source": "Thales (tisková zpráva)",
+          "date": "2026-10-22"
         }
       ]
     },
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "auto",
-      "asOf": "2026-11-01",
-      "summary": "Rheinmetall 6. 10. potvrdil cíle na rok 2026 (růst tržeb 37–42 %, marže kolem 19 %); akcie přesto klesla o 1 % a od začátku roku je zhruba o 40 % níž. Podle zdrojů investory drží zdrženlivé dřívější snížení výhledu tržeb. Čtvrtletní výsledky se čekají v listopadu. Deutsche Bank 27. 10. snížila cíl na 1 650 € a ponechala Buy (jen dle titulku). Zprávy o výsledcích za 3. čtvrtletí se čekají 5. 11. 2026.",
+      "mode": "claude",
+      "asOf": "2026-11-02",
+      "summary": "Rheinmetall v posledním týdnu října získal další zakázky: opci na 69 vozidel Schakal (29. 10.) a zakázku pro společný podnik s KNDS od OCCAR; podle MarketScreeneru Citi po zakázce Schakal zůstává u doporučení nákupu. Italská armáda podle deníku MF uzavřela s Leonardem a Rheinmetallem kontrakty za 3,7 mld. EUR (nepotvrzeno firmou). Zároveň banky snižují cílové ceny (Deutsche Bank, UBS), důvody ve zdrojích nejsou rozepsány.",
       "drivers": [
-        "Berenberg 8.–9. 10. snížil doporučení na Hold a cíl na 1 020 € kvůli nejistotě zakázek po roce 2030",
-        "Potvrzení cílů 2026 (6. 10.), Jefferies označil signály k tempu zakázek a programu Arminius za uklidňující",
-        "Obnovená a zdvojnásobená syndikovaná úvěrová linka na 1,5 mld. € (8. 10.)",
-        "Nový závod v Norsku (Skoppum), 6. 10."
+        "Opce na 69 vozidel Schakal (MarketScreener, 29. 10.)",
+        "Zakázka pro JV Rheinmetall/KNDS od OCCAR (MarketScreener, 29. 10.)",
+        "První sériové vozy Caracal dodány Německu a Nizozemsku (30. 10.)",
+        "Italské kontrakty za 3,7 mld. EUR podle MF (22. 10., nepotvrzeno)"
       ],
       "outlook": [
         {
-          "source": "Berenberg (George McWhirter, podle dpa-AFX)",
-          "view": "Snížil doporučení z Buy na Hold: střednědobý růst je nejistý, po roce 2030 by firma potřebovala výrazně víc zakázek; tržby 2030 odhaduje na 37,6 mld. € (konsensus 41,0 mld. €), smluvně pokryto jen 29 %",
-          "target": "1 020 € (dříve 1 600 €)",
-          "date": "2026-10-08",
-          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-berenberg-stuft-auf-hold-ab-und-senkt-kursziel-auf-1020-euro"
+          "source": "Deutsche Bank",
+          "view": "snížila cílovou cenu, doporučení Buy",
+          "target": "1 650 EUR",
+          "date": "2026-10-27",
+          "url": "https://www.marketscreener.com/news/deutsche-bank-cuts-rheinmetall-target-to-128-1-650-buy-ce785cddd88bf425"
         },
         {
-          "source": "Deutsche Bank (podle titulku MarketScreener)",
-          "view": "snížil cílovou cenu, doporučení Buy ponecháno; detaily jsem neověřil (článek nedostupný)",
-          "target": "1 650 €",
-          "date": "2026-10-27",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQUtPT3hQRFNfUldZekNpVm92TklsRURXWEZDRG9hVDlnX1Y2QTBJcV8ySjE5ZTh1UkhWa3FBcGUtU0F6Mk5tb3VKNHk2cEptNHZCTkV1ZkRHcktMczBFalFvSTd2bUk1YkZDa3dkd09zQkpwTFpIMGpmRHEtd1JjMjVyRmVGWjYyMGV6ak80aDRwWjhHa1N3QWhLOTF4RGRhcldReUxDSWVOTnM?oc=5"
+          "source": "UBS",
+          "view": "snížila cílovou cenu, doporučení Buy",
+          "target": "1 360 EUR",
+          "date": "2026-10-20",
+          "url": "https://www.marketscreener.com/news/ubs-cuts-target-for-rheinmetall-to-128-1-360-buy-ce785cdbd18bf624"
+        },
+        {
+          "source": "Citi",
+          "view": "zůstává u doporučení Buy po zakázce Schakal",
+          "target": "",
+          "date": "2026-10-30",
+          "url": "https://www.marketscreener.com/news/citi-remains-a-buyer-as-rheinmetall-shares-rise-after-schakal-contract-ce785fdadb8afe2c"
         }
       ],
       "risks": [
-        "Dřívější snížení výhledu tržeb a nižší cíl nových zakázek (JPMorgan, srpen 2026)",
-        "Odstup investorů – akcie je výrazně pod začátkem roku",
-        "Slabé smluvní pokrytí tržeb 2030 (zejména munice) podle Berenberg"
+        "Snižování cílových cen analytiky",
+        "Pozornost k nadcházejícím čtvrtletním výsledkům (datum nepotvrzeno)"
       ],
       "headlines": [
         {
-          "title": "Rheinmetall AG (RHM.DE) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1kalp2ZzIxY2RuOFJ2SW45UlkwWDJyWU5aZ2JHZFFqUURnNXNPY3k1MUUyNHBPeGFpcWg5VEZvVmFHT3pRVnpOZ01SR0VHejluVG04Yg?oc=5",
-          "source": "Yahoo! Finance Canada",
-          "date": "2026-10-31"
+          "title": "Rheinmetall wins option order for 69 more Schakal combat vehicles",
+          "url": "https://www.marketscreener.com/news/rheinmetall-wins-option-order-for-69-more-schakal-combat-vehicles-ce785cd3d181f426",
+          "source": "MarketScreener",
+          "date": "2026-10-29"
         },
         {
-          "title": "3 Eurozone Stocks To Watch For AI And Defence Spending",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-eurozone-stocks-watch-ai-131334166.html?.tsrc=rss",
-          "source": "Yahoo Finance",
+          "title": "Citi remains a buyer as Rheinmetall shares rise after 'Schakal' contract",
+          "url": "https://www.marketscreener.com/news/citi-remains-a-buyer-as-rheinmetall-shares-rise-after-schakal-contract-ce785fdadb8afe2c",
+          "source": "MarketScreener",
           "date": "2026-10-30"
         },
         {
-          "title": "Citi remains a buyer as Rheinmetall shares rise after \"Schakal\" contract - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQOVRnMENqRmpNUnJCTk8yeXZGMkYtUDFrNUJGMWFubm1zNTUwbDJfVVBKaDliVDBycGdGbDFKWmhOWjZvckhKWDNqOFE1SzZ6Q0p5dFJOVGNnYmY4eU43YVNybjZ5dTdBMUJSXzctNVBhcWdRcC1yWXhFZDZEZURpWDFjclUzY3RXRDhMQlV4ZzdUWFFCWWtrNXd5SEVfZDZtdGUzaF90MzZTY1ZMTGx5N2pyWW5pQlZWTTJodG05MlQ?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-10-30"
-        },
-        {
-          "title": "Italy seeks support from state-controlled groups, Germany's Rheinmetall over former Ilva steelworks - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQQS01VGhWLTdwMTFzS1BQSk8tbDlIWllrSGJfTDhyY2FoYk0yTHNVbzhCRDhiUlNva2hXamtjZzl2XzgtZmIwX0NHX21DX1N2Y25uUjIxUVo4TkFZbGdERnFIMGJqNEFoTXh6MGxEMi01S1FkMko2TEw1cnJ6Q1dDNllKNGh6V0llblhlZnY3dE85UjYwTFd6WnJCdm4xSHk0TTNOTFFzV0JCX2t1VGNXTEl1dVBIUGw5M1AzeG0teXVKbllQT05WQi1vMFd1QWkzSzZMajVCdXB6dmJXdE5yWDJyTFdkdw?oc=5",
-          "source": "marketscreener.com",
+          "title": "Deutsche Bank cuts Rheinmetall target to €1,650 - 'Buy'",
+          "url": "https://www.marketscreener.com/news/deutsche-bank-cuts-rheinmetall-target-to-128-1-650-buy-ce785cddd88bf425",
+          "source": "MarketScreener",
           "date": "2026-10-27"
         },
         {
-          "title": "Leonardo, Rheinmetall secure $4 billion contracts with Italian Army, report says - Defense News",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVjNNVC1EMnVQMmYwWXlhWmQyZXNDSzJRcXNoSkFmYi1VcnJuNmtJb3R3d1RFTl9ZM0RNaC1EZ04ycVNzcE8xUUEtYlItbHpmNnRTWWlaRXRPb19hQS1EamZ3dF9fNno3SHY0ZS1xMTNUMVdUeFlHNXZUbUdjcTVzVzFVaHZwVzlhcUpMUUc5UUJGOGpocF9UTklTSXBxNmJpaWxNUWdhWWF0aEducWNNRVVLZjRFSGVMVklVRjBTS3AxQVI3UEc0bTItcw?oc=5",
-          "source": "Defense News",
-          "date": "2026-10-23"
+          "title": "UBS cuts target for Rheinmetall to €1,360 - 'Buy'",
+          "url": "https://www.marketscreener.com/news/ubs-cuts-target-for-rheinmetall-to-128-1-360-buy-ce785cdbd18bf624",
+          "source": "MarketScreener",
+          "date": "2026-10-20"
         },
         {
-          "title": "Land-Based C4ISR Market Forecasts Growth from $36.6 Billion (2025) to $67.7 Billion by 2035, Profiling Lockheed Martin, Rheinmetall, Thales, Elbit Systems & 14 Other Key Players",
-          "url": "https://finance.yahoo.com/technology/articles/land-based-c4isr-market-forecasts-131200785.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-10-23"
+          "title": "Rheinmetall, KNDS JV bags combat vehicles order from OCCAR",
+          "url": "https://www.marketscreener.com/news/rheinmetall-knds-jv-bags-combat-vehicles-order-from-european-defense-group-occar-ce785cd3df8ffe2c",
+          "source": "MarketScreener",
+          "date": "2026-10-29"
         },
         {
-          "title": "Rheinmetall Stock And Europe’s Defence Factory Buildout",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/rheinmetall-stock-europe-defence-factory-021724474.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-10-23"
-        },
-        {
-          "title": "Leonardo, Rheinmetall secure 3.7-billion-euro contracts with Italian army, MF daily says - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNUTRsc0ZXdXpzRHMwQ1N0b2JueXRyQXlXWjB0TU8yOXVVQnA0ZlN2aEVwMmxBZ2ZGcFZUMzRTVHdhdlhXZ1dxQ1Nvb3FmYzRsb1p0RXRpM21ob240VUc2TEZzUUdXdnN4RndPUkw4Z1JnUFM0UjZDY2FTQVJLeDgxTHI3NnIzLVRvYTFpZGk1YXhFV05MM3RHTFFJRmtWYlZDNklHS3Myck1jZ1FxeXo2QWE4LV9IazM2VjlHeXlRSm9DZ1NVSUlGanAzekp5cHM1ZFY3dldkVGZvT1k?oc=5",
-          "source": "Reuters",
-          "date": "2026-10-22"
+          "title": "Rheinmetall delivers first Caracal series-production vehicles",
+          "url": "https://www.marketscreener.com/news/rheinmetall-delivers-first-caracal-series-production-vehicles-to-the-german-and-dutch-armed-forces-ce785fdbdf89f02c",
+          "source": "MarketScreener",
+          "date": "2026-10-30"
         }
       ]
     }
