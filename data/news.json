@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-03T12:50:38+00:00",
+  "updatedAt": "2026-11-04T13:02:28+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
       "mode": "auto",
-      "asOf": "2026-11-03",
+      "asOf": "2026-11-04",
       "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV, o ~11 % více meziročně (šestý měsíc růstu v řadě) a poprvé přes 300 tis. čistě elektrických. Za 9 měsíců zámořský prodej výrazně rostl (+92,7 %), tuzemský klesl (−30,2 %) podle CnEVPost. Firma uvádí nové modely (Seal 07 2. gen. 5. 11., Qin Plus DM-i). Příčinu pohybu akcie zdroje neuvádějí.",
       "drivers": [
         "Říjnový prodej 490 168 NEV (CnEVPost, 1. 11.)",
@@ -21,22 +21,16 @@
       ],
       "headlines": [
         {
-          "title": "China’s BYD Doubles Market Share in Brazil With New Plant Eyed - Bloomberg",
+          "title": "BYD teases new model for Guangzhou Auto Show, with next-gen Han expected - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZmRrVnpkT0FVQ1o4aTVvMkRSa21mc0pnY0dBcHlBd3FvQTQ3RGhpNi1IdzAweDl0SlNfc2xwSURmOUhVbURmV1NTZ3RZSkRTclJtTjhELTBnaHMyeU4wRGZTaHBmczkyQWZmYzVTVlMzMG5QT3J6RTFRTDNqc3AtR18zMm9XbWxsNG9saC0yMjd1UUVW?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-11-04"
+        },
+        {
+          "title": "China’s BYD Doubles Market Share in Brazil With New Plant Eyed - Bloomberg.com",
           "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZkYzLU5GQjVUdDZvVkE0RzhGd1JJeXk5M2FWQ2RwZHc2Ml9TcldySDc3ME5kU2hfNWlhcjRGSzh0bFV5cHhmSFF2NEdDSTZVcTduYXlqRlZFMTFKN3k5TnhRdnhqZjZBTDlDTTRmd0Fac1RKV25KRHZQZ3JadFlfWllSSWw1Wm11Nk5VTXlEWktHREs5d3lGcGd2R1ZMNUVqSmJINm1oWlBicWpUemhuYWVuRQ?oc=5",
-          "source": "Bloomberg",
+          "source": "Bloomberg.com",
           "date": "2026-11-03"
-        },
-        {
-          "title": "BYD's October Vehicle Figures Reflect Surging Demand for BEVs - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRE9qa3lDZTdQeUxrR2dvZmRLVW5CTE9aNWlDN0gxMVNSSVZOWjFabERIN29ndjhYVzh3OTBQT0pYTE92VDhDaVBBRmt4OTlHd1pIdmFYWl96NDJ4NWpWZUhwUThkdE5lcHM5dG1kaFltdm1YWjgwQ3dTWjZEbkhkWFZxcFZNYXhrX21MeDRFenhWX0pDWWJwTEQ0N2gzbXdKVmY3T3kydkRSekp2Qm1kaHQtaC0?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-03"
-        },
-        {
-          "title": "South Africa's EV sales this year race past last year's total - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdzlYZ2pfZHFuR2R0U0xPSm51QUFRZ2w5aWdHZS12Rno0V1N4bDljc3Z3NHJEaWhJV3FSRl9SV0U3YWQ0Si14WGFjNFFQYVpCUjdmUGhyZEZzVWllRjhPUGpnVWpIOHJXYjVSR1ZxMGkyZVZQNUtJVTRtY2ZneVZYejR1ODZ0d0VkZXhJUmJoYUNic3E4a0RqNGdhR2d2cmFjWGZsUnF5d2lwZmEx?oc=5",
-          "source": "Reuters",
-          "date": "2026-11-02"
         },
         {
           "title": "BYD Exports to Survive Its Domestic Market - marketscreener.com",
@@ -57,9 +51,9 @@
           "date": "2026-11-02"
         },
         {
-          "title": "BYD Reports Higher Sales for Sixth Month on Exports; Shares Gain - Bloomberg",
+          "title": "BYD Reports Higher Sales for Sixth Month on Exports; Shares Gain - Bloomberg.com",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRU1oODR6MVZQV3NJazVfWHlmaUYtaFNaeU9zVFpwb1VaYlB2REZnU3ZYV0JTYWdydWVMWTBmRmlYYkM5NHEzcTZqZDNvSFFJQkxDbmtsdGlxOGJSWDZGVldYMU5aVWFwY2dKU29Ib0dUbWRTc1VEdVFLNlZKTlRaNUYtWUUzT3VDcExKdnh3dTY0My1tZWZXcFZXSDBURzhYN1RKdlVqV0xyRlpZRTZoOFo1aW0?oc=5",
-          "source": "Bloomberg",
+          "source": "Bloomberg.com",
           "date": "2026-11-02"
         },
         {
@@ -67,6 +61,12 @@
           "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPY1FESTJEcFJKV2xwaENrSGFXa29HdERlR3hTLVVBcTFycEpZMXBwQkVKcFdZSzRvdncwTTFjNGt0SWdXN29hODY0VFdjalhUa0loUWw0Y2N2UXQzTVQ5UlhQcmVKZTNKMmdlTV9XRC1hU0xYaUdtbi1seHhhNFlIVzFxNVdZdTg?oc=5",
           "source": "CnEVPost",
           "date": "2026-11-02"
+        },
+        {
+          "title": "China’s BYD Continues Massive EV Exports. It Isn’t Helping. - Barron's",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE54dTJkc3RsNklYSlBxOWpUMzNnNkVsd1hkU3hTMHpBcXZJSDk5dGpaRWF5XzdDTVpPdzJ4T1p2UXFmTzlxM3F5RUV2Tm5VNS0yRWpMS1BqTjhMUUFxb2xsa1dsQ1pDTlk3QmF1R2FXRHRlM291cXRZ?oc=5",
+          "source": "Barron's",
+          "date": "2026-11-01"
         }
       ]
     },
@@ -74,7 +74,7 @@
       "name": "Bitcoin",
       "symbol": "bitcoin",
       "mode": "auto",
-      "asOf": "2026-11-03",
+      "asOf": "2026-11-04",
       "summary": "Trh s kryptem sleduje únik z Binance: podle CoinDesku šlo o ~6,3 mld. USD, FBI potvrdila podíl Severní Koreje a Binance 1. 11. po etapách znovu otevírá výběry, začíná bitcoinem. Společnost Next Technology Holding zvažuje prodej části svých BTC s odkazem na útok a kvantová rizika. Aktuální cenu a reakci trhu ze zdrojů, které se podařilo číst, nelze spolehlivě uvést.",
       "drivers": [
         "Hack Binance ~6,3 mld. USD, 18 270 BTC (CoinDesk, 31. 10.)",
@@ -88,52 +88,52 @@
       ],
       "headlines": [
         {
-          "title": "Bitcoin is breaking a midterm election pattern going back to 2014",
-          "url": "https://www.coindesk.com/daybook-us/2026/11/03/bitcoin-is-breaking-a-midterm-election-pattern-going-back-to-2014",
+          "title": "THORChain's RUNE jumps 10% as North Korean hackers resume laundering Binance loot",
+          "url": "https://www.coindesk.com/markets/2026/11/04/thorchain-s-rune-jumps-10-as-north-korean-hackers-resume-laundering-binance-loot",
           "source": "CoinDesk",
-          "date": "2026-11-03"
+          "date": "2026-11-04"
         },
         {
-          "title": "Bitcoin steadies after dip to $76,300 as ETF outflows and midterm elections weigh on crypto",
-          "url": "https://www.coindesk.com/markets/2026/11/03/bitcoin-steadies-after-dip-to-usd76-300-as-etf-outflows-and-midterm-elections-weigh-on-crypto",
-          "source": "CoinDesk",
-          "date": "2026-11-03"
+          "title": "Mapping the Market: Bitcoin could extend losses - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNNm9yeUVlVkVwM3RFNm1tMGFnMEVWellmVDZQQ2lGQ2hRR3VsMUVuSFVEN29BRHZ3Wnk0b0k2SVFpUk5WcGRYRW1Kck0tR3lSeDdiTy1LdTNMZGNBcGpndUUwNkRDRl9NNmRsZFZhWkhqa3VOY3VJcGdXU0k5d2dydThGc183cGM?oc=5",
+          "source": "Reuters",
+          "date": "2026-11-04"
         },
         {
-          "title": "Liquid’s bitcoin IOUs are fully backed again after a $320 million exploit",
-          "url": "https://www.coindesk.com/markets/2026/11/03/liquid-s-bitcoin-ious-are-fully-backed-again-after-a-usd320-million-exploit",
+          "title": "Bitcoin rebounds from midterm dip as DeFi leads gains",
+          "url": "https://www.coindesk.com/markets/2026/11/04/bitcoin-rebounds-from-midterm-dip-as-defi-leads-gains",
           "source": "CoinDesk",
-          "date": "2026-11-03"
+          "date": "2026-11-04"
         },
         {
-          "title": "Tether holds 150,000 bitcoin worth $11.5 billion, CEO Paolo Ardoino says",
-          "url": "https://www.coindesk.com/business/2026/11/03/tether-holds-150-000-bitcoin-worth-usd11-5-billion-ceo-paolo-ardoino-says",
+          "title": "Bitcoin rebounds from midterm dip as DeFi leads gains - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdl9SZHZudE5rNGFQck5hakdMNWN5UmZEaGoyTF9iZXVSOVVvNzJ1VGIxM2prb1lCNUh5eHlNbHZ2T3ZaZEw1V282X0c4endZMEx6Z1FFYUZ1cWhETndoYVBCLTVMUU41WXpYZVdWUFlhTU53VFRYVEM3MzBmNEtzYXpneHR3U0tsYzlIN25YdVFocndWUEZURTN4NkY5UQ?oc=5",
           "source": "CoinDesk",
-          "date": "2026-11-03"
+          "date": "2026-11-04"
         },
         {
-          "title": "Is Strategy (MSTR) Still Doubling Down On Bitcoin With A $65 Million Move? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSGhoeW1BNl9yODVQNFFRWWl4N2hTTTFOZXQ1aVFsR3NSa3VGRm5xSTVZaGVCbnFWNld3VGotNUJ6RWZEQ3ZEWTJkaUVuTXZlZjcza0M1UlVZLWhEY3FERXJ1S01SZlVKQUtTY2VmLVVEV3pmdmRBQkU4b0Y2LUxubUQtVDFNTTZreThkWks2bEd1ZFBndDJ2dU5pVE9CUHM?oc=5",
+          "title": "Bitcoin Slips as Democratic Sweep Bets Threaten Crypto Agenda - Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNWg3aW5QeW04R2pKaV9WdFp4XzJZdkJnaEw1UEdLNGZINHJBZk5UYldBX1FsY1Z3eUxubmphN1hvQnJJNFdERkJOcjZPMXppclBsN2hOZGZxVUhMZGRydHYwSlVpTXcxekxDZzQ5OFVFS1h3czZwVzQ2VW94VDNLdWdsbm5heHIteUhDZ2RjaC1SWlFycGNJSklZZkVWbThkQjRJQlF5QjJfMEFNWVVLa19n?oc=5",
+          "source": "Bloomberg.com",
+          "date": "2026-11-04"
+        },
+        {
+          "title": "Moscow Exchange Details Clearing and Settlement for Bitcoin, Ether and USDT Trades - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOc29jbXZWN1VjLUdDMjlHdUdwODkwVWYzaEFRSUxzR1BfYXFYTFA1UFdEQmNKX1M2amtzQ3YyZHJpU0djQmhxQTlLOEdGcnB5Q3dDUDZCRlpCRlJYMFpXblpJMk15dURad0YxeE9oRTVtVEdfc1RoWHlqR2Y3anhuMUZDbmNzeldpQ3d3VW5zSzNfYUYxU3ZyWElCcS1JaGVOMFJEcDlMdHFMdTVi?oc=5",
           "source": "Yahoo Finance",
-          "date": "2026-11-03"
+          "date": "2026-11-04"
         },
         {
-          "title": "Bitcoin price threatens $77.7K support loss with recent buyers underwater",
-          "url": "https://cointelegraph.com/markets/bitcoin-price-support-loss-recent-buyers-underwater?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "title": "Bitcoin ETFs lose $1.16B as Bitwise calls selling ‘short-term’",
+          "url": "https://cointelegraph.com/markets/bitcoin-etf-shed-1-16-billion-bitwise-short-term-risk-off?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "source": "Cointelegraph",
-          "date": "2026-11-03"
+          "date": "2026-11-04"
         },
         {
-          "title": "Live news: Bitcoin faces fifth weekly loss as midterm elections weigh on markets",
-          "url": "https://www.coindesk.com/markets/2026/11/03/live-news-bitcoin-faces-fifth-weekly-loss-as-midterm-uncertainty-and-apple-warning-weigh-on-markets",
+          "title": "Bitcoin (BTC) surges to $78,300. What next? - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUnlSaG55Rkxpb2V4U2UyXzhYNXNTMjlTcVNWUHhkR1F5d1U0bGNJYUFwdnU5RWFFZ0VTSmQyV21fRG5zc2FLcUFQck1sRmswSlctWGdPM3RrekJpdV9jWnlmSHNvcjE0ZnpwT0xsamk5MHIwLTNYNjJTY1RzWm1mRl9QZ3hHRlUxR0NqLTJ6WTVNYjJOTWJvNlpPZkpIU0N4LWJkQmFKQzFONXRzam5uby1xOHhRNVJQT3BOWjhB?oc=5",
           "source": "CoinDesk",
-          "date": "2026-11-03"
-        },
-        {
-          "title": "Mercado Bitcoin pledges to cover all user losses after near $40 million hack",
-          "url": "https://www.coindesk.com/business/2026/11/03/mercado-bitcoin-pledges-to-cover-all-user-losses-after-near-usd40-million-hack",
-          "source": "CoinDesk",
-          "date": "2026-11-03"
+          "date": "2026-11-04"
         }
       ]
     },
@@ -141,7 +141,7 @@
       "name": "Thales SA",
       "symbol": "HO.PA",
       "mode": "auto",
-      "asOf": "2026-11-03",
+      "asOf": "2026-11-04",
       "summary": "Thales 22. 10. oznámil za 9 měsíců 2026 přijaté zakázky 19,1 mld. EUR (+15 % organicky) a tržby 16,4 mld. EUR (+8,1 % organicky). Obrana: zakázky 11,3 mld. EUR (+14 %), tržby +13 % organicky; třetí čtvrtletí ale přineslo zakázky o 6 % nižší organicky. Firma zvýšila výhled organického růstu tržeb na horní hranici pásma +6 až +7 %.",
       "drivers": [
         "Námořní systémy, efektory a protivzdušná obrana (Thales)",
@@ -155,6 +155,12 @@
         "Výhled platí za předpokladu bez nových makro/geopolitických otřesů (Thales)"
       ],
       "headlines": [
+        {
+          "title": "European defense stocks slip as Democratic midterm win raises spending worries",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/european-defense-stocks-slip-democratic-102610840.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-04"
+        },
         {
           "title": "HII and Thales Successfully Demonstrate Expeditionary PathMaster's Ability to Deliver an End-to-End Autonomous Mine Countermeasure Mission",
           "url": "https://finance.yahoo.com/technology/ai/articles/hii-thales-successfully-demonstrate-expeditionary-060000699.html?.tsrc=rss",
@@ -187,21 +193,15 @@
         },
         {
           "title": "IRIS² CONSTELLATION: MDA SPACE TO PROVIDE THALES ALENIA SPACE WITH DIGITAL ANTENNA SUBSYSTEMS FOR 66 EARLY-DELIVERY SATELLITES",
-          "url": "https://finance.yahoo.com/technology/articles/iris-constellation-mda-space-thales-121500893.html?.tsrc=rss",
+          "url": "https://finance.yahoo.com/technology/articles/iris-constellation-mda-space-thales-121500522.html?.tsrc=rss",
           "source": "Yahoo Finance",
           "date": "2026-10-30"
         },
         {
-          "title": "BlackLine Expands into Europe’s Trusted Cloud Market with S3NS",
-          "url": "https://finance.yahoo.com/technology/ai/articles/blackline-expands-europe-trusted-cloud-120000158.html?.tsrc=rss",
-          "source": "Yahoo Finance",
+          "title": "Romania signs contract with Thales for four ground controlled approach radars - Janes Defence Intelligence",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNZEprdkpLRlltcTFBSmpPQ0ZNRHUtbER0UXBjUm9wNVBMTWhPcHNVVjdua2pscFpXQ25iWDFBR0NfVDdkWFVGNzNpdGtJcVY5T3pjN2psSkFyRjVWRVhJRzgwU29zVTVIUENSVlMyNGRXNURBTGppOWlqaHNCM05faF9wczduRUkteGk2U2taTExKRC04eTkzQk0yUEhWZ1Z2NlAxYUZLRTBqMHdqMV9RdEdyYjljSURqT2ZlUGs4R1R3ZnNQV0YycmE3dGNRZzkySmh5aWVsSFdkMGppUnFGT1ZB?oc=5",
+          "source": "Janes Defence Intelligence",
           "date": "2026-10-29"
-        },
-        {
-          "title": "SIMPL Wireless and Thales Publish Joint White Paper: \"Beyond Connectivity Management\"",
-          "url": "https://finance.yahoo.com/technology/articles/simpl-wireless-thales-publish-joint-110000024.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-10-28"
         }
       ]
     },
@@ -209,7 +209,7 @@
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
       "mode": "auto",
-      "asOf": "2026-11-03",
+      "asOf": "2026-11-04",
       "summary": "Rheinmetall v posledním týdnu října získal další zakázky: opci na 69 vozidel Schakal (29. 10.) a zakázku pro společný podnik s KNDS od OCCAR; podle MarketScreeneru Citi po zakázce Schakal zůstává u doporučení nákupu. Italská armáda podle deníku MF uzavřela s Leonardem a Rheinmetallem kontrakty za 3,7 mld. EUR (nepotvrzeno firmou). Zároveň banky snižují cílové ceny (Deutsche Bank, UBS), důvody ve zdrojích nejsou rozepsány.",
       "drivers": [
         "Opce na 69 vozidel Schakal (MarketScreener, 29. 10.)",
@@ -246,9 +246,27 @@
       ],
       "headlines": [
         {
-          "title": "Rheinmetall AG : Berenberg sticks Neutral - www.marketscreener.com",
+          "title": "European defense stocks slip as Democratic midterm win raises spending worries",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/european-defense-stocks-slip-democratic-102610840.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-04"
+        },
+        {
+          "title": "Rheinmetall AG (RHMB.MU) Seasonal Returns Chart - Yahoo Finance - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1LcGVEVzZSeFdlV212TEdvQ2E1TkQtalJKbm1kYmZ0eTNiTGotbEV5Y1pLUGc4WUZjbnRLTkR6dDByTEpQeXpfNHdDVS1Od0d4aHFCbDNuMzNYd3VuV3c0aUpOT1o5UQ?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-11-03"
+        },
+        {
+          "title": "Rheinmetall AG (RHMN.MX) recent insider transactions - Yahoo Finance Australia",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5lNmFicThFU21CWk10WmMtYmU0Ul9VNll5ZnN4VkhiR2pZRlBlRVVCWUUwOTN2NVdtXzdaQzBBMDZPVmZwZmRuNzJ2ckJpcTdBS2lUQS1hcDBhZHU1bzhWcVloR2k4SkZkVnhhUWh4UmZGUQ?oc=5",
+          "source": "Yahoo Finance Australia",
+          "date": "2026-11-03"
+        },
+        {
+          "title": "Rheinmetall AG : Berenberg sticks Neutral - marketscreener.com",
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNNDhXaEVLaXFacTh1NnhXa0RWS1lRS29Qc0Y5S0NYTmVELUVNNWwyV3h4Qnl6M1BybW5qaEFQa2Rqd29wWGd1NTBEX0RDdnA2aE5QM09hT3FtYWtOSkUzMS1RZWZlVnd5XzFPSU9QZzhqWDU3V09OSVNaT28wMEphbzM5YUhibzVqVTV2cXNtdUxLUTZBYkFz?oc=5",
-          "source": "www.marketscreener.com",
+          "source": "marketscreener.com",
           "date": "2026-11-03"
         },
         {
@@ -274,24 +292,6 @@
           "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1jWElqeGktUW9IUlM2UzBwWjhEbFEyLVNGcnpHNnh5OWpIOExYV29CcEgzdTgtNjNUMWJGRG9McmxCTWczVFJXTHpmUjR4RXpUUUJFRUNhajFmR2RXNW5yZEwxdkY?oc=5",
           "source": "Yahoo Finance UK",
           "date": "2026-10-31"
-        },
-        {
-          "title": "Rheinmetall AG (RHM.HM) Seasonal returns chart - Yahoo Finance UK",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBfQml5bE1CdlhZREZhX2JUMVpHYk1ESEZOZVRYQVEtaXN1V216WF9ZcmUzVkN5Zi02eVlHNWtqc0lBaFhZMmlYaDVuUkRUODVlYjhULU80dHlwUEhUVWttcWVmeFU?oc=5",
-          "source": "Yahoo Finance UK",
-          "date": "2026-10-30"
-        },
-        {
-          "title": "Rheinmetall AG (RHM.HA) Seasonal Returns Chart - Yahoo Finance - Yahoo! Finance Canada",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5sd3JWSUsyTmVnSXdSazM2UUpzNTNWTlRVMXE2OXF2enRQX0EyOWpqWlJZU3UwaEdUSEpSVjBUSk5OSThVZHpwbjNYMHlZOVMzNF85N2dXQTNqc1VHbXBRblp0Z2E?oc=5",
-          "source": "Yahoo! Finance Canada",
-          "date": "2026-10-30"
-        },
-        {
-          "title": "3 Eurozone Stocks To Watch For AI And Defence Spending",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-eurozone-stocks-watch-ai-131334166.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-10-30"
         }
       ]
     }
