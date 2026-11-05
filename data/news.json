@@ -1,25 +1,31 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-04T13:02:28+00:00",
+  "updatedAt": "2026-11-05T04:08:13+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "auto",
-      "asOf": "2026-11-04",
-      "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV, o ~11 % více meziročně (šestý měsíc růstu v řadě) a poprvé přes 300 tis. čistě elektrických. Za 9 měsíců zámořský prodej výrazně rostl (+92,7 %), tuzemský klesl (−30,2 %) podle CnEVPost. Firma uvádí nové modely (Seal 07 2. gen. 5. 11., Qin Plus DM-i). Příčinu pohybu akcie zdroje neuvádějí.",
+      "mode": "claude",
+      "asOf": "2026-11-05",
+      "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV, o 11 % více meziročně (šestý měsíc růstu v řadě); export činil 170 194 vozidel. Za leden–říjen je ale celkový prodej (3 621 744) mírně pod stejným obdobím loňska (3 701 852) podle just-auto. Příčinu pohybu akcie zdroje neuvádějí.",
       "drivers": [
-        "Říjnový prodej 490 168 NEV (CnEVPost, 1. 11.)",
+        "Říjnový prodej 490 168 NEV, +11 % meziročně (just-auto, 2. 11.)",
+        "Export 170 194 vozidel (just-auto, 2. 11.)",
         "Zámořský prodej +92,7 % za 9 měsíců, tuzemský −30,2 % (CnEVPost)",
-        "Nové modely: Seal 07 2. gen., Qin Plus DM-i",
-        "2. místo na světě v bateriích pro EV, podíl 15,2 % (CnEVPost, 2. 11.)"
+        "Nové modely: Seal 07 2. gen., Qin Plus DM-i"
       ],
       "outlook": [],
       "risks": [
-        "Slabý tuzemský trh (−30 % za 9 měsíců)",
-        "Odhad celočínského prodeje NEV na říjen −16,5 % meziročně (odhad, CnEVPost/Carnewschina)"
+        "Slabý tuzemský trh (−30 % za 9 měsíců, CnEVPost)",
+        "Prodej za 10 měsíců meziročně o ~2 % nižší (just-auto)"
       ],
       "headlines": [
+        {
+          "title": "BYD October NEV sales rise 11%",
+          "url": "https://www.just-auto.com/newsletters/byd-october-nev-sales-rise-11",
+          "source": "just-auto",
+          "date": "2026-11-02"
+        },
         {
           "title": "BYD teases new model for Guangzhou Auto Show, with next-gen Han expected - CnEVPost",
           "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZmRrVnpkT0FVQ1o4aTVvMkRSa21mc0pnY0dBcHlBd3FvQTQ3RGhpNi1IdzAweDl0SlNfc2xwSURmOUhVbURmV1NTZ3RZSkRTclJtTjhELTBnaHMyeU4wRGZTaHBmczkyQWZmYzVTVlMzMG5QT3J6RTFRTDNqc3AtR18zMm9XbWxsNG9saC0yMjd1UUVW?oc=5",
@@ -61,12 +67,6 @@
           "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPY1FESTJEcFJKV2xwaENrSGFXa29HdERlR3hTLVVBcTFycEpZMXBwQkVKcFdZSzRvdncwTTFjNGt0SWdXN29hODY0VFdjalhUa0loUWw0Y2N2UXQzTVQ5UlhQcmVKZTNKMmdlTV9XRC1hU0xYaUdtbi1seHhhNFlIVzFxNVdZdTg?oc=5",
           "source": "CnEVPost",
           "date": "2026-11-02"
-        },
-        {
-          "title": "China’s BYD Continues Massive EV Exports. It Isn’t Helping. - Barron's",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE54dTJkc3RsNklYSlBxOWpUMzNnNkVsd1hkU3hTMHpBcXZJSDk5dGpaRWF5XzdDTVpPdzJ4T1p2UXFmTzlxM3F5RUV2Tm5VNS0yRWpMS1BqTjhMUUFxb2xsa1dsQ1pDTlk3QmF1R2FXRHRlM291cXRZ?oc=5",
-          "source": "Barron's",
-          "date": "2026-11-01"
         }
       ]
     },
