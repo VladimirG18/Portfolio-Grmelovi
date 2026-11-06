@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-05T13:16:08+00:00",
+  "updatedAt": "2026-11-06T12:59:35+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "claude",
-      "asOf": "2026-11-05",
+      "mode": "auto",
+      "asOf": "2026-11-06",
       "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV, o 11 % více meziročně (šestý měsíc růstu v řadě); export činil 170 194 vozidel. Za leden–říjen je ale celkový prodej (3 621 744) mírně pod stejným obdobím loňska (3 701 852) podle just-auto. Příčinu pohybu akcie zdroje neuvádějí.",
       "drivers": [
         "Říjnový prodej 490 168 NEV, +11 % meziročně (just-auto, 2. 11.)",
@@ -21,10 +21,34 @@
       ],
       "headlines": [
         {
-          "title": "BYD October NEV sales rise 11%",
-          "url": "https://www.just-auto.com/newsletters/byd-october-nev-sales-rise-11",
-          "source": "just-auto",
-          "date": "2026-11-02"
+          "title": "BYD Denza to launch new N8 SUV on November 12 with up to 1,003 km range - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBCdlFwYV9wQlZ1QWsyZVhWc0lKcUtIOTlqUXpZSUZHLUd4cjRJR3BDYnN6cnFSWS1ER0lOUHdmS0w2X2lWYm9YMWtPR2xmaTNfYm00c1FwNHcxQ19PVWQxaG44WjBGc1hhcmJWSW9ZS2VpQVBZ?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "BYD launches second-gen Seal 07 in China with lower prices and longer range - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBzMEdjUS1ndHdEOUJ0cElHVk9ScGFzODJxdHZrVE1walM2ZF9qNTRSM0liLXRJV1pVVXQ2cGlvWUdoUG1TN2NMNGRrelRabkwyUm56bURUZGJTMXplQkRERlJUMzUwNjFhTGNWUFFR?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "CATL, BYD gain EV battery share outside China as Korean rivals lose ground - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOMElPY2xMZFBpSFpka2pMTVhydG9QaTFjMTVoYnczSmRna3FOdzl4ZUh5ZXZ2TXpWMXVrcjRaR0pqQ0FwcmgtTHljbjR5bWJDRlAzWWNhR3Q4a202RW45ZFRFSW85ZEt1VXZJSnhTY1dhcUp0Y1lfY1JNdkJGWlJuLUpJQQ?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "EU lawmakers push for bloc to assess security threat from BYD cars - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSDNJWUNLbTdUTFhfeVRuTVJ1YUg0TGRDUTk4TE9yQk5KelVjU0NpNU9HTERVOEZjVVVmUFBxSHFwQzUyRnFlVUozcHFwbDJ6NWtBM3VrbWlQLVI0WU1QbTZ5dzBXUmVNUS0zQVpETVBBckhqV0xPNlVFX1hLeXdveDNDemFfaWx3VUI2Rzh5VGlTQm1qdWtrSmVHaWxWYURIVUUwUjIwbk1HYUE?oc=5",
+          "source": "Reuters",
+          "date": "2026-11-04"
+        },
+        {
+          "title": "BYD's Denza N9 to add all-electric version with 5- and 6-seat layouts - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE52a1hnQ3BsWHpnbDdnbDZ4aUZhM1c4S0dFcGtpTEI1R09VTlNELXZzLUhMMW1YVmY1OTMtcTVuX01iQ1BrV1RUR3ppOW01aEw0bDVWQUZmXy1tbmtaVmhuTHlBQlR1VU11UWhwYVdVMGRMVFhLeVVEUnkwTXBQUQ?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-11-04"
         },
         {
           "title": "BYD teases new model for Guangzhou Auto Show, with next-gen Han expected - CnEVPost",
@@ -39,33 +63,9 @@
           "date": "2026-11-03"
         },
         {
-          "title": "BYD Exports to Survive Its Domestic Market - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNMzB1Um1GM3BlMDh4cFl6eFAtNzFqOUtLUGxxUDZVanNKUF9Mb29KdExjbzJMQU9vQW5IWDZjak11RFBYQVl3YUh5R3o2Z3Z2Q2l6U1RfSE5TaDB0UGxpS2U4aEJYeTZveWxWWTJKVFFnZmtMcGh1TUVCNEk4blRLUkdLVFJ4U3RUVmxuQmVTTEl5a0F3eE56RHlaZw?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-02"
-        },
-        {
           "title": "BYD October car sales up 11% - Yahoo Finance",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWmlTTlNwdlJWTG80b0NSM0kxNHNhejYweTdIYmFIbmJ5eXNKeTZBTHp4MUhHRmFQUkE3anZ0LTBUQVBnNWF5NVVHVTZfRXE4azlGeFRMMm5rb3htZzB4TmFUS004UjhPaWlvMVNZbnJPZkNSY3NsZVRWVW8wUlAtMzZUYzNWbzZDXy1vMGM5NlFCNFk?oc=5",
           "source": "Yahoo Finance",
-          "date": "2026-11-02"
-        },
-        {
-          "title": "BYD's Exports Jump 102.8% as Domestic Growth Cools - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZ2RqWVBQUzZqNTkwSk43V2UtR29oNWgyLTlIQktVdFIwLTd3bnBhZ19LdkdxXzBCR3N3SVliZ0l6bWdHLTREQmZjeHVkTHR1U0lwbjVYYTVvTEpZS3F0M3FsTkZGLUZMVmJtSmswWWtZNWtxNm1PNHdJMGxEYTdZNmlkemsyeXF4M253X0xkOTJWUQ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-02"
-        },
-        {
-          "title": "BYD Reports Higher Sales for Sixth Month on Exports; Shares Gain - Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRU1oODR6MVZQV3NJazVfWHlmaUYtaFNaeU9zVFpwb1VaYlB2REZnU3ZYV0JTYWdydWVMWTBmRmlYYkM5NHEzcTZqZDNvSFFJQkxDbmtsdGlxOGJSWDZGVldYMU5aVWFwY2dKU29Ib0dUbWRTc1VEdVFLNlZKTlRaNUYtWUUzT3VDcExKdnh3dTY0My1tZWZXcFZXSDBURzhYN1RKdlVqV0xyRlpZRTZoOFo1aW0?oc=5",
-          "source": "Bloomberg.com",
-          "date": "2026-11-02"
-        },
-        {
-          "title": "Global EV battery market share in January-September 2026: CATL 39.1%, BYD 15.2% - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPY1FESTJEcFJKV2xwaENrSGFXa29HdERlR3hTLVVBcTFycEpZMXBwQkVKcFdZSzRvdncwTTFjNGt0SWdXN29hODY0VFdjalhUa0loUWw0Y2N2UXQzTVQ5UlhQcmVKZTNKMmdlTV9XRC1hU0xYaUdtbi1seHhhNFlIVzFxNVdZdTg?oc=5",
-          "source": "CnEVPost",
           "date": "2026-11-02"
         }
       ]
@@ -74,7 +74,7 @@
       "name": "Bitcoin",
       "symbol": "bitcoin",
       "mode": "auto",
-      "asOf": "2026-11-05",
+      "asOf": "2026-11-06",
       "summary": "Trh s kryptem sleduje únik z Binance: podle CoinDesku šlo o ~6,3 mld. USD, FBI potvrdila podíl Severní Koreje a Binance 1. 11. po etapách znovu otevírá výběry, začíná bitcoinem. Společnost Next Technology Holding zvažuje prodej části svých BTC s odkazem na útok a kvantová rizika. Aktuální cenu a reakci trhu ze zdrojů, které se podařilo číst, nelze spolehlivě uvést.",
       "drivers": [
         "Hack Binance ~6,3 mld. USD, 18 270 BTC (CoinDesk, 31. 10.)",
@@ -88,52 +88,52 @@
       ],
       "headlines": [
         {
-          "title": "Bitcoin is resilient, but leverage is missing and demand still tepid",
-          "url": "https://www.coindesk.com/daybook-us/2026/11/05/bitcoin-is-resilient-but-leverage-is-missing-and-demand-still-tepid",
-          "source": "CoinDesk",
-          "date": "2026-11-05"
+          "title": "Bitcoin Selloff Eases as Investors Explore Cautious Recovery - Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPanI5WVpaVXdYVDM4dVdieTFHSnFjcU9vLUhPMk1velVJMUFZdHdzUjB1WGJMYTlkeVRaVEJVeHdSd0tJVU1IUVpsZ3JReUxORTBLVlFzSGo5cjU2R1dMemRhcWNHbTNfV29oUEFQYldxaTB0UmltbFpsVy1BX1JlV1l2MjByb3RxQVNyTzcwdmp4NDM4UHhrZW9odWVlVmZxX3VuWkxLNVJNRmdPY1gtbA?oc=5",
+          "source": "Bloomberg.com",
+          "date": "2026-11-06"
         },
         {
-          "title": "Bitcoin is resilient, but leverage is missing and demand still tepid: Crypto Daily - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQbFRtcWY2S1BSSkstYWxyMjR5YTNVSnJRa3FyTF9adl9ZOFg1dVZVeFFzMXRQQXdfcnVNTVphRHZzeXNyZ0N2elVMNDdHdVMzbzN3ZGt1dkdRalU5MG9WSkczQzFfS2tCODlEa3ZSZkVrVHdJX2l6UlRBVW1ZM1p6WE8ybTNhRnJWWUhJM0drbU1GbVlNckxrdHFoTU1mZzZHdlVGc0E0ZjZkcm1XN3RDMU5JaUw?oc=5",
-          "source": "CoinDesk",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Bitcoin miners are oversold following 35% October rout, VanEck says",
-          "url": "https://www.coindesk.com/markets/2026/11/05/bitcoin-miners-are-oversold-following-35-october-rout-says-vaneck",
-          "source": "CoinDesk",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Oversold bitcoin miners' grid connections carry a massive scarcity premium, VanEck says - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQYlBWWFF2d2JpdU9oQ1VLUTUycW1NYU94OFd0NmNJTnozdy1hTlhZajI3anpNMzhDLTVpb2h5WHZKRS1COW5nTGRieFhOdHV4ZHBwa0VNcW5hQm8xemQyY1ItMWgyMGpaTzNRODE1ZjV5dHAwVU1TYVp5ZGtGRHNUQ2czUHY5c3VJYmFtWGVHVkw3eUdTdHhCOFpCcjY3VEZvSUo0alJHNThiNVhXVXc?oc=5",
-          "source": "CoinDesk",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Trump-linked American Bitcoin swings to $126 million profit but misses revenue estimates",
-          "url": "https://www.coindesk.com/business/2026/11/05/trump-linked-american-bitcoin-swings-to-usd126-million-profit-in-q3-2026",
-          "source": "CoinDesk",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Bitcoin holds above $80,000 after Wednesday’s jump as injective rallies on staked ETF listing",
-          "url": "https://www.coindesk.com/markets/2026/11/05/bitcoin-holds-above-usd80-000-after-wednesday-s-jump-as-injective-rallies-on-staked-etf-listing",
-          "source": "CoinDesk",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Bitcoin steadies near $80,250 as injective rallies on ETF approval - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPYWNYQUFpdFRkekNzZ2w4a0VmX3doemxYNVVRLXZDMG1HVUpNTGJ5WWlJZ3FGR3JzekpyWTdTS2VRYUJFc0lBUTdneGhybk9qQXBXaE1IM3FnTW92eTJYR19Qa3JQbE5uTGxaZGR6NjJXNk9yQWFCQjFlUU5fczBPcHlCNktfakRLWEQ5UHdEYnRhM0J5S3RJYlFrbjhQUWprel9qdnhqMHh0WVhvTS1ZU2VGd1V3WTRnSmI2Y1hXNzZoME51YzRjNWU1N0ZfVHJoaEZnQUhR?oc=5",
-          "source": "CoinDesk",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "American Bitcoin’s $126 Million Quarterly Profit Comes From Its Bitcoin Treasury Gain - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQanNEa3RuZU0xdXlXeUoxWmlsNFhRTlBhTlpLS2hoS0tOYUlpQnhELXBhM2ltU3FwNmRvVlI3ZkFfUk5KS25Sd19UMWttU0lEZnFOTlRiYU1zZFljbGNPcWYwMVByZE5MUUlHbi1oeVFGUU9RLVJyQXM3TmhSY3NoRHVmcUtodnFhcG02d1JwTlNJY29RanY0VnZ5WUtjSUk1QjlkZ0t3?oc=5",
+          "title": "Bitcoin to $1M Before GTA 6? 10 Wild Bets Traders Wagered Millions on Ahead of Launch - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQX1BhX0tpSWZiS3pZNmR4bkdRVFBwUmdybG44MEkwMEwzZ2hwMGpuME5KUGYyNko4cmlUaVVsQnhjelVmWVA3WXJzOXNucmtIdHBCeER1cjhWdm5SQUloQk5ZUExZOEVpVlRwNHN6cXl4UEZFTUxQd0ZRdVczcW54R01JVGtVYTh0U2lUVg?oc=5",
           "source": "Yahoo Finance",
-          "date": "2026-11-05"
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Live updates: Bitcoin holding $76,000, Nasdaq bounces ahead of U.S. jobs data",
+          "url": "https://www.coindesk.com/tech/2026/11/06/live-updates-nasdaq-100-futures-rally-points-to-stock-market-respite",
+          "source": "CoinDesk",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Bitcoin steadies after AI-led selloff as eyes turn to latest U.S. jobs figures",
+          "url": "https://www.coindesk.com/markets/2026/11/06/bitcoin-steadies-near-usd76-000-after-ai-led-selloff",
+          "source": "CoinDesk",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Bitcoin holds $75K as AI regulation fears see KOSPI halted after 8% crash",
+          "url": "https://cointelegraph.com/markets/bitcoin-holds-ai-regulation-fears-kospi-halted?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "source": "Cointelegraph",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Bitcoin recovers $76,000 level as ETFs shed $430 million after tech rout",
+          "url": "https://www.coindesk.com/markets/2026/11/06/bitcoin-recovers-usd76-000-level-as-etfs-shed-usd430-million-after-tech-rout",
+          "source": "CoinDesk",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Bitcoin recovers $76,000 level as ETFs shed $430 million after tech rout - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOdF9qRWk2RGF2X29PZXdKaWpYa19Od1J0WTBUSS1yQ0NlOWU3d0JDYVhGT2hWWm5VU2hqR08wa0FKTk4zUG1FNE9QcGJBdDVORVcxSHRMNDZhb3VUYWtWblFVVGxueFN0NnZaZ3A5UmJsQkg4NHpjU2hhVEZpUk40d2dSSWdBb2k5dkpCdjc4NFpjWGZaZEVjbXRGRGJuMWNLSWZEQ2YwblFHcGRjYzFXelZuLW9ERzhlSWtvWA?oc=5",
+          "source": "CoinDesk",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Bitcoin, Ether ETFs post $530M outflows as election gains evaporate",
+          "url": "https://cointelegraph.com/markets/bitcoin-ether-etfs-lose-post-election-gains-erased?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "source": "Cointelegraph",
+          "date": "2026-11-06"
         }
       ]
     },
@@ -141,7 +141,7 @@
       "name": "Thales SA",
       "symbol": "HO.PA",
       "mode": "auto",
-      "asOf": "2026-11-05",
+      "asOf": "2026-11-06",
       "summary": "Thales 22. 10. oznámil za 9 měsíců 2026 přijaté zakázky 19,1 mld. EUR (+15 % organicky) a tržby 16,4 mld. EUR (+8,1 % organicky). Obrana: zakázky 11,3 mld. EUR (+14 %), tržby +13 % organicky; třetí čtvrtletí ale přineslo zakázky o 6 % nižší organicky. Firma zvýšila výhled organického růstu tržeb na horní hranici pásma +6 až +7 %.",
       "drivers": [
         "Námořní systémy, efektory a protivzdušná obrana (Thales)",
@@ -155,6 +155,18 @@
         "Výhled platí za předpokladu bez nových makro/geopolitických otřesů (Thales)"
       ],
       "headlines": [
+        {
+          "title": "3 European Defence Stocks With Backlogs That Could Steady Share Price Risk",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-european-defence-stocks-backlogs-012202201.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Aircraft Computers - Global Strategic Business Report 2026-2032: Capitalize on the $10.1 Billion Market Led by Honeywell, BAE Systems, Safran, Thales, and Curtiss-Wright",
+          "url": "https://finance.yahoo.com/technology/articles/aircraft-computers-global-strategic-business-145100847.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-05"
+        },
         {
           "title": "European Enterprises Face Growing Pressure to Turn AI Investment into Business Value, ISG Says",
           "url": "https://finance.yahoo.com/technology/ai/articles/european-enterprises-face-growing-pressure-090000809.html?.tsrc=rss",
@@ -190,18 +202,6 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/hii-thales-successfully-demonstrate-expeditionary-060000699.html?.tsrc=rss",
           "source": "Yahoo Finance",
           "date": "2026-11-03"
-        },
-        {
-          "title": "Chemical, Biological, Radiological and Nuclear Security - Global Strategic Business Report: Secure Share of a $24.7B Market by 2030 as 3M, Bruker, Honeywell and Thales Accelerate AI Detection",
-          "url": "https://finance.yahoo.com/technology/ai/articles/chemical-biological-radiological-nuclear-security-145500968.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-02"
-        },
-        {
-          "title": "Thales unit wins $53.9 million US Navy contract - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZGxhbmhPb1NOakpWdWUyUUZ5T083YlFlZTk0UUpQQ04ydWxKT2R1dVNWTEEycEJxWmV3QkZBRDNHYl9MOVhuQ2ZVNXZQcWw2Sl9kMEpmcTd0NkZhZXZOQUx4aDlkVkItV3hqcTEwdjFIYTRHc2c5NEtrYVBxTGc5MWVxUTBQQXNaa1hnQmFVbVBzQWxKc0cxamxCQWVLOUVpTFdXRlYzZnRJbE9F?oc=5",
-          "source": "Reuters",
-          "date": "2026-11-02"
         }
       ]
     },
@@ -209,7 +209,7 @@
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
       "mode": "auto",
-      "asOf": "2026-11-05",
+      "asOf": "2026-11-06",
       "summary": "Rheinmetall v posledním týdnu října získal další zakázky: opci na 69 vozidel Schakal (29. 10.) a zakázku pro společný podnik s KNDS od OCCAR; podle MarketScreeneru Citi po zakázce Schakal zůstává u doporučení nákupu. Italská armáda podle deníku MF uzavřela s Leonardem a Rheinmetallem kontrakty za 3,7 mld. EUR (nepotvrzeno firmou). Zároveň banky snižují cílové ceny (Deutsche Bank, UBS), důvody ve zdrojích nejsou rozepsány.",
       "drivers": [
         "Opce na 69 vozidel Schakal (MarketScreener, 29. 10.)",
@@ -246,52 +246,52 @@
       ],
       "headlines": [
         {
-          "title": "Hensoldt turns somewhat more optimistic, Rheinmetall weighs on entire sector - www.marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNWkZjQXA5UmJSWnNNLWFERDBIdGhpWE12S0JSeWRaSWN4ZC16R0lacFh6SU9talpHQnN1a1JtejZxRFZVYy1zbFQtTnlSQU9fODBlQjdrSXl6ckhUWFZfd05YQkF6c21TTEYtRlhBYTNBYlo1QWlhU0FXT3VKOHN3T2tKb3o4MElvZEtUR2xxUmZMWHlMVUhBWWRtalJ5UVNIZnc5XzJjMGRVUDBRb2pGSFpXNWFXQ2QzOGxpWnBtZWoxTkZKOWJR?oc=5",
-          "source": "www.marketscreener.com",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Rheinmetall Price Target Cut as AlphaValue/Baader Europe Notes Revised FY26 Outlook - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQTHRnRENGcUxmWEZCdXBoVmtoX1RscjRjUTA0RjJ6U2doN1VCOG5PVEIyNTl5VXdLdjNVRFhXbjRnSXBkdTJkanZMLTAtR015RzVoVEtDYXhoODZhbkswcDZRYnA0X2o4VGwxODBNMTMyZVgwRklRY2Nqb1E4cmNXa2JKTEdHNEcwLVR3WXJ3WEhhRW9pT2dwUElHd1V2Y21wV1pTNnlzSHRRTkdMVldienNtcHp3bEVGVFdwUjByTkNxR0llaGdmbnVqWmdGcER5VHc?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Rheinmetall AG : Receives a Buy rating from RBC - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUXdtcUJ4Rnd2d2VNOTBQRDR5M1FhdC1SdDh4ZkstQW4xaVJsd3Y0V3VsVHhGVVBSdUdiNjZpVDB5YXVPYWZmdmNPODVNT25jSDFTRXZra1AxeHVvaWh4ZURSYTRST1d4cFNrd25RRUJnUGpfQ1BqWU1pZlVnX0ZVM2dSRldRV2FocnlKcnRvVU4yUVgxbzZCamJZdzJSSVU?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Rheinmetall AG : Gets a Neutral rating from Berenberg - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPaXpfMFoyQnZLczBtU1EtYWdKbnlvUzJjZzRqRFRITXV0b25YZmpMWWRiUVNoY01WZ0N6R1dHdU1tenFBR3QzMFVDQ1FSRWQ1aUNIa3UtU2JJbE8tSHVCbUNScEhZRnhQajlDZktWN21UYy1HbmdzRmlMbFZrQ0o3QlFlNHRMOVJMeWowNHcwdkRSZFBSXzZ3cG9hN0JfbDA0SG1sTl9tZw?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Rheinmetall: Target cut by -14.8% - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOVBFR1ZfYWpIRFlJQnU3UThic2pOTjBSRFd2M1pwUzlGQ1VKbDF6N3lsenZyUU92UDJvMk52eWlHLXZNckE2bWZNc1FsZzZnZ09PTmtTUXFReUxON0QyajNSU0lMV0NMM282dnNtVHF1Wm5fRGYweTZ3N2xQaTBQaFlFLXJGcnY4WE44?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Breakingviews - COMMENTARY: Rheinmetall crash-lands to a more grounded reality - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcDRaWlYwYlAtZVZkQ3RkM3RSSzhCNk1rMmZLRjZ3ZTVMb0Q4NUV5dFFJY2hnQmRpZXFLeUZ5aTVjM25yZDBUWDctZkFVRmF5TFZmeXlLdjNCSTFaOTZIRXpxVmtld1RzZVNKUV9ONjFUZGR0NTRsT3dQSEw0aURxcnhsTlJnVWFPUUd5eWpvTmdya296a0IxVWw0ZUJMb0QzQzJTb3NiZTg2Zw?oc=5",
-          "source": "Reuters",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Germany's Rheinmetall posts Q3 earnings rise but lowers 2026 outlook - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQVUh1RVVXZVZvS2NKR0x2TGdKMEg0V193Tk1xelFCWW1nWWRWT0NhQkQxcmxRYmNTMjZNSzg3OUJpd21yU1NIMHo2RUN6YzlfbjFtU0RqSmU2Z1F4LXlrOFZDMWFvdG1Ud0ZOZDF1ZEJJVTdaRExoNHBTY0dISXBhcDh6R2l5UTZoa2preXd6N1RDbW10WDMwSkQxM2s1MmVSTXI1U01B?oc=5",
+          "title": "Rheinmetall AG (RNMBF) Q3 2026 Earnings Call Highlights: Strong Sales Growth Offset by Guidance ...",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rheinmetall-ag-rnmbf-q3-2026-111359466.html?.tsrc=rss",
           "source": "Yahoo Finance",
-          "date": "2026-11-05"
+          "date": "2026-11-06"
         },
         {
-          "title": "Rheinmetall shares fall 17% as it cuts sales forecast after deal delay - Financial Times",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQVGNJa2NuRk04Q1lybEdORDlKNmRpMFFYMkYzcG5hOExGTVQ4TVU2OVpRWV8wWG1jZ1dIdGFXbHNrdUZJTG9NZUNEOVpsODJVQTRRZVlGVFdHQXRudWREb1hyMTg4Uk9LVmszMDRoNkxaSnlzTk1sYmxydEUyQ3lxNkw0eEE?oc=5",
-          "source": "Financial Times",
-          "date": "2026-11-05"
+          "title": "Rheinmetall AG : Deutsche Bank keeps its Buy rating - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNX1RMVDRBMXFGdTdBOW4xbGhqVkV6clZoY2s1VXpLUjlnMzhlem1PRVNfLUJoUmo1a1RON3RjX2VjY2dMVkFUYjFINDRyNThWWWJNY0t4TmxjTmFsQ1hCUFM2RjFXbUcxcUxCbEVrbzRjY1FzQ19RQ1hmZ05BZjlTU01CTnA0SVJfeUhwNHpDT3RkZ2I3VmdnczBTaXlNNFNZQ25oYw?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Rheinmetall AG : Gets a Buy rating from UBS - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOY3E5emlxSUdxNkVOUkdaYTZjeUwzOEI2QWFVdzI4Nnl2cFA5cTNsMDYzck9DWkFqZUdwOVJrTkNHbDZLUXR0Y0hkTTYyU0tWbHdMejhiSVFKU3VJNkd1RFc4VWtvbXZfajZHcmlBd3lVWDFVNmV3S2U0Z1ZjNGR5UW55UTJwV25nQlRtUTFvLV81VkxHc1I0YzVB?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Rheinmetall Remains Under Pressure After Reactions to Profit Warning - www.marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPX2pZMVNJU2NGRnhmcHY2ZjltVE9FaEJ2S1ROdng0ellLakNmbDVlaW1JUzlodHZCS19LTkgtbzZ5QkpHRTJaU3FMbmJrWXRUZEs5RnlibUJocUplWHZzWHVLRU51b0tZaDVoVHBBWkxsZ01XU1ROZXVSUzVCZGlNclRSdnZER2E5czgzbkpMWl9mQUY1Y18xTmhmLUJOU1U1NlFxSC16cHRXdW1PNC0xYm1PSWQ3ckNFU0otQXRR?oc=5",
+          "source": "www.marketscreener.com",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Rheinmetall AG : Gets a Buy rating from DZ Bank - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbS1oZ280QzNsTXJaaWU1aTlxelJ2clpBOXRib0tSTEhQTVVqQ3FrYXFZa0pWMl9wQ25mUjdHTlBrajVSeW9BYTc2c1oyMnRlTnZSTHRabjFZUzloOW1ON2NxNjNNeTJnUHIybEZlQ1g5Z19EdHAyWjI2QndPSHkzbVFNejduTnhWLXBjYmIyaDBETFhrZm1fM3dhTGZydjg?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Rheinmetall AG : Bernstein is Neutral - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMl9TSVNacVBneW1Qd0tLSjdxVk9WdmRmZEdjdkJFX2l0OVlJWDZTd3JuOWVMRmJfNjdkOVZZVWI2Vmxqa2poMEpWMHNZckJlSHluVVduLW05T2JfNlRSWnd2YVlDbU9TU0ZmS1pyMUpSajU4aGZzN1Z1UnFOT1Y0V0p4OEJWZWZWeUVNSWZpVmpkQQ?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Rheinmetall (XTRA:RHM) Stock Faces Q3 Results Margin Pressure After Guidance Cut",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rheinmetall-xtra-rhm-stock-faces-043320016.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "3 European Defence Stocks With Backlogs That Could Steady Share Price Risk",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-european-defence-stocks-backlogs-012202201.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-06"
         }
       ]
     }
