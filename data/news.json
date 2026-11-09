@@ -1,14 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-08T11:58:21+00:00",
+  "updatedAt": "2026-11-09T05:00:00+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "auto",
-      "asOf": "2026-11-08",
-      "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV, o 11 % více meziročně (šestý měsíc růstu v řadě); export činil 170 194 vozidel. Za leden–říjen je ale celkový prodej (3 621 744) mírně pod stejným obdobím loňska (3 701 852) podle just-auto. Příčinu pohybu akcie zdroje neuvádějí.",
+      "mode": "claude",
+      "asOf": "2026-11-09",
+      "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV (+10,97 % meziročně, +5,7 % proti září); export 170 194 vozidel (+102,8 %), bateriové osobní vozy 305 743 (+37,4 %). Za leden–říjen je celkový prodej 3 621 744 (−2,2 % meziročně), export 1 513 154 (+93,8 %). Růst tedy táhne zahraničí, tuzemský trh je slabý. Příčinu pohybu akcie zdroje neuvádějí.",
       "drivers": [
+        "Export za 10 měsíců +93,8 %, říjen +102,8 % meziročně (CnEVPost, 1. 11.)",
         "Říjnový prodej 490 168 NEV, +11 % meziročně (just-auto, 2. 11.)",
         "Export 170 194 vozidel (just-auto, 2. 11.)",
         "Zámořský prodej +92,7 % za 9 měsíců, tuzemský −30,2 % (CnEVPost)",
@@ -20,6 +21,12 @@
         "Prodej za 10 měsíců meziročně o ~2 % nižší (just-auto)"
       ],
       "headlines": [
+        {
+          "title": "BYD Oct 2026 sales",
+          "url": "https://cnevpost.com/2026/11/01/byd-oct-2026-sales/",
+          "source": "CnEVPost",
+          "date": "2026-11-01"
+        },
         {
           "title": "BYD Yangwang debuts Altior, targeting ultra-luxury executive sedan market - CnEVPost",
           "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5PWFdfVnJwOVJPOXZtbUlvNG85U2Z5UDNwXzB0UXJkVzU2WnN2SlZPWERUZE5qWXdMNVgzQ1VONTEyVFgxYUxUNFF6Rk5pT3lxUm5QYmtvU192M0plMDhfWW44OVB6NThzYnFB?oc=5",
@@ -60,12 +67,6 @@
           "title": "EU lawmakers push for bloc to assess security threat from BYD cars - Reuters",
           "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSDNJWUNLbTdUTFhfeVRuTVJ1YUg0TGRDUTk4TE9yQk5KelVjU0NpNU9HTERVOEZjVVVmUFBxSHFwQzUyRnFlVUozcHFwbDJ6NWtBM3VrbWlQLVI0WU1QbTZ5dzBXUmVNUS0zQVpETVBBckhqV0xPNlVFX1hLeXdveDNDemFfaWx3VUI2Rzh5VGlTQm1qdWtrSmVHaWxWYURIVUUwUjIwbk1HYUE?oc=5",
           "source": "Reuters",
-          "date": "2026-11-04"
-        },
-        {
-          "title": "Is BYD (SEHK:1211) Undervalued After Six Straight Months Of NEV Sales Growth? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPS1ZjRVR1aVhyZHR6NnlDaklYaW1JMVR6MEFjaUJHTkxYdHAzZEZYdTl0aloyRzk5ZFVWamF4SnBfNWM1cGN2MzlLWXc3cVo2V1FoM1l6NEhsbmY5LTlfSnJDNzQ1ZGxZUGRMbjVOWTFHTWM4S3NpVnA3aC1lU00wTVl3cjJRSWZjMV9GVnR1aHN5b0VtejRObGdB?oc=5",
-          "source": "Yahoo Finance",
           "date": "2026-11-04"
         }
       ]
@@ -208,14 +209,14 @@
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "auto",
-      "asOf": "2026-11-08",
-      "summary": "Rheinmetall v posledním týdnu října získal další zakázky: opci na 69 vozidel Schakal (29. 10.) a zakázku pro společný podnik s KNDS od OCCAR; podle MarketScreeneru Citi po zakázce Schakal zůstává u doporučení nákupu. Italská armáda podle deníku MF uzavřela s Leonardem a Rheinmetallem kontrakty za 3,7 mld. EUR (nepotvrzeno firmou). Zároveň banky snižují cílové ceny (Deutsche Bank, UBS), důvody ve zdrojích nejsou rozepsány.",
+      "mode": "claude",
+      "asOf": "2026-11-09",
+      "summary": "Rheinmetall 5. 11. zveřejnil výsledky za 3. čtvrtletí a podruhé během tří měsíců snížil výhled tržeb na 2026 na ~13,2 mld. EUR (dříve 13,7–14,2 mld.); marže provozního výsledku má být ~18,5 % (dříve ~19 %). Důvodem jsou podle zdroje zpoždění německého projektu Arminius (nelze zadat před 2027) a zkoušek přejímky dělostřelecké munice. Zároveň firma hlásí rekordní provozní výsledek za 9 měsíců a backlog 78 mld. EUR. Reakci akcie použité zdroje nepopisují.",
       "drivers": [
-        "Opce na 69 vozidel Schakal (MarketScreener, 29. 10.)",
-        "Zakázka pro JV Rheinmetall/KNDS od OCCAR (MarketScreener, 29. 10.)",
-        "První sériové vozy Caracal dodány Německu a Nizozemsku (30. 10.)",
-        "Italské kontrakty za 3,7 mld. EUR podle MF (22. 10., nepotvrzeno)"
+        "Snížení výhledu tržeb 2026 na ~13,2 mld. EUR kvůli zpoždění Arminius a přejímek munice (Defence Industry Europe, 5. 11.)",
+        "Tržby za 9 měsíců +38 % na 8,38 mld. EUR, provozní výsledek rekordních 1,34 mld. EUR (marže 16 %) (tamtéž)",
+        "Backlog 78 mld. EUR vs. 56,7 mld. před rokem, včetně rámcových smluv (tamtéž)",
+        "Vozidla +20 %, zbraně a munice +34 %, protivzdušná obrana +63 % (tamtéž)"
       ],
       "outlook": [
         {
@@ -241,10 +242,17 @@
         }
       ],
       "risks": [
-        "Snižování cílových cen analytiky",
-        "Pozornost k nadcházejícím čtvrtletním výsledkům (datum nepotvrzeno)"
+        "Další případné posouvání výhledu – zpoždění Arminius a přejímek munice",
+        "Backlog zahrnuje rámcové smlouvy, ne jen pevné zakázky",
+        "Snižování cílových cen některými bankami (Deutsche Bank, UBS, Metzler)"
       ],
       "headlines": [
+        {
+          "title": "Rheinmetall cuts 2026 sales forecast to €13.2 billion after project and ammunition delays",
+          "url": "https://defence-industry.eu/rheinmetall-cuts-2026-sales-forecast-to-e13-2-billion-after-project-and-ammunition-delays/",
+          "source": "Defence Industry Europe",
+          "date": "2026-11-05"
+        },
         {
           "title": "Arms Maker Rheinmetall Slashes Guidance Again as Orders Face Delays - WSJ",
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEpNdlRBX0JNNUlSOE1RUWZDVjVjZC0zbDVuRDFIQWlSYUdjdWxKTFE1b0NjazM2blhMS3hQb3RBOVYzc2NMeURXazBqaFEzRHhXZXR1Rm15c2F2ZWRaZ1hncHRuWVM2LXU5bXZ6Z1BqRHByRl9zMVo4cVJ6aE5uOWt2c0hRNVd6NXhQWmhsQTlvZF9Qd21NNHFSNkVIYmJsT01NSWRndzU?oc=5",
@@ -284,12 +292,6 @@
         {
           "title": "Rheinmetall AG : Gets a Buy rating from DZ Bank - marketscreener.com",
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbS1oZ280QzNsTXJaaWU1aTlxelJ2clpBOXRib0tSTEhQTVVqQ3FrYXFZa0pWMl9wQ25mUjdHTlBrajVSeW9BYTc2c1oyMnRlTnZSTHRabjFZUzloOW1ON2NxNjNNeTJnUHIybEZlQ1g5Z19EdHAyWjI2QndPSHkzbVFNejduTnhWLXBjYmIyaDBETFhrZm1fM3dhTGZydjg?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-06"
-        },
-        {
-          "title": "Rheinmetall AG : Bernstein is Neutral - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMl9TSVNacVBneW1Qd0tLSjdxVk9WdmRmZEdjdkJFX2l0OVlJWDZTd3JuOWVMRmJfNjdkOVZZVWI2Vmxqa2poMEpWMHNZckJlSHluVVduLW05T2JfNlRSWnd2YVlDbU9TU0ZmS1pyMUpSajU4aGZzN1Z1UnFOT1Y0V0p4OEJWZWZWeUVNSWZpVmpkQQ?oc=5",
           "source": "marketscreener.com",
           "date": "2026-11-06"
         }
