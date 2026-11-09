@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09T05:00:00+00:00",
+  "updatedAt": "2026-11-09T13:57:56+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -75,7 +75,7 @@
       "name": "Bitcoin",
       "symbol": "bitcoin",
       "mode": "auto",
-      "asOf": "2026-11-08",
+      "asOf": "2026-11-09",
       "summary": "Trh s kryptem sleduje únik z Binance: podle CoinDesku šlo o ~6,3 mld. USD, FBI potvrdila podíl Severní Koreje a Binance 1. 11. po etapách znovu otevírá výběry, začíná bitcoinem. Společnost Next Technology Holding zvažuje prodej části svých BTC s odkazem na útok a kvantová rizika. Aktuální cenu a reakci trhu ze zdrojů, které se podařilo číst, nelze spolehlivě uvést.",
       "drivers": [
         "Hack Binance ~6,3 mld. USD, 18 270 BTC (CoinDesk, 31. 10.)",
@@ -89,52 +89,52 @@
       ],
       "headlines": [
         {
-          "title": "Robert Kiyosaki Says 'Why Worry?' as He Eyes Buying Bitcoin, Gold, Silver in Next Crash - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQQlQ3N2E4V0oyWDhkMFNGYXp3X3BXQnBwcjZLME5aUnJuZDNpN3kyNkNmVTF6cklDUnRRVHN5ZVNyb2pGaTdDLUU2OGl3cGhPdFA2eHZtdVJyNy0yX21NMmVuTkdZNG5zNnRRd0l5RHZOSFZyVGVadnMwd2tFV051X1Vac3ZnTEFGNVBWbEhlb3hVR1hqMnRNdng2RQ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-07"
-        },
-        {
-          "title": "Bitcoin Has Traded at a Discount on Coinbase for 61 Straight Days. Have U.S. Investors Stopped Buying BTC? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTHBGVWdLRTdGVGJfX1FZa1g5UFJOa1ZPQzg5Wk9JR0o0WU1EcUpUVnZzQ2pBOUp0YzRDUWtSb2NFbWl5TktfdEN3S3VyQTd2WjlldGhXSWM3VTh4ZHprdjNzNkFJZ013eGdjQ3phbFRJR095QWRNSUVtT2phZU1veVdEMGxwVjdWTmd4YXdmQ0NWQmZsTFNuN1NJMFp5enp6UUE?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-07"
-        },
-        {
-          "title": "Core Scientific Is Quitting Bitcoin Mining as It Now Makes About 92% of Its Revenue Renting to AI Customers - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQ1N0SUFaeEc4TnJSYlZMRTh1WkdkSUE5QlhWTmFlMThNQm1uMVVYbUFWdnpiajVVX1RVdExpMFFCQTNKMXlTMmlPT016M3Y2NGlBbzdRcEZUMWoxdTRkT1ZwcTMwNmJTRUJpbVRPZTR1RzF0ZVlaLU5NWXZDbS1iTlJRYmdVRjNhRWMyWUdqenZBMl9tcXFFTk93Q3FLWTFfc2NIR1RfTQ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-07"
-        },
-        {
-          "title": "Bitcoin ETFs flip negative for 2026 after $1.28 billion outflow week, worst since June - The Block",
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOQ05mSjFiN2djQi1IS25LSERFa1kyRlhZenE5WFA3NUJ5bU4xSkNxa25kbXpEM256LTRfTVhGTnJoaXNQcklPZ3VCejNlVF9wWExYSjNyUW5XYmJuRGtWbzc1NE9JRE5qNVRMakpYYjFGY01WZkxLdWI3SG5IMVBrRllBOUI0Qzh0Nzk2TEpkY3VBU2F0YURHYlB5TWhlemRUWlZpQUZCSlU3UzhoQ0NRaUtiT1J2elBqc3BkdEZrcEc2dWNZaWhoQ1BBLTRUbkZfMkJGR1hR?oc=5",
-          "source": "The Block",
-          "date": "2026-11-07"
-        },
-        {
-          "title": "$1,000 in Bitcoin or XRP: Which Is Worth More by 2030? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNb1AwU1oxYTF3TjVERXg1OHBTazRUWDdYb1RsQTlqNmo2N1JKaUEzMjBYanVIWVNvR2YxUXZvTFBYdFpGODFWeGh3OW5NY01MMzByOWJCbGpjT0NySlR6cGZFUldES05FY1NxenhDTkNQUDRPaEJ1bHhkRl9IbHdMVFQ4Y0JjU21BZWtsLUZqRFFSUQ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-07"
-        },
-        {
-          "title": "Bitcoin Doesn't Need a Bank, Yet MicroStrategy Wants to Become One - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMU16UTdka2Npc3UxLTdHaC1oTEs0R1Q5dTdGem5GeHlNcFE1MjJ2MVBqSURrNDBxRndVelJ6Zk1wTW5JS1pucGlWa1FyU01yRkFYYzgxVU9tTGJ5RllUZ2pyeTJhOXM2Szd0RXZ3WGlNNi10QXZabFRjWlFSc0RZdHpuYU5MdDFxeGRsRVhxaTFMN0pDbEZjeTUzUmZQR253MWJUYQ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-07"
-        },
-        {
-          "title": "Zcash Price Is Flashing a Warning Sign for Bitcoin and Ethereum - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcHhkenlzdGxoSnI0VTlBN3NqNG5DSDZiTWpUQjZ3LUZGNW5vQzRKbGFHN2ZHeXpZREpsc1RYcmdtNGdFakdCZ010NnF0X0wwVV9wLUhrOFhFVnhpME9HZ2FSRjFPLUtONW5YWmFuZFQyTjV3N2ladk9hZUdRdHYxZHJuajhtUnc2M1VRVnlveTAteXhWbVBKcDBrdzM2aGc?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-07"
-        },
-        {
           "title": "Here’s what happened in crypto today",
           "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
           "source": "Cointelegraph",
-          "date": "2026-11-07"
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Strategy buys 1,036 Bitcoin as BTC holdings climb to 850,364",
+          "url": "https://cointelegraph.com/news/strategy-buy-1036-bitcoin-holdings-850364-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "source": "Cointelegraph",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Strategy Buys $82M in Bitcoin, Buys Back $188M of STRC - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYm9PSFVtSkstcGtSdkNwQ3FIclh1TXZKcVNkaFJILUVtUndlUXh5b01TZS04WmJ4RE1wa09CNExLMThTQTF3QjZ6aEhDZXRGRzAwVTBZamRsZm01OWkxZjBDT01ndTFsNDNGc3hUeW5FcGFuLVhpc3hHc21waUN0bmEycGxPSlpHUmZOejIyRFdaSnBBTWxxam5ncw?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "'Connecting the dots': Michael Saylor's Strategy buys another 1,036 bitcoin for $82 million as holdings reach 850,364 BTC - The Block",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYjdsVXhEam5McEh4S0Y4ZDZoejFDOEduaUZkb0U0UXRDQ01rOU40NlQwNEU0dzhuZzl0aXhwQVdpQUJTY3hlTzFLY2w0Nlp1dFZYQnVjUXJoOFF2VUU0NmJXSlpsY254N2J1Unh5aVlKdnBMVkN2bWo0NkprUHNVQnZTUXdtLUdqeE9WY0dQZzZ5aTEteVdoV0FEYnpENG44ZXBwXzVxVVVGYXM?oc=5",
+          "source": "The Block",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Bitcoin loses 50-week moving average as 24-hour crypto long liquidations top $1 billion - The Block",
+          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbGFlN2hlYnFUUlhiYjVHcHNteE5fV3BZN1MtS2hKeXBWY0g2eGxCUU1WSE9kYlV4ZFJNUTJUOXBWZnUwNTRrQmxsUlJLc3pNZnE5cDY0YjNtZEVMRGw1c3RnYURtOGotWEZCQWpvaThGUTdtVHVTVFI1cXFMMVIzVlcxR2dvS3ltMEdhRHM2dWFzcERVS3k4dmVISHRXTFM4S0hLV3ljTk9PcjNGMEpVOHFvOUlpaWxmNlY4Vl9JM192bHlUMHJOZlhVV1VOdFBSc0lHNFRSSXU?oc=5",
+          "source": "The Block",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Strategy’s $64 Billion Bitcoin Bet Just Went Underwater - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPc3FEMGVteXNuaGE2ejNsX0FDN0VERGpackZHd200a3kzSEVMVm94OGRTYXFmYm91aHF0c1NLbDZjVWJRbFlEWDhwY2pmOU9jdHRzU1pXb2tJQUF4UkVpamJuSkhjal9zVzYybFhvZXJ0NGVXODVQYnNPTE9yNi1aWFo0RFNlZmNySnFya20tVy1aX2hLVmFPUWQ3UFk?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Bitcoin's drop and pop triggers $1 billion in liquidations - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQS1lCdHhqRkREYU9TTjQ2Zm1ENDd0T0Z2WHB3MW1RcmhocVdpQzc5WlhfUWdwX0xWWkdLM2t6SVg5VzZfQmd3STZZd1lsNjhjREYxZmpiMzJoaUxIZ19CNUJEZjFGajEyWF8xaVBocjlWa0pWdHdsY29ORTg5VWw0RDZoRHpIdWF1QmN1cGRyVzl4MW5EdFAxSFpJcFJXWTRYcGpEeURGbDFIQ2xublBPN3JidVF4U1A2T0JoWFZyUEQ5RkEtTmdhbEw4czhXY3A3?oc=5",
+          "source": "CoinDesk",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Bitcoin bulls can't rely on ETF flows",
+          "url": "https://www.coindesk.com/daybook-us/2026/11/09/bitcoin-bulls-can-t-rely-on-etf-flows",
+          "source": "CoinDesk",
+          "date": "2026-11-09"
         }
       ]
     },
@@ -142,7 +142,7 @@
       "name": "Thales SA",
       "symbol": "HO.PA",
       "mode": "auto",
-      "asOf": "2026-11-08",
+      "asOf": "2026-11-09",
       "summary": "Thales 22. 10. oznámil za 9 měsíců 2026 přijaté zakázky 19,1 mld. EUR (+15 % organicky) a tržby 16,4 mld. EUR (+8,1 % organicky). Obrana: zakázky 11,3 mld. EUR (+14 %), tržby +13 % organicky; třetí čtvrtletí ale přineslo zakázky o 6 % nižší organicky. Firma zvýšila výhled organického růstu tržeb na horní hranici pásma +6 až +7 %.",
       "drivers": [
         "Námořní systémy, efektory a protivzdušná obrana (Thales)",
@@ -160,7 +160,19 @@
           "title": "Thales S.A. (THLLY) Stock Price, News, Quote & History - Yahoo! Finance Canada",
           "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9BdjMwTDd4clNzYk5FamU4OExWcVh6LWJPYUFvUGlGMkREQnBpakJaanBpV0dtdy1IUXp4bHpSeUFGOF9sQ0pjSzVOc2dTTDBwSDNN?oc=5",
           "source": "Yahoo! Finance Canada",
-          "date": "2026-11-08"
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Telespazio Partners with Rivada for Secure Connectivity",
+          "url": "https://finance.yahoo.com/technology/articles/telespazio-partners-rivada-secure-connectivity-094100371.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Swiss neutrality proponents challenge arms firms in vote on easing of exports - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbVlwVkJsYzRsN1RGWkpGUnZrbnY4dWV5cVVkTnJMVlpUcy1vNUg3VWRDMlpld1lleEwzUXI1a0F4d2ZQeHBzcmFtM21qUTY1R2tSUk9TZjJDOVJMY0lkY2Z4RXRZU0p0WjRFVGhjUjdvNXNaQ3J4Q3FUQU9xcUxhLS1UaEdhMkxaV01iTVVTWHFkdUNsa2p0N1JpVGNzVFpfU2dyOW1KdWJMX2NMdkIyVWlEOU14eXlTb0w5ZWh1S0VOR29sTFdQUWh3?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-09"
         },
         {
           "title": "Global Counter-Drone and Anti-Unmanned Aerial System (UAS) Technology Market Report 2026 | Capitalize on 26.8% CAGR as RTX, Thales, Anduril and DroneShield Scale AI Defense",
@@ -189,18 +201,6 @@
         {
           "title": "Thales (ENXTPA:HO) Stock May Be 33% Undervalued As Navy Contract Lands",
           "url": "https://finance.yahoo.com/markets/stocks/articles/thales-enxtpa-ho-stock-may-211700395.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-04"
-        },
-        {
-          "title": "Thales : join industry collaboration to shape the future Hybrid Navy - www.marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQjFyaE02Y0hUR0p1T1lpOW1vUEx0N0Y0cVhid1BFdW1ha2lWVl96SlVUM3MtVHFaanY3QXp3b05PQXJYd1RMbTJPNEI5YmZNYVU5amk5bXA5QmtwX1BPaUUxUDRoMHZDenZSWHhZb1VERmE4aTBsV1RYTmg0cnNlTHZFLUxBajJFTWV5ZU5wOUQ3ZDFyNVRTRVhMVzZzQTkwYVpPMGdGekRkVURfWVBhZmRvcnF3emhqR3c0?oc=5",
-          "source": "www.marketscreener.com",
-          "date": "2026-11-04"
-        },
-        {
-          "title": "Global Cabin Management System Market Report 2026: Size, Share, Trends, and Forecast to 2030 | Capitalize on Connected Cabins with Boeing, RTX, Airbus, Thales, and Honeywell",
-          "url": "https://finance.yahoo.com/technology/articles/global-cabin-management-system-market-153900336.html?.tsrc=rss",
           "source": "Yahoo Finance",
           "date": "2026-11-04"
         }
