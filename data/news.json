@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10T04:08:58+00:00",
+  "updatedAt": "2026-11-10T13:31:12+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "claude",
-      "asOf": "2026-11-09",
+      "mode": "auto",
+      "asOf": "2026-11-10",
       "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV (+10,97 % meziročně, +5,7 % proti září); export 170 194 vozidel (+102,8 %), bateriové osobní vozy 305 743 (+37,4 %). Za leden–říjen je celkový prodej 3 621 744 (−2,2 % meziročně), export 1 513 154 (+93,8 %). Růst tedy táhne zahraničí, tuzemský trh je slabý. Příčinu pohybu akcie zdroje neuvádějí.",
       "drivers": [
         "Export za 10 měsíců +93,8 %, říjen +102,8 % meziročně (CnEVPost, 1. 11.)",
@@ -22,10 +22,40 @@
       ],
       "headlines": [
         {
-          "title": "BYD Oct 2026 sales",
-          "url": "https://cnevpost.com/2026/11/01/byd-oct-2026-sales/",
+          "title": "Automakers' shares of China's NEV exports in October: BYD leads with 28.3%, Tesla rises to 10.1% - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPOC1aOGFPcm9oQzNrUHJVREpySVFGa1dzVGo3UUlfUXNOTUViVjQ3c3QtZGJ4bGltUko3NlJLZUdtMnhOaUZoUkZKUzRhZGNoUV90Ny1Famp1VTBYQkZ2NmVGOVJXOFZqX2NTS3hhTmpMX3BWTWF4LXZGQ2pxalhNMUg0MA?oc=5",
           "source": "CnEVPost",
-          "date": "2026-11-01"
+          "date": "2026-11-10"
+        },
+        {
+          "title": "China NEV market share in October: BYD leads with 22.4%, Tesla drops out of top 10 - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9VdDU5T3NVQk1LZG1KLUhwcUJxd2Znc3VSLTU3QlVNMk1BQTNfUXFxNmI0azFTX2hMR3Q0U2VsRllqVUR6M0ZUQVQ0QXRsbkxMclBqd3RPQ2tMMEc5cGNBanZUTUVYV2pm?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-11-10"
+        },
+        {
+          "title": "BYD Yangwang Altior heading to Guangzhou Auto Show after Abu Dhabi world debut - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaGxPRS1GQ0ZvTExLQy1rZVN6cThDQkxOdGZaaHlXbmxqZVFfSnZYYWhDcDVFa25EWFBBR2IyUWxiWldRamJYbFB0YmNxeDRRRThVRmxES3RGX2tUbEFzdUtIbTh5LXI2bl82RjNMX1EzTnBQYzVfWXN5M0I4MUxJdTZ6N0M?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-11-10"
+        },
+        {
+          "title": "BYD secures design patent for 2-door microcar with distinctive styling - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1kRkhIeUlaTUstaC1nSm9UQ3F5WFNDX2pkU2JNU1dZUlotUXdqU0FRd3FNQ2liRy1pdHVfR2pPNFJOTndHd2RST2FyWjhlWmtVdmxWc25YMDhSd1J2SnU3b3BFNm1oelU5dkZRckVXSkIyTDVQ?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-11-10"
+        },
+        {
+          "title": "BYD, Chery-Led China Auto Exports Boom Comes With $270 Billion Cost - Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNX3pLSF9KRGdHZEFZRWNvcnFhQkJkUFZsTEdzUXp1MWJ2YUl3SHhOQmFCamVsTHpOREUwOW84MW8zLWptQURoZllsR2kzWk9TT2FkRERmeXNHblhYWGl3d3BwYlZlcy1uNEpmRXZJMUdUNjFRVzI3eTg5WFlqTG5vTEhiRFExSkZmR0lPTw?oc=5",
+          "source": "Bloomberg.com",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "BYD reaches 19 million NEV production milestone as Fang Cheng Bao opens Tai 9 reservations - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOQTFwRVVKNmxiRFpMdjhkSmVlSkJTOXJnTmVfMW5mZ2RKUVVfYkNGN1Z1aE51aXVDNTNaTWotTG1udER6TlVuZ2xRd1dkS1R5U0djb3ZvVDNzb1R5aEs0RTVJakNsdm9ldnF6aUFjbC1fekF2WTZWcjdzWGtqSkhjbWdVOGtiQ08tcEpZeUFodEZ4SlM5akdsZV9NZ3Y?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-11-09"
         },
         {
           "title": "BYD Yangwang debuts Altior, targeting ultra-luxury executive sedan market - CnEVPost",
@@ -38,36 +68,6 @@
           "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQc1BQS1psUDJCTnZ3TEpWWUtUUy12VWZ2UWlOZ25qVTVCeFpkNmVBNEhuajY2N2VGUjZDLVdGWW41aU9nNm9UMXp3WEg2aG1WbFlwbzdldlRyS3hwaHVqRnpaX0dIQW5CQjVqbTdHY2VVM0kxeS1FR1h0Wm1KQ3BhdjRfUmVEY0ZBUEE?oc=5",
           "source": "CnEVPost",
           "date": "2026-11-07"
-        },
-        {
-          "title": "BYD Yangwang U9 Xtreme breaches 500 km/h barrier to set new world record for production cars - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBBMm5yVFg4WEluOUxBWHJybXQtRFNOR28za0R3WDhIZFdZblFlZFFkSjFLOUtMVXFwLWFsT3pJUUQ0SktNZm1VTTBrTW11a3RJTndpYmE2Z2tJdnN1REhtRlZZVDN4M3lwU093S3owZEVRcXJoWC1hU1VPcjRqdw?oc=5",
-          "source": "CnEVPost",
-          "date": "2026-11-06"
-        },
-        {
-          "title": "BYD Denza to launch new N8 SUV on November 12 with up to 1,003 km range - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBCdlFwYV9wQlZ1QWsyZVhWc0lKcUtIOTlqUXpZSUZHLUd4cjRJR3BDYnN6cnFSWS1ER0lOUHdmS0w2X2lWYm9YMWtPR2xmaTNfYm00c1FwNHcxQ19PVWQxaG44WjBGc1hhcmJWSW9ZS2VpQVBZ?oc=5",
-          "source": "CnEVPost",
-          "date": "2026-11-06"
-        },
-        {
-          "title": "BYD launches second-gen Seal 07 in China with lower prices and longer range - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBzMEdjUS1ndHdEOUJ0cElHVk9ScGFzODJxdHZrVE1walM2ZF9qNTRSM0liLXRJV1pVVXQ2cGlvWUdoUG1TN2NMNGRrelRabkwyUm56bURUZGJTMXplQkRERlJUMzUwNjFhTGNWUFFR?oc=5",
-          "source": "CnEVPost",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Tesla Registrations Explode Across Europe as Iran War Sends Fuel Prices Soaring — But BYD and Chinese EV Rivals Are Gaining Fast - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOMUJHWTJSUEVISlFKRUNPTUljcHA3OUlZU0NvOWNQMTJLSnJnWk83NHVpcnRHRnVLbWdzZ3oxdVZsNHhLRndVZnZzcHRxQ19yRFFxdV91dDJVR09IbVBEX1oyWkg3MlZwOFlFR0hsSzBJU2RXVERuOVVDeUJhSnZ3cUIxcm1oWEx5LTRWZ2RfNF9ueWM0MWlxTDU3ajNWcTA?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "EU lawmakers push for bloc to assess security threat from BYD cars - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSDNJWUNLbTdUTFhfeVRuTVJ1YUg0TGRDUTk4TE9yQk5KelVjU0NpNU9HTERVOEZjVVVmUFBxSHFwQzUyRnFlVUozcHFwbDJ6NWtBM3VrbWlQLVI0WU1QbTZ5dzBXUmVNUS0zQVpETVBBckhqV0xPNlVFX1hLeXdveDNDemFfaWx3VUI2Rzh5VGlTQm1qdWtrSmVHaWxWYURIVUUwUjIwbk1HYUE?oc=5",
-          "source": "Reuters",
-          "date": "2026-11-04"
         }
       ]
     },
@@ -144,7 +144,7 @@
       "name": "Thales SA",
       "symbol": "HO.PA",
       "mode": "auto",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "summary": "Thales 22. 10. oznámil za 9 měsíců 2026 přijaté zakázky 19,1 mld. EUR (+15 % organicky) a tržby 16,4 mld. EUR (+8,1 % organicky). Obrana: zakázky 11,3 mld. EUR (+14 %), tržby +13 % organicky; třetí čtvrtletí ale přineslo zakázky o 6 % nižší organicky. Firma zvýšila výhled organického růstu tržeb na horní hranici pásma +6 až +7 %.",
       "drivers": [
         "Námořní systémy, efektory a protivzdušná obrana (Thales)",
@@ -159,9 +159,33 @@
       ],
       "headlines": [
         {
-          "title": "Thales S.A. (THLLY) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9BdjMwTDd4clNzYk5FamU4OExWcVh6LWJPYUFvUGlGMkREQnBpakJaanBpV0dtdy1IUXp4bHpSeUFGOF9sQ0pjSzVOc2dTTDBwSDNN?oc=5",
-          "source": "Yahoo! Finance Canada",
+          "title": "Global Drone Traffic Management Market Size and Forecast Report 2026-2030 | Capitalize on 22.4% CAGR as BVLOS and Automation Scale, Featuring Key Players RTX, Honeywell, Thales and Lockheed Martin",
+          "url": "https://finance.yahoo.com/technology/articles/global-drone-traffic-management-market-162200273.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Global Autonomous Urban Drone Traffic Control Market Report 2026: Size, Share, Trends and Forecast to 2030 | Capitalize on 22.7% CAGR with Airbus, Thales, DJI and Lockheed Martin",
+          "url": "https://finance.yahoo.com/technology/articles/global-autonomous-urban-drone-traffic-162000713.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Global Unmanned Aerial Vehicle (UAV) Navigation Systems Market Report 2026 | Capitalize on 18.3% CAGR as Honeywell, BAE Systems, Thales, Safran and Shield AI Vie for Share",
+          "url": "https://finance.yahoo.com/technology/articles/global-unmanned-aerial-vehicle-uav-155900054.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Global Counter-Drone Systems Market Report 2026: Size, Share, Trends, and Forecast to 2030 | Capitalize on $8.58B AI Defense with RTX, Lockheed Martin, Thales, and DroneShield",
+          "url": "https://finance.yahoo.com/technology/ai/articles/global-counter-drone-systems-market-155800566.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Global Drone Navigation System Market Report 2026 | Capitalize on AI and GPS-Denied Navigation as DJI, Honeywell, RTX, BAE Systems, and Thales Drive a $16.54B Market by 2030",
+          "url": "https://finance.yahoo.com/technology/ai/articles/global-drone-navigation-system-market-155700133.html?.tsrc=rss",
+          "source": "Yahoo Finance",
           "date": "2026-11-09"
         },
         {
@@ -181,38 +205,14 @@
           "url": "https://finance.yahoo.com/technology/articles/global-counter-drone-anti-unmanned-141500254.html?.tsrc=rss",
           "source": "Yahoo Finance",
           "date": "2026-11-06"
-        },
-        {
-          "title": "3 European Defence Stocks With Backlogs That Could Steady Share Price Risk",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-european-defence-stocks-backlogs-012202201.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-06"
-        },
-        {
-          "title": "Aircraft Computers - Global Strategic Business Report 2026-2032: Capitalize on the $10.1 Billion Market Led by Honeywell, BAE Systems, Safran, Thales, and Curtiss-Wright",
-          "url": "https://finance.yahoo.com/technology/articles/aircraft-computers-global-strategic-business-145100847.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "European Enterprises Face Growing Pressure to Turn AI Investment into Business Value, ISG Says",
-          "url": "https://finance.yahoo.com/technology/ai/articles/european-enterprises-face-growing-pressure-090000809.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Thales (ENXTPA:HO) Stock May Be 33% Undervalued As Navy Contract Lands",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/thales-enxtpa-ho-stock-may-211700395.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-04"
         }
       ]
     },
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "claude",
-      "asOf": "2026-11-09",
+      "mode": "auto",
+      "asOf": "2026-11-10",
       "summary": "Rheinmetall 5. 11. zveřejnil výsledky za 3. čtvrtletí a podruhé během tří měsíců snížil výhled tržeb na 2026 na ~13,2 mld. EUR (dříve 13,7–14,2 mld.); marže provozního výsledku má být ~18,5 % (dříve ~19 %). Důvodem jsou podle zdroje zpoždění německého projektu Arminius (nelze zadat před 2027) a zkoušek přejímky dělostřelecké munice. Zároveň firma hlásí rekordní provozní výsledek za 9 měsíců a backlog 78 mld. EUR. Reakci akcie použité zdroje nepopisují.",
       "drivers": [
         "Snížení výhledu tržeb 2026 na ~13,2 mld. EUR kvůli zpoždění Arminius a přejímek munice (Defence Industry Europe, 5. 11.)",
@@ -250,52 +250,52 @@
       ],
       "headlines": [
         {
-          "title": "Rheinmetall cuts 2026 sales forecast to €13.2 billion after project and ammunition delays",
-          "url": "https://defence-industry.eu/rheinmetall-cuts-2026-sales-forecast-to-e13-2-billion-after-project-and-ammunition-delays/",
-          "source": "Defence Industry Europe",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Arms Maker Rheinmetall Slashes Guidance Again as Orders Face Delays - WSJ",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEpNdlRBX0JNNUlSOE1RUWZDVjVjZC0zbDVuRDFIQWlSYUdjdWxKTFE1b0NjazM2blhMS3hQb3RBOVYzc2NMeURXazBqaFEzRHhXZXR1Rm15c2F2ZWRaZ1hncHRuWVM2LXU5bXZ6Z1BqRHByRl9zMVo4cVJ6aE5uOWt2c0hRNVd6NXhQWmhsQTlvZF9Qd21NNHFSNkVIYmJsT01NSWRndzU?oc=5",
-          "source": "WSJ",
-          "date": "2026-11-06"
-        },
-        {
-          "title": "Metzler Cuts Rheinmetall Price Target, Estimates Amid Increased Execution Risks - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWEs2X3FpSllicDhTTjVqUHRDU0pmYzZnczRvSDdrMk1oc0V2dHhaNzJCalRhY2x3WkxIVzRUSHUtSnRMVWZpZ3BjSTdONVFzbHdQV21WVUtJME96NnJBSzBnRDhKdUl6YkpqTHJOanVNWksxNEhGY1hVNEtlWXgxR2dENzdxZHpLc2l3Z0FwZTd3SGFxZjAwdUtRRzFObDZYcDRlMnAwRk1YT2J3a0tMTFRmVjFMWF9HXzR1SF9yUjJZNHF3dmNZZHFfOA?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-06"
-        },
-        {
-          "title": "Rheinmetall AG (RNMBF) Q3 2026 Earnings Call Highlights: Strong Sales Growth Offset by Guidance ...",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/rheinmetall-ag-rnmbf-q3-2026-111359466.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-06"
-        },
-        {
-          "title": "Rheinmetall AG : Deutsche Bank keeps its Buy rating - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNX1RMVDRBMXFGdTdBOW4xbGhqVkV6clZoY2s1VXpLUjlnMzhlem1PRVNfLUJoUmo1a1RON3RjX2VjY2dMVkFUYjFINDRyNThWWWJNY0t4TmxjTmFsQ1hCUFM2RjFXbUcxcUxCbEVrbzRjY1FzQ19RQ1hmZ05BZjlTU01CTnA0SVJfeUhwNHpDT3RkZ2I3VmdnczBTaXlNNFNZQ25oYw?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-06"
-        },
-        {
-          "title": "Rheinmetall AG : Gets a Buy rating from UBS - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOY3E5emlxSUdxNkVOUkdaYTZjeUwzOEI2QWFVdzI4Nnl2cFA5cTNsMDYzck9DWkFqZUdwOVJrTkNHbDZLUXR0Y0hkTTYyU0tWbHdMejhiSVFKU3VJNkd1RFc4VWtvbXZfajZHcmlBd3lVWDFVNmV3S2U0Z1ZjNGR5UW55UTJwV25nQlRtUTFvLV81VkxHc1I0YzVB?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-06"
-        },
-        {
-          "title": "Rheinmetall Remains Under Pressure After Reactions to Profit Warning - www.marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPX2pZMVNJU2NGRnhmcHY2ZjltVE9FaEJ2S1ROdng0ellLakNmbDVlaW1JUzlodHZCS19LTkgtbzZ5QkpHRTJaU3FMbmJrWXRUZEs5RnlibUJocUplWHZzWHVLRU51b0tZaDVoVHBBWkxsZ01XU1ROZXVSUzVCZGlNclRSdnZER2E5czgzbkpMWl9mQUY1Y18xTmhmLUJOU1U1NlFxSC16cHRXdW1PNC0xYm1PSWQ3ckNFU0otQXRR?oc=5",
+          "title": "Rheinmetall continues recovery from low since February 2025 - www.marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNM3hSei05QXJtTkNpVk15LVFSNW1iNHVlTGR0Z1RUUm5ldlhOYUZzQXJWc1JnOWplYWluRUZkNTdrZ1dmNi1ZTUVZUTF5aTF4YnhnTXVfSlNPSzUzR0lKSkJ1VC1mcnluVHNZam5uTmpFZ0pxdi0wSEFmWlhPOTBXcmR4M0hkRURqRVl4YnNnWUktQWtRckx5c1ZleGhzVWprNHNYS24xTndYbXNTT1hmR0ZB?oc=5",
           "source": "www.marketscreener.com",
-          "date": "2026-11-06"
+          "date": "2026-11-10"
         },
         {
-          "title": "Rheinmetall AG : Gets a Buy rating from DZ Bank - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbS1oZ280QzNsTXJaaWU1aTlxelJ2clpBOXRib0tSTEhQTVVqQ3FrYXFZa0pWMl9wQ25mUjdHTlBrajVSeW9BYTc2c1oyMnRlTnZSTHRabjFZUzloOW1ON2NxNjNNeTJnUHIybEZlQ1g5Z19EdHAyWjI2QndPSHkzbVFNejduTnhWLXBjYmIyaDBETFhrZm1fM3dhTGZydjg?oc=5",
+          "title": "Rheinmetall AG : Berenberg is Neutral - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNS1INGJEWmxJckk3U1FxcTJEZFR5eFRfc3ZBWFNMS1RlZDdTVGxXVW0zNlNNT0VxRklkLWM4a0VpZWthUjlFX2RaWmc2VXlGR29wQmxlamx0c1ZlakVhOGtaZ2hnT1BqZVpvaXNJYTRaMU9PSWVxM21ldDQyQWpoTzlNWHBlV3B6WTVaNW9mT1BnQQ?oc=5",
           "source": "marketscreener.com",
-          "date": "2026-11-06"
+          "date": "2026-11-10"
+        },
+        {
+          "title": "Berenberg cuts Rheinmetall target to €900 - 'Hold' - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNVFDTDN4VU5QWEt1Zi1uanJsU1dtWW1VSklERkh5RTkxT01xTVNPUXdRVEN0MkQ5ZUtKYXlYa2xtMG9XQXFWRms0empxUnNEdmtlX0FnQUMzUDN0bkRTYmJqMVFhbE8zM3h5eDBRYUlYQkZGV2FkLVBiWkNfTDdXMUNwQlBvbjI3NDZBT3JIUXJLcE5NMmNrOXVzTmxKa2U5MUg3dQ?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-10"
+        },
+        {
+          "title": "Mwb Sees Rheinmetall's Expected FY30 Outlook Cut 'Largely Discounted' - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNVnlGVUs4QUM0STJGbGtLeDVhN2NTcW5TOXpfdW9TaUhVTXhqNTM1MjBZQW9GcmxQU0N0SWRmaEpCVmlEWk9PQ3hyMkFOc052Z1BsU2xpMjYwS0ZaeGRmeU5CczMtY1BGM1h5SEtxNEVIeE16aWZzcTREUEVGVWRKVmhtRFRTdkhyZTBMc05RQ0sxNHRJNE5XRW0tNkJhUjl5Nmp5ODBzMkJIZVV0d3dNM19VR3NiVTFMbUZ3Mg?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-10"
+        },
+        {
+          "title": "Rheinmetall AG : Receives a Buy rating from Jefferies - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQVEtNUVR0UHQ3WEpSdkY1bFFQazVpZGNaU3JqZkdUaUtRQ0N6aVJ4enZ5ZGRuVGJkVG8wWFdKQzZDaDA4YnRYY2czQmJqN0dUQlFQNExwbnE4UGtsaGRBNk9MdFp4a2ZRVVR1YWtFdjd6S3ZLeEVlbUZab1JxZGpFODlTdWo1U0g2UlhhSWJyUTFHYmo2UjZQT1RKSVBSSXVyengxWlhSVQ?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Manufacturo selected by Rheinmetall ICEYE Space Solutions to support production and quality management for SAR satellite manufacturing",
+          "url": "https://finance.yahoo.com/technology/articles/manufacturo-selected-rheinmetall-iceye-space-160000905.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "AlphaValue/Baader Europe Upgrades Rheinmetall to Buy Rating - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUXkyNUNfN25pOWh3ZFBqbzUzSVoycG5HSG9mSjZIMG83UFNNYWRFbVFKdVlUd3I5SUZ5aENvVm5kazVRdml3N2lvS2JaSGlqTFpyYjY5cjhPQWc5dk1oVUx2MS1aNHpUQVRWYjdiWkJ5Tl9FUFRFU0NibDU0N0xFbFdYMUlhVFpncE5fTG50clhCWl9iZXVoSnlaaUJGTkdfTndVcGVFOU5NQ2Y3YXFZZG13?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "MWB Research Upgrades Rheinmetall to Buy - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbXpPQmhsNDFOVEZsYzlvMW42dEowT1pmYzRnajlpUVA0eGNLQ3U1MUN4T1Ywc2dreVNXa3d4VmRFbG1ocGljVWxwVGxpLS1JVFQwblE4dkY2T3l0cHhKaVVRUlkyS1dEbnJ5V2FENnNvVUl1LWsxWmtQVTdIa05kRlh4RzRzYTBZSlIzZHBVcU1BX19ndnhHaA?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-09"
         }
       ]
     }
