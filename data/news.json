@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09T13:57:56+00:00",
+  "updatedAt": "2026-11-10T04:08:58+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -74,18 +74,20 @@
     "bitcoin": {
       "name": "Bitcoin",
       "symbol": "bitcoin",
-      "mode": "auto",
-      "asOf": "2026-11-09",
-      "summary": "Trh s kryptem sleduje únik z Binance: podle CoinDesku šlo o ~6,3 mld. USD, FBI potvrdila podíl Severní Koreje a Binance 1. 11. po etapách znovu otevírá výběry, začíná bitcoinem. Společnost Next Technology Holding zvažuje prodej části svých BTC s odkazem na útok a kvantová rizika. Aktuální cenu a reakci trhu ze zdrojů, které se podařilo číst, nelze spolehlivě uvést.",
+      "mode": "claude",
+      "asOf": "2026-11-10",
+      "summary": "Bitcoin 5.–6. 11. 2026 spadl na ~75 800 USD (−5,2 % za 24 h, −11,5 % za 30 dní; rekord z října 2025 byl 126 000 USD) po odlivech z amerických spotových ETF: 5. 11. −430 mil. USD, za 2.–5. 11. −870 mil. USD (TradingNews, 6. 11.). The Block 9. 11. uvádí ztrátu 50týdenního klouzavého průměru a likvidace long pozic přes 1 mld. USD za 24 h. Dřívější zprávy: únik z Binance (CoinDesk, 31. 10.). Jednoznačnou příčinu poklesu zdroje neuvádějí.",
       "drivers": [
-        "Hack Binance ~6,3 mld. USD, 18 270 BTC (CoinDesk, 31. 10.)",
-        "FBI připisuje útok Severní Koreji (CoinDesk, 31. 10.)",
-        "Binance fázově otevírá výběry (CoinDesk, 1. 11.)"
+        "Odlivy z amerických spotových BTC ETF: 5. 11. −430 mil. USD, všech 12 fondů (TradingNews, 6. 11.)",
+        "Ztráta 50týdenního klouzavého průměru, likvidace long pozic přes 1 mld. USD (The Block, 9. 11.)",
+        "Hack Binance ~6,3 mld. USD, FBI připisuje Severní Koreji (CoinDesk, 31. 10.)",
+        "Strategy dál nakupuje: +1 036 BTC (Cointelegraph, 9. 11.)"
       ],
       "outlook": [],
       "risks": [
-        "Důvěra v burzy po hacku",
-        "Možné prodeje firemních držitelů BTC"
+        "Pokračující odlivy z ETF",
+        "Průraz podpory kolem 75 000 USD (50týdenní průměr ~75 700 USD, TradingNews)",
+        "Důvěra v burzy po hacku Binance"
       ],
       "headlines": [
         {
