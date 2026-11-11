@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10T13:31:12+00:00",
+  "updatedAt": "2026-11-11T05:00:00+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -211,91 +211,31 @@
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "auto",
-      "asOf": "2026-11-10",
-      "summary": "Rheinmetall 5. 11. zveřejnil výsledky za 3. čtvrtletí a podruhé během tří měsíců snížil výhled tržeb na 2026 na ~13,2 mld. EUR (dříve 13,7–14,2 mld.); marže provozního výsledku má být ~18,5 % (dříve ~19 %). Důvodem jsou podle zdroje zpoždění německého projektu Arminius (nelze zadat před 2027) a zkoušek přejímky dělostřelecké munice. Zároveň firma hlásí rekordní provozní výsledek za 9 měsíců a backlog 78 mld. EUR. Reakci akcie použité zdroje nepopisují.",
+      "mode": "claude",
+      "asOf": "2026-11-11",
+      "summary": "Rheinmetall 5. 11. 2026 oznámil výsledky za 9 měsíců: tržby +38 % na 8 376 mil. €, provozní výsledek +68 % na 1 339 mil. € (marže 16,0 %), nové zakázky +19 % na 19,1 mld. €, backlog 78,0 mld. €. Zároveň snížil výhled na rok 2026: tržby cca 13,2 mld. € (dříve 13,7–14,2 mld.), marže cca 18,5 % (dříve cca 19 %). Důvodem jsou zpoždění projektu Arminius (zakázka bude až v roce 2027) a zpožděné přejímky dělostřelecké munice. Reakci kurzu zdroje neuvádějí.",
       "drivers": [
-        "Snížení výhledu tržeb 2026 na ~13,2 mld. EUR kvůli zpoždění Arminius a přejímek munice (Defence Industry Europe, 5. 11.)",
-        "Tržby za 9 měsíců +38 % na 8,38 mld. EUR, provozní výsledek rekordních 1,34 mld. EUR (marže 16 %) (tamtéž)",
-        "Backlog 78 mld. EUR vs. 56,7 mld. před rokem, včetně rámcových smluv (tamtéž)",
-        "Vozidla +20 %, zbraně a munice +34 %, protivzdušná obrana +63 % (tamtéž)"
+        "Tržby za 9 měsíců +38 %, provozní výsledek +68 % (Rheinmetall, 5. 11.)",
+        "Backlog 78,0 mld. € proti 56,7 mld. € před rokem (Rheinmetall, 5. 11.)",
+        "Provozní free cash flow −1 698 mil. € (Rheinmetall, 5. 11.)"
       ],
-      "outlook": [
-        {
-          "source": "Deutsche Bank",
-          "view": "snížila cílovou cenu, doporučení Buy",
-          "target": "1 650 EUR",
-          "date": "2026-10-27",
-          "url": "https://www.marketscreener.com/news/deutsche-bank-cuts-rheinmetall-target-to-128-1-650-buy-ce785cddd88bf425"
-        },
-        {
-          "source": "UBS",
-          "view": "snížila cílovou cenu, doporučení Buy",
-          "target": "1 360 EUR",
-          "date": "2026-10-20",
-          "url": "https://www.marketscreener.com/news/ubs-cuts-target-for-rheinmetall-to-128-1-360-buy-ce785cdbd18bf624"
-        },
-        {
-          "source": "Citi",
-          "view": "zůstává u doporučení Buy po zakázce Schakal",
-          "target": "",
-          "date": "2026-10-30",
-          "url": "https://www.marketscreener.com/news/citi-remains-a-buyer-as-rheinmetall-shares-rise-after-schakal-contract-ce785fdadb8afe2c"
-        }
-      ],
+      "outlook": [],
       "risks": [
-        "Další případné posouvání výhledu – zpoždění Arminius a přejímek munice",
-        "Backlog zahrnuje rámcové smlouvy, ne jen pevné zakázky",
-        "Snižování cílových cen některými bankami (Deutsche Bank, UBS, Metzler)"
+        "Snížený výhled 2026: tržby cca 13,2 mld. €, marže cca 18,5 % (Rheinmetall, 5. 11.)",
+        "Projekt Arminius nelze zakázat dříve než v roce 2027; zpoždění přejímek munice (Rheinmetall, Defence Industry Europe, 5. 11.)"
       ],
       "headlines": [
         {
-          "title": "Rheinmetall continues recovery from low since February 2025 - www.marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNM3hSei05QXJtTkNpVk15LVFSNW1iNHVlTGR0Z1RUUm5ldlhOYUZzQXJWc1JnOWplYWluRUZkNTdrZ1dmNi1ZTUVZUTF5aTF4YnhnTXVfSlNPSzUzR0lKSkJ1VC1mcnluVHNZam5uTmpFZ0pxdi0wSEFmWlhPOTBXcmR4M0hkRURqRVl4YnNnWUktQWtRckx5c1ZleGhzVWprNHNYS24xTndYbXNTT1hmR0ZB?oc=5",
-          "source": "www.marketscreener.com",
-          "date": "2026-11-10"
+          "title": "Rheinmetall Quarterly Statement Q3 2026",
+          "url": "https://www.rheinmetall.com/en/media/news-watch/news/2026/11/2026-11-05-rheinmetall-news-quarterly-statement-q3",
+          "source": "Rheinmetall",
+          "date": "2026-11-05"
         },
         {
-          "title": "Rheinmetall AG : Berenberg is Neutral - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNS1INGJEWmxJckk3U1FxcTJEZFR5eFRfc3ZBWFNMS1RlZDdTVGxXVW0zNlNNT0VxRklkLWM4a0VpZWthUjlFX2RaWmc2VXlGR29wQmxlamx0c1ZlakVhOGtaZ2hnT1BqZVpvaXNJYTRaMU9PSWVxM21ldDQyQWpoTzlNWHBlV3B6WTVaNW9mT1BnQQ?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Berenberg cuts Rheinmetall target to €900 - 'Hold' - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNVFDTDN4VU5QWEt1Zi1uanJsU1dtWW1VSklERkh5RTkxT01xTVNPUXdRVEN0MkQ5ZUtKYXlYa2xtMG9XQXFWRms0empxUnNEdmtlX0FnQUMzUDN0bkRTYmJqMVFhbE8zM3h5eDBRYUlYQkZGV2FkLVBiWkNfTDdXMUNwQlBvbjI3NDZBT3JIUXJLcE5NMmNrOXVzTmxKa2U5MUg3dQ?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Mwb Sees Rheinmetall's Expected FY30 Outlook Cut 'Largely Discounted' - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNVnlGVUs4QUM0STJGbGtLeDVhN2NTcW5TOXpfdW9TaUhVTXhqNTM1MjBZQW9GcmxQU0N0SWRmaEpCVmlEWk9PQ3hyMkFOc052Z1BsU2xpMjYwS0ZaeGRmeU5CczMtY1BGM1h5SEtxNEVIeE16aWZzcTREUEVGVWRKVmhtRFRTdkhyZTBMc05RQ0sxNHRJNE5XRW0tNkJhUjl5Nmp5ODBzMkJIZVV0d3dNM19VR3NiVTFMbUZ3Mg?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Rheinmetall AG : Receives a Buy rating from Jefferies - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQVEtNUVR0UHQ3WEpSdkY1bFFQazVpZGNaU3JqZkdUaUtRQ0N6aVJ4enZ5ZGRuVGJkVG8wWFdKQzZDaDA4YnRYY2czQmJqN0dUQlFQNExwbnE4UGtsaGRBNk9MdFp4a2ZRVVR1YWtFdjd6S3ZLeEVlbUZab1JxZGpFODlTdWo1U0g2UlhhSWJyUTFHYmo2UjZQT1RKSVBSSXVyengxWlhSVQ?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-09"
-        },
-        {
-          "title": "Manufacturo selected by Rheinmetall ICEYE Space Solutions to support production and quality management for SAR satellite manufacturing",
-          "url": "https://finance.yahoo.com/technology/articles/manufacturo-selected-rheinmetall-iceye-space-160000905.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-09"
-        },
-        {
-          "title": "AlphaValue/Baader Europe Upgrades Rheinmetall to Buy Rating - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUXkyNUNfN25pOWh3ZFBqbzUzSVoycG5HSG9mSjZIMG83UFNNYWRFbVFKdVlUd3I5SUZ5aENvVm5kazVRdml3N2lvS2JaSGlqTFpyYjY5cjhPQWc5dk1oVUx2MS1aNHpUQVRWYjdiWkJ5Tl9FUFRFU0NibDU0N0xFbFdYMUlhVFpncE5fTG50clhCWl9iZXVoSnlaaUJGTkdfTndVcGVFOU5NQ2Y3YXFZZG13?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-09"
-        },
-        {
-          "title": "MWB Research Upgrades Rheinmetall to Buy - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbXpPQmhsNDFOVEZsYzlvMW42dEowT1pmYzRnajlpUVA0eGNLQ3U1MUN4T1Ywc2dreVNXa3d4VmRFbG1ocGljVWxwVGxpLS1JVFQwblE4dkY2T3l0cHhKaVVRUlkyS1dEbnJ5V2FENnNvVUl1LWsxWmtQVTdIa05kRlh4RzRzYTBZSlIzZHBVcU1BX19ndnhHaA?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-09"
+          "title": "Rheinmetall cuts 2026 sales forecast to €13.2 billion after project and ammunition delays",
+          "url": "https://defence-industry.eu/rheinmetall-cuts-2026-sales-forecast-to-e13-2-billion-after-project-and-ammunition-delays/",
+          "source": "Defence Industry Europe",
+          "date": "2026-11-05"
         }
       ]
     }
