@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12T05:00:00+00:00",
+  "updatedAt": "2026-11-12T13:48:54+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -83,7 +83,7 @@
       "name": "Bitcoin",
       "symbol": "bitcoin",
       "mode": "auto",
-      "asOf": "2026-11-11",
+      "asOf": "2026-11-12",
       "summary": "Bitcoin 5.–6. 11. 2026 spadl na ~75 800 USD (−5,2 % za 24 h, −11,5 % za 30 dní; rekord z října 2025 byl 126 000 USD) po odlivech z amerických spotových ETF: 5. 11. −430 mil. USD, za 2.–5. 11. −870 mil. USD (TradingNews, 6. 11.). The Block 9. 11. uvádí ztrátu 50týdenního klouzavého průměru a likvidace long pozic přes 1 mld. USD za 24 h. Dřívější zprávy: únik z Binance (CoinDesk, 31. 10.). Jednoznačnou příčinu poklesu zdroje neuvádějí.",
       "drivers": [
         "Odlivy z amerických spotových BTC ETF: 5. 11. −430 mil. USD, všech 12 fondů (TradingNews, 6. 11.)",
@@ -99,52 +99,52 @@
       ],
       "headlines": [
         {
-          "title": "Live news: CoreWeave jumps 14% as earnings fuel rebound across battered AI stocks",
-          "url": "https://www.coindesk.com/tech/2026/11/11/live-news-coreweave-jumps-14-as-earnings-fuel-rebound-across-battered-ai-stocks",
+          "title": "Index Provider MSCI Removes Strategy From Equity Benchmark - Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZW5DR09LVkg4dkthOHBBckpTQU92UGhvUFNQNTZneVNtV2diNHd6TlEyT1RWMHNKb1pJTWFYU3ZLbERzUkFHS1ZNSkVFYi1lSW1lMmo2MFFteERJNG5Td25UNlBzWDNyaUpsbDZNY1NVcnFnNW5ncVZMMmJaNldfdTNQdHlZZ1Y1bU5TbHF6QVBsWFo2cmtyekZjdWRTNjl1cnNZTlNNR3VlRkJPYWc?oc=5",
+          "source": "Bloomberg.com",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Bitcoin Retreats as Nvidia Turmoil Weighs on Risk Appetite - Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVUxZZzlNWWNPa1prTjRxVlVjVGlKU05HRmwzZWkwY1M0WmZLeTQ0U2ZaVG9fYWZxeDZyQVBJRVNhWXN2b0puckFfNDN0czMzU3U2ZWlrUmVqWkdpd3IxOHN3S2hEUkk4Uzd5UHloOGJDRmxJaVozT2FxT2JpSGlnTWNrajc3MlRoUTk4N3I1TjlOMG8tNl8xTzFuVl9DaFNKSUZHZ1Rzem9vd3J3NEE?oc=5",
+          "source": "Bloomberg.com",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Bitcoin weakness erases September's bullish signal",
+          "url": "https://www.coindesk.com/daybook-us/2026/11/12/bitcoin-weakness-erases-september-s-bullish-signal",
           "source": "CoinDesk",
-          "date": "2026-11-11"
+          "date": "2026-11-12"
         },
         {
-          "title": "Bitcoin barely flinches at hot CPI as ETF selling slows",
-          "url": "https://www.coindesk.com/daybook-us/2026/11/11/bitcoin-barely-flinches-at-hot-cpi-as-etf-selling-slows",
+          "title": "Bitcoin (BTC) price weakness erases September's bullish signal: Crypto Daily - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVjF4R3RiaUphZkJaNnhNUnFCOS1GNHY2aTMyZldjWWNtZ0hrc2xiUnMtSWF6UWdNX2tHcVpZRGo5Snhnb0JjTG1rSl9wdHZHNjd2NFZucThsVEtZSWtDVjBqNE1Wbk0yTFF6UUFUNGFwb3VURmdaV3lwLWQ4T2dsZjJyX3ZsQnBHZmdYWC1vUS12Sjhsd2dFR1MxTXBzdw?oc=5",
           "source": "CoinDesk",
-          "date": "2026-11-11"
+          "date": "2026-11-12"
         },
         {
-          "title": "Bitcoin barely flinches at hot CPI as ETF selling slows - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQT3Y0dHcyWEVqRUhxUFdzUlVuWGlwb1ZyaWVEcTlPYUxBVFk2UUJvcEY5RlJuQ1BSRVVBWGdHeWY3RUk2cmlkZ1RaQTlnekVpRlJJOHVUTnlvX3ZDTFVxbTRMZDZESE9HOUEyZ0JmdEVUeEpXaWdZVkpZQlJPU3VwUHN4RTgxTlN5NEp2RTBzMzJlT2Uza3NOOXpzYXZfSHhSWnhhUg?oc=5",
+          "title": "Bitcoin dips with Nvidia as ETF outflows reach day five",
+          "url": "https://www.coindesk.com/markets/2026/11/12/bitcoin-dips-with-nvidia-as-etf-outflows-reach-day-five",
           "source": "CoinDesk",
-          "date": "2026-11-11"
+          "date": "2026-11-12"
         },
         {
-          "title": "Barclays boosts BlackRock Bitcoin ETF stake 48% as banks expand holdings",
-          "url": "https://cointelegraph.com/news/barclays-blackrock-ibit-boost-key-q3-filings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "source": "Cointelegraph",
-          "date": "2026-11-11"
-        },
-        {
-          "title": "Bitcoin sits out stock rebound as ETF outflows extend to fourth day",
-          "url": "https://www.coindesk.com/markets/2026/11/11/bitcoin-sits-out-stock-rebound-as-etf-outflows-extend-to-fourth-day",
+          "title": "Bitcoin slips with tech stocks as Nvidia CEO turmoil and ETF outflows weigh - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQcU54SUVyeng5QXhCMi1RS00tSzQ5QjkyVElxR2hZcURCVFJZS01jaFVCZXVIMVdWZVBfMUV0VEVRdTFZeDlSM0NQREVWZ1dicWFYckY4WlJ5emtPRVI1Y3F6cWl2cTJFaHM1VDlLTHh0amdjNENDVVpJNmVCQUFwckpqcFZGQkkyNkZEU2NVOUg5RUoydnRsMkhtZHJLZVZF?oc=5",
           "source": "CoinDesk",
-          "date": "2026-11-11"
+          "date": "2026-11-12"
         },
         {
-          "title": "Bitcoin sits out stock rebound as ETF outflows extend to fourth day - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVE1LTjN4empxV2lyWVZDMDkxX2xMRlRlS0hvRXhYY01kVlZYaVVGT3psdE9XUTIwUXdPalhwRm5ocDNyWjd3cEhCOUtZdHlzS292U2JHZlA3a2Itd05oenNlQ1JMcEJFSzRUZHFfeERuMktnLW9EM2pFR3dEWVNrenkyZFhBZi15T1RIT3ExU1N2a2d3akpGN3dXeDlMRWNYU3ZWZ3lqNjhrczNRWWU0RQ?oc=5",
-          "source": "CoinDesk",
-          "date": "2026-11-11"
+          "title": "Bitcoin Price Slides Toward $73K as Nvidia Plunges 9% and MSCI Drops Saylor’s Strategy - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNOHNsRWw5N2ZFRzF2U1BNUWZaaHhSWkRTTVFITHhueFRQc3ZDVGlmSllwV1JyUkoyLVZYX0k0TTlyb2tzRWswTnljSjFSM0ZoTlpCZnJJNl9Pa0VrR0FCVUVGSnZCUTlxLXZ5TXVXX21VZEgzeWYyME5EWmoybDAzV1E0RWg1NWNXUXRMT3l1QkN5SUJ6YnJ2dzhyNDc?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
         },
         {
-          "title": "Bitcoin short-term holders send 47K BTC to exchanges at a loss",
-          "url": "https://cointelegraph.com/markets/bitcoin-speculators-btc-exchanges-unrealized-loss-727k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "source": "Cointelegraph",
-          "date": "2026-11-11"
-        },
-        {
-          "title": "Bitcoin holds steady as CoreWeave earnings revive AI outlook, Anthropic said to raise IPO valuation",
-          "url": "https://www.coindesk.com/markets/2026/11/11/coreweave-earnings-revive-ai-outlook-as-anthropic-weighs-higher-ipo-valuation",
-          "source": "CoinDesk",
-          "date": "2026-11-11"
+          "title": "Bitcoin Bottom or Deeper Correction? The Data Points Both Ways - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOX0xWX3NuZjZhZlcwUFU0Ml9ubWsyTlV1cUVXeUhySGxHOS1XZXVRUHQ2M011R0ZXVGJDYm5BQTVQSlBuYzBwZ0liczJackp3bDJEUkxmd1hLZDJlOGowWkl5M1FFUWVGY0hhYWFDaUlCUkk1X0xfdS1zdzlsSTg2TTJsel9oMXg5V3BmZ19lTnRpQm93MlVOc3p0YmJUaVBnenM2Rw?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
         }
       ]
     },
@@ -152,7 +152,7 @@
       "name": "Thales SA",
       "symbol": "HO.PA",
       "mode": "auto",
-      "asOf": "2026-11-11",
+      "asOf": "2026-11-12",
       "summary": "Thales 22. 10. oznámil za 9 měsíců 2026 přijaté zakázky 19,1 mld. EUR (+15 % organicky) a tržby 16,4 mld. EUR (+8,1 % organicky). Obrana: zakázky 11,3 mld. EUR (+14 %), tržby +13 % organicky; třetí čtvrtletí ale přineslo zakázky o 6 % nižší organicky. Firma zvýšila výhled organického růstu tržeb na horní hranici pásma +6 až +7 %.",
       "drivers": [
         "Námořní systémy, efektory a protivzdušná obrana (Thales)",
@@ -167,6 +167,42 @@
       ],
       "headlines": [
         {
+          "title": "Thales (ENXTPA:HO) Is Getting Fresh Attention, What Is Behind It?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/thales-enxtpa-ho-getting-fresh-121324005.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Thales (ENXTPA:HO) Is Getting Fresh Attention, What Is Behind It? - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQbUo3NU9hREUtLV9GaWFZMTgyTkRCMTZKTVpUZGNNQ0o1aFNoWFdnRkxTdHpYNnhBNUZ6bjRRWE1melRPbHY4ZHFLYjl3enl2QXZmbE5NQ0Y0eHVxanFQbE1URmk4Qi1QT0lFRzcwdDFsS0tuM0tCcjFiQ2ItOC1RSk5PbXBrUQ?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push",
+          "url": "https://finance.yahoo.com/technology/ai/articles/thales-enxtpa-ho-deepens-european-071625650.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWVhObTl5WVNOMkxfV3JxbFRUQlVKcGVUOElKUUZXYmJ0WGxXc1VSalhUM1NLSk1XZGRnSGhxR0tKNDFyRFF1VkEwcHZycHV0aUlLNmVOTzZZNmVoWEdPakFoRW04U0JsenF3OFFFMHBhbWRkUUE0b2Nab1A5ZmRVY01KbmUzanpwNUtZWlpSemYzcmsyX1c5ZDc5d1lLQQ?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Seadronix Debuts AI Solution in the European Defense Supply Chain",
+          "url": "https://finance.yahoo.com/technology/ai/articles/seadronix-debuts-ai-solution-european-010000503.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Global Intelligent Unmanned Underwater Navigation System Market Forecast to 2035 | Secure AI Autonomy Gains with Kongsberg, Northrop Grumman, Lockheed Martin and Thales",
+          "url": "https://finance.yahoo.com/technology/articles/global-intelligent-unmanned-underwater-navigation-143000981.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-11"
+        },
+        {
           "title": "French Thales to deliver two drone-detecting radar systems to Romania earlier, defence ministry says - Reuters",
           "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQXdVMnJVdkxQdS1BNmZjU2k2MG9iX0cyUURqRU5zcWxqNHhxWFdTYWlhWFlwckJaZUl0LVpVa2JnOGJReklGS2Jja0hRNG52cVQxZlJlNUxHdTROeGJodXVhOUVWZ0lGWS14T2Y4UU9idE1ERzZGcHJ2OVQxMUpLWmxkQktJMDAzZGpQYWdoSHJkT0c4U1M4QjczU2psZl9mRFhfN0E2MXpvYzh1MHdaNnd2ODhlM1dRQ0dnQ0poRlRzc0FqUWJKQWJLWVl0a0FYV1hMZGU4Q0piZw?oc=5",
           "source": "Reuters",
@@ -177,42 +213,6 @@
           "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNRGdmeHIyNDFCSnFDWEtmQ2d4TnNhaVhUT0dfeVNTbW45dXIxMVRqRkFJUThMbS1wOUVRcUlHOUlfdHk0dDZ3M25BdXQ4SVN4TU4xN19uWlRzTElRMW1lblJPeUh1Smk2ZGV0amR0Y1NhU3VTYnVraWQ3OENITlcxdC1HbXlpYmRGa2xaM1p0cEZyVWY0NlZUM3VObk14RHdWOVZsaXlXWEZQUDgtOEo4ZXJiWFc3VGJsdTB1Qm5B?oc=5",
           "source": "Breaking Defense",
           "date": "2026-11-10"
-        },
-        {
-          "title": "Global Swarm Drones Market Report 2026: Size, Share, Trends and Forecast to 2030 | Capitalize on 23.5% CAGR as Airbus, Thales, Anduril and AeroVironment Scale AI Autonomy",
-          "url": "https://finance.yahoo.com/technology/ai/articles/global-swarm-drones-market-report-144300424.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Global Drone Traffic Management Market Size and Forecast Report 2026-2030 | Capitalize on 22.4% CAGR as BVLOS and Automation Scale, Featuring Key Players RTX, Honeywell, Thales and Lockheed Martin",
-          "url": "https://finance.yahoo.com/technology/articles/global-drone-traffic-management-market-162200273.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-09"
-        },
-        {
-          "title": "Global Autonomous Urban Drone Traffic Control Market Report 2026: Size, Share, Trends and Forecast to 2030 | Capitalize on 22.7% CAGR with Airbus, Thales, DJI and Lockheed Martin",
-          "url": "https://finance.yahoo.com/technology/articles/global-autonomous-urban-drone-traffic-162000713.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-09"
-        },
-        {
-          "title": "Global Unmanned Aerial Vehicle (UAV) Navigation Systems Market Report 2026 | Capitalize on 18.3% CAGR as Honeywell, BAE Systems, Thales, Safran and Shield AI Vie for Share",
-          "url": "https://finance.yahoo.com/technology/articles/global-unmanned-aerial-vehicle-uav-155900054.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-09"
-        },
-        {
-          "title": "Global Counter-Drone Systems Market Report 2026: Size, Share, Trends, and Forecast to 2030 | Capitalize on $8.58B AI Defense with RTX, Lockheed Martin, Thales, and DroneShield",
-          "url": "https://finance.yahoo.com/technology/ai/articles/global-counter-drone-systems-market-155800566.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-09"
-        },
-        {
-          "title": "Global Drone Navigation System Market Report 2026 | Capitalize on AI and GPS-Denied Navigation as DJI, Honeywell, RTX, BAE Systems, and Thales Drive a $16.54B Market by 2030",
-          "url": "https://finance.yahoo.com/technology/ai/articles/global-drone-navigation-system-market-155700133.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-09"
         }
       ]
     },
