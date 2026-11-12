@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-11T12:46:08+00:00",
+  "updatedAt": "2026-11-12T05:00:00+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "auto",
-      "asOf": "2026-11-11",
+      "mode": "claude",
+      "asOf": "2026-11-12",
       "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV (+10,97 % meziročně, +5,7 % proti září); export 170 194 vozidel (+102,8 %), bateriové osobní vozy 305 743 (+37,4 %). Za leden–říjen je celkový prodej 3 621 744 (−2,2 % meziročně), export 1 513 154 (+93,8 %). Růst tedy táhne zahraničí, tuzemský trh je slabý. Příčinu pohybu akcie zdroje neuvádějí.",
       "drivers": [
         "Export za 10 měsíců +93,8 %, říjen +102,8 % meziročně (CnEVPost, 1. 11.)",
@@ -15,12 +15,26 @@
         "Zámořský prodej +92,7 % za 9 měsíců, tuzemský −30,2 % (CnEVPost)",
         "Nové modely: Seal 07 2. gen., Qin Plus DM-i"
       ],
-      "outlook": [],
+      "outlook": [
+        {
+          "source": "Macquarie",
+          "view": "pozitivní hodnocení ponecháno, cíl snížen (hongkongská akcie)",
+          "target": "97 HKD (dříve 104 HKD)",
+          "date": "2026-11-03",
+          "url": "https://www.boerse-express.com/news/articles/byd-aktie-macquarie-legt-die-latte-tiefer-958720"
+        }
+      ],
       "risks": [
         "Slabý tuzemský trh (−30 % za 9 měsíců, CnEVPost)",
         "Prodej za 10 měsíců meziročně o ~2 % nižší (just-auto)"
       ],
       "headlines": [
+        {
+          "title": "BYD Aktie: Macquarie legt die Latte tiefer",
+          "url": "https://www.boerse-express.com/news/articles/byd-aktie-macquarie-legt-die-latte-tiefer-958720",
+          "source": "Börse Express",
+          "date": "2026-11-03"
+        },
         {
           "title": "BYD Apologizes for Putting SUV’s Wheels on the Wrong Way - Bloomberg.com",
           "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdU5weXZIM0JpMGtBWWR1Skp3Zzd5cTYyNFRWS2tkVjBubm5yZ29wWnZYcFNLMWZlQW1SaHF2ZnRWNG9naVdZa2dqei1HWkE0bmxZTHBrYkxJZTcxRjk4ZjVRY0dRTjd0eUUwVTdKT2RZSTBQN3VCaEFnNXV5QVJNZXprcFNxZ0gweWFUNGdFdXhhX3pYWmt2OEhVNy1FTzZOX28yUjhLdlEyM1E?oc=5",
@@ -62,12 +76,6 @@
           "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1kRkhIeUlaTUstaC1nSm9UQ3F5WFNDX2pkU2JNU1dZUlotUXdqU0FRd3FNQ2liRy1pdHVfR2pPNFJOTndHd2RST2FyWjhlWmtVdmxWc25YMDhSd1J2SnU3b3BFNm1oelU5dkZRckVXSkIyTDVQ?oc=5",
           "source": "CnEVPost",
           "date": "2026-11-10"
-        },
-        {
-          "title": "BYD, Chery-Led China Auto Exports Boom Comes With $270 Billion Cost - Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNX3pLSF9KRGdHZEFZRWNvcnFhQkJkUFZsTEdzUXp1MWJ2YUl3SHhOQmFCamVsTHpOREUwOW84MW8zLWptQURoZllsR2kzWk9TT2FkRERmeXNHblhYWGl3d3BwYlZlcy1uNEpmRXZJMUdUNjFRVzI3eTg5WFlqTG5vTEhiRFExSkZmR0lPTw?oc=5",
-          "source": "Bloomberg.com",
-          "date": "2026-11-09"
         }
       ]
     },
@@ -212,19 +220,61 @@
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
       "mode": "claude",
-      "asOf": "2026-11-11",
+      "asOf": "2026-11-12",
       "summary": "Rheinmetall 5. 11. 2026 oznámil výsledky za 9 měsíců: tržby +38 % na 8 376 mil. €, provozní výsledek +68 % na 1 339 mil. € (marže 16,0 %), nové zakázky +19 % na 19,1 mld. €, backlog 78,0 mld. €. Zároveň snížil výhled na rok 2026: tržby cca 13,2 mld. € (dříve 13,7–14,2 mld.), marže cca 18,5 % (dříve cca 19 %). Důvodem jsou zpoždění projektu Arminius (zakázka bude až v roce 2027) a zpožděné přejímky dělostřelecké munice. Reakci kurzu zdroje neuvádějí.",
       "drivers": [
         "Tržby za 9 měsíců +38 %, provozní výsledek +68 % (Rheinmetall, 5. 11.)",
         "Backlog 78,0 mld. € proti 56,7 mld. € před rokem (Rheinmetall, 5. 11.)",
         "Provozní free cash flow −1 698 mil. € (Rheinmetall, 5. 11.)"
       ],
-      "outlook": [],
+      "outlook": [
+        {
+          "source": "LBBW",
+          "view": "Kaufen, cíl snížen z 1 500 €",
+          "target": "1 250 €",
+          "date": "2026-11-06",
+          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
+        },
+        {
+          "source": "DZ Bank",
+          "view": "Kaufen, férová hodnota snížena z 1 705 €",
+          "target": "1 205 €",
+          "date": "2026-11-06",
+          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
+        },
+        {
+          "source": "UBS",
+          "view": "Buy, cíl snížen z 1 360 €",
+          "target": "1 100 €",
+          "date": "2026-11-06",
+          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
+        },
+        {
+          "source": "Exane BNP",
+          "view": "Outperform, cíl snížen z 1 600 €",
+          "target": "1 300 €",
+          "date": "2026-11-06",
+          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
+        },
+        {
+          "source": "JPMorgan",
+          "view": "Neutral",
+          "target": "1 150 €",
+          "date": "2026-11-06",
+          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
+        }
+      ],
       "risks": [
         "Snížený výhled 2026: tržby cca 13,2 mld. €, marže cca 18,5 % (Rheinmetall, 5. 11.)",
         "Projekt Arminius nelze zakázat dříve než v roce 2027; zpoždění přejímek munice (Rheinmetall, Defence Industry Europe, 5. 11.)"
       ],
       "headlines": [
+        {
+          "title": "Rheinmetall Aktie: Analysten senken Kursziele nach Prognosekorrektur",
+          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur",
+          "source": "Goldesel",
+          "date": "2026-11-06"
+        },
         {
           "title": "Rheinmetall Quarterly Statement Q3 2026",
           "url": "https://www.rheinmetall.com/en/media/news-watch/news/2026/11/2026-11-05-rheinmetall-news-quarterly-statement-q3",
