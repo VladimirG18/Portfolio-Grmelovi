@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12T13:48:54+00:00",
+  "updatedAt": "2026-11-13T04:08:52+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -82,20 +82,19 @@
     "bitcoin": {
       "name": "Bitcoin",
       "symbol": "bitcoin",
-      "mode": "auto",
-      "asOf": "2026-11-12",
-      "summary": "Bitcoin 5.–6. 11. 2026 spadl na ~75 800 USD (−5,2 % za 24 h, −11,5 % za 30 dní; rekord z října 2025 byl 126 000 USD) po odlivech z amerických spotových ETF: 5. 11. −430 mil. USD, za 2.–5. 11. −870 mil. USD (TradingNews, 6. 11.). The Block 9. 11. uvádí ztrátu 50týdenního klouzavého průměru a likvidace long pozic přes 1 mld. USD za 24 h. Dřívější zprávy: únik z Binance (CoinDesk, 31. 10.). Jednoznačnou příčinu poklesu zdroje neuvádějí.",
+      "mode": "claude",
+      "asOf": "2026-11-13",
+      "summary": "Bitcoin se 12. 11. 2026 pohyboval kolem 73 400 USD (CoinDesk). Americké spotové ETF zaznamenaly pátý den po sobě odliv: −299,9 mil. USD ve středu, celkem ~1,44 mld. USD od 5. 11. (SoSoValue přes CoinDesk). Trh zároveň tlačí pokles Nvidie po zprávách o jejím šéfovi a vyřazení Strategy z indexu MSCI (titulky Bloombergu/Yahoo). Jednoznačnou příčinu poklesu zdroje neuvádějí.",
       "drivers": [
-        "Odlivy z amerických spotových BTC ETF: 5. 11. −430 mil. USD, všech 12 fondů (TradingNews, 6. 11.)",
-        "Ztráta 50týdenního klouzavého průměru, likvidace long pozic přes 1 mld. USD (The Block, 9. 11.)",
-        "Hack Binance ~6,3 mld. USD, FBI připisuje Severní Koreji (CoinDesk, 31. 10.)",
-        "Strategy dál nakupuje: +1 036 BTC (Cointelegraph, 9. 11.)"
+        "Pátý den odlivů z amerických spotových BTC ETF, ~1,44 mld. USD od 5. 11. (CoinDesk, 12. 11.)",
+        "IBIT devátý den po sobě odliv (CoinDesk, 12. 11.)",
+        "Pokles Nvidie táhne rizikové aktivum dolů (CoinDesk, 12. 11.)"
       ],
       "outlook": [],
       "risks": [
         "Pokračující odlivy z ETF",
-        "Průraz podpory kolem 75 000 USD (50týdenní průměr ~75 700 USD, TradingNews)",
-        "Důvěra v burzy po hacku Binance"
+        "Vyřazení Strategy z indexu MSCI (titulek Bloomberg, 12. 11.)",
+        "Důvěra v burzy po hacku Binance (CoinDesk, 31. 10.)"
       ],
       "headlines": [
         {
@@ -151,56 +150,26 @@
     "HO.PA": {
       "name": "Thales SA",
       "symbol": "HO.PA",
-      "mode": "auto",
-      "asOf": "2026-11-12",
-      "summary": "Thales 22. 10. oznámil za 9 měsíců 2026 přijaté zakázky 19,1 mld. EUR (+15 % organicky) a tržby 16,4 mld. EUR (+8,1 % organicky). Obrana: zakázky 11,3 mld. EUR (+14 %), tržby +13 % organicky; třetí čtvrtletí ale přineslo zakázky o 6 % nižší organicky. Firma zvýšila výhled organického růstu tržeb na horní hranici pásma +6 až +7 %.",
+      "mode": "claude",
+      "asOf": "2026-11-13",
+      "summary": "Thales 10. 11. 2026 oznámil dodávku radarů GM200 MM/C pro belgický projekt Blue Dome; akcie téhož dne podle Idéal Investisseur rostla o ~1,75 % na 232,70 €, za tři měsíce je však zhruba −12 %. Za 9 měsíců firma 22. 10. potvrdila cíle na rok 2026 (zakázky 19,1 mld. €, +15 % organicky; tržby 16,4 mld. €). Příčinu poklesu za čtvrtletí zdroje blíže nevysvětlují.",
       "drivers": [
-        "Námořní systémy, efektory a protivzdušná obrana (Thales)",
-        "22 zakázek nad 100 mil. EUR od začátku roku, 9 z nich ve 3. čtvrtletí",
-        "Zakázka na mobilní radar pro rumunské letectvo (27. 10.)",
-        "Rozjezd výroby táhne tržby obrany"
+        "Radary GM200 MM/C pro belgický Blue Dome (Thales, 10. 11.)",
+        "Zakázky 9M 19,1 mld. €, tržby 16,4 mld. €, cíle 2026 potvrzeny (Thales, 22. 10.)",
+        "Tržby 3Q 5 473 mil. €, +9,7 % (Idéal Investisseur, 10. 11.)"
       ],
       "outlook": [],
       "risks": [
-        "Slabší čtvrtletní zakázky obrany (−6 % org. ve 3Q)",
-        "Výhled platí za předpokladu bez nových makro/geopolitických otřesů (Thales)"
+        "Slabší čtvrtletní zakázky obrany (−6 % org. ve 3Q, Thales 22. 10.)",
+        "Konflikt na Blízkém východě může zasáhnout avioniku a letecký provoz (Idéal Investisseur, 10. 11.)",
+        "Akcie je ~3 % pod 200denním průměrem (Idéal Investisseur, 10. 11.)"
       ],
       "headlines": [
         {
-          "title": "Thales (ENXTPA:HO) Is Getting Fresh Attention, What Is Behind It?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/thales-enxtpa-ho-getting-fresh-121324005.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Thales (ENXTPA:HO) Is Getting Fresh Attention, What Is Behind It? - Yahoo! Finance Canada",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQbUo3NU9hREUtLV9GaWFZMTgyTkRCMTZKTVpUZGNNQ0o1aFNoWFdnRkxTdHpYNnhBNUZ6bjRRWE1melRPbHY4ZHFLYjl3enl2QXZmbE5NQ0Y0eHVxanFQbE1URmk4Qi1QT0lFRzcwdDFsS0tuM0tCcjFiQ2ItOC1RSk5PbXBrUQ?oc=5",
-          "source": "Yahoo! Finance Canada",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push",
-          "url": "https://finance.yahoo.com/technology/ai/articles/thales-enxtpa-ho-deepens-european-071625650.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWVhObTl5WVNOMkxfV3JxbFRUQlVKcGVUOElKUUZXYmJ0WGxXc1VSalhUM1NLSk1XZGRnSGhxR0tKNDFyRFF1VkEwcHZycHV0aUlLNmVOTzZZNmVoWEdPakFoRW04U0JsenF3OFFFMHBhbWRkUUE0b2Nab1A5ZmRVY01KbmUzanpwNUtZWlpSemYzcmsyX1c5ZDc5d1lLQQ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Seadronix Debuts AI Solution in the European Defense Supply Chain",
-          "url": "https://finance.yahoo.com/technology/ai/articles/seadronix-debuts-ai-solution-european-010000503.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Global Intelligent Unmanned Underwater Navigation System Market Forecast to 2035 | Secure AI Autonomy Gains with Kongsberg, Northrop Grumman, Lockheed Martin and Thales",
-          "url": "https://finance.yahoo.com/technology/articles/global-intelligent-unmanned-underwater-navigation-143000981.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-11"
+          "title": "Thales shares rebound 1.75%, still down 12% over the quarter",
+          "url": "https://www.ideal-investisseur.fr/en/stock-news/thales-shares-rebound-1-75-still-down-12-over-the-quarter/29105.html",
+          "source": "Idéal Investisseur",
+          "date": "2026-11-10"
         },
         {
           "title": "French Thales to deliver two drone-detecting radar systems to Romania earlier, defence ministry says - Reuters",
