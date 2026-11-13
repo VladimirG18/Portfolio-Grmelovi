@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-13T04:08:52+00:00",
+  "updatedAt": "2026-11-13T13:10:39+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "claude",
-      "asOf": "2026-11-12",
+      "mode": "auto",
+      "asOf": "2026-11-13",
       "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV (+10,97 % meziročně, +5,7 % proti září); export 170 194 vozidel (+102,8 %), bateriové osobní vozy 305 743 (+37,4 %). Za leden–říjen je celkový prodej 3 621 744 (−2,2 % meziročně), export 1 513 154 (+93,8 %). Růst tedy táhne zahraničí, tuzemský trh je slabý. Příčinu pohybu akcie zdroje neuvádějí.",
       "drivers": [
         "Export za 10 měsíců +93,8 %, říjen +102,8 % meziročně (CnEVPost, 1. 11.)",
@@ -30,10 +30,40 @@
       ],
       "headlines": [
         {
-          "title": "BYD Aktie: Macquarie legt die Latte tiefer",
-          "url": "https://www.boerse-express.com/news/articles/byd-aktie-macquarie-legt-die-latte-tiefer-958720",
-          "source": "Börse Express",
-          "date": "2026-11-03"
+          "title": "China’s Improbable Transformation Into an Automobile Superpower - Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNS29nRmNzclNScl9rZ0dHdWc5VFY4LWtoRmZfaFdwdmJYUDhYaFVWYndVazdxNFUxdV9INXc3MmRfdHQ0Y0d1b214aXRYb0l3ZVUwMHJ0Nk9jMzgtVXFoUzRlbzY2YVpCZDRSSGs2VnhtcGNBaWNvOGI1VUdoNDhaRXprYkxwclhqaF84d3hveFJxVjhjbG1HR0pNNFVHekVlUENobGRWa0l4RXlva1pmRXBlOVhLbm1jbzAzOW9qaGhKTDg?oc=5",
+          "source": "Bloomberg.com",
+          "date": "2026-11-13"
+        },
+        {
+          "title": "BYD Fang Cheng Bao to launch its largest SUV Tai 9 on November 19 - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1PX2U0WEVFc0pyVVZ6dkFUYmkySUN4Sm85REVWdU1XTmQyX1FtRlZkSzBhcHZvZnR6SjFidkRTVWJ3eW50cTJocm9iQWxzUVlYQ3A5WlE1MnUyM3JGMmRURS0wYTR2VnF4QUJaeURVemJaT0tHcHY4clBfNA?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-11-13"
+        },
+        {
+          "title": "Officials seize BYD files over claims it dismantled a Land Rover Defender to copy its tech - Yahoo Finance UK",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOVEl0bUdrLWxoOWJaZkl6WnZIYmtieHcwWk00V0czUG90cFloSmJxT1Ribzg0ZThHUHpmM3FXVzUwNHd3dzFBOXBGSU9JdHpOcWdDbklleVZQYTZIOFF1VUZxeUdhTDE2Y01sNThTakVuY3AwOUZqUlJGeU5fbDVKM1pkTG5fZw?oc=5",
+          "source": "Yahoo Finance UK",
+          "date": "2026-11-13"
+        },
+        {
+          "title": "BYD opens pre-sales for third-gen Tang, expanding 5-seat electric SUV lineup - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5paGlsXzBRclozQXoyTkVEbkNOWVJDblYxQTBBdlZkc0xfRFFrZTY0aUs3cW0zLXJ6aVR1ZlRTX0tSMko5dWhiT0wydkk2S3hNSFRKZk5hT3NvaVpVVnFUR3FxTDNqeXJuc2RMTDUwZl9SVWM?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-11-13"
+        },
+        {
+          "title": "BYD Denza's updated N8 returns as 5-seater, expanding family SUV lineup - CnEVPost",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9OWmtNRHdXMmRDME9ZM1Q4aDRLQTRpTjFTRTdOVFlhQnRLTlVscTlyOFBQbXcwSVQ4Szh5OFlzaHQ0M1dheUU1MU1RT2dpQWlwRXZ1UEc5Y1Y0ZzlsQWNiakVCRjExTWR2djRYZWIwbm02ZlNEdWFNOA?oc=5",
+          "source": "CnEVPost",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Boyd Group Services (TSX:BYD) Could Be 50% Undervalued On Its Earnings Selloff - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNX0tPOFBYc0JkMWxQT3prb0luUnVCcExuTkJaUThyM2pKRlZCY205a1MzRDdQNjZ0Nmw0OEpwVlQ3T3NTWTk1Q3ZRSzBmWVFNdXZIaDdNZkNSZlFMWXVXd0gxeGM5TndsZ1VVSnV1R1l4Ulo3MUtEZk56ZDBWeVRYUVRDNVZzSWdRanNsajRvWVVFR2M2NzhN?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
         },
         {
           "title": "BYD Apologizes for Putting SUV’s Wheels on the Wrong Way - Bloomberg.com",
@@ -46,36 +76,6 @@
           "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE42anM0OWlLQ0Uxc0s2UWtnbnJqcE1xalQ4MzZJNVhrMmNiNDV0M3JzemxmRVdoSFRQOEJMei1hY1hBYWxjeG51a1VnRDJBMC0zb0VqQThuSTRQYUlnVlVyTlBqUnNhVWFmUGdvQnJOV2hTVGJQUnFadVNnOGk?oc=5",
           "source": "CnEVPost",
           "date": "2026-11-11"
-        },
-        {
-          "title": "BYD's Profits Rebounded. These 2 Questions Will Decide What Comes Next. - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOdXc2ZkFSbnR5OFRBckxLNVc1UDlic19tY3JGWVRUWnNjY1pUQkJ0N3NxcXJGbVd4NlVjOVZlRGdmbFJPZXVtRDl5ekpucHdQaGV5dks1cnhWZGdfeDg2Vzg2T1R3N0c3VXotLXROVEwwc0Foc0FIa0hteDdkWlVlbFJKdk1Gd1lId2dsSlhtNWgweVVyaVlsSjVtMDFZVXRE?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-11"
-        },
-        {
-          "title": "Automakers' shares of China's NEV exports in October: BYD leads with 28.3%, Tesla rises to 10.1% - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPOC1aOGFPcm9oQzNrUHJVREpySVFGa1dzVGo3UUlfUXNOTUViVjQ3c3QtZGJ4bGltUko3NlJLZUdtMnhOaUZoUkZKUzRhZGNoUV90Ny1Famp1VTBYQkZ2NmVGOVJXOFZqX2NTS3hhTmpMX3BWTWF4LXZGQ2pxalhNMUg0MA?oc=5",
-          "source": "CnEVPost",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "China NEV market share in October: BYD leads with 22.4%, Tesla drops out of top 10 - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9VdDU5T3NVQk1LZG1KLUhwcUJxd2Znc3VSLTU3QlVNMk1BQTNfUXFxNmI0azFTX2hMR3Q0U2VsRllqVUR6M0ZUQVQ0QXRsbkxMclBqd3RPQ2tMMEc5cGNBanZUTUVYV2pm?oc=5",
-          "source": "CnEVPost",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "BYD Yangwang Altior heading to Guangzhou Auto Show after Abu Dhabi world debut - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaGxPRS1GQ0ZvTExLQy1rZVN6cThDQkxOdGZaaHlXbmxqZVFfSnZYYWhDcDVFa25EWFBBR2IyUWxiWldRamJYbFB0YmNxeDRRRThVRmxES3RGX2tUbEFzdUtIbTh5LXI2bl82RjNMX1EzTnBQYzVfWXN5M0I4MUxJdTZ6N0M?oc=5",
-          "source": "CnEVPost",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "BYD secures design patent for 2-door microcar with distinctive styling - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1kRkhIeUlaTUstaC1nSm9UQ3F5WFNDX2pkU2JNU1dZUlotUXdqU0FRd3FNQ2liRy1pdHVfR2pPNFJOTndHd2RST2FyWjhlWmtVdmxWc25YMDhSd1J2SnU3b3BFNm1oelU5dkZRckVXSkIyTDVQ?oc=5",
-          "source": "CnEVPost",
-          "date": "2026-11-10"
         }
       ]
     },
@@ -188,8 +188,8 @@
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "claude",
-      "asOf": "2026-11-12",
+      "mode": "auto",
+      "asOf": "2026-11-13",
       "summary": "Rheinmetall 5. 11. 2026 oznámil výsledky za 9 měsíců: tržby +38 % na 8 376 mil. €, provozní výsledek +68 % na 1 339 mil. € (marže 16,0 %), nové zakázky +19 % na 19,1 mld. €, backlog 78,0 mld. €. Zároveň snížil výhled na rok 2026: tržby cca 13,2 mld. € (dříve 13,7–14,2 mld.), marže cca 18,5 % (dříve cca 19 %). Důvodem jsou zpoždění projektu Arminius (zakázka bude až v roce 2027) a zpožděné přejímky dělostřelecké munice. Reakci kurzu zdroje neuvádějí.",
       "drivers": [
         "Tržby za 9 měsíců +38 %, provozní výsledek +68 % (Rheinmetall, 5. 11.)",
@@ -239,22 +239,52 @@
       ],
       "headlines": [
         {
-          "title": "Rheinmetall Aktie: Analysten senken Kursziele nach Prognosekorrektur",
-          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur",
-          "source": "Goldesel",
-          "date": "2026-11-06"
+          "title": "Concerns over F127 frigates, Rheinmetall and TKMS sink - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdWFtZ3ZmZU9RUjZCN2FEOERxOHo2VjVjRlJhdzhJc18yRDN2R3k5N2JSam1KamZTRklKMXQyeGdxTnJuTnJuTTAtQ3lIdmszU1pQZXdpMkpyUlExTkg4QmtyUk1OQkcwV1hTRlZPU1dlN2hOc3hmNllUcUpidWhvMmJ2emxId2cxUFVfM2lVdUFLQjNIdDV1cFFmeTNhZHJ6MUd1Q2NfLV9uUQ?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-13"
         },
         {
-          "title": "Rheinmetall Quarterly Statement Q3 2026",
-          "url": "https://www.rheinmetall.com/en/media/news-watch/news/2026/11/2026-11-05-rheinmetall-news-quarterly-statement-q3",
-          "source": "Rheinmetall",
-          "date": "2026-11-05"
+          "title": "Artificial Intelligence (AI)-Enabled Counter-Drone System Market Global Report 2026 | Secure the $1.66B Market by 2030 with Lockheed Martin, Thales, Rheinmetall and Anduril",
+          "url": "https://finance.yahoo.com/technology/ai/articles/artificial-intelligence-ai-enabled-counter-141900234.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
         },
         {
-          "title": "Rheinmetall cuts 2026 sales forecast to €13.2 billion after project and ammunition delays",
-          "url": "https://defence-industry.eu/rheinmetall-cuts-2026-sales-forecast-to-e13-2-billion-after-project-and-ammunition-delays/",
-          "source": "Defence Industry Europe",
-          "date": "2026-11-05"
+          "title": "J.P. Morgan sees CSG margins under pressure as ammunition demand shifts",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-sees-csg-130322413.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Berenberg Expects Rheinmetall to Cut FY30 Organic Revenue Outlook at Capital Markets Day; Price Target Lowered - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQMUgzV1R2SGMtMXd3NTA2VHh0amVhdDl4eVE0Y1h6MldCektBYXhfdzU2bWhHVG9IbEliX3cxRV9fck9kcDdCVnV1R2thRWR3MG1hVGVGWXhkRE0zZkNzSTBNNUFJOFRDLUw4QzFBSVBnWkQ4LUJYZTNhdldPNTRUQnppUGlRM2RETjRnbVZJdUotdFltRkwwbmM0REJZaFYtc0ktVGhteHNWbF92eEFydWNDaERDd0s3Uzlqc0ZNQ0dJSzJTT0taZ29GRndZVDM0aGg5ZzNsLXBWYmFETkNZTmViUmtNMnM?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-10"
+        },
+        {
+          "title": "Military Unmanned Ground Vehicles - Global Strategic Business Report: Secure Share of a $3.1 Billion Market by 2032 as BAE Systems, Elbit Systems, Rheinmetall and Milrem Robotics Accelerate Autonomy",
+          "url": "https://finance.yahoo.com/technology/ai/articles/military-unmanned-ground-vehicles-global-145300395.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-10"
+        },
+        {
+          "title": "Berenberg Research Reduces Rheinmetall PT, Keeps Hold Rating - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPR3ozeTdnc1paVTlZWldCcjRuQ3NMOTZ6Rl9UVEVqU3JKd2RmejR2dUVxOGl2ZzVlOE1CSVBiX0xQM21ySHg2S01oNkhJczlSZXVSQzlxTFRDVnFlaWpCTXEzNjR1MVVVN3FaZEoxTmhMYTN4dEROTjZjejZlVmlJVDJHZmRROE4wcXhsQVFBek1Wc0Ixd251cnhmQkcxc2lSNmhBMlRMeDAwNlZFdWZneGpn?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-10"
+        },
+        {
+          "title": "Rheinmetall continues recovery from low since February 2025 - www.marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNM3hSei05QXJtTkNpVk15LVFSNW1iNHVlTGR0Z1RUUm5ldlhOYUZzQXJWc1JnOWplYWluRUZkNTdrZ1dmNi1ZTUVZUTF5aTF4YnhnTXVfSlNPSzUzR0lKSkJ1VC1mcnluVHNZam5uTmpFZ0pxdi0wSEFmWlhPOTBXcmR4M0hkRURqRVl4YnNnWUktQWtRckx5c1ZleGhzVWprNHNYS24xTndYbXNTT1hmR0ZB?oc=5",
+          "source": "www.marketscreener.com",
+          "date": "2026-11-10"
+        },
+        {
+          "title": "Rheinmetall AG : Berenberg is Neutral - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNS1INGJEWmxJckk3U1FxcTJEZFR5eFRfc3ZBWFNMS1RlZDdTVGxXVW0zNlNNT0VxRklkLWM4a0VpZWthUjlFX2RaWmc2VXlGR29wQmxlamx0c1ZlakVhOGtaZ2hnT1BqZVpvaXNJYTRaMU9PSWVxM21ldDQyQWpoTzlNWHBlV3B6WTVaNW9mT1BnQQ?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-10"
         }
       ]
     }
