@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-14T04:08:40+00:00",
+  "updatedAt": "2026-11-14T12:15:44+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -82,8 +82,8 @@
     "bitcoin": {
       "name": "Bitcoin",
       "symbol": "bitcoin",
-      "mode": "claude",
-      "asOf": "2026-11-13",
+      "mode": "auto",
+      "asOf": "2026-11-14",
       "summary": "Bitcoin se 12. 11. 2026 pohyboval kolem 73 400 USD (CoinDesk). Americké spotové ETF zaznamenaly pátý den po sobě odliv: −299,9 mil. USD ve středu, celkem ~1,44 mld. USD od 5. 11. (SoSoValue přes CoinDesk). Trh zároveň tlačí pokles Nvidie po zprávách o jejím šéfovi a vyřazení Strategy z indexu MSCI (titulky Bloombergu/Yahoo). Jednoznačnou příčinu poklesu zdroje neuvádějí.",
       "drivers": [
         "Pátý den odlivů z amerických spotových BTC ETF, ~1,44 mld. USD od 5. 11. (CoinDesk, 12. 11.)",
@@ -98,60 +98,60 @@
       ],
       "headlines": [
         {
-          "title": "Index Provider MSCI Removes Strategy From Equity Benchmark - Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZW5DR09LVkg4dkthOHBBckpTQU92UGhvUFNQNTZneVNtV2diNHd6TlEyT1RWMHNKb1pJTWFYU3ZLbERzUkFHS1ZNSkVFYi1lSW1lMmo2MFFteERJNG5Td25UNlBzWDNyaUpsbDZNY1NVcnFnNW5ncVZMMmJaNldfdTNQdHlZZ1Y1bU5TbHF6QVBsWFo2cmtyekZjdWRTNjl1cnNZTlNNR3VlRkJPYWc?oc=5",
-          "source": "Bloomberg.com",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Bitcoin Retreats as Nvidia Turmoil Weighs on Risk Appetite - Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVUxZZzlNWWNPa1prTjRxVlVjVGlKU05HRmwzZWkwY1M0WmZLeTQ0U2ZaVG9fYWZxeDZyQVBJRVNhWXN2b0puckFfNDN0czMzU3U2ZWlrUmVqWkdpd3IxOHN3S2hEUkk4Uzd5UHloOGJDRmxJaVozT2FxT2JpSGlnTWNrajc3MlRoUTk4N3I1TjlOMG8tNl8xTzFuVl9DaFNKSUZHZ1Rzem9vd3J3NEE?oc=5",
-          "source": "Bloomberg.com",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Bitcoin weakness erases September's bullish signal",
-          "url": "https://www.coindesk.com/daybook-us/2026/11/12/bitcoin-weakness-erases-september-s-bullish-signal",
-          "source": "CoinDesk",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Bitcoin (BTC) price weakness erases September's bullish signal: Crypto Daily - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVjF4R3RiaUphZkJaNnhNUnFCOS1GNHY2aTMyZldjWWNtZ0hrc2xiUnMtSWF6UWdNX2tHcVpZRGo5Snhnb0JjTG1rSl9wdHZHNjd2NFZucThsVEtZSWtDVjBqNE1Wbk0yTFF6UUFUNGFwb3VURmdaV3lwLWQ4T2dsZjJyX3ZsQnBHZmdYWC1vUS12Sjhsd2dFR1MxTXBzdw?oc=5",
-          "source": "CoinDesk",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Bitcoin dips with Nvidia as ETF outflows reach day five",
-          "url": "https://www.coindesk.com/markets/2026/11/12/bitcoin-dips-with-nvidia-as-etf-outflows-reach-day-five",
-          "source": "CoinDesk",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Bitcoin slips with tech stocks as Nvidia CEO turmoil and ETF outflows weigh - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQcU54SUVyeng5QXhCMi1RS00tSzQ5QjkyVElxR2hZcURCVFJZS01jaFVCZXVIMVdWZVBfMUV0VEVRdTFZeDlSM0NQREVWZ1dicWFYckY4WlJ5emtPRVI1Y3F6cWl2cTJFaHM1VDlLTHh0amdjNENDVVpJNmVCQUFwckpqcFZGQkkyNkZEU2NVOUg5RUoydnRsMkhtZHJLZVZF?oc=5",
-          "source": "CoinDesk",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Bitcoin Price Slides Toward $73K as Nvidia Plunges 9% and MSCI Drops Saylor’s Strategy - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNOHNsRWw5N2ZFRzF2U1BNUWZaaHhSWkRTTVFITHhueFRQc3ZDVGlmSllwV1JyUkoyLVZYX0k0TTlyb2tzRWswTnljSjFSM0ZoTlpCZnJJNl9Pa0VrR0FCVUVGSnZCUTlxLXZ5TXVXX21VZEgzeWYyME5EWmoybDAzV1E0RWg1NWNXUXRMT3l1QkN5SUJ6YnJ2dzhyNDc?oc=5",
+          "title": "Strategy's Michael Saylor Says Bitcoin Is Now a Bipartisan Issue That Crosses Party Lines. Here's Why He's Right. - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOekdFNXNYTWZYbC1WakM1SUFFY1BETXJwSXBLdlExdEpwTzVwVTk4My1Pc0NheHVfSW93WW1NOGo3X2gxeU05eGJEcTlQcktteFRsbThuQjBFUDRwNEFucFFxUzF4QlI0cUZwUFZ1WC1CLTR2UnlocWRxSkZjU2pPOEZrMVcxNFZrYTVRNmg0SDZ0RHc5MkdCVjJqQ09hd09WM3RwUQ?oc=5",
           "source": "Yahoo Finance",
-          "date": "2026-11-12"
+          "date": "2026-11-14"
         },
         {
-          "title": "Bitcoin Bottom or Deeper Correction? The Data Points Both Ways - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOX0xWX3NuZjZhZlcwUFU0Ml9ubWsyTlV1cUVXeUhySGxHOS1XZXVRUHQ2M011R0ZXVGJDYm5BQTVQSlBuYzBwZ0liczJackp3bDJEUkxmd1hLZDJlOGowWkl5M1FFUWVGY0hhYWFDaUlCUkk1X0xfdS1zdzlsSTg2TTJsel9oMXg5V3BmZ19lTnRpQm93MlVOc3p0YmJUaVBnenM2Rw?oc=5",
+          "title": "Here’s what happened in crypto today",
+          "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "source": "Cointelegraph",
+          "date": "2026-11-14"
+        },
+        {
+          "title": "Most Investors Are Wrong About Who Owns the Most Bitcoin. That Misunderstanding Is a Buying Opportunity. - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPeTJRelRuVEZUUU54SFZuYklGQ3ZQNEJ3T0pqNGVGOVNMc25iVW82bGc5Mk42TG1FMEV2Vk9WLTVKeUQ3ZWRZZ0JJVTJuVWtwOS1XLTg5Tjhkakl0TjNibUkwVTNqVEtjcEFHMGFtcVZWQXlqR0NtbkE4cTl3NEZoeWt3NDBaYjZCSVFEbGZxM1AyLXB5bHBQenlNRQ?oc=5",
           "source": "Yahoo Finance",
-          "date": "2026-11-12"
+          "date": "2026-11-14"
+        },
+        {
+          "title": "Eric Balchunas Calls Nvidia-Driven Market Sell-Off The '280th Nervous Breakdown,' Sees Bitcoin Base In The $60K - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRVR0T1BfM2ZBMkJhbDVhNXdldUlZOFhFZTFqZzFibnJQQXhwVVEtLTJGdlJpLWZYUlZ6ajlkOHhodXc3c2pvaGwxNHhKYm9EZWxVRWZERmFTaFR5LV9zanNnbHZRM05xNFRfTU5EODdUa09RaUotRGQ1Tk4tRXJFejhlWVRUUHpkQXBfTzgyM0I4ZE11NU1MbzhSU19ZMFlE?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-14"
+        },
+        {
+          "title": "Twenty One Capital CEO Says ‘A Balance Sheet Is Not A Business’ After $1 Billion Bitcoin-Driven Gain - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVkwxdnAtUURGVlVhN3ZIOUkxLTA3SjNtSzNBd09lTjcyT1NZeEU4bnFrcFlGbHlaVGJmUnFMNWxNdmNLZGV0eFpvb2xQNFcxQTlzejlWQzBKb1VUeDJpOVJ4ZnB6cTl5NHVpdnpudDYyNTRiUUNTZ1dITEVETExEVXBFRXR6ZFBfQ0NpdUNPSE5DTmlLM1BF?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-14"
+        },
+        {
+          "title": "Strive CEO Says Bitcoin Could ‘Go To A Penny’ And The Company Would Still Survive Because It Has No Debt - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPU2dSLVE1ZVRTOHRpVlh0c05HcGJmYXJaQUNXTHRsQTJaRmhkUThSaGY1MEVJdDZXTGxpZHBsT1YzOW5DSGpLYzcySVpfNzFYWXNQaDhaU0hzX283bkNhVUJNSFdMbklVVU9hWmc0OXVYeUNhWWc0RXJtczE2M3k3TDdrZUIzX3VkMGhZUzVsczJ5VlYxTXNYMW1R?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-14"
+        },
+        {
+          "title": "Bitcoin ETFs shed $2.35B in 2 weeks, BlackRock’s losing streak hits 11",
+          "url": "https://cointelegraph.com/markets/bitcoin-etf-outflows-2-35-billion-blackrock-11-session-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "source": "Cointelegraph",
+          "date": "2026-11-14"
+        },
+        {
+          "title": "Bitcoin slides below $68,000 as Anthropic IPO frenzy drains market liquidity - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQUmdjeS1rRjgyaHB3b29VcVlsQjN2TVBIaWFYSUJmSnkxbEtKMnU1M2FJdkViN19peVBOQTRKVFloUTNXenZnVEJfbVdCVjFoN256V2NmRTdHVGxaYWE5R3d6aEJFN2RTR29td0ptRWVNSTVtYVd3bnN3QmJkSjh6NF95MDVnRTFrMFU0cm9QMk9VbV9fREpR?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-14"
         }
       ]
     },
     "HO.PA": {
       "name": "Thales SA",
       "symbol": "HO.PA",
-      "mode": "claude",
-      "asOf": "2026-11-13",
+      "mode": "auto",
+      "asOf": "2026-11-14",
       "summary": "Thales 10. 11. 2026 oznámil dodávku radarů GM200 MM/C pro belgický projekt Blue Dome; akcie téhož dne podle Idéal Investisseur rostla o ~1,75 % na 232,70 €, za tři měsíce je však zhruba −12 %. Za 9 měsíců firma 22. 10. potvrdila cíle na rok 2026 (zakázky 19,1 mld. €, +15 % organicky; tržby 16,4 mld. €). Příčinu poklesu za čtvrtletí zdroje blíže nevysvětlují.",
       "drivers": [
         "Radary GM200 MM/C pro belgický Blue Dome (Thales, 10. 11.)",
@@ -166,22 +166,52 @@
       ],
       "headlines": [
         {
-          "title": "Thales shares rebound 1.75%, still down 12% over the quarter",
-          "url": "https://www.ideal-investisseur.fr/en/stock-news/thales-shares-rebound-1-75-still-down-12-over-the-quarter/29105.html",
-          "source": "Idéal Investisseur",
-          "date": "2026-11-10"
+          "title": "Global Airport Information Technology (IT) Spending Market Report 2026 | Capitalize on 9.3% CAGR Through 2030 as Siemens, Cisco, Thales and SITA Accelerate AI, Cloud and Biometrics",
+          "url": "https://finance.yahoo.com/technology/articles/global-airport-information-technology-spending-142100947.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
         },
         {
-          "title": "French Thales to deliver two drone-detecting radar systems to Romania earlier, defence ministry says - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQXdVMnJVdkxQdS1BNmZjU2k2MG9iX0cyUURqRU5zcWxqNHhxWFdTYWlhWFlwckJaZUl0LVpVa2JnOGJReklGS2Jja0hRNG52cVQxZlJlNUxHdTROeGJodXVhOUVWZ0lGWS14T2Y4UU9idE1ERzZGcHJ2OVQxMUpLWmxkQktJMDAzZGpQYWdoSHJkT0c4U1M4QjczU2psZl9mRFhfN0E2MXpvYzh1MHdaNnd2ODhlM1dRQ0dnQ0poRlRzc0FqUWJKQWJLWVl0a0FYV1hMZGU4Q0piZw?oc=5",
-          "source": "Reuters",
-          "date": "2026-11-10"
+          "title": "Artificial Intelligence (AI)-Enabled Counter-Drone System Market Global Report 2026 | Secure the $1.66B Market by 2030 with Lockheed Martin, Thales, Rheinmetall and Anduril",
+          "url": "https://finance.yahoo.com/technology/ai/articles/artificial-intelligence-ai-enabled-counter-141900234.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
         },
         {
-          "title": "France awards $1.7 billion contract to Airbus-Thales team for new military satellites - Breaking Defense",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNRGdmeHIyNDFCSnFDWEtmQ2d4TnNhaVhUT0dfeVNTbW45dXIxMVRqRkFJUThMbS1wOUVRcUlHOUlfdHk0dDZ3M25BdXQ4SVN4TU4xN19uWlRzTElRMW1lblJPeUh1Smk2ZGV0amR0Y1NhU3VTYnVraWQ3OENITlcxdC1HbXlpYmRGa2xaM1p0cEZyVWY0NlZUM3VObk14RHdWOVZsaXlXWEZQUDgtOEo4ZXJiWFc3VGJsdTB1Qm5B?oc=5",
-          "source": "Breaking Defense",
-          "date": "2026-11-10"
+          "title": "Thales (ENXTPA:HO) Is Getting Fresh Attention, What Is Behind It?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/thales-enxtpa-ho-getting-fresh-121324005.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Thales (ENXTPA:HO) Is Getting Fresh Attention, What Is Behind It? - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQbUo3NU9hREUtLV9GaWFZMTgyTkRCMTZKTVpUZGNNQ0o1aFNoWFdnRkxTdHpYNnhBNUZ6bjRRWE1melRPbHY4ZHFLYjl3enl2QXZmbE5NQ0Y0eHVxanFQbE1URmk4Qi1QT0lFRzcwdDFsS0tuM0tCcjFiQ2ItOC1RSk5PbXBrUQ?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push",
+          "url": "https://finance.yahoo.com/technology/ai/articles/thales-enxtpa-ho-deepens-european-071625650.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWVhObTl5WVNOMkxfV3JxbFRUQlVKcGVUOElKUUZXYmJ0WGxXc1VSalhUM1NLSk1XZGRnSGhxR0tKNDFyRFF1VkEwcHZycHV0aUlLNmVOTzZZNmVoWEdPakFoRW04U0JsenF3OFFFMHBhbWRkUUE0b2Nab1A5ZmRVY01KbmUzanpwNUtZWlpSemYzcmsyX1c5ZDc5d1lLQQ?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Seadronix Debuts AI Solution in the European Defense Supply Chain",
+          "url": "https://finance.yahoo.com/technology/ai/articles/seadronix-debuts-ai-solution-european-010000503.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Global Intelligent Unmanned Underwater Navigation System Market Forecast to 2035 | Secure AI Autonomy Gains with Kongsberg, Northrop Grumman, Lockheed Martin and Thales",
+          "url": "https://finance.yahoo.com/technology/articles/global-intelligent-unmanned-underwater-navigation-143000981.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-11"
         }
       ]
     },
