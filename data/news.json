@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-13T13:10:39+00:00",
+  "updatedAt": "2026-11-14T04:08:40+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "auto",
-      "asOf": "2026-11-13",
+      "mode": "claude",
+      "asOf": "2026-11-14",
       "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV (+10,97 % meziročně, +5,7 % proti září); export 170 194 vozidel (+102,8 %), bateriové osobní vozy 305 743 (+37,4 %). Za leden–říjen je celkový prodej 3 621 744 (−2,2 % meziročně), export 1 513 154 (+93,8 %). Růst tedy táhne zahraničí, tuzemský trh je slabý. Příčinu pohybu akcie zdroje neuvádějí.",
       "drivers": [
         "Export za 10 měsíců +93,8 %, říjen +102,8 % meziročně (CnEVPost, 1. 11.)",
@@ -29,6 +29,12 @@
         "Prodej za 10 měsíců meziročně o ~2 % nižší (just-auto)"
       ],
       "headlines": [
+        {
+          "title": "BYD Oct 2026 sales",
+          "url": "https://cnevpost.com/2026/11/01/byd-oct-2026-sales/",
+          "source": "CnEVPost",
+          "date": "2026-11-01"
+        },
         {
           "title": "China’s Improbable Transformation Into an Automobile Superpower - Bloomberg.com",
           "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNS29nRmNzclNScl9rZ0dHdWc5VFY4LWtoRmZfaFdwdmJYUDhYaFVWYndVazdxNFUxdV9INXc3MmRfdHQ0Y0d1b214aXRYb0l3ZVUwMHJ0Nk9jMzgtVXFoUzRlbzY2YVpCZDRSSGs2VnhtcGNBaWNvOGI1VUdoNDhaRXprYkxwclhqaF84d3hveFJxVjhjbG1HR0pNNFVHekVlUENobGRWa0l4RXlva1pmRXBlOVhLbm1jbzAzOW9qaGhKTDg?oc=5",
@@ -69,12 +75,6 @@
           "title": "BYD Apologizes for Putting SUV’s Wheels on the Wrong Way - Bloomberg.com",
           "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdU5weXZIM0JpMGtBWWR1Skp3Zzd5cTYyNFRWS2tkVjBubm5yZ29wWnZYcFNLMWZlQW1SaHF2ZnRWNG9naVdZa2dqei1HWkE0bmxZTHBrYkxJZTcxRjk4ZjVRY0dRTjd0eUUwVTdKT2RZSTBQN3VCaEFnNXV5QVJNZXprcFNxZ0gweWFUNGdFdXhhX3pYWmt2OEhVNy1FTzZOX28yUjhLdlEyM1E?oc=5",
           "source": "Bloomberg.com",
-          "date": "2026-11-11"
-        },
-        {
-          "title": "BYD apologizes to owners, blames supplier coding error for Da Tang wheel rim mix-up - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE42anM0OWlLQ0Uxc0s2UWtnbnJqcE1xalQ4MzZJNVhrMmNiNDV0M3JzemxmRVdoSFRQOEJMei1hY1hBYWxjeG51a1VnRDJBMC0zb0VqQThuSTRQYUlnVlVyTlBqUnNhVWFmUGdvQnJOV2hTVGJQUnFadVNnOGk?oc=5",
-          "source": "CnEVPost",
           "date": "2026-11-11"
         }
       ]
@@ -188,13 +188,14 @@
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "auto",
-      "asOf": "2026-11-13",
-      "summary": "Rheinmetall 5. 11. 2026 oznámil výsledky za 9 měsíců: tržby +38 % na 8 376 mil. €, provozní výsledek +68 % na 1 339 mil. € (marže 16,0 %), nové zakázky +19 % na 19,1 mld. €, backlog 78,0 mld. €. Zároveň snížil výhled na rok 2026: tržby cca 13,2 mld. € (dříve 13,7–14,2 mld.), marže cca 18,5 % (dříve cca 19 %). Důvodem jsou zpoždění projektu Arminius (zakázka bude až v roce 2027) a zpožděné přejímky dělostřelecké munice. Reakci kurzu zdroje neuvádějí.",
+      "mode": "claude",
+      "asOf": "2026-11-14",
+      "summary": "Rheinmetall 5. 11. 2026 oznámil výsledky za 9 měsíců: tržby +38 % na 8 376 mil. €, provozní výsledek +68 % na 1 339 mil. € (marže 16,0 %), nové zakázky +19 % na 19,1 mld. €, backlog 78,0 mld. €. Zároveň snížil výhled na rok 2026: tržby cca 13,2 mld. € (dříve 13,7–14,2 mld.), marže cca 18,5 % (dříve cca 19 %). Důvodem jsou zpoždění projektu Arminius (zakázka bude až v roce 2027) a zpožděné přejímky dělostřelecké munice. Akcie po zveřejnění 5. 11. výrazně oslabila; je to už druhé snížení výhledu během tří měsíců (první v srpnu, po rozhodnutí Německa upustit od plánu na fregaty/lodě) (Sharecast/Hargreaves Lansdown, 5. 11.).",
       "drivers": [
         "Tržby za 9 měsíců +38 %, provozní výsledek +68 % (Rheinmetall, 5. 11.)",
         "Backlog 78,0 mld. € proti 56,7 mld. € před rokem (Rheinmetall, 5. 11.)",
-        "Provozní free cash flow −1 698 mil. € (Rheinmetall, 5. 11.)"
+        "Provozní free cash flow −1 698 mil. € (Rheinmetall, 5. 11.)",
+        "Q3 samostatně: tržby +32 % na 3,15 mld. €, provozní zisk +62 % na 553 mil. € (Sharecast, 5. 11.)"
       ],
       "outlook": [
         {
@@ -239,6 +240,12 @@
       ],
       "headlines": [
         {
+          "title": "Rheinmetall shares tank after second guidance cut as defence contract delays bite",
+          "url": "https://www.hl.co.uk/shares/stock-market-news/company--news/rheinmetall-shares-tank-after-second-guidance-cut-as-defence-contract-delays-bite",
+          "source": "Sharecast / Hargreaves Lansdown",
+          "date": "2026-11-05"
+        },
+        {
           "title": "Concerns over F127 frigates, Rheinmetall and TKMS sink - marketscreener.com",
           "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdWFtZ3ZmZU9RUjZCN2FEOERxOHo2VjVjRlJhdzhJc18yRDN2R3k5N2JSam1KamZTRklKMXQyeGdxTnJuTnJuTTAtQ3lIdmszU1pQZXdpMkpyUlExTkg4QmtyUk1OQkcwV1hTRlZPU1dlN2hOc3hmNllUcUpidWhvMmJ2emxId2cxUFVfM2lVdUFLQjNIdDV1cFFmeTNhZHJ6MUd1Q2NfLV9uUQ?oc=5",
           "source": "marketscreener.com",
@@ -278,12 +285,6 @@
           "title": "Rheinmetall continues recovery from low since February 2025 - www.marketscreener.com",
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNM3hSei05QXJtTkNpVk15LVFSNW1iNHVlTGR0Z1RUUm5ldlhOYUZzQXJWc1JnOWplYWluRUZkNTdrZ1dmNi1ZTUVZUTF5aTF4YnhnTXVfSlNPSzUzR0lKSkJ1VC1mcnluVHNZam5uTmpFZ0pxdi0wSEFmWlhPOTBXcmR4M0hkRURqRVl4YnNnWUktQWtRckx5c1ZleGhzVWprNHNYS24xTndYbXNTT1hmR0ZB?oc=5",
           "source": "www.marketscreener.com",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Rheinmetall AG : Berenberg is Neutral - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNS1INGJEWmxJckk3U1FxcTJEZFR5eFRfc3ZBWFNMS1RlZDdTVGxXVW0zNlNNT0VxRklkLWM4a0VpZWthUjlFX2RaWmc2VXlGR29wQmxlamx0c1ZlakVhOGtaZ2hnT1BqZVpvaXNJYTRaMU9PSWVxM21ldDQyQWpoTzlNWHBlV3B6WTVaNW9mT1BnQQ?oc=5",
-          "source": "marketscreener.com",
           "date": "2026-11-10"
         }
       ]
