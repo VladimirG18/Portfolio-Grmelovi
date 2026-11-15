@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-14T12:15:44+00:00",
+  "updatedAt": "2026-11-15T04:11:05+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -82,68 +82,80 @@
     "bitcoin": {
       "name": "Bitcoin",
       "symbol": "bitcoin",
-      "mode": "auto",
-      "asOf": "2026-11-14",
-      "summary": "Bitcoin se 12. 11. 2026 pohyboval kolem 73 400 USD (CoinDesk). Americké spotové ETF zaznamenaly pátý den po sobě odliv: −299,9 mil. USD ve středu, celkem ~1,44 mld. USD od 5. 11. (SoSoValue přes CoinDesk). Trh zároveň tlačí pokles Nvidie po zprávách o jejím šéfovi a vyřazení Strategy z indexu MSCI (titulky Bloombergu/Yahoo). Jednoznačnou příčinu poklesu zdroje neuvádějí.",
+      "mode": "claude",
+      "asOf": "2026-11-15",
+      "summary": "Bitcoin 14. 11. 2026 podle CoinDesku spadl pod 63 000 USD, na tříměsíční minimum; 13. 11. šel poprvé od srpna pod 70 000 USD a likvidace na futures přesáhly 1,6 mld. USD. Za rok je cena zhruba −21 % (CoinDesk, 13. 11.). Zdroje uvádějí jako souběžné faktory silný dolar a očekávání vyšších sazeb Fedu, odlivy z amerických spotových ETF a odliv kapitálu do očekávané IPO Anthropicu; analytici přímou souvislost s Nvidií nevidí. Jednoznačnou jedinou příčinu zdroje neuvádějí.",
       "drivers": [
-        "Pátý den odlivů z amerických spotových BTC ETF, ~1,44 mld. USD od 5. 11. (CoinDesk, 12. 11.)",
-        "IBIT devátý den po sobě odliv (CoinDesk, 12. 11.)",
-        "Pokles Nvidie táhne rizikové aktivum dolů (CoinDesk, 12. 11.)"
+        "Dolarový index na 19měsíčním maximu a očekávání vyšších sazeb Fedu (CoinDesk, 13. 11.)",
+        "Odlivy ze spotových BTC ETF: od začátku roku čistý odliv přes 1,5 mld. USD (CoinDesk, 13. 11.)",
+        "Odliv likvidity do očekávané IPO Anthropicu a širší risk-off (CoinDesk, 13. 11.)",
+        "Likvidace na futures přes 1,6 mld. USD zesílily pokles (CoinDesk, 13. 11.)"
       ],
-      "outlook": [],
+      "outlook": [
+        {
+          "source": "James Check (analytik, cituje CoinDesk)",
+          "view": "Označuje pokles za čtvrtou kapitulační vlnu; oblast kolem 65 000 USD vidí jako zónu hluboké hodnoty",
+          "target": "",
+          "date": "2026-11-14",
+          "url": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst"
+        },
+        {
+          "source": "Eric Balchunas (Yahoo Finance)",
+          "view": "Vidí dno bitcoinu v pásmu kolem 60 000 USD",
+          "target": "~60 000 USD",
+          "date": "2026-11-14",
+          "url": "https://finance.yahoo.com/"
+        },
+        {
+          "source": "CoinDesk Daybook (technický indikátor)",
+          "view": "Momentum indikátor se obrací do červené, cena by mohla zamířit pod 60 000 USD",
+          "target": "<60 000 USD",
+          "date": "2026-11-13",
+          "url": "https://www.coindesk.com/daybook-us/2026/11/13/bitcoin-s-momentum-gauge-is-turning-red-could-send-prices-back-below-usd60-000"
+        }
+      ],
       "risks": [
-        "Pokračující odlivy z ETF",
-        "Vyřazení Strategy z indexu MSCI (titulek Bloomberg, 12. 11.)",
-        "Důvěra v burzy po hacku Binance (CoinDesk, 31. 10.)"
+        "Další odlivy z ETF",
+        "Pád pod 200týdenní klouzavý průměr (CoinDesk, 13. 11.)",
+        "Posilující dolar a vyšší sazby",
+        "Volatilitu mohou zesilovat market makeři (CoinDesk, 14. 11.)"
       ],
       "headlines": [
         {
-          "title": "Strategy's Michael Saylor Says Bitcoin Is Now a Bipartisan Issue That Crosses Party Lines. Here's Why He's Right. - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOekdFNXNYTWZYbC1WakM1SUFFY1BETXJwSXBLdlExdEpwTzVwVTk4My1Pc0NheHVfSW93WW1NOGo3X2gxeU05eGJEcTlQcktteFRsbThuQjBFUDRwNEFucFFxUzF4QlI0cUZwUFZ1WC1CLTR2UnlocWRxSkZjU2pPOEZrMVcxNFZrYTVRNmg0SDZ0RHc5MkdCVjJqQ09hd09WM3RwUQ?oc=5",
-          "source": "Yahoo Finance",
+          "title": "Bitcoin crashes to 3-month low below $63,000 as analyst flags fourth capitulation wave",
+          "url": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
+          "source": "CoinDesk",
           "date": "2026-11-14"
         },
         {
-          "title": "Here’s what happened in crypto today",
-          "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "source": "Cointelegraph",
+          "title": "A behind the scenes force may amplify bitcoin and ether price volatility",
+          "url": "https://www.coindesk.com/markets/2026/11/14/a-behind-the-scenes-force-may-amplify-bitcoin-and-ether-price-volatility",
+          "source": "CoinDesk",
           "date": "2026-11-14"
         },
         {
-          "title": "Most Investors Are Wrong About Who Owns the Most Bitcoin. That Misunderstanding Is a Buying Opportunity. - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPeTJRelRuVEZUUU54SFZuYklGQ3ZQNEJ3T0pqNGVGOVNMc25iVW82bGc5Mk42TG1FMEV2Vk9WLTVKeUQ3ZWRZZ0JJVTJuVWtwOS1XLTg5Tjhkakl0TjNibUkwVTNqVEtjcEFHMGFtcVZWQXlqR0NtbkE4cTl3NEZoeWt3NDBaYjZCSVFEbGZxM1AyLXB5bHBQenlNRQ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-14"
+          "title": "Bitcoin plunges to $68,000 as Anthropic IPO frenzy adds to market jitters",
+          "url": "https://www.coindesk.com/markets/2026/11/13/bitcoin-slides-to-usd68k-as-nvidia-turmoil-anthropic-ipo-fuel-broader-market-sell-off",
+          "source": "CoinDesk",
+          "date": "2026-11-13"
         },
         {
-          "title": "Eric Balchunas Calls Nvidia-Driven Market Sell-Off The '280th Nervous Breakdown,' Sees Bitcoin Base In The $60K - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRVR0T1BfM2ZBMkJhbDVhNXdldUlZOFhFZTFqZzFibnJQQXhwVVEtLTJGdlJpLWZYUlZ6ajlkOHhodXc3c2pvaGwxNHhKYm9EZWxVRWZERmFTaFR5LV9zanNnbHZRM05xNFRfTU5EODdUa09RaUotRGQ1Tk4tRXJFejhlWVRUUHpkQXBfTzgyM0I4ZE11NU1MbzhSU19ZMFlE?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-14"
+          "title": "Bitcoin heads for sixth weekly loss as Anthropic's blockbuster IPO looms",
+          "url": "https://www.coindesk.com/markets/2026/11/13/bitcoin-heads-for-sixth-weekly-loss-as-anthropic-s-blockbuster-ipo-looms",
+          "source": "CoinDesk",
+          "date": "2026-11-13"
         },
         {
-          "title": "Twenty One Capital CEO Says ‘A Balance Sheet Is Not A Business’ After $1 Billion Bitcoin-Driven Gain - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVkwxdnAtUURGVlVhN3ZIOUkxLTA3SjNtSzNBd09lTjcyT1NZeEU4bnFrcFlGbHlaVGJmUnFMNWxNdmNLZGV0eFpvb2xQNFcxQTlzejlWQzBKb1VUeDJpOVJ4ZnB6cTl5NHVpdnpudDYyNTRiUUNTZ1dITEVETExEVXBFRXR6ZFBfQ0NpdUNPSE5DTmlLM1BF?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-14"
+          "title": "Bitcoin hits 12-week low as dollar rallies on interest-rate outlook, liquidations top $1.6 billion",
+          "url": "https://www.coindesk.com/markets/2026/11/13/bitcoin-hits-12-week-low-as-dollar-rallies-on-interest-rate-outlook-liquidations-top-usd1-6-billion",
+          "source": "CoinDesk",
+          "date": "2026-11-13"
         },
         {
-          "title": "Strive CEO Says Bitcoin Could ‘Go To A Penny’ And The Company Would Still Survive Because It Has No Debt - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPU2dSLVE1ZVRTOHRpVlh0c05HcGJmYXJaQUNXTHRsQTJaRmhkUThSaGY1MEVJdDZXTGxpZHBsT1YzOW5DSGpLYzcySVpfNzFYWXNQaDhaU0hzX283bkNhVUJNSFdMbklVVU9hWmc0OXVYeUNhWWc0RXJtczE2M3k3TDdrZUIzX3VkMGhZUzVsczJ5VlYxTXNYMW1R?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-14"
-        },
-        {
-          "title": "Bitcoin ETFs shed $2.35B in 2 weeks, BlackRock’s losing streak hits 11",
-          "url": "https://cointelegraph.com/markets/bitcoin-etf-outflows-2-35-billion-blackrock-11-session-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "source": "Cointelegraph",
-          "date": "2026-11-14"
-        },
-        {
-          "title": "Bitcoin slides below $68,000 as Anthropic IPO frenzy drains market liquidity - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQUmdjeS1rRjgyaHB3b29VcVlsQjN2TVBIaWFYSUJmSnkxbEtKMnU1M2FJdkViN19peVBOQTRKVFloUTNXenZnVEJfbVdCVjFoN256V2NmRTdHVGxaYWE5R3d6aEJFN2RTR29td0ptRWVNSTVtYVd3bnN3QmJkSjh6NF95MDVnRTFrMFU0cm9QMk9VbV9fREpR?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-14"
+          "title": "Bitcoin ETFs are now down over $1.5 billion in net outflows for the year",
+          "url": "https://www.coindesk.com/markets/2026/11/13/bitcoin-etfs-are-now-down-over-usd1-5-billion-in-net-outflows-for-the-year",
+          "source": "CoinDesk",
+          "date": "2026-11-13"
         }
       ]
     },
