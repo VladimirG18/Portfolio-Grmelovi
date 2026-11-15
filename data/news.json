@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-15T04:11:05+00:00",
+  "updatedAt": "2026-11-15T12:47:56+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "claude",
-      "asOf": "2026-11-14",
+      "mode": "auto",
+      "asOf": "2026-11-15",
       "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV (+10,97 % meziročně, +5,7 % proti září); export 170 194 vozidel (+102,8 %), bateriové osobní vozy 305 743 (+37,4 %). Za leden–říjen je celkový prodej 3 621 744 (−2,2 % meziročně), export 1 513 154 (+93,8 %). Růst tedy táhne zahraničí, tuzemský trh je slabý. Příčinu pohybu akcie zdroje neuvádějí.",
       "drivers": [
         "Export za 10 měsíců +93,8 %, říjen +102,8 % meziročně (CnEVPost, 1. 11.)",
@@ -30,10 +30,16 @@
       ],
       "headlines": [
         {
-          "title": "BYD Oct 2026 sales",
-          "url": "https://cnevpost.com/2026/11/01/byd-oct-2026-sales/",
-          "source": "CnEVPost",
-          "date": "2026-11-01"
+          "title": "Ford’s Jim Farley Isn’t the Only One Worried About BYD, Geely and Chinese Automakers: UAW Sends Warning to Congress, Says ‘China Must Not Gain a Foothold’ - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSEdaU3lidzRkbmozS1dLWVVMQmowa2JRbnNPZGVEdjRHTV9QV2NxSmRsU3JzcF9pNEZtaXZ4cWhiODh1MlhadEthSmV0NGF4cFByNzlycGhWb3l6a0dBekI0SlcyU3NXeHl4d1FxZG9xVDhrRGJxLXIwRDlJRXNDQ0Y2RDhwMzh5eE9CSGZJUQ?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-14"
+        },
+        {
+          "title": "BYD launches luxury brand Denza in India, taking on Mercedes, Toyota - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNSm5YUEdGS1YxQ0FsVGhGb3huMnZJZ1dCLXpPQzkxZGFMNXlCcXpXb0xULVJFS18yeFJjTG5iLXpTTDIyXzFzTC1HQ19SczRiejhCbHZhVzEwdVg1OGUxTWphNVhSZG02QVNSV0M1UnoyMWRCUExDTmkzUFpLaV8wQ2VKOEUxdVJIemgyRlVSVnF6TGFVQ2toaWJRVVU4VHJuVGJwZ3prTDlQazJGQ25US3VfOA?oc=5",
+          "source": "Reuters",
+          "date": "2026-11-13"
         },
         {
           "title": "China’s Improbable Transformation Into an Automobile Superpower - Bloomberg.com",
@@ -63,12 +69,6 @@
           "title": "BYD Denza's updated N8 returns as 5-seater, expanding family SUV lineup - CnEVPost",
           "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9OWmtNRHdXMmRDME9ZM1Q4aDRLQTRpTjFTRTdOVFlhQnRLTlVscTlyOFBQbXcwSVQ4Szh5OFlzaHQ0M1dheUU1MU1RT2dpQWlwRXZ1UEc5Y1Y0ZzlsQWNiakVCRjExTWR2djRYZWIwbm02ZlNEdWFNOA?oc=5",
           "source": "CnEVPost",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Boyd Group Services (TSX:BYD) Could Be 50% Undervalued On Its Earnings Selloff - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNX0tPOFBYc0JkMWxQT3prb0luUnVCcExuTkJaUThyM2pKRlZCY205a1MzRDdQNjZ0Nmw0OEpwVlQ3T3NTWTk1Q3ZRSzBmWVFNdXZIaDdNZkNSZlFMWXVXd0gxeGM5TndsZ1VVSnV1R1l4Ulo3MUtEZk56ZDBWeVRYUVRDNVZzSWdRanNsajRvWVVFR2M2NzhN?oc=5",
-          "source": "Yahoo Finance",
           "date": "2026-11-12"
         },
         {
@@ -163,7 +163,7 @@
       "name": "Thales SA",
       "symbol": "HO.PA",
       "mode": "auto",
-      "asOf": "2026-11-14",
+      "asOf": "2026-11-15",
       "summary": "Thales 10. 11. 2026 oznámil dodávku radarů GM200 MM/C pro belgický projekt Blue Dome; akcie téhož dne podle Idéal Investisseur rostla o ~1,75 % na 232,70 €, za tři měsíce je však zhruba −12 %. Za 9 měsíců firma 22. 10. potvrdila cíle na rok 2026 (zakázky 19,1 mld. €, +15 % organicky; tržby 16,4 mld. €). Příčinu poklesu za čtvrtletí zdroje blíže nevysvětlují.",
       "drivers": [
         "Radary GM200 MM/C pro belgický Blue Dome (Thales, 10. 11.)",
@@ -177,6 +177,12 @@
         "Akcie je ~3 % pod 200denním průměrem (Idéal Investisseur, 10. 11.)"
       ],
       "headlines": [
+        {
+          "title": "3 Space Stocks To Watch As Cheaper Launches Reshape Satellite Economics",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-space-stocks-watch-cheaper-031408747.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-15"
+        },
         {
           "title": "Global Airport Information Technology (IT) Spending Market Report 2026 | Capitalize on 9.3% CAGR Through 2030 as Siemens, Cisco, Thales and SITA Accelerate AI, Cloud and Biometrics",
           "url": "https://finance.yahoo.com/technology/articles/global-airport-information-technology-spending-142100947.html?.tsrc=rss",
@@ -193,12 +199,6 @@
           "title": "Thales (ENXTPA:HO) Is Getting Fresh Attention, What Is Behind It?",
           "url": "https://finance.yahoo.com/markets/stocks/articles/thales-enxtpa-ho-getting-fresh-121324005.html?.tsrc=rss",
           "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Thales (ENXTPA:HO) Is Getting Fresh Attention, What Is Behind It? - Yahoo! Finance Canada",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQbUo3NU9hREUtLV9GaWFZMTgyTkRCMTZKTVpUZGNNQ0o1aFNoWFdnRkxTdHpYNnhBNUZ6bjRRWE1melRPbHY4ZHFLYjl3enl2QXZmbE5NQ0Y0eHVxanFQbE1URmk4Qi1QT0lFRzcwdDFsS0tuM0tCcjFiQ2ItOC1RSk5PbXBrUQ?oc=5",
-          "source": "Yahoo! Finance Canada",
           "date": "2026-11-12"
         },
         {
@@ -230,8 +230,8 @@
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "claude",
-      "asOf": "2026-11-14",
+      "mode": "auto",
+      "asOf": "2026-11-15",
       "summary": "Rheinmetall 5. 11. 2026 oznámil výsledky za 9 měsíců: tržby +38 % na 8 376 mil. €, provozní výsledek +68 % na 1 339 mil. € (marže 16,0 %), nové zakázky +19 % na 19,1 mld. €, backlog 78,0 mld. €. Zároveň snížil výhled na rok 2026: tržby cca 13,2 mld. € (dříve 13,7–14,2 mld.), marže cca 18,5 % (dříve cca 19 %). Důvodem jsou zpoždění projektu Arminius (zakázka bude až v roce 2027) a zpožděné přejímky dělostřelecké munice. Akcie po zveřejnění 5. 11. výrazně oslabila; je to už druhé snížení výhledu během tří měsíců (první v srpnu, po rozhodnutí Německa upustit od plánu na fregaty/lodě) (Sharecast/Hargreaves Lansdown, 5. 11.).",
       "drivers": [
         "Tržby za 9 měsíců +38 %, provozní výsledek +68 % (Rheinmetall, 5. 11.)",
@@ -282,15 +282,33 @@
       ],
       "headlines": [
         {
-          "title": "Rheinmetall shares tank after second guidance cut as defence contract delays bite",
-          "url": "https://www.hl.co.uk/shares/stock-market-news/company--news/rheinmetall-shares-tank-after-second-guidance-cut-as-defence-contract-delays-bite",
-          "source": "Sharecast / Hargreaves Lansdown",
-          "date": "2026-11-05"
+          "title": "BVB and Rheinmetall: End of controversial sponsorship deal - www.marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdmY5RVAxZFFmWGFFc3dsTHVsS04xX1RnckozQ0Z6YXBBQjV3dGxta0E2YnRyNU96S3hMMnZhT3lwT1p4M2F4RXk5aXNZMWt5NDM3YmhEWE1NMHN6b2F6OGhiMGdrTmVCV2Vqa0h0MFc3RlIwVFhTeXE2UllCOW1qRWROSE94WXR1cFFTZHZNcVFvcnA4WkxFa3UwdGptNjZURjFsS1VtYy10c20weWw0?oc=5",
+          "source": "www.marketscreener.com",
+          "date": "2026-11-13"
+        },
+        {
+          "title": "Rheinmetall continues to fall - Bernstein: Delay for F127? - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbzNrb3Y2Qm13LUgyVGNHRmdkZHVQbjB6UEE4My1lMUg3WThoZUFOcm11a0dRR21rSW5YYTUtR0dHOU5hdzJNQ3dlcDRxdzlQME1uSW4wVmI4RjFQWkpZREdaQ0xfNGZTS2RtYVlybjJZbF9hWG9LR05BLW9KZV9SMGF5S2tVcjJJRTgtZE9YYU0tWHlucXVndG5odDNSRzVYNWNXeGw1cS1nU3c?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-13"
         },
         {
           "title": "Concerns over F127 frigates, Rheinmetall and TKMS sink - marketscreener.com",
           "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdWFtZ3ZmZU9RUjZCN2FEOERxOHo2VjVjRlJhdzhJc18yRDN2R3k5N2JSam1KamZTRklKMXQyeGdxTnJuTnJuTTAtQ3lIdmszU1pQZXdpMkpyUlExTkg4QmtyUk1OQkcwV1hTRlZPU1dlN2hOc3hmNllUcUpidWhvMmJ2emxId2cxUFVfM2lVdUFLQjNIdDV1cFFmeTNhZHJ6MUd1Q2NfLV9uUQ?oc=5",
           "source": "marketscreener.com",
+          "date": "2026-11-13"
+        },
+        {
+          "title": "Rheinmetall AG (RHM.DE) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1kalp2ZzIxY2RuOFJ2SW45UlkwWDJyWU5aZ2JHZFFqUURnNXNPY3k1MUUyNHBPeGFpcWg5VEZvVmFHT3pRVnpOZ01SR0VHejluVG04Yg?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-11-13"
+        },
+        {
+          "title": "Rheinmetall AG (RHM.NE) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBaRnhWT01TaEQwTDNqYVFWcGdYQjFuVUFjRXpRMVBpUU1Hb3ZEeW1WMnM1MGxLVEVXSkM2RWljeEh4QnlxNFZlcHl3TFJHanhSRG9GNg?oc=5",
+          "source": "Yahoo! Finance Canada",
           "date": "2026-11-13"
         },
         {
@@ -309,24 +327,6 @@
           "title": "Berenberg Expects Rheinmetall to Cut FY30 Organic Revenue Outlook at Capital Markets Day; Price Target Lowered - marketscreener.com",
           "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQMUgzV1R2SGMtMXd3NTA2VHh0amVhdDl4eVE0Y1h6MldCektBYXhfdzU2bWhHVG9IbEliX3cxRV9fck9kcDdCVnV1R2thRWR3MG1hVGVGWXhkRE0zZkNzSTBNNUFJOFRDLUw4QzFBSVBnWkQ4LUJYZTNhdldPNTRUQnppUGlRM2RETjRnbVZJdUotdFltRkwwbmM0REJZaFYtc0ktVGhteHNWbF92eEFydWNDaERDd0s3Uzlqc0ZNQ0dJSzJTT0taZ29GRndZVDM0aGg5ZzNsLXBWYmFETkNZTmViUmtNMnM?oc=5",
           "source": "marketscreener.com",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Military Unmanned Ground Vehicles - Global Strategic Business Report: Secure Share of a $3.1 Billion Market by 2032 as BAE Systems, Elbit Systems, Rheinmetall and Milrem Robotics Accelerate Autonomy",
-          "url": "https://finance.yahoo.com/technology/ai/articles/military-unmanned-ground-vehicles-global-145300395.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Berenberg Research Reduces Rheinmetall PT, Keeps Hold Rating - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPR3ozeTdnc1paVTlZWldCcjRuQ3NMOTZ6Rl9UVEVqU3JKd2RmejR2dUVxOGl2ZzVlOE1CSVBiX0xQM21ySHg2S01oNkhJczlSZXVSQzlxTFRDVnFlaWpCTXEzNjR1MVVVN3FaZEoxTmhMYTN4dEROTjZjejZlVmlJVDJHZmRROE4wcXhsQVFBek1Wc0Ixd251cnhmQkcxc2lSNmhBMlRMeDAwNlZFdWZneGpn?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Rheinmetall continues recovery from low since February 2025 - www.marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNM3hSei05QXJtTkNpVk15LVFSNW1iNHVlTGR0Z1RUUm5ldlhOYUZzQXJWc1JnOWplYWluRUZkNTdrZ1dmNi1ZTUVZUTF5aTF4YnhnTXVfSlNPSzUzR0lKSkJ1VC1mcnluVHNZam5uTmpFZ0pxdi0wSEFmWlhPOTBXcmR4M0hkRURqRVl4YnNnWUktQWtRckx5c1ZleGhzVWprNHNYS24xTndYbXNTT1hmR0ZB?oc=5",
-          "source": "www.marketscreener.com",
           "date": "2026-11-10"
         }
       ]
