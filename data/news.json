@@ -1,81 +1,28 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-15T12:47:56+00:00",
+  "updatedAt": "2026-11-16T04:08:50+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
-      "mode": "auto",
-      "asOf": "2026-11-15",
-      "summary": "BYD v říjnu 2026 prodal 490 168 vozidel NEV (+10,97 % meziročně, +5,7 % proti září); export 170 194 vozidel (+102,8 %), bateriové osobní vozy 305 743 (+37,4 %). Za leden–říjen je celkový prodej 3 621 744 (−2,2 % meziročně), export 1 513 154 (+93,8 %). Růst tedy táhne zahraničí, tuzemský trh je slabý. Příčinu pohybu akcie zdroje neuvádějí.",
+      "mode": "claude",
+      "asOf": "2026-11-16",
+      "summary": "BYD v říjnu 2026 prodal 490 168 vozidel (+10,97 % meziročně, šestý měsíc růstu v řadě). Export 170 194 ks (+102,8 %), tuzemsko −10,6 % meziročně. Za leden–říjen 3 621 744 ks (−2,16 %). Osobní BEV poprvé přes 300 000 ks, PHEV −17,2 %. Příčinu pohybu ceny akcie jsem z ověřených zdrojů nezjistil.",
       "drivers": [
-        "Export za 10 měsíců +93,8 %, říjen +102,8 % meziročně (CnEVPost, 1. 11.)",
-        "Říjnový prodej 490 168 NEV, +11 % meziročně (just-auto, 2. 11.)",
-        "Export 170 194 vozidel (just-auto, 2. 11.)",
-        "Zámořský prodej +92,7 % za 9 měsíců, tuzemský −30,2 % (CnEVPost)",
-        "Nové modely: Seal 07 2. gen., Qin Plus DM-i"
+        "Export více než dvojnásobný meziročně (CnEVPost, 1. 11.)",
+        "Slabá domácí poptávka (CnEVPost, 1. 11.)"
       ],
-      "outlook": [
-        {
-          "source": "Macquarie",
-          "view": "pozitivní hodnocení ponecháno, cíl snížen (hongkongská akcie)",
-          "target": "97 HKD (dříve 104 HKD)",
-          "date": "2026-11-03",
-          "url": "https://www.boerse-express.com/news/articles/byd-aktie-macquarie-legt-die-latte-tiefer-958720"
-        }
-      ],
+      "outlook": [],
       "risks": [
-        "Slabý tuzemský trh (−30 % za 9 měsíců, CnEVPost)",
-        "Prodej za 10 měsíců meziročně o ~2 % nižší (just-auto)"
+        "Pokles tuzemských prodejů a PHEV",
+        "Export meziměsíčně −5,8 % (CnEVPost, 1. 11.)"
       ],
       "headlines": [
         {
-          "title": "Ford’s Jim Farley Isn’t the Only One Worried About BYD, Geely and Chinese Automakers: UAW Sends Warning to Congress, Says ‘China Must Not Gain a Foothold’ - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSEdaU3lidzRkbmozS1dLWVVMQmowa2JRbnNPZGVEdjRHTV9QV2NxSmRsU3JzcF9pNEZtaXZ4cWhiODh1MlhadEthSmV0NGF4cFByNzlycGhWb3l6a0dBekI0SlcyU3NXeHl4d1FxZG9xVDhrRGJxLXIwRDlJRXNDQ0Y2RDhwMzh5eE9CSGZJUQ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-14"
-        },
-        {
-          "title": "BYD launches luxury brand Denza in India, taking on Mercedes, Toyota - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNSm5YUEdGS1YxQ0FsVGhGb3huMnZJZ1dCLXpPQzkxZGFMNXlCcXpXb0xULVJFS18yeFJjTG5iLXpTTDIyXzFzTC1HQ19SczRiejhCbHZhVzEwdVg1OGUxTWphNVhSZG02QVNSV0M1UnoyMWRCUExDTmkzUFpLaV8wQ2VKOEUxdVJIemgyRlVSVnF6TGFVQ2toaWJRVVU4VHJuVGJwZ3prTDlQazJGQ25US3VfOA?oc=5",
-          "source": "Reuters",
-          "date": "2026-11-13"
-        },
-        {
-          "title": "China’s Improbable Transformation Into an Automobile Superpower - Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNS29nRmNzclNScl9rZ0dHdWc5VFY4LWtoRmZfaFdwdmJYUDhYaFVWYndVazdxNFUxdV9INXc3MmRfdHQ0Y0d1b214aXRYb0l3ZVUwMHJ0Nk9jMzgtVXFoUzRlbzY2YVpCZDRSSGs2VnhtcGNBaWNvOGI1VUdoNDhaRXprYkxwclhqaF84d3hveFJxVjhjbG1HR0pNNFVHekVlUENobGRWa0l4RXlva1pmRXBlOVhLbm1jbzAzOW9qaGhKTDg?oc=5",
-          "source": "Bloomberg.com",
-          "date": "2026-11-13"
-        },
-        {
-          "title": "BYD Fang Cheng Bao to launch its largest SUV Tai 9 on November 19 - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1PX2U0WEVFc0pyVVZ6dkFUYmkySUN4Sm85REVWdU1XTmQyX1FtRlZkSzBhcHZvZnR6SjFidkRTVWJ3eW50cTJocm9iQWxzUVlYQ3A5WlE1MnUyM3JGMmRURS0wYTR2VnF4QUJaeURVemJaT0tHcHY4clBfNA?oc=5",
+          "title": "BYD Oct 2026 sales",
+          "url": "https://cnevpost.com/2026/11/01/byd-oct-2026-sales/",
           "source": "CnEVPost",
-          "date": "2026-11-13"
-        },
-        {
-          "title": "Officials seize BYD files over claims it dismantled a Land Rover Defender to copy its tech - Yahoo Finance UK",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOVEl0bUdrLWxoOWJaZkl6WnZIYmtieHcwWk00V0czUG90cFloSmJxT1Ribzg0ZThHUHpmM3FXVzUwNHd3dzFBOXBGSU9JdHpOcWdDbklleVZQYTZIOFF1VUZxeUdhTDE2Y01sNThTakVuY3AwOUZqUlJGeU5fbDVKM1pkTG5fZw?oc=5",
-          "source": "Yahoo Finance UK",
-          "date": "2026-11-13"
-        },
-        {
-          "title": "BYD opens pre-sales for third-gen Tang, expanding 5-seat electric SUV lineup - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5paGlsXzBRclozQXoyTkVEbkNOWVJDblYxQTBBdlZkc0xfRFFrZTY0aUs3cW0zLXJ6aVR1ZlRTX0tSMko5dWhiT0wydkk2S3hNSFRKZk5hT3NvaVpVVnFUR3FxTDNqeXJuc2RMTDUwZl9SVWM?oc=5",
-          "source": "CnEVPost",
-          "date": "2026-11-13"
-        },
-        {
-          "title": "BYD Denza's updated N8 returns as 5-seater, expanding family SUV lineup - CnEVPost",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9OWmtNRHdXMmRDME9ZM1Q4aDRLQTRpTjFTRTdOVFlhQnRLTlVscTlyOFBQbXcwSVQ4Szh5OFlzaHQ0M1dheUU1MU1RT2dpQWlwRXZ1UEc5Y1Y0ZzlsQWNiakVCRjExTWR2djRYZWIwbm02ZlNEdWFNOA?oc=5",
-          "source": "CnEVPost",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "BYD Apologizes for Putting SUV’s Wheels on the Wrong Way - Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdU5weXZIM0JpMGtBWWR1Skp3Zzd5cTYyNFRWS2tkVjBubm5yZ29wWnZYcFNLMWZlQW1SaHF2ZnRWNG9naVdZa2dqei1HWkE0bmxZTHBrYkxJZTcxRjk4ZjVRY0dRTjd0eUUwVTdKT2RZSTBQN3VCaEFnNXV5QVJNZXprcFNxZ0gweWFUNGdFdXhhX3pYWmt2OEhVNy1FTzZOX28yUjhLdlEyM1E?oc=5",
-          "source": "Bloomberg.com",
-          "date": "2026-11-11"
+          "date": "2026-11-01"
         }
       ]
     },
@@ -162,172 +109,76 @@
     "HO.PA": {
       "name": "Thales SA",
       "symbol": "HO.PA",
-      "mode": "auto",
-      "asOf": "2026-11-15",
-      "summary": "Thales 10. 11. 2026 oznámil dodávku radarů GM200 MM/C pro belgický projekt Blue Dome; akcie téhož dne podle Idéal Investisseur rostla o ~1,75 % na 232,70 €, za tři měsíce je však zhruba −12 %. Za 9 měsíců firma 22. 10. potvrdila cíle na rok 2026 (zakázky 19,1 mld. €, +15 % organicky; tržby 16,4 mld. €). Příčinu poklesu za čtvrtletí zdroje blíže nevysvětlují.",
+      "mode": "claude",
+      "asOf": "2026-11-16",
+      "summary": "Akcie Thales 10. 11. 2026 posílily o 1,75 % na 232,70 €, za tři měsíce jsou ale zhruba o 12 % níž (Idéal Investisseur). Thales oznámil dodávku radarů GM200 MM/C Belgii pro štít Blue Dome. Při výsledkách za devět měsíců (22. 10.) potvrdil všechny cíle pro rok 2026; objednávky 19,1 mld. € (+15 % organicky). Konkrétní hodnocení analytiků jsem nenašel.",
       "drivers": [
-        "Radary GM200 MM/C pro belgický Blue Dome (Thales, 10. 11.)",
-        "Zakázky 9M 19,1 mld. €, tržby 16,4 mld. €, cíle 2026 potvrzeny (Thales, 22. 10.)",
-        "Tržby 3Q 5 473 mil. €, +9,7 % (Idéal Investisseur, 10. 11.)"
+        "Potvrzené cíle 2026 a růst objednávek (Idéal Investisseur, 10. 11.)",
+        "Zakázka radarů pro Belgii – Blue Dome (10. 11.)"
       ],
       "outlook": [],
       "risks": [
-        "Slabší čtvrtletní zakázky obrany (−6 % org. ve 3Q, Thales 22. 10.)",
-        "Konflikt na Blízkém východě může zasáhnout avioniku a letecký provoz (Idéal Investisseur, 10. 11.)",
-        "Akcie je ~3 % pod 200denním průměrem (Idéal Investisseur, 10. 11.)"
+        "Dopad konfliktu na Blízkém východě na avioniku a leteckou dopravu (Idéal Investisseur, 10. 11.)"
       ],
       "headlines": [
         {
-          "title": "3 Space Stocks To Watch As Cheaper Launches Reshape Satellite Economics",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-space-stocks-watch-cheaper-031408747.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-15"
-        },
-        {
-          "title": "Global Airport Information Technology (IT) Spending Market Report 2026 | Capitalize on 9.3% CAGR Through 2030 as Siemens, Cisco, Thales and SITA Accelerate AI, Cloud and Biometrics",
-          "url": "https://finance.yahoo.com/technology/articles/global-airport-information-technology-spending-142100947.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Artificial Intelligence (AI)-Enabled Counter-Drone System Market Global Report 2026 | Secure the $1.66B Market by 2030 with Lockheed Martin, Thales, Rheinmetall and Anduril",
-          "url": "https://finance.yahoo.com/technology/ai/articles/artificial-intelligence-ai-enabled-counter-141900234.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Thales (ENXTPA:HO) Is Getting Fresh Attention, What Is Behind It?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/thales-enxtpa-ho-getting-fresh-121324005.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push",
-          "url": "https://finance.yahoo.com/technology/ai/articles/thales-enxtpa-ho-deepens-european-071625650.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWVhObTl5WVNOMkxfV3JxbFRUQlVKcGVUOElKUUZXYmJ0WGxXc1VSalhUM1NLSk1XZGRnSGhxR0tKNDFyRFF1VkEwcHZycHV0aUlLNmVOTzZZNmVoWEdPakFoRW04U0JsenF3OFFFMHBhbWRkUUE0b2Nab1A5ZmRVY01KbmUzanpwNUtZWlpSemYzcmsyX1c5ZDc5d1lLQQ?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Seadronix Debuts AI Solution in the European Defense Supply Chain",
-          "url": "https://finance.yahoo.com/technology/ai/articles/seadronix-debuts-ai-solution-european-010000503.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Global Intelligent Unmanned Underwater Navigation System Market Forecast to 2035 | Secure AI Autonomy Gains with Kongsberg, Northrop Grumman, Lockheed Martin and Thales",
-          "url": "https://finance.yahoo.com/technology/articles/global-intelligent-unmanned-underwater-navigation-143000981.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-11"
+          "title": "Thales shares rebound 1.75%, still down 12% over the quarter",
+          "url": "https://www.ideal-investisseur.fr/en/stock-news/thales-shares-rebound-1-75-still-down-12-over-the-quarter/29105.html",
+          "source": "Idéal Investisseur",
+          "date": "2026-11-10"
         }
       ]
     },
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "auto",
-      "asOf": "2026-11-15",
-      "summary": "Rheinmetall 5. 11. 2026 oznámil výsledky za 9 měsíců: tržby +38 % na 8 376 mil. €, provozní výsledek +68 % na 1 339 mil. € (marže 16,0 %), nové zakázky +19 % na 19,1 mld. €, backlog 78,0 mld. €. Zároveň snížil výhled na rok 2026: tržby cca 13,2 mld. € (dříve 13,7–14,2 mld.), marže cca 18,5 % (dříve cca 19 %). Důvodem jsou zpoždění projektu Arminius (zakázka bude až v roce 2027) a zpožděné přejímky dělostřelecké munice. Akcie po zveřejnění 5. 11. výrazně oslabila; je to už druhé snížení výhledu během tří měsíců (první v srpnu, po rozhodnutí Německa upustit od plánu na fregaty/lodě) (Sharecast/Hargreaves Lansdown, 5. 11.).",
+      "mode": "claude",
+      "asOf": "2026-11-16",
+      "summary": "Rheinmetall v noci na 5. 11. 2026 snížil výhled provozní marže z cca 19 % na cca 18,5 %; jde podle goldesel.de o pátou revizi prognózy za 11 měsíců. Zdroj uvádí jako příčinu odložené velké zakázky Bundeswehru, hlavně Boxer a munice. Několik bank po tom snížilo cílové ceny, většina ale ponechala kladné hodnocení. Další událostí je kapitálový den 26.–27. 11.",
       "drivers": [
-        "Tržby za 9 měsíců +38 %, provozní výsledek +68 % (Rheinmetall, 5. 11.)",
-        "Backlog 78,0 mld. € proti 56,7 mld. € před rokem (Rheinmetall, 5. 11.)",
-        "Provozní free cash flow −1 698 mil. € (Rheinmetall, 5. 11.)",
-        "Q3 samostatně: tržby +32 % na 3,15 mld. €, provozní zisk +62 % na 553 mil. € (Sharecast, 5. 11.)"
+        "Odložené velké zakázky Bundeswehru (Boxer, munice) (goldesel.de, 6. 11.)",
+        "Snížení výhledu marže na cca 18,5 % (goldesel.de, 6. 11.)"
       ],
       "outlook": [
         {
           "source": "LBBW",
-          "view": "Kaufen, cíl snížen z 1 500 €",
-          "target": "1 250 €",
-          "date": "2026-11-06",
-          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
-        },
-        {
-          "source": "DZ Bank",
-          "view": "Kaufen, férová hodnota snížena z 1 705 €",
-          "target": "1 205 €",
+          "view": "Snížil cílovou cenu, rating Kaufen",
+          "target": "1 250 € (dříve 1 500 €)",
           "date": "2026-11-06",
           "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
         },
         {
           "source": "UBS",
-          "view": "Buy, cíl snížen z 1 360 €",
-          "target": "1 100 €",
+          "view": "Snížil cílovou cenu, rating Kaufen beze změny",
+          "target": "1 100 € (dříve 1 360 €)",
           "date": "2026-11-06",
           "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
         },
         {
           "source": "Exane BNP",
-          "view": "Outperform, cíl snížen z 1 600 €",
-          "target": "1 300 €",
+          "view": "Snížil cílovou cenu, Outperform",
+          "target": "1 300 € (dříve 1 600 €)",
           "date": "2026-11-06",
           "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
         },
         {
           "source": "JPMorgan",
-          "view": "Neutral",
+          "view": "Cílová cena 1 150 €, rating Neutral beze změny",
           "target": "1 150 €",
           "date": "2026-11-06",
           "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
         }
       ],
       "risks": [
-        "Snížený výhled 2026: tržby cca 13,2 mld. €, marže cca 18,5 % (Rheinmetall, 5. 11.)",
-        "Projekt Arminius nelze zakázat dříve než v roce 2027; zpoždění přejímek munice (Rheinmetall, Defence Industry Europe, 5. 11.)"
+        "Další odklady zakázek a revize prognózy",
+        "Kapitálový den 26.–27. 11. – Berenberg čeká snížení cíle tržeb 2030 (zdroj neověřen do detailu)"
       ],
       "headlines": [
         {
-          "title": "BVB and Rheinmetall: End of controversial sponsorship deal - www.marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdmY5RVAxZFFmWGFFc3dsTHVsS04xX1RnckozQ0Z6YXBBQjV3dGxta0E2YnRyNU96S3hMMnZhT3lwT1p4M2F4RXk5aXNZMWt5NDM3YmhEWE1NMHN6b2F6OGhiMGdrTmVCV2Vqa0h0MFc3RlIwVFhTeXE2UllCOW1qRWROSE94WXR1cFFTZHZNcVFvcnA4WkxFa3UwdGptNjZURjFsS1VtYy10c20weWw0?oc=5",
-          "source": "www.marketscreener.com",
-          "date": "2026-11-13"
-        },
-        {
-          "title": "Rheinmetall continues to fall - Bernstein: Delay for F127? - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbzNrb3Y2Qm13LUgyVGNHRmdkZHVQbjB6UEE4My1lMUg3WThoZUFOcm11a0dRR21rSW5YYTUtR0dHOU5hdzJNQ3dlcDRxdzlQME1uSW4wVmI4RjFQWkpZREdaQ0xfNGZTS2RtYVlybjJZbF9hWG9LR05BLW9KZV9SMGF5S2tVcjJJRTgtZE9YYU0tWHlucXVndG5odDNSRzVYNWNXeGw1cS1nU3c?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-13"
-        },
-        {
-          "title": "Concerns over F127 frigates, Rheinmetall and TKMS sink - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdWFtZ3ZmZU9RUjZCN2FEOERxOHo2VjVjRlJhdzhJc18yRDN2R3k5N2JSam1KamZTRklKMXQyeGdxTnJuTnJuTTAtQ3lIdmszU1pQZXdpMkpyUlExTkg4QmtyUk1OQkcwV1hTRlZPU1dlN2hOc3hmNllUcUpidWhvMmJ2emxId2cxUFVfM2lVdUFLQjNIdDV1cFFmeTNhZHJ6MUd1Q2NfLV9uUQ?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-13"
-        },
-        {
-          "title": "Rheinmetall AG (RHM.DE) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1kalp2ZzIxY2RuOFJ2SW45UlkwWDJyWU5aZ2JHZFFqUURnNXNPY3k1MUUyNHBPeGFpcWg5VEZvVmFHT3pRVnpOZ01SR0VHejluVG04Yg?oc=5",
-          "source": "Yahoo! Finance Canada",
-          "date": "2026-11-13"
-        },
-        {
-          "title": "Rheinmetall AG (RHM.NE) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBaRnhWT01TaEQwTDNqYVFWcGdYQjFuVUFjRXpRMVBpUU1Hb3ZEeW1WMnM1MGxLVEVXSkM2RWljeEh4QnlxNFZlcHl3TFJHanhSRG9GNg?oc=5",
-          "source": "Yahoo! Finance Canada",
-          "date": "2026-11-13"
-        },
-        {
-          "title": "Artificial Intelligence (AI)-Enabled Counter-Drone System Market Global Report 2026 | Secure the $1.66B Market by 2030 with Lockheed Martin, Thales, Rheinmetall and Anduril",
-          "url": "https://finance.yahoo.com/technology/ai/articles/artificial-intelligence-ai-enabled-counter-141900234.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "J.P. Morgan sees CSG margins under pressure as ammunition demand shifts",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-sees-csg-130322413.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Berenberg Expects Rheinmetall to Cut FY30 Organic Revenue Outlook at Capital Markets Day; Price Target Lowered - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQMUgzV1R2SGMtMXd3NTA2VHh0amVhdDl4eVE0Y1h6MldCektBYXhfdzU2bWhHVG9IbEliX3cxRV9fck9kcDdCVnV1R2thRWR3MG1hVGVGWXhkRE0zZkNzSTBNNUFJOFRDLUw4QzFBSVBnWkQ4LUJYZTNhdldPNTRUQnppUGlRM2RETjRnbVZJdUotdFltRkwwbmM0REJZaFYtc0ktVGhteHNWbF92eEFydWNDaERDd0s3Uzlqc0ZNQ0dJSzJTT0taZ29GRndZVDM0aGg5ZzNsLXBWYmFETkNZTmViUmtNMnM?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-10"
+          "title": "Rheinmetall Aktie: Analysten senken Kursziele nach Prognosekorrektur",
+          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur",
+          "source": "goldesel.de",
+          "date": "2026-11-06"
         }
       ]
     }
