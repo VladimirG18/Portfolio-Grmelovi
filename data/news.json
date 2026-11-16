@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T04:08:50+00:00",
+  "updatedAt": "2026-11-16T13:43:43+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -29,8 +29,8 @@
     "bitcoin": {
       "name": "Bitcoin",
       "symbol": "bitcoin",
-      "mode": "claude",
-      "asOf": "2026-11-15",
+      "mode": "auto",
+      "asOf": "2026-11-16",
       "summary": "Bitcoin 14. 11. 2026 podle CoinDesku spadl pod 63 000 USD, na tříměsíční minimum; 13. 11. šel poprvé od srpna pod 70 000 USD a likvidace na futures přesáhly 1,6 mld. USD. Za rok je cena zhruba −21 % (CoinDesk, 13. 11.). Zdroje uvádějí jako souběžné faktory silný dolar a očekávání vyšších sazeb Fedu, odlivy z amerických spotových ETF a odliv kapitálu do očekávané IPO Anthropicu; analytici přímou souvislost s Nvidií nevidí. Jednoznačnou jedinou příčinu zdroje neuvádějí.",
       "drivers": [
         "Dolarový index na 19měsíčním maximu a očekávání vyšších sazeb Fedu (CoinDesk, 13. 11.)",
@@ -69,40 +69,52 @@
       ],
       "headlines": [
         {
-          "title": "Bitcoin crashes to 3-month low below $63,000 as analyst flags fourth capitulation wave",
-          "url": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
-          "source": "CoinDesk",
-          "date": "2026-11-14"
+          "title": "Wall Street Traders Bet That Bitcoin Will Fall Below $60,000 - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSWV6Nk04OWF0dERpdmN4azhtTXBzcGR2RFJOWm9vbG16RE9iYXB2U2pBRS1RX002bzI2SWZlMjZtb1A1TlJtY0JyTWdYUG90WkhVcU5ITFdzc1gyRmNpa3lFRzdnazV0Uk5CLThXZVA3eGViR1VNX055X0xRLWdNa0tCOVVpdTFjTWJhbU00b0dqQjZneU9YMHFmWHo?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-16"
         },
         {
-          "title": "A behind the scenes force may amplify bitcoin and ether price volatility",
-          "url": "https://www.coindesk.com/markets/2026/11/14/a-behind-the-scenes-force-may-amplify-bitcoin-and-ether-price-volatility",
-          "source": "CoinDesk",
-          "date": "2026-11-14"
+          "title": "Here’s what happened in crypto today",
+          "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "source": "Cointelegraph",
+          "date": "2026-11-16"
         },
         {
-          "title": "Bitcoin plunges to $68,000 as Anthropic IPO frenzy adds to market jitters",
-          "url": "https://www.coindesk.com/markets/2026/11/13/bitcoin-slides-to-usd68k-as-nvidia-turmoil-anthropic-ipo-fuel-broader-market-sell-off",
-          "source": "CoinDesk",
-          "date": "2026-11-13"
+          "title": "Strategy buys $33M in Bitcoin, spends $228M on STRC buybacks",
+          "url": "https://cointelegraph.com/news/strategy-buy-485-bitcoin-228-million-strc-buyback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "source": "Cointelegraph",
+          "date": "2026-11-16"
         },
         {
-          "title": "Bitcoin heads for sixth weekly loss as Anthropic's blockbuster IPO looms",
-          "url": "https://www.coindesk.com/markets/2026/11/13/bitcoin-heads-for-sixth-weekly-loss-as-anthropic-s-blockbuster-ipo-looms",
-          "source": "CoinDesk",
-          "date": "2026-11-13"
+          "title": "Bitcoin Prices Tumble and Bring Coinbase and Strategy Stocks Down With Them - Barron's",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0yS0RmaHF4aWFYdWEwa1Z4TmZ0dzdqM1NPR21vdTZvc3dZNlVDalJHdHROUjJEcm03V0YtdHhEdC01T0tpS0RDLWZNRFpLNWlnZVJPeXlXY3k0Tk1NNW1hUEtrOE9DaWp6OU44VGpQclQtQW9pTF9jazVRNVV2UDA?oc=5",
+          "source": "Barron's",
+          "date": "2026-11-16"
         },
         {
-          "title": "Bitcoin hits 12-week low as dollar rallies on interest-rate outlook, liquidations top $1.6 billion",
-          "url": "https://www.coindesk.com/markets/2026/11/13/bitcoin-hits-12-week-low-as-dollar-rallies-on-interest-rate-outlook-liquidations-top-usd1-6-billion",
-          "source": "CoinDesk",
-          "date": "2026-11-13"
+          "title": "'This dip could use a little orange': Michael Saylor's Strategy buys another 485 BTC for $33 million as bitcoin tumbles - The Block",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNazBwQXJBTG5DVUhlQmJPMk5xNXZFUWJ6MUs3YnBuMzBLRXZ5NzlPcWRDYmRWekszdEQ1TElWcUxhU3BSNDU2bVpRREx2N2l5VEN0VUZFX2xfYU9LTUg1RXJqZi03M1dNMHhHaWkxbmxNS3JJd01Fd0JJZFV6QkgzQXJlSTFpLTZPdTV4S3VGQThBU2ZSLXE1OFNkTmQxZVQtdzdSU1BXTlFsazFCNk94dGJuaWlOeWhlMlB1T0ZOSmYwZ05iMEJDTU5R?oc=5",
+          "source": "The Block",
+          "date": "2026-11-16"
         },
         {
-          "title": "Bitcoin ETFs are now down over $1.5 billion in net outflows for the year",
-          "url": "https://www.coindesk.com/markets/2026/11/13/bitcoin-etfs-are-now-down-over-usd1-5-billion-in-net-outflows-for-the-year",
+          "title": "Binance Pay Later offers credit backed by Bitcoin, Ether and BNB holdings",
+          "url": "https://cointelegraph.com/news/binance-pay-later-crypto-backed-credit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+          "source": "Cointelegraph",
+          "date": "2026-11-16"
+        },
+        {
+          "title": "Bitcoin’s slide reopens an old feud between crypto’s most powerful founders - CoinDesk",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUnpwcFBSSHAwRGtPa3FadGpld0FpRWZ6WVlVRGk0czVpaXg2SUF3MlNRbGZEMS1oUUgyRi1QR1J1MzV3RFR1ZmxVbXFzTDFZSzNNd3RJZi1JS212NnpEbzlnbGdBS0hnQS1iWjBMVjd2SmJuMXotTDNTOTdwT0gwNmlIUGlsTmFjaHlQS1FuWUhnam5FUzVmYUQyZkQ2X2ZTNnBIb2RFVGxuNjVYWFVXUVd5ZmZBemhOcFlN?oc=5",
           "source": "CoinDesk",
-          "date": "2026-11-13"
+          "date": "2026-11-16"
+        },
+        {
+          "title": "Bitcoin, Ether Slump Further - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNemJKTlE0N1hQT0Z3amttWTkyZmJNMi1rQlZKSkVGeUpvWFlEUl9QY0pZVGVvWjQ2dWZOemtNdjVULUpsNjNWdlBCZHBMUndmZ0pfazNhT2hRZDBqUmkxbEc0VDk2ZVNxYzBLTUhsSEdWMG1GbEZ3a1plN2dDRkx2UnNFdXJhZ1g0blU4YkV5T29FUG80QkE0a3pjc2ZSM29adWc?oc=5",
+          "source": "WSJ",
+          "date": "2026-11-16"
         }
       ]
     },
