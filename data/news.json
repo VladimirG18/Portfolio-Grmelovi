@@ -1,23 +1,47 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T13:43:43+00:00",
+  "updatedAt": "2026-11-17T04:10:11+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
       "mode": "claude",
-      "asOf": "2026-11-16",
-      "summary": "BYD v říjnu 2026 prodal 490 168 vozidel (+10,97 % meziročně, šestý měsíc růstu v řadě). Export 170 194 ks (+102,8 %), tuzemsko −10,6 % meziročně. Za leden–říjen 3 621 744 ks (−2,16 %). Osobní BEV poprvé přes 300 000 ks, PHEV −17,2 %. Příčinu pohybu ceny akcie jsem z ověřených zdrojů nezjistil.",
+      "asOf": "2026-11-17",
+      "summary": "Akcie BYD je ve Frankfurtu na ročním minimu: 16. 11. 2026 poslední cena 7,53 € (−7 % za týden, −31 % za rok; Börse Express). CLSA 9. 11. snížila cílovou cenu hongkongské akcie a čeká, že zisk na exportovaný vůz v roce 2027 klesne o 20–30 % kvůli přísnějším exportním pravidlům a teprve budovaným dodavatelským řetězcům v zahraničí. Firma se zároveň omluvila za zaměněná přední a zadní kola u části SUV Great Tang (chyba v kódování u dodavatele, podle BYD bez vlivu na bezpečnost). Provozně: v říjnu 490 168 prodaných vozů (+10,97 % meziročně), export +102,8 %, tuzemsko −10,6 % (CnEVPost, 1. 11.); závod v Maďarsku je podle vedení těsně před zahájením sériové výroby.",
       "drivers": [
-        "Export více než dvojnásobný meziročně (CnEVPost, 1. 11.)",
-        "Slabá domácí poptávka (CnEVPost, 1. 11.)"
+        "Říjnové prodeje 490 168 ks, šestý měsíc růstu v řadě; táhne export, tuzemský trh klesá (CnEVPost, 1. 11.)",
+        "CLSA čeká pokles zisku na exportovaný vůz o 20–30 % v roce 2027 (Börse Express, 16. 11.)",
+        "Slabost hongkongských akcií výrobců elektromobilů (Börse Express, 11. 11.)",
+        "Maďarský závod před zahájením sériové výroby; nabíjecí zařízení v Abú Zabí spuštěno 10. 11. (Börse Express, 16. 11.)"
       ],
-      "outlook": [],
+      "outlook": [
+        {
+          "source": "CLSA",
+          "view": "Rating „High Conviction Outperform“ beze změny; čeká pokles zisku na exportovaný vůz o 20–30 % v roce 2027",
+          "target": "100 HKD (dříve 109 HKD)",
+          "date": "2026-11-09",
+          "url": "https://www.boerse-express.com/news/articles/byd-aktie-great-tang-mit-vertauschten-felgen-963705"
+        }
+      ],
       "risks": [
-        "Pokles tuzemských prodejů a PHEV",
-        "Export meziměsíčně −5,8 % (CnEVPost, 1. 11.)"
+        "Europoslanci 4. 11. vyzvali Evropskou komisi, aby posoudila bezpečnostní rizika vozů BYD a případné vyloučení z veřejných zakázek (Reuters, cituje Börse Express)",
+        "Klesající tuzemské prodeje (říjen −10,6 % meziročně)",
+        "Tlak na ziskovost exportu podle CLSA",
+        "Kvalitativní problém u Great Tang (zaměněná kola)"
       ],
       "headlines": [
+        {
+          "title": "BYD Aktie: Great Tang mit vertauschten Felgen",
+          "url": "https://www.boerse-express.com/news/articles/byd-aktie-great-tang-mit-vertauschten-felgen-963705",
+          "source": "Börse Express",
+          "date": "2026-11-16"
+        },
+        {
+          "title": "BYD Aktie: CLSA kappt Ziel und bleibt beim Kaufen",
+          "url": "https://www.boerse-express.com/news/articles/byd-aktie-clsa-kappt-ziel-und-bleibt-beim-kaufen-961916",
+          "source": "Börse Express",
+          "date": "2026-11-11"
+        },
         {
           "title": "BYD Oct 2026 sales",
           "url": "https://cnevpost.com/2026/11/01/byd-oct-2026-sales/",
@@ -29,92 +53,82 @@
     "bitcoin": {
       "name": "Bitcoin",
       "symbol": "bitcoin",
-      "mode": "auto",
-      "asOf": "2026-11-16",
-      "summary": "Bitcoin 14. 11. 2026 podle CoinDesku spadl pod 63 000 USD, na tříměsíční minimum; 13. 11. šel poprvé od srpna pod 70 000 USD a likvidace na futures přesáhly 1,6 mld. USD. Za rok je cena zhruba −21 % (CoinDesk, 13. 11.). Zdroje uvádějí jako souběžné faktory silný dolar a očekávání vyšších sazeb Fedu, odlivy z amerických spotových ETF a odliv kapitálu do očekávané IPO Anthropicu; analytici přímou souvislost s Nvidií nevidí. Jednoznačnou jedinou příčinu zdroje neuvádějí.",
+      "mode": "claude",
+      "asOf": "2026-11-17",
+      "summary": "Bitcoin v pátek 13. 11. 2026 klesl pod 70 000 USD, o víkendu až na cca 62 100 USD (nejníž od 14. 7.) a v pondělí 16. 11. se pohyboval kolem 64 000–65 000 USD; jde o šestý týdenní pokles v řadě (CoinDesk, 16. 11.). CoinDesk jako důvody uvádí rostoucí výnosy dluhopisů (desetiletý americký 5,15 %), trhem čekané zvýšení sazeb Fedu v prosinci (cca 92% pravděpodobnost), odlivy ze spotových ETF (sedm seancí v řadě, cca 1,9 mld. USD od 5. 11.) a nucené likvidace (přes 2 mld. USD za 24 hodin o víkendu). Trh čekal na úterní výsledky Nvidie; jejich dopad v době zápisu neznám. Na Deribitu je největší opční pozicí put na 60 000 USD (cca 900 mil. USD).",
       "drivers": [
-        "Dolarový index na 19měsíčním maximu a očekávání vyšších sazeb Fedu (CoinDesk, 13. 11.)",
-        "Odlivy ze spotových BTC ETF: od začátku roku čistý odliv přes 1,5 mld. USD (CoinDesk, 13. 11.)",
-        "Odliv likvidity do očekávané IPO Anthropicu a širší risk-off (CoinDesk, 13. 11.)",
-        "Likvidace na futures přes 1,6 mld. USD zesílily pokles (CoinDesk, 13. 11.)"
+        "Rostoucí výnosy dluhopisů a očekávané zvýšení sazeb Fedu v prosinci (CoinDesk, 16. 11.)",
+        "Odlivy z amerických spotových ETF: sedm seancí v řadě, cca 1,9 mld. USD od 5. 11. (Farside, cituje CoinDesk)",
+        "Nucené likvidace kolem 2 mld. USD za 24 hodin o víkendu 14.–15. 11. (CoinDesk)",
+        "Pokles nabídky stablecoinů o 14–16 mld. USD za měsíc (CoinDesk, 16. 11.)",
+        "Slabý sentiment technologických akcií před výsledky Nvidie (Nansen, cituje CoinDesk)"
       ],
       "outlook": [
         {
-          "source": "James Check (analytik, cituje CoinDesk)",
-          "view": "Označuje pokles za čtvrtou kapitulační vlnu; oblast kolem 65 000 USD vidí jako zónu hluboké hodnoty",
+          "source": "Wintermute (cituje CoinDesk)",
+          "view": "Medvědí trh, málo nových peněz; zůstává defenzivní a čeká tlak do pásma 50 000–60 000 USD. Méně defenzivní by byl po návratu nad 200týdenní průměr (cca 68 000 USD) spolu s přílivy do ETF",
+          "target": "pod 60 000 USD",
+          "date": "2026-11-16",
+          "url": "https://www.coindesk.com/markets/2026/11/16/bitcoin-risks-falling-below-usd60-000-as-nvidia-earnings-threaten-to-deepen-crypto-sell-off"
+        },
+        {
+          "source": "Nicolai Søndergaard, Nansen (cituje CoinDesk)",
+          "view": "Pásmo 60 000–62 600 USD je klíčový test příštích týdnů; slabé výsledky Nvidie by mohly cenu poslat pod 60 000 USD. Prvním signálem konce výprodeje by byl návrat nad 200denní průměr (cca 73 000 USD)",
+          "target": "60 000–62 600 USD (podpora)",
+          "date": "2026-11-16",
+          "url": "https://www.coindesk.com/markets/2026/11/16/bitcoin-risks-falling-below-usd60-000-as-nvidia-earnings-threaten-to-deepen-crypto-sell-off"
+        },
+        {
+          "source": "James Check (cituje CoinDesk a CoinCentral)",
+          "view": "Čtvrtá kapitulační vlna od historického maxima; cena je podle něj v „zóně hluboké hodnoty“, což ale neznamená, že dno už nastalo",
           "target": "",
           "date": "2026-11-14",
           "url": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst"
         },
         {
-          "source": "Eric Balchunas (Yahoo Finance)",
-          "view": "Vidí dno bitcoinu v pásmu kolem 60 000 USD",
-          "target": "~60 000 USD",
-          "date": "2026-11-14",
-          "url": "https://finance.yahoo.com/"
-        },
-        {
-          "source": "CoinDesk Daybook (technický indikátor)",
-          "view": "Momentum indikátor se obrací do červené, cena by mohla zamířit pod 60 000 USD",
-          "target": "<60 000 USD",
-          "date": "2026-11-13",
-          "url": "https://www.coindesk.com/daybook-us/2026/11/13/bitcoin-s-momentum-gauge-is-turning-red-could-send-prices-back-below-usd60-000"
+          "source": "Glassnode (cituje CoinCentral)",
+          "view": "Velký shluk likvidací poblíž aktuální ceny může spustit „závěrečný kapitulační výplach“",
+          "target": "",
+          "date": "2026-11-15",
+          "url": "https://coincentral.com/bitcoin-btc-price-sinks-to-62000-as-etf-investors-pull-2-35-billion-in-november"
         }
       ],
       "risks": [
-        "Další odlivy z ETF",
-        "Pád pod 200týdenní klouzavý průměr (CoinDesk, 13. 11.)",
-        "Posilující dolar a vyšší sazby",
-        "Volatilitu mohou zesilovat market makeři (CoinDesk, 14. 11.)"
+        "Proražení 60 000 USD – opční trh je na tuto úroveň nejvíc vsazený (CoinDesk, 16. 11.)",
+        "Pokračující odlivy z ETF; listopadové odlivy 2,35 mld. USD po devíti seancích (CoinCentral, 15. 11.)",
+        "Zvýšení sazeb Fedu v prosinci a vyšší výnosy dluhopisů",
+        "Přelití výprodeje z technologických akcií"
       ],
       "headlines": [
         {
-          "title": "Wall Street Traders Bet That Bitcoin Will Fall Below $60,000 - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSWV6Nk04OWF0dERpdmN4azhtTXBzcGR2RFJOWm9vbG16RE9iYXB2U2pBRS1RX002bzI2SWZlMjZtb1A1TlJtY0JyTWdYUG90WkhVcU5ITFdzc1gyRmNpa3lFRzdnazV0Uk5CLThXZVA3eGViR1VNX055X0xRLWdNa0tCOVVpdTFjTWJhbU00b0dqQjZneU9YMHFmWHo?oc=5",
-          "source": "Yahoo Finance",
-          "date": "2026-11-16"
-        },
-        {
-          "title": "Here’s what happened in crypto today",
-          "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "source": "Cointelegraph",
-          "date": "2026-11-16"
-        },
-        {
-          "title": "Strategy buys $33M in Bitcoin, spends $228M on STRC buybacks",
-          "url": "https://cointelegraph.com/news/strategy-buy-485-bitcoin-228-million-strc-buyback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "source": "Cointelegraph",
-          "date": "2026-11-16"
-        },
-        {
-          "title": "Bitcoin Prices Tumble and Bring Coinbase and Strategy Stocks Down With Them - Barron's",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0yS0RmaHF4aWFYdWEwa1Z4TmZ0dzdqM1NPR21vdTZvc3dZNlVDalJHdHROUjJEcm03V0YtdHhEdC01T0tpS0RDLWZNRFpLNWlnZVJPeXlXY3k0Tk1NNW1hUEtrOE9DaWp6OU44VGpQclQtQW9pTF9jazVRNVV2UDA?oc=5",
-          "source": "Barron's",
-          "date": "2026-11-16"
-        },
-        {
-          "title": "'This dip could use a little orange': Michael Saylor's Strategy buys another 485 BTC for $33 million as bitcoin tumbles - The Block",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNazBwQXJBTG5DVUhlQmJPMk5xNXZFUWJ6MUs3YnBuMzBLRXZ5NzlPcWRDYmRWekszdEQ1TElWcUxhU3BSNDU2bVpRREx2N2l5VEN0VUZFX2xfYU9LTUg1RXJqZi03M1dNMHhHaWkxbmxNS3JJd01Fd0JJZFV6QkgzQXJlSTFpLTZPdTV4S3VGQThBU2ZSLXE1OFNkTmQxZVQtdzdSU1BXTlFsazFCNk94dGJuaWlOeWhlMlB1T0ZOSmYwZ05iMEJDTU5R?oc=5",
-          "source": "The Block",
-          "date": "2026-11-16"
-        },
-        {
-          "title": "Binance Pay Later offers credit backed by Bitcoin, Ether and BNB holdings",
-          "url": "https://cointelegraph.com/news/binance-pay-later-crypto-backed-credit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-          "source": "Cointelegraph",
-          "date": "2026-11-16"
-        },
-        {
-          "title": "Bitcoin’s slide reopens an old feud between crypto’s most powerful founders - CoinDesk",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUnpwcFBSSHAwRGtPa3FadGpld0FpRWZ6WVlVRGk0czVpaXg2SUF3MlNRbGZEMS1oUUgyRi1QR1J1MzV3RFR1ZmxVbXFzTDFZSzNNd3RJZi1JS212NnpEbzlnbGdBS0hnQS1iWjBMVjd2SmJuMXotTDNTOTdwT0gwNmlIUGlsTmFjaHlQS1FuWUhnam5FUzVmYUQyZkQ2X2ZTNnBIb2RFVGxuNjVYWFVXUVd5ZmZBemhOcFlN?oc=5",
+          "title": "Bitcoin risks falling below $60,000 as Nvidia earnings threaten to deepen crypto sell-off",
+          "url": "https://www.coindesk.com/markets/2026/11/16/bitcoin-risks-falling-below-usd60-000-as-nvidia-earnings-threaten-to-deepen-crypto-sell-off",
           "source": "CoinDesk",
           "date": "2026-11-16"
         },
         {
-          "title": "Bitcoin, Ether Slump Further - WSJ",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNemJKTlE0N1hQT0Z3amttWTkyZmJNMi1rQlZKSkVGeUpvWFlEUl9QY0pZVGVvWjQ2dWZOemtNdjVULUpsNjNWdlBCZHBMUndmZ0pfazNhT2hRZDBqUmkxbEc0VDk2ZVNxYzBLTUhsSEdWMG1GbEZ3a1plN2dDRkx2UnNFdXJhZ1g0blU4YkV5T29FUG80QkE0a3pjc2ZSM29adWc?oc=5",
-          "source": "WSJ",
+          "title": "Bitcoin slips after rebounding from July 14 low that triggered $2 billion of liquidations",
+          "url": "https://www.coindesk.com/markets/2026/11/16/bitcoin-slips-to-usd64-000-after-usd2-billion-weekend-flush",
+          "source": "CoinDesk",
           "date": "2026-11-16"
+        },
+        {
+          "title": "Bitcoin's biggest bet is now a drop below $60,000, not a rally above $100,000",
+          "url": "https://www.coindesk.com/markets/2026/11/16/bitcoin-s-biggest-bet-is-now-a-drop-below-usd60-000-not-a-rally-above-usd100-000",
+          "source": "CoinDesk",
+          "date": "2026-11-16"
+        },
+        {
+          "title": "Bitcoin crashes to 3-month low below $63,000 as analyst flags fourth capitulation wave",
+          "url": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
+          "source": "CoinDesk",
+          "date": "2026-11-14"
+        },
+        {
+          "title": "Bitcoin (BTC) Price Sinks to $62,000 as ETF Investors Pull $2.35 Billion in November",
+          "url": "https://coincentral.com/bitcoin-btc-price-sinks-to-62000-as-etf-investors-pull-2-35-billion-in-november",
+          "source": "CoinCentral",
+          "date": "2026-11-15"
         }
       ]
     },
@@ -122,17 +136,38 @@
       "name": "Thales SA",
       "symbol": "HO.PA",
       "mode": "claude",
-      "asOf": "2026-11-16",
-      "summary": "Akcie Thales 10. 11. 2026 posílily o 1,75 % na 232,70 €, za tři měsíce jsou ale zhruba o 12 % níž (Idéal Investisseur). Thales oznámil dodávku radarů GM200 MM/C Belgii pro štít Blue Dome. Při výsledkách za devět měsíců (22. 10.) potvrdil všechny cíle pro rok 2026; objednávky 19,1 mld. € (+15 % organicky). Konkrétní hodnocení analytiků jsem nenašel.",
+      "asOf": "2026-11-17",
+      "summary": "Thales v listopadu 2026 ohlásil několik zakázek a partnerství: francouzská DGA zadala konsorciu Airbus + Thales Alenia Space vojenské pozorovací družice IRIS (dvě družice, podle Airbusu a odborného tisku přes 1,5 mld. € za celý kontrakt; oznámeno 9. 11.), Thales dodá Belgii radary pro štít Blue Dome a s Kongsberg Maritime nabízí společné řešení pro protiponorkový bezposádkový člun Type 92 britského námořnictva (10. 11.). Akcie 10. 11. posílila o 1,75 % na 232,70 €, za tři měsíce ale byla zhruba o 12 % níž (Idéal Investisseur). Při výsledcích za devět měsíců (22. 10.) firma potvrdila cíle pro rok 2026. Aktuální hodnocení analytiků z posledních 14 dnů jsem z ověřitelných zdrojů nenašel; jednoznačnou příčinu čtvrtletního poklesu zdroje neuvádějí.",
       "drivers": [
-        "Potvrzené cíle 2026 a růst objednávek (Idéal Investisseur, 10. 11.)",
-        "Zakázka radarů pro Belgii – Blue Dome (10. 11.)"
+        "Kontrakt DGA na družice IRIS – Thales Alenia Space je spoluhlavním dodavatelem a vyvíjí optické přístroje obou družic (Satnews, 9. 11.)",
+        "Radary pro belgický štít Blue Dome (Idéal Investisseur, 10. 11.)",
+        "Partnerství s Kongsberg Maritime pro Type 92 Royal Navy – sonar a zabezpečená komunikace od Thales (Idéal Investisseur, 10. 11.)",
+        "Potvrzené cíle pro rok 2026 při výsledcích za devět měsíců (22. 10.)"
       ],
       "outlook": [],
       "risks": [
-        "Dopad konfliktu na Blízkém východě na avioniku a leteckou dopravu (Idéal Investisseur, 10. 11.)"
+        "Akcie byla k 10. 11. za čtvrtletí zhruba o 12 % níž; odraz zdroj označuje za křehký (Idéal Investisseur)",
+        "Type 92 je zatím jen nabídka, ne získaná zakázka"
       ],
       "headlines": [
+        {
+          "title": "Thales Alenia Space Awarded DGA Contract for French IRIS Military Optical Constellation",
+          "url": "https://satnews.com/2026/11/09/thales-alenia-space-awarded-dga-contract-for-french-iris-military-optical-constellation/",
+          "source": "Satnews",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Airbus to deliver IRIS, France’s next generation military Earth observation satellites",
+          "url": "https://www.airbus.com/en/newsroom/press-releases/2026-11-airbus-to-deliver-iris-frances-next-generation-military-earth-observation-satellites",
+          "source": "Airbus",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Thales teams up with Kongsberg Maritime for the Royal Navy's future anti-submarine drone",
+          "url": "https://www.ideal-investisseur.fr/en/stock-news/thales-teams-up-with-kongsberg-maritime-for-the-royal-navy-s-future-anti-submarine-drone/29119.html",
+          "source": "Idéal Investisseur",
+          "date": "2026-11-10"
+        },
         {
           "title": "Thales shares rebound 1.75%, still down 12% over the quarter",
           "url": "https://www.ideal-investisseur.fr/en/stock-news/thales-shares-rebound-1-75-still-down-12-over-the-quarter/29105.html",
@@ -145,19 +180,57 @@
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
       "mode": "claude",
-      "asOf": "2026-11-16",
-      "summary": "Rheinmetall v noci na 5. 11. 2026 snížil výhled provozní marže z cca 19 % na cca 18,5 %; jde podle goldesel.de o pátou revizi prognózy za 11 měsíců. Zdroj uvádí jako příčinu odložené velké zakázky Bundeswehru, hlavně Boxer a munice. Několik bank po tom snížilo cílové ceny, většina ale ponechala kladné hodnocení. Další událostí je kapitálový den 26.–27. 11.",
+      "asOf": "2026-11-17",
+      "summary": "Rheinmetall 4. 11. 2026 večer snížil výhled na rok 2026: tržby cca 13,2 mld. € (dříve 13,7–14,2 mld. €) a provozní marže cca 18,5 % (dříve cca 19 %); firma to zdůvodnila pravděpodobným zpožděním projektu Boxer (Arminius) a přejímek dělostřelecké munice (Der Aktionär, 5. 11.). Zásoba zakázek k 30. 9. byla rekordních 78,0 mld. € (Rheinmetall, 5. 11.). Akcie od té doby výrazně klesla – ze závěru 1 003,40 € (4. 11.) na 765,50 € (13. 11.); v pondělí 16. 11. kolem poledne rostla o 3,8 % na 794,70 € a vedla DAX poté, co Goldman Sachs potvrdil doporučení koupit, byť s výrazně nižším cílem (Investing.com, 16. 11.). Banky po snížení výhledu plošně snižují cílové ceny, dvě snížily i doporučení.",
       "drivers": [
-        "Odložené velké zakázky Bundeswehru (Boxer, munice) (goldesel.de, 6. 11.)",
-        "Snížení výhledu marže na cca 18,5 % (goldesel.de, 6. 11.)"
+        "Snížení výhledu tržeb a marže na 2026 kvůli odkladu zakázky Boxer/Arminius a přejímek munice (Der Aktionär, 5. 11.)",
+        "Podle JPMorgan jde o páté varování k tržbám či zisku za 11 měsíců (Der Aktionär, 5. 11.)",
+        "Rekordní zásoba zakázek 78,0 mld. € k 30. 9. 2026 (Rheinmetall, 5. 11.)",
+        "Série snížení cílových cen; Bank of America a Bernstein snížily doporučení na Hold (Investing.com, 16. 11.)",
+        "Kapitálový den 27. 11. – JPMorgan čeká úpravu cílů do roku 2030 (Der Aktionär, 5. 11.)"
       ],
       "outlook": [
         {
-          "source": "LBBW",
-          "view": "Snížil cílovou cenu, rating Kaufen",
-          "target": "1 250 € (dříve 1 500 €)",
+          "source": "Goldman Sachs",
+          "view": "Potvrzuje Buy; podle banky se tržby posouvají v čase, poptávka neklesá. Pro rok 2030 nově čeká tržby cca 35 mld. €",
+          "target": "1 350 € (dříve 2 100 €)",
+          "date": "2026-11-16",
+          "url": "https://de.investing.com/news/stock-market-news/rheinmetallaktie-goldman-kappt-kursziel-kraftig--und-rat-weiter-zum-kauf-3769232"
+        },
+        {
+          "source": "Citi",
+          "view": "Buy, snížená cílová cena",
+          "target": "1 099 € (dříve 1 374 €)",
+          "date": "2026-11-13",
+          "url": "https://de.investing.com/news/stock-market-news/rheinmetallaktie-goldman-kappt-kursziel-kraftig--und-rat-weiter-zum-kauf-3769232"
+        },
+        {
+          "source": "Berenberg",
+          "view": "Hold, snížená cílová cena",
+          "target": "900 € (dříve 1 020 €)",
+          "date": "2026-11-10",
+          "url": "https://de.investing.com/news/stock-market-news/rheinmetallaktie-goldman-kappt-kursziel-kraftig--und-rat-weiter-zum-kauf-3769232"
+        },
+        {
+          "source": "Bank of America",
+          "view": "Snížení doporučení na Hold",
+          "target": "900 € (dříve 1 300 €)",
+          "date": "2026-11-09",
+          "url": "https://de.investing.com/news/stock-market-news/rheinmetallaktie-goldman-kappt-kursziel-kraftig--und-rat-weiter-zum-kauf-3769232"
+        },
+        {
+          "source": "Bernstein",
+          "view": "Snížení doporučení na Hold",
+          "target": "1 000 € (dříve 1 200 €)",
           "date": "2026-11-06",
-          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
+          "url": "https://de.investing.com/news/stock-market-news/rheinmetallaktie-goldman-kappt-kursziel-kraftig--und-rat-weiter-zum-kauf-3769232"
+        },
+        {
+          "source": "JPMorgan (David Perry)",
+          "view": "Neutral; drží titul na seznamu „Negative Catalyst Watch“ a čeká, že firma na kapitálovém dni 27. 11. upraví cíle do roku 2030, možná výrazně",
+          "target": "1 150 € (dříve 1 350 €)",
+          "date": "2026-11-05",
+          "url": "https://www.deraktionaer.de/artikel/aktien/rheinmetall-aktie-rauscht-nach-unten-jpmorgan-senkt-das-kursziel-und-nun-20434446.html"
         },
         {
           "source": "UBS",
@@ -167,25 +240,43 @@
           "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
         },
         {
-          "source": "Exane BNP",
-          "view": "Snížil cílovou cenu, Outperform",
-          "target": "1 300 € (dříve 1 600 €)",
-          "date": "2026-11-06",
-          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
-        },
-        {
-          "source": "JPMorgan",
-          "view": "Cílová cena 1 150 €, rating Neutral beze změny",
-          "target": "1 150 €",
+          "source": "LBBW",
+          "view": "Snížil cílovou cenu, rating Kaufen",
+          "target": "1 250 € (dříve 1 500 €)",
           "date": "2026-11-06",
           "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur"
         }
       ],
       "risks": [
-        "Další odklady zakázek a revize prognózy",
-        "Kapitálový den 26.–27. 11. – Berenberg čeká snížení cíle tržeb 2030 (zdroj neověřen do detailu)"
+        "Možné snížení střednědobých cílů (2030) na kapitálovém dni 27. 11. – očekávání JPMorgan (Der Aktionär, 5. 11.)",
+        "Další odklady velkých zakázek Bundeswehru; Jefferies čeká i snížení prognózy zásoby zakázek kvůli projektu Arminius (Der Aktionär, 5. 11.)",
+        "Opakované revize výhledu oslabují důvěru v prognózy vedení (JPMorgan, 5. 11.)"
       ],
       "headlines": [
+        {
+          "title": "Rheinmetall-Aktie: Goldman kappt Kursziel kräftig – und rät weiter zum Kauf",
+          "url": "https://de.investing.com/news/stock-market-news/rheinmetallaktie-goldman-kappt-kursziel-kraftig--und-rat-weiter-zum-kauf-3769232",
+          "source": "Investing.com",
+          "date": "2026-11-16"
+        },
+        {
+          "title": "Rheinmetall: Aktie rauscht nach unten, JPMorgan senkt das Kursziel",
+          "url": "https://www.deraktionaer.de/artikel/aktien/rheinmetall-aktie-rauscht-nach-unten-jpmorgan-senkt-das-kursziel-und-nun-20434446.html",
+          "source": "Der Aktionär",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "Rheinmetall: Quarterly statement Q3 2026",
+          "url": "https://www.rheinmetall.com/en/media/news-watch/news/2026/11/2026-11-05-rheinmetall-news-quarterly-statement-q3",
+          "source": "Rheinmetall",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "Rheinmetall cuts 2026 sales forecast to €13.2 billion after project and ammunition delays",
+          "url": "https://defence-industry.eu/rheinmetall-cuts-2026-sales-forecast-to-e13-2-billion-after-project-and-ammunition-delays/",
+          "source": "defence-industry.eu",
+          "date": "2026-11-05"
+        },
         {
           "title": "Rheinmetall Aktie: Analysten senken Kursziele nach Prognosekorrektur",
           "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur",
