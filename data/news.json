@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-17T04:10:11+00:00",
+  "updatedAt": "2026-11-18T04:08:55+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
       "mode": "claude",
-      "asOf": "2026-11-17",
-      "summary": "Akcie BYD je ve Frankfurtu na ročním minimu: 16. 11. 2026 poslední cena 7,53 € (−7 % za týden, −31 % za rok; Börse Express). CLSA 9. 11. snížila cílovou cenu hongkongské akcie a čeká, že zisk na exportovaný vůz v roce 2027 klesne o 20–30 % kvůli přísnějším exportním pravidlům a teprve budovaným dodavatelským řetězcům v zahraničí. Firma se zároveň omluvila za zaměněná přední a zadní kola u části SUV Great Tang (chyba v kódování u dodavatele, podle BYD bez vlivu na bezpečnost). Provozně: v říjnu 490 168 prodaných vozů (+10,97 % meziročně), export +102,8 %, tuzemsko −10,6 % (CnEVPost, 1. 11.); závod v Maďarsku je podle vedení těsně před zahájením sériové výroby.",
+      "asOf": "2026-11-18",
+      "summary": "Akcie BYD dál padá na roční minima: 16. 11. 2026 nové 12měsíční minimum 7,53 € (Börse Express, boerse.de), 17. 11. večer 7,32 € (−1,5 % za den, Börse Stuttgart podle boerse.de); od 4. 5. 2026 je v dlouhodobém sestupném trendu, zhruba −33 % (boerse.de, 17. 11.). CLSA 9. 11. snížila cílovou cenu hongkongské akcie a čeká, že zisk na exportovaný vůz v roce 2027 klesne o 20–30 % kvůli přísnějším exportním pravidlům a teprve budovaným dodavatelským řetězcům v zahraničí. Firma se zároveň omluvila za zaměněná přední a zadní kola u části SUV Great Tang (chyba v kódování u dodavatele, podle BYD bez vlivu na bezpečnost). Provozně: v říjnu 490 168 prodaných vozů (+10,97 % meziročně), export +102,8 %, tuzemsko −10,6 % (CnEVPost, 1. 11.); závod v Maďarsku je podle vedení těsně před zahájením sériové výroby.",
       "drivers": [
         "Říjnové prodeje 490 168 ks, šestý měsíc růstu v řadě; táhne export, tuzemský trh klesá (CnEVPost, 1. 11.)",
         "CLSA čeká pokles zisku na exportovaný vůz o 20–30 % v roce 2027 (Börse Express, 16. 11.)",
@@ -30,6 +30,12 @@
         "Kvalitativní problém u Great Tang (zaměněná kola)"
       ],
       "headlines": [
+        {
+          "title": "BYD-Aktie mit neuem 12-Monats-Tief",
+          "url": "https://www.boerse.de/nachrichten/BYD-Aktie-mit-neuem-12-Monats-Tief/38723894",
+          "source": "boerse.de",
+          "date": "2026-11-17"
+        },
         {
           "title": "BYD Aktie: Great Tang mit vertauschten Felgen",
           "url": "https://www.boerse-express.com/news/articles/byd-aktie-great-tang-mit-vertauschten-felgen-963705",
@@ -54,16 +60,23 @@
       "name": "Bitcoin",
       "symbol": "bitcoin",
       "mode": "claude",
-      "asOf": "2026-11-17",
-      "summary": "Bitcoin v pátek 13. 11. 2026 klesl pod 70 000 USD, o víkendu až na cca 62 100 USD (nejníž od 14. 7.) a v pondělí 16. 11. se pohyboval kolem 64 000–65 000 USD; jde o šestý týdenní pokles v řadě (CoinDesk, 16. 11.). CoinDesk jako důvody uvádí rostoucí výnosy dluhopisů (desetiletý americký 5,15 %), trhem čekané zvýšení sazeb Fedu v prosinci (cca 92% pravděpodobnost), odlivy ze spotových ETF (sedm seancí v řadě, cca 1,9 mld. USD od 5. 11.) a nucené likvidace (přes 2 mld. USD za 24 hodin o víkendu). Trh čekal na úterní výsledky Nvidie; jejich dopad v době zápisu neznám. Na Deribitu je největší opční pozicí put na 60 000 USD (cca 900 mil. USD).",
+      "asOf": "2026-11-18",
+      "summary": "Bitcoin pokračuje v poklesu: v úterý 17. 11. 2026 klesl na Bitstampu až na 63 269 USD (−2,5 % za den), od 15. 11. se pohyboval v pásmu 64 000–66 000 USD; trh byl opatrný před výsledky Nvidie a pod tlakem slábnoucích technologických akcií (Cointelegraph, 17. 11.). Nvidia večer 17. 11. vykázala tržby 115,8 mld. USD (+103 % meziročně) a výhled na další čtvrtletí cca 130 mld. USD, ale nižší výhled hrubé marže; bitcoin se ráno 18. 11. držel kolem 64 750 USD, zhruba beze změny za 24 h (TechFlow/Bitget, 18. 11.). Za sedm dní je bitcoin cca o 13–14 % níž. Širší pozadí z minulého týdne trvá: rostoucí výnosy dluhopisů, očekávané zvýšení sazeb Fedu v prosinci, odlivy ze spotových ETF a nucené likvidace (CoinDesk, 16. 11.).",
       "drivers": [
+        "Výsledky Nvidie 17. 11.: tržby 115,8 mld. USD, výhled cca 130 mld. USD, nižší výhled marže; první reakce bitcoinu neutrální, kolem 65 000 USD (TechFlow/Bitget, 18. 11.)",
+        "Slabý sentiment technologických akcií: Nasdaq 17. 11. cca −2,5 %, průzkum Bank of America ukázal největší snížení převahy technologií u fondů od června 2006 (Cointelegraph, 17. 11.)",
         "Rostoucí výnosy dluhopisů a očekávané zvýšení sazeb Fedu v prosinci (CoinDesk, 16. 11.)",
-        "Odlivy z amerických spotových ETF: sedm seancí v řadě, cca 1,9 mld. USD od 5. 11. (Farside, cituje CoinDesk)",
-        "Nucené likvidace kolem 2 mld. USD za 24 hodin o víkendu 14.–15. 11. (CoinDesk)",
-        "Pokles nabídky stablecoinů o 14–16 mld. USD za měsíc (CoinDesk, 16. 11.)",
-        "Slabý sentiment technologických akcií před výsledky Nvidie (Nansen, cituje CoinDesk)"
+        "Odlivy z amerických spotových ETF: sedm seancí v řadě, cca 1,9 mld. USD od 5. 11. (Farside, cituje CoinDesk, 16. 11.)",
+        "Akcie Strategy (MSTR) 17. 11. −6,3 %; bitcoin je cca 14 % pod průměrnou nákupní cenou firmy (TechFlow/Bitget, 18. 11.)"
       ],
       "outlook": [
+        {
+          "source": "Keith Alan, Material Indicators (cituje Cointelegraph)",
+          "view": "Bitcoin musí získat zpět 200týdenní průměr (cca 67 977 USD), ani to ale samo nestačí; odraz má podle něj vyšší pravděpodobnost být pastí než skutečným zotavením",
+          "target": "klíčová úroveň 67 977 USD",
+          "date": "2026-11-17",
+          "url": "https://cointelegraph.com/markets/bitcoin-drops-25-nvidia-stock-risks-new-5-month-low-q3-earnings"
+        },
         {
           "source": "Wintermute (cituje CoinDesk)",
           "view": "Medvědí trh, málo nových peněz; zůstává defenzivní a čeká tlak do pásma 50 000–60 000 USD. Méně defenzivní by byl po návratu nad 200týdenní průměr (cca 68 000 USD) spolu s přílivy do ETF",
@@ -100,6 +113,18 @@
         "Přelití výprodeje z technologických akcií"
       ],
       "headlines": [
+        {
+          "title": "NVIDIA Revenue Doubles, Gross Margin Guidance Becomes New Focus; US Stocks Continue Correction; Bitcoin Holds Near $65,000",
+          "url": "https://www.techflowpost.com/en-US/article/35456",
+          "source": "TechFlow (Bitget)",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "Bitcoin drops 2.5% as Nvidia stock risks new 5-month lows into Q3 earnings",
+          "url": "https://cointelegraph.com/markets/bitcoin-drops-25-nvidia-stock-risks-new-5-month-low-q3-earnings",
+          "source": "Cointelegraph",
+          "date": "2026-11-17"
+        },
         {
           "title": "Bitcoin risks falling below $60,000 as Nvidia earnings threaten to deepen crypto sell-off",
           "url": "https://www.coindesk.com/markets/2026/11/16/bitcoin-risks-falling-below-usd60-000-as-nvidia-earnings-threaten-to-deepen-crypto-sell-off",
