@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-18T04:08:55+00:00",
+  "updatedAt": "2026-11-18T14:08:02+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -160,8 +160,8 @@
     "HO.PA": {
       "name": "Thales SA",
       "symbol": "HO.PA",
-      "mode": "claude",
-      "asOf": "2026-11-17",
+      "mode": "auto",
+      "asOf": "2026-11-18",
       "summary": "Thales v listopadu 2026 ohlásil několik zakázek a partnerství: francouzská DGA zadala konsorciu Airbus + Thales Alenia Space vojenské pozorovací družice IRIS (dvě družice, podle Airbusu a odborného tisku přes 1,5 mld. € za celý kontrakt; oznámeno 9. 11.), Thales dodá Belgii radary pro štít Blue Dome a s Kongsberg Maritime nabízí společné řešení pro protiponorkový bezposádkový člun Type 92 britského námořnictva (10. 11.). Akcie 10. 11. posílila o 1,75 % na 232,70 €, za tři měsíce ale byla zhruba o 12 % níž (Idéal Investisseur). Při výsledcích za devět měsíců (22. 10.) firma potvrdila cíle pro rok 2026. Aktuální hodnocení analytiků z posledních 14 dnů jsem z ověřitelných zdrojů nenašel; jednoznačnou příčinu čtvrtletního poklesu zdroje neuvádějí.",
       "drivers": [
         "Kontrakt DGA na družice IRIS – Thales Alenia Space je spoluhlavním dodavatelem a vyvíjí optické přístroje obou družic (Satnews, 9. 11.)",
@@ -176,36 +176,60 @@
       ],
       "headlines": [
         {
-          "title": "Thales Alenia Space Awarded DGA Contract for French IRIS Military Optical Constellation",
-          "url": "https://satnews.com/2026/11/09/thales-alenia-space-awarded-dga-contract-for-french-iris-military-optical-constellation/",
-          "source": "Satnews",
-          "date": "2026-11-09"
+          "title": "Thales S.A. (HO.PA) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5nTlpnODNqendhWmpBd09nWjBVaHJVVG9oajItV0FVRFhaNmkycjYxbHh0WERKb2FXeTRyWUhqQzYyaEl1XzBSdU5SNjZzNXZncFVB?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-11-17"
         },
         {
-          "title": "Airbus to deliver IRIS, France’s next generation military Earth observation satellites",
-          "url": "https://www.airbus.com/en/newsroom/press-releases/2026-11-airbus-to-deliver-iris-frances-next-generation-military-earth-observation-satellites",
-          "source": "Airbus",
-          "date": "2026-11-09"
+          "title": "Global Anti Jamming Equipment Market Report 2026 | Capitalize on $7.21B in AI-Driven GNSS Demand by 2030 as Lockheed Martin, Northrop Grumman, BAE Systems, and L3Harris Accelerate",
+          "url": "https://finance.yahoo.com/technology/articles/global-anti-jamming-equipment-market-153000848.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-16"
         },
         {
-          "title": "Thales teams up with Kongsberg Maritime for the Royal Navy's future anti-submarine drone",
-          "url": "https://www.ideal-investisseur.fr/en/stock-news/thales-teams-up-with-kongsberg-maritime-for-the-royal-navy-s-future-anti-submarine-drone/29119.html",
-          "source": "Idéal Investisseur",
-          "date": "2026-11-10"
+          "title": "3 Space Stocks To Watch As Cheaper Launches Reshape Satellite Economics",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-space-stocks-watch-cheaper-031408747.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-15"
         },
         {
-          "title": "Thales shares rebound 1.75%, still down 12% over the quarter",
-          "url": "https://www.ideal-investisseur.fr/en/stock-news/thales-shares-rebound-1-75-still-down-12-over-the-quarter/29105.html",
-          "source": "Idéal Investisseur",
-          "date": "2026-11-10"
+          "title": "Global Airport Information Technology (IT) Spending Market Report 2026 | Capitalize on 9.3% CAGR Through 2030 as Siemens, Cisco, Thales and SITA Accelerate AI, Cloud and Biometrics",
+          "url": "https://finance.yahoo.com/technology/articles/global-airport-information-technology-spending-142100947.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Artificial Intelligence (AI)-Enabled Counter-Drone System Market Global Report 2026 | Secure the $1.66B Market by 2030 with Lockheed Martin, Thales, Rheinmetall and Anduril",
+          "url": "https://finance.yahoo.com/technology/ai/articles/artificial-intelligence-ai-enabled-counter-141900234.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Thales (ENXTPA:HO) Is Getting Fresh Attention, What Is Behind It?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/thales-enxtpa-ho-getting-fresh-121324005.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push",
+          "url": "https://finance.yahoo.com/technology/ai/articles/thales-enxtpa-ho-deepens-european-071625650.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWVhObTl5WVNOMkxfV3JxbFRUQlVKcGVUOElKUUZXYmJ0WGxXc1VSalhUM1NLSk1XZGRnSGhxR0tKNDFyRFF1VkEwcHZycHV0aUlLNmVOTzZZNmVoWEdPakFoRW04U0JsenF3OFFFMHBhbWRkUUE0b2Nab1A5ZmRVY01KbmUzanpwNUtZWlpSemYzcmsyX1c5ZDc5d1lLQQ?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
         }
       ]
     },
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "claude",
-      "asOf": "2026-11-17",
+      "mode": "auto",
+      "asOf": "2026-11-18",
       "summary": "Rheinmetall 4. 11. 2026 večer snížil výhled na rok 2026: tržby cca 13,2 mld. € (dříve 13,7–14,2 mld. €) a provozní marže cca 18,5 % (dříve cca 19 %); firma to zdůvodnila pravděpodobným zpožděním projektu Boxer (Arminius) a přejímek dělostřelecké munice (Der Aktionär, 5. 11.). Zásoba zakázek k 30. 9. byla rekordních 78,0 mld. € (Rheinmetall, 5. 11.). Akcie od té doby výrazně klesla – ze závěru 1 003,40 € (4. 11.) na 765,50 € (13. 11.); v pondělí 16. 11. kolem poledne rostla o 3,8 % na 794,70 € a vedla DAX poté, co Goldman Sachs potvrdil doporučení koupit, byť s výrazně nižším cílem (Investing.com, 16. 11.). Banky po snížení výhledu plošně snižují cílové ceny, dvě snížily i doporučení.",
       "drivers": [
         "Snížení výhledu tržeb a marže na 2026 kvůli odkladu zakázky Boxer/Arminius a přejímek munice (Der Aktionär, 5. 11.)",
@@ -279,34 +303,52 @@
       ],
       "headlines": [
         {
-          "title": "Rheinmetall-Aktie: Goldman kappt Kursziel kräftig – und rät weiter zum Kauf",
-          "url": "https://de.investing.com/news/stock-market-news/rheinmetallaktie-goldman-kappt-kursziel-kraftig--und-rat-weiter-zum-kauf-3769232",
-          "source": "Investing.com",
+          "title": "Rheinmetall AG (RHM.NE) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBaRnhWT01TaEQwTDNqYVFWcGdYQjFuVUFjRXpRMVBpUU1Hb3ZEeW1WMnM1MGxLVEVXSkM2RWljeEh4QnlxNFZlcHl3TFJHanhSRG9GNg?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-11-17"
+        },
+        {
+          "title": "3 Defense Stocks Backed By Rising Air Defense Demand",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-defense-stocks-backed-rising-131401577.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-17"
+        },
+        {
+          "title": "Changing battlefield tactics hit Europe’s ammunition makers - Financial Times",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObEFSdGtRNDhMR2o3V0pkd3NfMjFCQi1veFlnb1M3SWlBaERSTWpySUxXYkVJMGFBVHh2aW9QMWNsOFNEeGhsMG53TThTSEo2dU5jdXk1ZGJVUXNvS0UtVHVLSHVkQWNRWkk4TDlTMGxfM3I5d0pibFdOSEtUMFhpRF9vTTA?oc=5",
+          "source": "Financial Times",
+          "date": "2026-11-17"
+        },
+        {
+          "title": "Rheinmetall Attempts to Rebound After AlphaValue Calls Fall \"Excessive\" - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPc3IzaGpYQXlpcldYSWxJdjRDZDlDUHo2dkt1eml6dURXZUVQbTF1RllSNzd0U1JBYjFYUFdCYUQ1bzVsMTNtOHc1bktqWlpVeWFXVTdaZlJBMXNYZktMQmJGWXpJN0pxcXE3Q3lZTkg4dUQ3SlU5UHFFM0xSZVRhY3pnSEFOcy0taXFXSXZ1eGpDdUI4TXlhUDhtVHotc2ZMX3J2RWQtVUwyZHRUNTBqVnEtQkNxRl9LckFzM2JWcFhLLU5BNVlUWWFRdHREb3MtQmktQ0xmelpzZWNTYi10UUpxOA?oc=5",
+          "source": "marketscreener.com",
           "date": "2026-11-16"
         },
         {
-          "title": "Rheinmetall: Aktie rauscht nach unten, JPMorgan senkt das Kursziel",
-          "url": "https://www.deraktionaer.de/artikel/aktien/rheinmetall-aktie-rauscht-nach-unten-jpmorgan-senkt-das-kursziel-und-nun-20434446.html",
-          "source": "Der Aktionär",
-          "date": "2026-11-05"
+          "title": "Rheinmetall AG : Buy rating from Goldman Sachs - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPQ25YMGpKMkd5WUYzc2MtYmhycXRQSGVzdGh1ZjJvam9uZU9rOU4xT1RhOF9lWVlCdGhxbFNlMVFEUUFybXBuYmoxTFBabnVpSmJSNTBrZTN4WUtrTE5KeVdfY0E5RmdLQXBvWXhZV04zSnFURmtmRENwTEFoMmI3RjlKZGlmTHBJbmJtTHVsTV93RldqVlJCMTljUnIxQQ?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-16"
         },
         {
-          "title": "Rheinmetall: Quarterly statement Q3 2026",
-          "url": "https://www.rheinmetall.com/en/media/news-watch/news/2026/11/2026-11-05-rheinmetall-news-quarterly-statement-q3",
-          "source": "Rheinmetall",
-          "date": "2026-11-05"
+          "title": "Goldman cuts Rheinmetall target to €1,350 - \"Buy\" - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPMjRYUm4wb240TVlRb3hzQWJLOVBqWGtjNUwwc0xzMjRZRjB2SUlOYWt1czJpeWdwbjBmbVZhbmFjQUpmTHpRU2l4azdUUlVSNXB3ZE5pOUJHS2hraVhWa3RSVEMtLUlNTWlqYlZ0XzFDMExCbVZxUGZJS2YxbklyZkJkbU5VNXBsTVcxN1JzUEVLVE9YdmZ0T1UzVjhONE9kbnJV?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-16"
         },
         {
-          "title": "Rheinmetall cuts 2026 sales forecast to €13.2 billion after project and ammunition delays",
-          "url": "https://defence-industry.eu/rheinmetall-cuts-2026-sales-forecast-to-e13-2-billion-after-project-and-ammunition-delays/",
-          "source": "defence-industry.eu",
-          "date": "2026-11-05"
+          "title": "Rheinmetall AG (RNMBF) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5TVG4wZlk0RTR3UUNobzAwUHdoemJob28zRFNTNC00VGlITDNTRnBFM28zZ0hDdzFnVWhoeWtBcHUtY2h6TERsTk9id3AyWlBIVWd3?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-11-13"
         },
         {
-          "title": "Rheinmetall Aktie: Analysten senken Kursziele nach Prognosekorrektur",
-          "url": "https://goldesel.de/aktien/news/rheinmetall-aktie-analysten-senken-kursziele-nach-prognosekorrektur",
-          "source": "goldesel.de",
-          "date": "2026-11-06"
+          "title": "Artificial Intelligence (AI)-Enabled Counter-Drone System Market Global Report 2026 | Secure the $1.66B Market by 2030 with Lockheed Martin, Thales, Rheinmetall and Anduril",
+          "url": "https://finance.yahoo.com/technology/ai/articles/artificial-intelligence-ai-enabled-counter-141900234.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
         }
       ]
     }
