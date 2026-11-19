@@ -1,26 +1,41 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-18T14:08:02+00:00",
+  "updatedAt": "2026-11-19T04:10:35+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
       "mode": "claude",
-      "asOf": "2026-11-18",
-      "summary": "Akcie BYD dál padá na roční minima: 16. 11. 2026 nové 12měsíční minimum 7,53 € (Börse Express, boerse.de), 17. 11. večer 7,32 € (−1,5 % za den, Börse Stuttgart podle boerse.de); od 4. 5. 2026 je v dlouhodobém sestupném trendu, zhruba −33 % (boerse.de, 17. 11.). CLSA 9. 11. snížila cílovou cenu hongkongské akcie a čeká, že zisk na exportovaný vůz v roce 2027 klesne o 20–30 % kvůli přísnějším exportním pravidlům a teprve budovaným dodavatelským řetězcům v zahraničí. Firma se zároveň omluvila za zaměněná přední a zadní kola u části SUV Great Tang (chyba v kódování u dodavatele, podle BYD bez vlivu na bezpečnost). Provozně: v říjnu 490 168 prodaných vozů (+10,97 % meziročně), export +102,8 %, tuzemsko −10,6 % (CnEVPost, 1. 11.); závod v Maďarsku je podle vedení těsně před zahájením sériové výroby.",
+      "asOf": "2026-11-19",
+      "summary": "Akcie BYD se drží u ročních minim: 18. 11. 2026 večer 7,36 € (−0,15 %), za týden −7 %, za rok −31 % (Börse Express, 18. 11.); 16. 11. padlo nové 12měsíční minimum 7,53 € (boerse.de). Bank of America snížila cíl pro hongkongskou akcii ze 124 na 104 HKD a snížila odhady zisku, doporučení Buy ponechala (trading-treff, 18. 11.); podle banky se BYD přesouvá od cenové války k produktům a technologiím. Už 9. 11. snížila cíl i CLSA (100 HKD) kvůli očekávanému poklesu zisku na exportovaný vůz o 20–30 % v roce 2027. Provozně: Q3 čistý zisk 10,0 mld. CNY (+28,1 %), tržby 221,5 mld. CNY (+13,6 %), ale pod očekáváním trhu; v říjnu 490 168 prodaných vozů (+11 %), táhne export, tuzemsko klesá.",
       "drivers": [
-        "Říjnové prodeje 490 168 ks, šestý měsíc růstu v řadě; táhne export, tuzemský trh klesá (CnEVPost, 1. 11.)",
-        "CLSA čeká pokles zisku na exportovaný vůz o 20–30 % v roce 2027 (Börse Express, 16. 11.)",
-        "Slabost hongkongských akcií výrobců elektromobilů (Börse Express, 11. 11.)",
-        "Maďarský závod před zahájením sériové výroby; nabíjecí zařízení v Abú Zabí spuštěno 10. 11. (Börse Express, 16. 11.)"
+        "BofA snížila cíl na 104 HKD a odhady EPS (2026: 3,68 CNY), Buy ponechán (trading-treff, 18. 11.)",
+        "Výsledky Q3 pod očekáváním trhu (trading-treff, 18. 11.)",
+        "Říjnové prodeje 490 168 ks; export +102,8 %, tuzemsko −10,6 % (CnEVPost, 1. 11.)",
+        "Plán 6 000 rychlonabíjecích stanic FLASH do konce 2027; zařízení v Abú Zabí (Börse Express, 18. 11.)",
+        "Uvedení SUV Fang Cheng Bao Ti 9 v Číně 19. 11. (Börse Express, 18. 11.)"
       ],
       "outlook": [
+        {
+          "source": "Bank of America Securities",
+          "view": "Buy ponechán; snížené odhady zisku. Čeká zahraniční výrobní kapacitu 600–700 tis. vozů v 2027 a přes 1 mil. v 2028",
+          "target": "104 HKD (dříve 124 HKD)",
+          "date": "2026-11-18",
+          "url": "https://trading-treff.de/wirtschaft/byd-aktie-bofa-stutzt-ziel-und-gewinnerwartungen"
+        },
         {
           "source": "CLSA",
           "view": "Rating „High Conviction Outperform“ beze změny; čeká pokles zisku na exportovaný vůz o 20–30 % v roce 2027",
           "target": "100 HKD (dříve 109 HKD)",
           "date": "2026-11-09",
           "url": "https://www.boerse-express.com/news/articles/byd-aktie-great-tang-mit-vertauschten-felgen-963705"
+        },
+        {
+          "source": "Konsenzus Börse Express",
+          "view": "10 domů: 8 Buy, 1 Hold, 1 Sell",
+          "target": "průměr 12,47 € (12 měsíců)",
+          "date": "2026-11-18",
+          "url": "https://www.boerse-express.com/news/articles/byd-aktie-der-plan-sind-6000-schnellladestationen-964282"
         }
       ],
       "risks": [
@@ -30,6 +45,18 @@
         "Kvalitativní problém u Great Tang (zaměněná kola)"
       ],
       "headlines": [
+        {
+          "title": "BYD Aktie: BofA stutzt Ziel und Gewinnerwartungen",
+          "url": "https://trading-treff.de/wirtschaft/byd-aktie-bofa-stutzt-ziel-und-gewinnerwartungen",
+          "source": "trading-treff",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "BYD Aktie: Der Plan sind 6.000 Schnellladestationen",
+          "url": "https://www.boerse-express.com/news/articles/byd-aktie-der-plan-sind-6000-schnellladestationen-964282",
+          "source": "Börse Express",
+          "date": "2026-11-18"
+        },
         {
           "title": "BYD-Aktie mit neuem 12-Monats-Tief",
           "url": "https://www.boerse.de/nachrichten/BYD-Aktie-mit-neuem-12-Monats-Tief/38723894",
@@ -60,16 +87,30 @@
       "name": "Bitcoin",
       "symbol": "bitcoin",
       "mode": "claude",
-      "asOf": "2026-11-18",
-      "summary": "Bitcoin pokračuje v poklesu: v úterý 17. 11. 2026 klesl na Bitstampu až na 63 269 USD (−2,5 % za den), od 15. 11. se pohyboval v pásmu 64 000–66 000 USD; trh byl opatrný před výsledky Nvidie a pod tlakem slábnoucích technologických akcií (Cointelegraph, 17. 11.). Nvidia večer 17. 11. vykázala tržby 115,8 mld. USD (+103 % meziročně) a výhled na další čtvrtletí cca 130 mld. USD, ale nižší výhled hrubé marže; bitcoin se ráno 18. 11. držel kolem 64 750 USD, zhruba beze změny za 24 h (TechFlow/Bitget, 18. 11.). Za sedm dní je bitcoin cca o 13–14 % níž. Širší pozadí z minulého týdne trvá: rostoucí výnosy dluhopisů, očekávané zvýšení sazeb Fedu v prosinci, odlivy ze spotových ETF a nucené likvidace (CoinDesk, 16. 11.).",
+      "asOf": "2026-11-19",
+      "summary": "Bitcoin 18. 11. 2026 propadl pod pásmo 64 000–66 000 USD, ve kterém se držel od 15. 11.: večer 62 451 USD (−2,7 % za 24 h) a podruhé letos pod 200týdenním průměrem (COINOTAG, 18. 11.); 19. 11. ráno kolem 63 000 USD, za týden −15 % a zhruba 50 % pod rekordem 126 080 USD (CryptoTicker podle CoinGecka). Hlavní spouštěč byl Fed: guvernér Waller v rozhovoru pro CNBC připustil zvýšení sazeb o 50 b. b. v prosinci a zápis z říjnového zasedání ukázal, že téměř všichni členové považují další zvyšování za vhodné. Pokračují i odlivy ze spotových ETF (17. 11. −239,9 mil. USD, z toho IBIT 209,5 mil., SoSoValue přes CryptoTicker). Index strachu a chamtivosti je na 10–11 („extrémní strach“). Silné výsledky Nvidie trend nezvrátily (Digital Today, 19. 11.).",
       "drivers": [
-        "Výsledky Nvidie 17. 11.: tržby 115,8 mld. USD, výhled cca 130 mld. USD, nižší výhled marže; první reakce bitcoinu neutrální, kolem 65 000 USD (TechFlow/Bitget, 18. 11.)",
-        "Slabý sentiment technologických akcií: Nasdaq 17. 11. cca −2,5 %, průzkum Bank of America ukázal největší snížení převahy technologií u fondů od června 2006 (Cointelegraph, 17. 11.)",
-        "Rostoucí výnosy dluhopisů a očekávané zvýšení sazeb Fedu v prosinci (CoinDesk, 16. 11.)",
-        "Odlivy z amerických spotových ETF: sedm seancí v řadě, cca 1,9 mld. USD od 5. 11. (Farside, cituje CoinDesk, 16. 11.)",
-        "Akcie Strategy (MSTR) 17. 11. −6,3 %; bitcoin je cca 14 % pod průměrnou nákupní cenou firmy (TechFlow/Bitget, 18. 11.)"
+        "Waller (Fed) 18. 11. pro CNBC: v prosinci může být potřeba zvýšení o 50 b. b.; trh oceňuje 25 b. b. s pravděpodobností přes 95 % (CME FedWatch, cituje CryptoTicker a Digital Today)",
+        "Zápis z FOMC (27.–28. 10.) zveřejněný 18. 11.: téměř všichni účastníci považují další zvýšení sazeb za pravděpodobně vhodné (CryptoTicker, 19. 11.)",
+        "Odlivy z amerických spotových ETF: −1,91 mld. USD za sedm seancí do 13. 11., 17. 11. dalších −239,9 mil. USD (SoSoValue přes CryptoTicker)",
+        "Průlom pod 200týdenní průměr podruhé v roce 2026 (COINOTAG, 18. 11.)",
+        "Extrémní strach – Fear & Greed 10–11 (CryptoTicker, COINOTAG)"
       ],
       "outlook": [
+        {
+          "source": "Robin Brooks, ekonom (cituje Digital Today)",
+          "view": "Další zvyšování sazeb Fedem by podle něj byla „hrozná chyba“ – argument proti utahování, které teď tlačí na riziková aktiva",
+          "target": "",
+          "date": "2026-11-19",
+          "url": "https://www.digitaltoday.co.kr/en/view/127945/bitcoin-shaken-by-fed-hawkish-stance-etf-outflows-add-pressure"
+        },
+        {
+          "source": "David Eng (cituje Digital Today)",
+          "view": "Prodejní tlak z ETF označuje za extrémní (za 30 dní odliv 8,7 mld. USD); k vyrovnání by stačilo zlepšit denní bilanci zhruba o 290 mil. USD",
+          "target": "",
+          "date": "2026-11-19",
+          "url": "https://www.digitaltoday.co.kr/en/view/127945/bitcoin-shaken-by-fed-hawkish-stance-etf-outflows-add-pressure"
+        },
         {
           "source": "Keith Alan, Material Indicators (cituje Cointelegraph)",
           "view": "Bitcoin musí získat zpět 200týdenní průměr (cca 67 977 USD), ani to ale samo nestačí; odraz má podle něj vyšší pravděpodobnost být pastí než skutečným zotavením",
@@ -107,12 +148,30 @@
         }
       ],
       "risks": [
+        "Zvýšení sazeb Fedu v prosinci (8.–9. 12.), případně o 50 b. b.",
         "Proražení 60 000 USD – opční trh je na tuto úroveň nejvíc vsazený (CoinDesk, 16. 11.)",
-        "Pokračující odlivy z ETF; listopadové odlivy 2,35 mld. USD po devíti seancích (CoinCentral, 15. 11.)",
-        "Zvýšení sazeb Fedu v prosinci a vyšší výnosy dluhopisů",
+        "Pokračující odlivy z ETF",
         "Přelití výprodeje z technologických akcií"
       ],
       "headlines": [
+        {
+          "title": "Bitcoin (BTC) Breaks 200-Week Line for Second Time in 2026 After Fed Minutes",
+          "url": "https://en.coinotag.com/bitcoin-btc-breaks-200-week-line-fed-minutes",
+          "source": "COINOTAG",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "Why is crypto crashing? 3 Fed signals behind BTC's 15% drop",
+          "url": "https://cryptoticker.io/en/fed-minutes-waller-rate-hike-crypto-selloff-bitcoin/",
+          "source": "CryptoTicker",
+          "date": "2026-11-19"
+        },
+        {
+          "title": "Bitcoin shaken by Fed hawkish stance; ETF outflows add pressure",
+          "url": "https://www.digitaltoday.co.kr/en/view/127945/bitcoin-shaken-by-fed-hawkish-stance-etf-outflows-add-pressure",
+          "source": "Digital Today",
+          "date": "2026-11-19"
+        },
         {
           "title": "NVIDIA Revenue Doubles, Gross Margin Guidance Becomes New Focus; US Stocks Continue Correction; Bitcoin Holds Near $65,000",
           "url": "https://www.techflowpost.com/en-US/article/35456",
@@ -142,84 +201,78 @@
           "url": "https://www.coindesk.com/markets/2026/11/16/bitcoin-s-biggest-bet-is-now-a-drop-below-usd60-000-not-a-rally-above-usd100-000",
           "source": "CoinDesk",
           "date": "2026-11-16"
-        },
-        {
-          "title": "Bitcoin crashes to 3-month low below $63,000 as analyst flags fourth capitulation wave",
-          "url": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
-          "source": "CoinDesk",
-          "date": "2026-11-14"
-        },
-        {
-          "title": "Bitcoin (BTC) Price Sinks to $62,000 as ETF Investors Pull $2.35 Billion in November",
-          "url": "https://coincentral.com/bitcoin-btc-price-sinks-to-62000-as-etf-investors-pull-2-35-billion-in-november",
-          "source": "CoinCentral",
-          "date": "2026-11-15"
         }
       ]
     },
     "HO.PA": {
       "name": "Thales SA",
       "symbol": "HO.PA",
-      "mode": "auto",
-      "asOf": "2026-11-18",
-      "summary": "Thales v listopadu 2026 ohlásil několik zakázek a partnerství: francouzská DGA zadala konsorciu Airbus + Thales Alenia Space vojenské pozorovací družice IRIS (dvě družice, podle Airbusu a odborného tisku přes 1,5 mld. € za celý kontrakt; oznámeno 9. 11.), Thales dodá Belgii radary pro štít Blue Dome a s Kongsberg Maritime nabízí společné řešení pro protiponorkový bezposádkový člun Type 92 britského námořnictva (10. 11.). Akcie 10. 11. posílila o 1,75 % na 232,70 €, za tři měsíce ale byla zhruba o 12 % níž (Idéal Investisseur). Při výsledcích za devět měsíců (22. 10.) firma potvrdila cíle pro rok 2026. Aktuální hodnocení analytiků z posledních 14 dnů jsem z ověřitelných zdrojů nenašel; jednoznačnou příčinu čtvrtletního poklesu zdroje neuvádějí.",
+      "mode": "claude",
+      "asOf": "2026-11-19",
+      "summary": "Thales Alenia Space (Thales 67 %, Leonardo 33 %) podepsala 17. 11. 2026 s Italskou kosmickou agenturou (ASI) smlouvu na radarovou družici SAR v pásmu L jako hlavní dodavatel celého systému (ad-hoc-news, 18. 11.). Akcie se 18. 11. večer obchodovala kolem 226 € (Lang & Schwarz podle ad-hoc-news; Idéal Investisseur 226,10 € k závěru 18. 11.) a od 10. 11. (232,70 €) tak mírně oslabila; jednoznačnou příčinu poklesu zdroje neuvádějí. Medián cílů analytiků je podle Idéal Investisseur 273,50 € (+21 %), podle Boursoramy k 14. 11. 285,25 € z 22 analytiků. Na výsledcích za devět měsíců (22. 10.) firma potvrdila cíle pro rok 2026.",
       "drivers": [
-        "Kontrakt DGA na družice IRIS – Thales Alenia Space je spoluhlavním dodavatelem a vyvíjí optické přístroje obou družic (Satnews, 9. 11.)",
-        "Radary pro belgický štít Blue Dome (Idéal Investisseur, 10. 11.)",
-        "Partnerství s Kongsberg Maritime pro Type 92 Royal Navy – sonar a zabezpečená komunikace od Thales (Idéal Investisseur, 10. 11.)",
+        "Smlouva ASI na družici SAR v pásmu L (17. 11.) – Thales Alenia Space odpovídá za celý systém včetně družice a přístroje (ad-hoc-news, 18. 11.)",
+        "Kontrakt DGA na pozorovací družice IRIS s Airbusem (9. 11.)",
+        "Radary pro belgický štít Blue Dome a partnerství s Kongsberg pro Type 92 Royal Navy (10. 11.)",
         "Potvrzené cíle pro rok 2026 při výsledcích za devět měsíců (22. 10.)"
       ],
-      "outlook": [],
+      "outlook": [
+        {
+          "source": "Konsenzus Idéal Investisseur",
+          "view": "2 pozitivní, 3 neutrální, 0 negativní hodnocení",
+          "target": "medián 273,50 € (rozpětí 250–315 €)",
+          "date": "2026-11-18",
+          "url": "https://www.ideal-investisseur.fr/en/analyst-consensus/thales/FR0000121329.html"
+        },
+        {
+          "source": "Konsenzus Boursorama",
+          "view": "22 analytiků: 9 Acheter, 4 Renforcer, 8 Conserver, 1 Vendre",
+          "target": "medián 285,25 €",
+          "date": "2026-11-14",
+          "url": "https://www.boursorama.com/cours/consensus/1rPHO/"
+        },
+        {
+          "source": "CIC Market Solutions (cituje Idéal Investisseur)",
+          "view": "Buy",
+          "target": "305 €",
+          "date": "2026-11-04",
+          "url": "https://www.ideal-investisseur.fr/en/analyst-consensus/thales/FR0000121329.html"
+        },
+        {
+          "source": "Rothschild & Co Redburn (cituje Idéal Investisseur)",
+          "view": "Neutral",
+          "target": "255 €",
+          "date": "2026-11-04",
+          "url": "https://www.ideal-investisseur.fr/en/analyst-consensus/thales/FR0000121329.html"
+        }
+      ],
       "risks": [
-        "Akcie byla k 10. 11. za čtvrtletí zhruba o 12 % níž; odraz zdroj označuje za křehký (Idéal Investisseur)",
-        "Type 92 je zatím jen nabídka, ne získaná zakázka"
+        "Akcie je za poslední čtvrtletí výrazně níž a odraz z 10. 11. se nepotvrdil",
+        "Type 92 je zatím jen nabídka, ne získaná zakázka",
+        "Analytici jsou rozděleni – zhruba polovina hodnocení je neutrální (Boursorama, Idéal Investisseur)"
       ],
       "headlines": [
         {
-          "title": "Thales S.A. (HO.PA) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5nTlpnODNqendhWmpBd09nWjBVaHJVVG9oajItV0FVRFhaNmkycjYxbHh0WERKb2FXeTRyWUhqQzYyaEl1XzBSdU5SNjZzNXZncFVB?oc=5",
-          "source": "Yahoo! Finance Canada",
-          "date": "2026-11-17"
+          "title": "Thales stock: Space unit signs Italian radar satellite contract",
+          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/thales-stock-space-unit-signs-italian-radar-satellite-contract/70531828",
+          "source": "ad-hoc-news",
+          "date": "2026-11-18"
         },
         {
-          "title": "Global Anti Jamming Equipment Market Report 2026 | Capitalize on $7.21B in AI-Driven GNSS Demand by 2030 as Lockheed Martin, Northrop Grumman, BAE Systems, and L3Harris Accelerate",
-          "url": "https://finance.yahoo.com/technology/articles/global-anti-jamming-equipment-market-153000848.html?.tsrc=rss",
-          "source": "Yahoo Finance",
+          "title": "Thales stock: Romania brings forward radar deliveries",
+          "url": "https://ad-hoc-news.de/boerse/news/corporate-news/thales-stock-romania-brings-forward-radar-deliveries/70521837",
+          "source": "ad-hoc-news",
           "date": "2026-11-16"
         },
         {
-          "title": "3 Space Stocks To Watch As Cheaper Launches Reshape Satellite Economics",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-space-stocks-watch-cheaper-031408747.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-15"
-        },
-        {
-          "title": "Global Airport Information Technology (IT) Spending Market Report 2026 | Capitalize on 9.3% CAGR Through 2030 as Siemens, Cisco, Thales and SITA Accelerate AI, Cloud and Biometrics",
-          "url": "https://finance.yahoo.com/technology/articles/global-airport-information-technology-spending-142100947.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Artificial Intelligence (AI)-Enabled Counter-Drone System Market Global Report 2026 | Secure the $1.66B Market by 2030 with Lockheed Martin, Thales, Rheinmetall and Anduril",
-          "url": "https://finance.yahoo.com/technology/ai/articles/artificial-intelligence-ai-enabled-counter-141900234.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Thales (ENXTPA:HO) Is Getting Fresh Attention, What Is Behind It?",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/thales-enxtpa-ho-getting-fresh-121324005.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
+          "title": "Analyst Ratings THALES",
+          "url": "https://www.ideal-investisseur.fr/en/analyst-consensus/thales/FR0000121329.html",
+          "source": "Idéal Investisseur",
+          "date": "2026-11-18"
         },
         {
           "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push",
           "url": "https://finance.yahoo.com/technology/ai/articles/thales-enxtpa-ho-deepens-european-071625650.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWVhObTl5WVNOMkxfV3JxbFRUQlVKcGVUOElKUUZXYmJ0WGxXc1VSalhUM1NLSk1XZGRnSGhxR0tKNDFyRFF1VkEwcHZycHV0aUlLNmVOTzZZNmVoWEdPakFoRW04U0JsenF3OFFFMHBhbWRkUUE0b2Nab1A5ZmRVY01KbmUzanpwNUtZWlpSemYzcmsyX1c5ZDc5d1lLQQ?oc=5",
           "source": "Yahoo Finance",
           "date": "2026-11-12"
         }
@@ -228,17 +281,38 @@
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "auto",
-      "asOf": "2026-11-18",
-      "summary": "Rheinmetall 4. 11. 2026 večer snížil výhled na rok 2026: tržby cca 13,2 mld. € (dříve 13,7–14,2 mld. €) a provozní marže cca 18,5 % (dříve cca 19 %); firma to zdůvodnila pravděpodobným zpožděním projektu Boxer (Arminius) a přejímek dělostřelecké munice (Der Aktionär, 5. 11.). Zásoba zakázek k 30. 9. byla rekordních 78,0 mld. € (Rheinmetall, 5. 11.). Akcie od té doby výrazně klesla – ze závěru 1 003,40 € (4. 11.) na 765,50 € (13. 11.); v pondělí 16. 11. kolem poledne rostla o 3,8 % na 794,70 € a vedla DAX poté, co Goldman Sachs potvrdil doporučení koupit, byť s výrazně nižším cílem (Investing.com, 16. 11.). Banky po snížení výhledu plošně snižují cílové ceny, dvě snížily i doporučení.",
+      "mode": "claude",
+      "asOf": "2026-11-19",
+      "summary": "Akcie Rheinmetall po snížení výhledu na rok 2026 (4. 11.: tržby cca 13,2 mld. € místo 13,7–14,2 mld. €, marže cca 18,5 % místo cca 19 %) dál hledá dno: 17. 11. udělala nové 52týdenní minimum 738,70 € a na Xetře zavřela na 763,00 € (aktiencheck.de, 18. 11.), 18. 11. večer se obchodovala kolem 742,90 € (−2,1 %, Börse Stuttgart podle boerse.de). Od únorového maxima je zhruba o 56 % níž (boerse.de). Trh teď čeká na kapitálový den 25.–27. 11. v Hamburku (loděnice Blohm+Voss), kde má firma představit nové střednědobé cíle; Goldman Sachs i Berenberg počítají se snížením cíle tržeb pro rok 2030. Ve čtvrtek 19. 11. se v Berlíně schází „koalice ochotných“ k Ukrajině, což zdroje zmiňují jako další faktor pro zbrojní tituly; konkrétní dopad na cenu neuvádějí.",
       "drivers": [
-        "Snížení výhledu tržeb a marže na 2026 kvůli odkladu zakázky Boxer/Arminius a přejímek munice (Der Aktionär, 5. 11.)",
-        "Podle JPMorgan jde o páté varování k tržbám či zisku za 11 měsíců (Der Aktionär, 5. 11.)",
-        "Rekordní zásoba zakázek 78,0 mld. € k 30. 9. 2026 (Rheinmetall, 5. 11.)",
-        "Série snížení cílových cen; Bank of America a Bernstein snížily doporučení na Hold (Investing.com, 16. 11.)",
-        "Kapitálový den 27. 11. – JPMorgan čeká úpravu cílů do roku 2030 (Der Aktionär, 5. 11.)"
+        "Snížený výhled 2026 kvůli odkladu projektu Boxer/Arminius a přejímek munice (Der Aktionär, 5. 11.; Börse Express, 19. 11.)",
+        "Q3 2026: tržby 3,15 mld. € (z 2,31 mld.), ale pod očekáváním 3,23 mld. € (Börse Express, 19. 11.)",
+        "Nové 52týdenní minimum 738,70 € (17. 11.); cena cca 37 % pod 200denním průměrem (aktiencheck.de, boerse.de, 18. 11.)",
+        "Kapitálový den 25.–27. 11. v Hamburku – nové střednědobé cíle (aktiencheck.de, 18. 11.)",
+        "Summit „koalice ochotných“ v Berlíně 19. 11. (aktiencheck.de, 18. 11.)"
       ],
       "outlook": [
+        {
+          "source": "Berenberg (cituje dpa-AFX přes aktiencheck.de)",
+          "view": "Akcie se obchoduje se slevou cca 35 % vůči sektoru; čeká snížení střednědobého cíle tržeb zhruba o 14 %",
+          "target": "",
+          "date": "2026-11-18",
+          "url": "https://aktiencheck.de/artikel/rheinmetall-aktie-vor-berlin-gipfel-und-kapitalmarkttag-ist-der-frieden-schon"
+        },
+        {
+          "source": "TipRanks (cituje aktiencheck.de)",
+          "view": "Průměrný cíl 11 domů za poslední 3 měsíce",
+          "target": "1 169,90 € (rozpětí 900–1 650 €)",
+          "date": "2026-11-13",
+          "url": "https://aktiencheck.de/artikel/rheinmetall-aktie-vor-berlin-gipfel-und-kapitalmarkttag-ist-der-frieden-schon"
+        },
+        {
+          "source": "Konsenzus Börse Express",
+          "view": "12 domů: 8 Kaufen, 4 Halten, 0 Verkaufen",
+          "target": "1 100 € (12 měsíců)",
+          "date": "2026-11-19",
+          "url": "https://www.boerse-express.com/news/articles/rheinmetall-aktie-absolut-spekulativ-964178"
+        },
         {
           "source": "Goldman Sachs",
           "view": "Potvrzuje Buy; podle banky se tržby posouvají v čase, poptávka neklesá. Pro rok 2030 nově čeká tržby cca 35 mld. €",
@@ -297,58 +371,41 @@
         }
       ],
       "risks": [
-        "Možné snížení střednědobých cílů (2030) na kapitálovém dni 27. 11. – očekávání JPMorgan (Der Aktionär, 5. 11.)",
-        "Další odklady velkých zakázek Bundeswehru; Jefferies čeká i snížení prognózy zásoby zakázek kvůli projektu Arminius (Der Aktionär, 5. 11.)",
-        "Opakované revize výhledu oslabují důvěru v prognózy vedení (JPMorgan, 5. 11.)"
+        "Snížení střednědobých cílů (2030) na kapitálovém dni – čekají ho Goldman Sachs, Berenberg i JPMorgan",
+        "Další odklady velkých zakázek Bundeswehru (Arminius, munice)",
+        "Opakované revize výhledu oslabují důvěru v prognózy vedení (JPMorgan, 5. 11.)",
+        "Silný sestupný trend – cena hluboko pod klouzavými průměry (boerse.de, 18. 11.)"
       ],
       "headlines": [
         {
-          "title": "Rheinmetall AG (RHM.NE) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBaRnhWT01TaEQwTDNqYVFWcGdYQjFuVUFjRXpRMVBpUU1Hb3ZEeW1WMnM1MGxLVEVXSkM2RWljeEh4QnlxNFZlcHl3TFJHanhSRG9GNg?oc=5",
-          "source": "Yahoo! Finance Canada",
-          "date": "2026-11-17"
+          "title": "Rheinmetall-Aktie: Absolut spekulativ!",
+          "url": "https://www.boerse-express.com/news/articles/rheinmetall-aktie-absolut-spekulativ-964178",
+          "source": "Börse Express",
+          "date": "2026-11-19"
         },
         {
-          "title": "3 Defense Stocks Backed By Rising Air Defense Demand",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-defense-stocks-backed-rising-131401577.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-17"
+          "title": "Rheinmetall-Aktie vor Berlin-Gipfel und Kapitalmarkttag",
+          "url": "https://aktiencheck.de/artikel/rheinmetall-aktie-vor-berlin-gipfel-und-kapitalmarkttag-ist-der-frieden-schon",
+          "source": "aktiencheck.de",
+          "date": "2026-11-18"
         },
         {
-          "title": "Changing battlefield tactics hit Europe’s ammunition makers - Financial Times",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObEFSdGtRNDhMR2o3V0pkd3NfMjFCQi1veFlnb1M3SWlBaERSTWpySUxXYkVJMGFBVHh2aW9QMWNsOFNEeGhsMG53TThTSEo2dU5jdXk1ZGJVUXNvS0UtVHVLSHVkQWNRWkk4TDlTMGxfM3I5d0pibFdOSEtUMFhpRF9vTTA?oc=5",
-          "source": "Financial Times",
-          "date": "2026-11-17"
+          "title": "Rheinmetall-Aktie mit neuem 12-Monats-Tief",
+          "url": "https://www.boerse.de/nachrichten/Rheinmetall-Aktie-mit-neuem-12-Monats-Tief/38725599",
+          "source": "boerse.de",
+          "date": "2026-11-18"
         },
         {
-          "title": "Rheinmetall Attempts to Rebound After AlphaValue Calls Fall \"Excessive\" - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPc3IzaGpYQXlpcldYSWxJdjRDZDlDUHo2dkt1eml6dURXZUVQbTF1RllSNzd0U1JBYjFYUFdCYUQ1bzVsMTNtOHc1bktqWlpVeWFXVTdaZlJBMXNYZktMQmJGWXpJN0pxcXE3Q3lZTkg4dUQ3SlU5UHFFM0xSZVRhY3pnSEFOcy0taXFXSXZ1eGpDdUI4TXlhUDhtVHotc2ZMX3J2RWQtVUwyZHRUNTBqVnEtQkNxRl9LckFzM2JWcFhLLU5BNVlUWWFRdHREb3MtQmktQ0xmelpzZWNTYi10UUpxOA?oc=5",
-          "source": "marketscreener.com",
+          "title": "Rheinmetall-Aktie: Goldman kappt Kursziel kräftig – und rät weiter zum Kauf",
+          "url": "https://de.investing.com/news/stock-market-news/rheinmetallaktie-goldman-kappt-kursziel-kraftig--und-rat-weiter-zum-kauf-3769232",
+          "source": "Investing.com",
           "date": "2026-11-16"
         },
         {
-          "title": "Rheinmetall AG : Buy rating from Goldman Sachs - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPQ25YMGpKMkd5WUYzc2MtYmhycXRQSGVzdGh1ZjJvam9uZU9rOU4xT1RhOF9lWVlCdGhxbFNlMVFEUUFybXBuYmoxTFBabnVpSmJSNTBrZTN4WUtrTE5KeVdfY0E5RmdLQXBvWXhZV04zSnFURmtmRENwTEFoMmI3RjlKZGlmTHBJbmJtTHVsTV93RldqVlJCMTljUnIxQQ?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-16"
-        },
-        {
-          "title": "Goldman cuts Rheinmetall target to €1,350 - \"Buy\" - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPMjRYUm4wb240TVlRb3hzQWJLOVBqWGtjNUwwc0xzMjRZRjB2SUlOYWt1czJpeWdwbjBmbVZhbmFjQUpmTHpRU2l4azdUUlVSNXB3ZE5pOUJHS2hraVhWa3RSVEMtLUlNTWlqYlZ0XzFDMExCbVZxUGZJS2YxbklyZkJkbU5VNXBsTVcxN1JzUEVLVE9YdmZ0T1UzVjhONE9kbnJV?oc=5",
-          "source": "marketscreener.com",
-          "date": "2026-11-16"
-        },
-        {
-          "title": "Rheinmetall AG (RNMBF) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5TVG4wZlk0RTR3UUNobzAwUHdoemJob28zRFNTNC00VGlITDNTRnBFM28zZ0hDdzFnVWhoeWtBcHUtY2h6TERsTk9id3AyWlBIVWd3?oc=5",
-          "source": "Yahoo! Finance Canada",
-          "date": "2026-11-13"
-        },
-        {
-          "title": "Artificial Intelligence (AI)-Enabled Counter-Drone System Market Global Report 2026 | Secure the $1.66B Market by 2030 with Lockheed Martin, Thales, Rheinmetall and Anduril",
-          "url": "https://finance.yahoo.com/technology/ai/articles/artificial-intelligence-ai-enabled-counter-141900234.html?.tsrc=rss",
-          "source": "Yahoo Finance",
-          "date": "2026-11-12"
+          "title": "Rheinmetall-Aktie rauscht nach unten: JPMorgan senkt das Kursziel",
+          "url": "https://www.deraktionaer.de/artikel/aktien/rheinmetall-aktie-rauscht-nach-unten-jpmorgan-senkt-das-kursziel-und-nun-20434446.html",
+          "source": "Der Aktionär",
+          "date": "2026-11-05"
         }
       ]
     }
