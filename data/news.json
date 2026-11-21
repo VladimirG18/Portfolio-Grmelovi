@@ -1,20 +1,21 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-20T04:09:33+00:00",
+  "updatedAt": "2026-11-21T04:09:42+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
       "mode": "claude",
-      "asOf": "2026-11-20",
-      "summary": "Akcie BYD se drží u ročních minim (nová cenová data za 19. 11. zdroje zatím neuvádějí): 18. 11. 2026 večer 7,36 € (−0,15 %), za týden −7 %, za rok −31 % (Börse Express, 18. 11.); 16. 11. padlo nové 12měsíční minimum 7,53 € (boerse.de). Bank of America snížila cíl pro hongkongskou akcii ze 124 na 104 HKD a snížila odhady zisku, doporučení Buy ponechala (trading-treff, 18. 11.); podle banky se BYD přesouvá od cenové války k produktům a technologiím. Už 9. 11. snížila cíl i CLSA (100 HKD) kvůli očekávanému poklesu zisku na exportovaný vůz o 20–30 % v roce 2027. Provozně: Q3 čistý zisk 10,0 mld. CNY (+28,1 %), tržby 221,5 mld. CNY (+13,6 %), ale pod očekáváním trhu; v říjnu 490 168 prodaných vozů (+11 %), táhne export, tuzemsko klesá. 19. 11. začal v Číně prodej SUV Fang Cheng Bao Tai 9 za 279 900–329 900 CNY; nejvyšší verze má sklopný volant steer-by-wire (Electrek, 19. 11.). Třetí generace elektrického Tangu má přijít 24. 11. (boerse-global přes ad-hoc-news).",
+      "asOf": "2026-11-21",
+      "summary": "Akcie BYD klesá dál: 19. 11. 2026 padlo nové 12měsíční minimum 7,31 € a 20. 11. večer se v Německu obchodovala kolem 6,99 € (−3,8 %, boerse.de); od 4. 5. 2026 ztratila asi 35 % a je asi 26 % pod 200denním průměrem. Pátek byl slabý na trzích obecně (výprodej technologických akcií); konkrétní zprávu, která by pohyb BYD vysvětlovala, zdroje neuvádějí. Bank of America (18. 11.) i CLSA (9. 11.) snížily cíle, ale ponechaly nákupní doporučení; Daiwa 20. 11. vydala zprávu, která zdůrazňuje humanoidní roboty jako nový segment (IT-Times přes finanznachrichten – výše cíle v dostupném textu není). Provozně: Q3 čistý zisk +28,1 %, ale pod očekáváním; v říjnu 490 168 vozů (+11 %), export roste, tuzemsko klesá. Třetí generace elektrického Tangu má přijít 24. 11.",
       "drivers": [
+        "Nové 12měsíční minimum 7,31 € (19. 11.), 20. 11. večer ~6,99 € (boerse.de)",
+        "Daiwa 20. 11.: zpráva zdůrazňuje humanoidní roboty jako další potenciál (IT-Times přes finanznachrichten)",
         "BofA snížila cíl na 104 HKD a odhady EPS (2026: 3,68 CNY), Buy ponechán (trading-treff, 18. 11.)",
         "Výsledky Q3 pod očekáváním trhu (trading-treff, 18. 11.)",
         "Říjnové prodeje 490 168 ks; export +102,8 %, tuzemsko −10,6 % (CnEVPost, 1. 11.)",
         "Plán 6 000 rychlonabíjecích stanic FLASH do konce 2027; zařízení v Abú Zabí (Börse Express, 18. 11.)",
-        "Start prodeje SUV Tai 9 v Číně 19. 11. za 279 900–329 900 CNY; Fang Cheng Bao v říjnu 43 872 vozů, +41 % (Electrek, 19. 11.)",
-        "BYD zvedl cíl zahraničních prodejů 2026 z 1,3 na 1,8 mil. vozů (10. 11., boerse-global přes ad-hoc-news)"
+        "Start prodeje SUV Tai 9 v Číně 19. 11. za 279 900–329 900 CNY; Fang Cheng Bao v říjnu 43 872 vozů, +41 % (Electrek, 19. 11.)"
       ],
       "outlook": [
         {
@@ -48,6 +49,18 @@
       ],
       "headlines": [
         {
+          "title": "BYD-Aktie mit neuem 12-Monats-Tief",
+          "url": "https://www.boerse.de/nachrichten/BYD-Aktie-mit-neuem-12-Monats-Tief/38729672",
+          "source": "boerse.de",
+          "date": "2026-11-20"
+        },
+        {
+          "title": "BYD Aktie im Fokus: Humanoide Roboter bieten zusätzliches Aufwärtspotenzial",
+          "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70187030-byd-aktie-im-fokus-humanoide-roboter-bieten-zusaetzliches-aufwaertspotenzial-046.htm",
+          "source": "IT-Times / finanznachrichten",
+          "date": "2026-11-20"
+        },
+        {
           "title": "BYD's folding steering wheel isn't a concept: it's in a $49K SUV",
           "url": "https://electrek.co/2026/11/19/byd-folding-steering-wheel-tai-9-production",
           "source": "Electrek",
@@ -72,12 +85,6 @@
           "date": "2026-11-18"
         },
         {
-          "title": "BYD-Aktie mit neuem 12-Monats-Tief",
-          "url": "https://www.boerse.de/nachrichten/BYD-Aktie-mit-neuem-12-Monats-Tief/38723894",
-          "source": "boerse.de",
-          "date": "2026-11-17"
-        },
-        {
           "title": "BYD Aktie: Great Tang mit vertauschten Felgen",
           "url": "https://www.boerse-express.com/news/articles/byd-aktie-great-tang-mit-vertauschten-felgen-963705",
           "source": "Börse Express",
@@ -88,12 +95,6 @@
           "url": "https://www.boerse-express.com/news/articles/byd-aktie-clsa-kappt-ziel-und-bleibt-beim-kaufen-961916",
           "source": "Börse Express",
           "date": "2026-11-11"
-        },
-        {
-          "title": "BYD Oct 2026 sales",
-          "url": "https://cnevpost.com/2026/11/01/byd-oct-2026-sales/",
-          "source": "CnEVPost",
-          "date": "2026-11-01"
         }
       ]
     },
@@ -101,16 +102,44 @@
       "name": "Bitcoin",
       "symbol": "bitcoin",
       "mode": "claude",
-      "asOf": "2026-11-20",
-      "summary": "Výprodej pokračuje: bitcoin 19. 11. 2026 pozdě večer klesl až k 61 300 USD, nejníž od začátku července, a za 24 hodin se zlikvidovaly futures pozice za více než 600 mil. USD (CoinDesk, 20. 11.). Pokles přišel v den rekordního vstupu Anthropicu na Nasdaq (emise cca 81,3 mld. USD) a výprodeje technologických akcií (Nasdaq −2,4 %); analytici oslovení CoinDeskem ale teorii, že investoři prodávali bitcoin kvůli nákupu akcií Anthropicu, z velké části odmítají a mluví spíš o odbourávání páky. Dál na trh tlačí jestřábí signály Fedu (Waller připustil zvýšení o 50 b. b. v prosinci, zápis z FOMC) a odlivy ze spotových ETF – v listopadu podle různých agregátorů 2,5–2,9 mld. USD. Bitcoin je zhruba o polovinu pod rekordem 126 080 USD a index strachu a chamtivosti ukazuje „extrémní strach“.",
+      "asOf": "2026-11-21",
+      "summary": "Bitcoin 20. 11. 2026 poprvé od července spadl pod 60 000 USD – odpoledne (UTC) až k 58 811 USD, za týden −13,8 %, za měsíc téměř −30 % (Cointelegraph); večer v USA kotace Motley Fool ukazovala zhruba 56 700 USD. Hlavní spouštěč byl výprodej technologických a AI akcií: Nasdaq Composite −5,28 %, S&P 500 −3,69 %, akcie Anthropicu −8,5 %. Ze spotových ETF odteklo 19. 11. 582,3 mil. USD, z toho rekordních 541,1 mil. USD z BlackRock IBIT (Farside), a za 24 h se zlikvidovaly pákové pozice za přes 1,5 mld. USD (CoinGlass přes CoinDesk). Na pozadí jsou očekávání dalšího zvýšení sazeb Fedu 9. 12. (25 b. b. trh bere jako nejpravděpodobnější, 50 b. b. už nečeká) a bitcoin je víc než 50 % pod rekordem ~126 000 USD.",
       "drivers": [
-        "Pokles k 61 300 USD 19. 11. a likvidace přes 600 mil. USD za 24 h (CoinDesk, 20. 11.)",
-        "Výprodej technologických akcií v den IPO Anthropicu; Nasdaq −2,4 %, futures pod 200denním průměrem (CoinDesk, 20. 11.)",
-        "Waller (Fed) 18. 11.: v prosinci může být potřeba zvýšení o 50 b. b.; zápis z FOMC jestřábí (CryptoTicker, 19. 11.)",
-        "Odlivy ze spotových ETF: 17. 11. −239,9 mil. USD, 18. 11. −306 mil. USD (Coin-Turk); za listopad 2,5–2,9 mld. USD podle zdroje",
-        "Průlom pod 200týdenní průměr podruhé v roce 2026 (COINOTAG, 18. 11.)"
+        "Pod 60 000 USD poprvé od července, minimum 58 811 USD (Cointelegraph, 20. 11.)",
+        "Výprodej AI/technologií: Nasdaq Composite −5,28 %, Anthropic −8,5 % (Cointelegraph, 20. 11.)",
+        "ETF 19. 11.: −582,3 mil. USD, IBIT −541,1 mil. USD – největší denní odliv od spuštění (Farside přes CoinDesk)",
+        "Likvidace přes 1,5 mld. USD za 24 h (CoinGlass přes CoinDesk, 20. 11.)",
+        "Fed: trh čeká zvýšení o 25 b. b. 9. 12. na 4,00–4,25 %; guvernérka Cook zmínila inflaci ~3,8 % (CoinDesk, 20. 11.)"
       ],
       "outlook": [
+        {
+          "source": "James Butterfill, CoinShares (cituje Cointelegraph)",
+          "view": "Pokles připisuje hlavně výprodeji AI akcií; čekal obchodování v pásmu 60–90 tis. USD, propad pod něj označuje za „nepříjemný, ne měnící tezi“. Při prohloubení výprodeje AI čeká další krátkodobé ztráty, při stabilizaci technologií rychlé zotavení",
+          "target": "pásmo 60 000–90 000 USD",
+          "date": "2026-11-20",
+          "url": "https://cointelegraph.com/markets/bitcoin-falls-below-60k-for-first-time-since-july-amid-broader-market-selloff"
+        },
+        {
+          "source": "Alexander Blume, Two Prime (cituje Cointelegraph)",
+          "view": "Prodávající a likvidace páky jsou podle něj z velké části vyčerpané; nepřekvapilo by ho brzké dno",
+          "target": "",
+          "date": "2026-11-20",
+          "url": "https://cointelegraph.com/markets/bitcoin-falls-below-60k-for-first-time-since-july-amid-broader-market-selloff"
+        },
+        {
+          "source": "Andy Baehr, GSR (cituje CoinDesk)",
+          "view": "„Katarze“ kvůli očekávání zvyšování sazeb a vyprchání nadšení z IPO Anthropicu; dlouhodobou trajektorii krypta to podle něj nemění",
+          "target": "",
+          "date": "2026-11-20",
+          "url": "https://www.coindesk.com/tech/2026/11/20/live-news-bitcoin-hovers-just-above-usd61-000-as-anthropic-slides-13-after-nasdaq-debut"
+        },
+        {
+          "source": "Scott Freeman, Delphi Digital (cituje CoinDesk)",
+          "view": "Varuje před chybou Fedu – zvyšováním sazeb do zpomalující ekonomiky",
+          "target": "",
+          "date": "2026-11-20",
+          "url": "https://www.coindesk.com/tech/2026/11/20/live-news-bitcoin-hovers-just-above-usd61-000-as-anthropic-slides-13-after-nasdaq-debut"
+        },
         {
           "source": "Paul Howard, Wincent (cituje CoinDesk)",
           "view": "Čeká návrat kapitálu do krypta po IPO, ale spíš postupné zotavení přes zimu než prudký odraz",
@@ -152,36 +181,33 @@
           "target": "pod 60 000 USD",
           "date": "2026-11-16",
           "url": "https://www.coindesk.com/markets/2026/11/16/bitcoin-risks-falling-below-usd60-000-as-nvidia-earnings-threaten-to-deepen-crypto-sell-off"
-        },
-        {
-          "source": "Nicolai Søndergaard, Nansen (cituje CoinDesk)",
-          "view": "Pásmo 60 000–62 600 USD je klíčový test příštích týdnů; slabé výsledky Nvidie by mohly cenu poslat pod 60 000 USD. Prvním signálem konce výprodeje by byl návrat nad 200denní průměr (cca 73 000 USD)",
-          "target": "60 000–62 600 USD (podpora)",
-          "date": "2026-11-16",
-          "url": "https://www.coindesk.com/markets/2026/11/16/bitcoin-risks-falling-below-usd60-000-as-nvidia-earnings-threaten-to-deepen-crypto-sell-off"
-        },
-        {
-          "source": "James Check (cituje CoinDesk a CoinCentral)",
-          "view": "Čtvrtá kapitulační vlna od historického maxima; cena je podle něj v „zóně hluboké hodnoty“, což ale neznamená, že dno už nastalo",
-          "target": "",
-          "date": "2026-11-14",
-          "url": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst"
-        },
-        {
-          "source": "Glassnode (cituje CoinCentral)",
-          "view": "Velký shluk likvidací poblíž aktuální ceny může spustit „závěrečný kapitulační výplach“",
-          "target": "",
-          "date": "2026-11-15",
-          "url": "https://coincentral.com/bitcoin-btc-price-sinks-to-62000-as-etf-investors-pull-2-35-billion-in-november"
         }
       ],
       "risks": [
-        "Zvýšení sazeb Fedu v prosinci (8.–9. 12.), případně o 50 b. b.",
-        "Proražení 60 000 USD – opční trh je na tuto úroveň nejvíc vsazený (CoinDesk, 16. 11.)",
-        "Pokračující odlivy z ETF",
-        "Další výprodej technologických akcií po IPO Anthropicu"
+        "Zvýšení sazeb Fedu 9. 12.",
+        "Další prohloubení výprodeje AI/technologických akcií (Butterfill, CoinShares)",
+        "Pokračující rekordní odlivy z ETF",
+        "Wintermute (16. 11.) počítal s tlakem do pásma 50 000–60 000 USD"
       ],
       "headlines": [
+        {
+          "title": "Bitcoin Price Sinks Below $60K as Tech Stocks Slide",
+          "url": "https://cointelegraph.com/markets/bitcoin-falls-below-60k-for-first-time-since-july-amid-broader-market-selloff",
+          "source": "Cointelegraph",
+          "date": "2026-11-20"
+        },
+        {
+          "title": "Live news: Bitcoin slips to fresh lows below $59,000 as Anthropic, Nvidia slide in AI rout",
+          "url": "https://www.coindesk.com/tech/2026/11/20/live-news-bitcoin-hovers-just-above-usd61-000-as-anthropic-slides-13-after-nasdaq-debut",
+          "source": "CoinDesk",
+          "date": "2026-11-20"
+        },
+        {
+          "title": "Bitcoin Fell More Than 20% in November. History Says This Happens Next.",
+          "url": "https://www.fool.com/investing/2026/11/20/bitcoin-fell-more-than-20-in-november-history-says-this-happens-next/",
+          "source": "Motley Fool",
+          "date": "2026-11-20"
+        },
         {
           "title": "BTC slides to $61,300 after Anthropic's IPO, triggers $660 million in liquidations",
           "url": "https://www.coindesk.com/markets/2026/11/20/bitcoin-hits-four-month-low-after-anthropic-s-ipo-as-tech-stocks-wilt",
@@ -211,24 +237,6 @@
           "url": "https://en.coinotag.com/bitcoin-btc-breaks-200-week-line-fed-minutes",
           "source": "COINOTAG",
           "date": "2026-11-18"
-        },
-        {
-          "title": "Why is crypto crashing? 3 Fed signals behind BTC's 15% drop",
-          "url": "https://cryptoticker.io/en/fed-minutes-waller-rate-hike-crypto-selloff-bitcoin/",
-          "source": "CryptoTicker",
-          "date": "2026-11-19"
-        },
-        {
-          "title": "Bitcoin shaken by Fed hawkish stance; ETF outflows add pressure",
-          "url": "https://www.digitaltoday.co.kr/en/view/127945/bitcoin-shaken-by-fed-hawkish-stance-etf-outflows-add-pressure",
-          "source": "Digital Today",
-          "date": "2026-11-19"
-        },
-        {
-          "title": "NVIDIA Revenue Doubles, Gross Margin Guidance Becomes New Focus; US Stocks Continue Correction; Bitcoin Holds Near $65,000",
-          "url": "https://www.techflowpost.com/en-US/article/35456",
-          "source": "TechFlow (Bitget)",
-          "date": "2026-11-18"
         }
       ]
     },
@@ -236,14 +244,14 @@
       "name": "Thales SA",
       "symbol": "HO.PA",
       "mode": "claude",
-      "asOf": "2026-11-20",
-      "summary": "Thales sbírá další zakázky a dohody: 19. 11. 2026 švýcarský armasuisse vybral radar Ground Master 200 MM/A jako náhradu systému TAFLIR (vyřazení koncem 2028; Airforce Technology) a s malajským partnerem Weststar firma podepsala dvě memoranda – o družicových misích (Thales Alenia Space) a o protivzdušné obraně, boji s drony a kybernetické bezpečnosti (Zonebourse přes Boursoramu). Akcie 19. 11. dopoledne přidávala zhruba 1,4 % na cca 229,5 € (Zonebourse), po mírném oslabení od 10. 11. (232,70 €). 17. 11. Thales Alenia Space získala smlouvu Italské kosmické agentury na radarovou družici SAR v pásmu L. Medián cílů analytiků je podle Idéal Investisseur 273,50 €, podle Boursoramy k 14. 11. 285,25 € z 22 analytiků.",
+      "asOf": "2026-11-21",
+      "summary": "Thales v pátek 20. 11. 2026 oslabil o 1,85 % na 223,40 € v Paříži, která celkově klesala; titul je pod všemi třemi klouzavými průměry (200denní 238,89 €) a za čtvrtletí ztrácí asi 13 % (Idéal Investisseur, 20. 11.). Konkrétní firemní důvod poklesu zdroje neuvádějí – zprávy z týdne byly spíš pozitivní: 19. 11. Švýcarsko vybralo radar Ground Master 200 MM/A a Thales podepsal dvě memoranda s malajskou Weststar (družice; protivzdušná obrana, drony, kyber), 17. 11. Thales Alenia Space získala zakázku ASI na radarovou družici SAR. Medián cílů analytiků je podle Idéal Investisseur 273,50 €, podle Boursoramy (14. 11.) 285,25 €. Dne 2. 12. 2026 firma vyplatí dividendu 1,05 €.",
       "drivers": [
+        "20. 11. pokles −1,85 % na 223,40 € v klesající Paříži; pod MA20/50/200, podpora 218,30 € (Idéal Investisseur)",
         "Švýcarsko vybralo radar GM200 MM/A (armasuisse, výběr ze čtyř evropských výrobců, Armament Programme 2026; Airforce Technology, 19. 11.)",
         "Dvě memoranda s malajskou Weststar: družice a protivzdušná obrana/anti-drony/kyber (Zonebourse přes Boursoramu, 19. 11.)",
         "Smlouva ASI na družici SAR v pásmu L (17. 11.) – Thales Alenia Space odpovídá za celý systém (ad-hoc-news, 18. 11.)",
-        "Kontrakt DGA na pozorovací družice IRIS s Airbusem (9. 11.)",
-        "Potvrzené cíle pro rok 2026 při výsledcích za devět měsíců (22. 10.)"
+        "Kontrakt DGA na pozorovací družice IRIS s Airbusem (9. 11.)"
       ],
       "outlook": [
         {
@@ -278,9 +286,16 @@
       "risks": [
         "Memoranda s Weststar jsou zatím jen záměr, ne zakázka; hodnota švýcarské zakázky nebyla zveřejněna",
         "Type 92 je zatím jen nabídka, ne získaná zakázka",
-        "Analytici jsou rozděleni – zhruba polovina hodnocení je neutrální (Boursorama, Idéal Investisseur)"
+        "Analytici jsou rozděleni – zhruba polovina hodnocení je neutrální (Boursorama, Idéal Investisseur)",
+        "Konflikt na Blízkém východě může zasáhnout servis avioniky (Idéal Investisseur, 20. 11.)"
       ],
       "headlines": [
+        {
+          "title": "Thales shares down 13% over the quarter and remain below their moving averages",
+          "url": "https://www.ideal-investisseur.fr/en/stock-news/thales-shares-down-13-over-the-quarter-and-remain-below-their-moving-averages/29856.html",
+          "source": "Idéal Investisseur",
+          "date": "2026-11-20"
+        },
         {
           "title": "Switzerland selects Thales GM200 radar to replace ageing TAFLIR system",
           "url": "https://www.airforce-technology.com/news/switzerland-thales-gm200-radar/",
@@ -323,13 +338,13 @@
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
       "mode": "claude",
-      "asOf": "2026-11-20",
-      "summary": "Rheinmetall dál padá na nová minima: 19. 11. 2026 akcie na Xetře zavřela na 725,60 € (−2,50 %), za pět dní −6 %, od začátku roku zhruba −54 % a od rekordu 2 008 € zhruba o dvě třetiny níž (MarketScreener, dpa-AFX přes Investing.com). Ten den tlačila na cenu skeptická studie Bernsteinu: analytik Adrien Rabier snížil cíl na 950 € a po roce 2030 už nečeká růst – argumentuje tím, že na frontě dnes zabíjejí hlavně drony, ne dělostřelectvo, a zásoby munice NATO mohou být doplněné zhruba za tři roky. Pozitivní zprávy (memorandum s nizozemským ministerstvem obrany o spolupráci na technologiích vozidel a bezpilotních systémech, 19. 11.) cenu nezvedly. Výchozím bodem poklesu zůstává snížený výhled na rok 2026 ze 4.–5. 11. a trh teď čeká na kapitálový den 25.–27. 11. v Hamburku, kde mají padnout nové střednědobé cíle.",
+      "asOf": "2026-11-21",
+      "summary": "Pád pokračoval i v pátek: 20. 11. 2026 akcie Rheinmetallu krátce klesla pod 700 € (minimum 696 €) a večer se obchodovala kolem 681–687 € (−4,2 %, boerse.de); od 23. 2. 2026 ztratila téměř 59 % a je asi 41 % pod 200denním průměrem. Na náladě dál leží skeptická studie Bernsteinu (cíl 950 €): drony podle ní v Ukrajině způsobují zhruba 80 % ztrát, ceny dělostřelecké munice klesají a zásoby NATO mohou být doplněné do tří let, ne za deset. Výprodej začal snížením ročního výhledu na začátku listopadu; boerse.de zmiňuje i Putinovy signály ochoty ke kompromisu ohledně konce války, přímou souvislost s cenou ale netvrdí. Trh teď čeká na kapitálový den 25.–27. 11. v Hamburku.",
       "drivers": [
-        "Bernstein 19. 11.: cíl 950 € (dříve 1 000 €), po roce 2030 neočekává růst kvůli klesajícím cenám a objemům munice (dpa-AFX přes Investing.com)",
-        "Nové minimum od února 2025; Xetra 19. 11. 725,60 € (MarketScreener)",
-        "Memorandum s nizozemským ministerstvem obrany (NEDS, Rotterdam, 19. 11.) – bezpilotní systémy, hybridní pohon, materiály (MarketScreener)",
+        "20. 11. krátce pod 700 € (minimum 696 €), večer kolem 681 € (−4,2 %; boerse.de)",
+        "Bernstein (Adrien Rabier): drony ~80 % ztrát v Ukrajině, klesající ceny munice, rychlejší doplnění zásob NATO (boerse.de, 20. 11.)",
         "Snížený výhled 2026 kvůli odkladu projektu Boxer/Arminius a přejímek munice (Der Aktionär, 5. 11.)",
+        "Memorandum s nizozemským ministerstvem obrany o bezpilotních systémech a technologiích vozidel (MarketScreener, 19. 11.)",
         "Kapitálový den 25.–27. 11. v Hamburku – nové střednědobé cíle (aktiencheck.de, 18. 11.)"
       ],
       "outlook": [
@@ -419,6 +434,18 @@
       ],
       "headlines": [
         {
+          "title": "Rheinmetall-Aktie zeitweise unter 700 Euro: (K)ein Ende in Sicht?",
+          "url": "https://www.boerse.de/nachrichten/Rheinmetall-Aktie-zeitweise-unter-700-Euro-K-ein-Ende-in-Sicht/38731080",
+          "source": "boerse.de",
+          "date": "2026-11-20"
+        },
+        {
+          "title": "Rheinmetall-Aktie: Ist das Geschäftsmodell wirklich „tot“?",
+          "url": "https://www.boerse.de/nachrichten/Rheinmetall-Aktie-Ist-das-Geschaeftsmodell-wirklich-tot/38729005",
+          "source": "boerse.de",
+          "date": "2026-11-20"
+        },
+        {
           "title": "AKTIE IM FOKUS: Rheinmetall auf Jahrestief – Bernstein sehr skeptisch ab 2030",
           "url": "https://de.investing.com/news/stock-market-news/aktie-im-fokus-rheinmetall-auf-jahrestief--bernstein-sehr-skeptisch-ab-2030-3777021",
           "source": "dpa-AFX / Investing.com",
@@ -453,18 +480,6 @@
           "url": "https://www.boerse.de/nachrichten/Rheinmetall-Aktie-mit-neuem-12-Monats-Tief/38725599",
           "source": "boerse.de",
           "date": "2026-11-18"
-        },
-        {
-          "title": "Rheinmetall-Aktie: Goldman kappt Kursziel kräftig – und rät weiter zum Kauf",
-          "url": "https://de.investing.com/news/stock-market-news/rheinmetallaktie-goldman-kappt-kursziel-kraftig--und-rat-weiter-zum-kauf-3769232",
-          "source": "Investing.com",
-          "date": "2026-11-16"
-        },
-        {
-          "title": "Rheinmetall-Aktie rauscht nach unten: JPMorgan senkt das Kursziel",
-          "url": "https://www.deraktionaer.de/artikel/aktien/rheinmetall-aktie-rauscht-nach-unten-jpmorgan-senkt-das-kursziel-und-nun-20434446.html",
-          "source": "Der Aktionär",
-          "date": "2026-11-05"
         }
       ]
     }
