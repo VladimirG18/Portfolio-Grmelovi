@@ -1,14 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-21T04:09:42+00:00",
+  "updatedAt": "2026-11-22T04:30:00+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
       "mode": "claude",
-      "asOf": "2026-11-21",
-      "summary": "Akcie BYD klesá dál: 19. 11. 2026 padlo nové 12měsíční minimum 7,31 € a 20. 11. večer se v Německu obchodovala kolem 6,99 € (−3,8 %, boerse.de); od 4. 5. 2026 ztratila asi 35 % a je asi 26 % pod 200denním průměrem. Pátek byl slabý na trzích obecně (výprodej technologických akcií); konkrétní zprávu, která by pohyb BYD vysvětlovala, zdroje neuvádějí. Bank of America (18. 11.) i CLSA (9. 11.) snížily cíle, ale ponechaly nákupní doporučení; Daiwa 20. 11. vydala zprávu, která zdůrazňuje humanoidní roboty jako nový segment (IT-Times přes finanznachrichten – výše cíle v dostupném textu není). Provozně: Q3 čistý zisk +28,1 %, ale pod očekáváním; v říjnu 490 168 vozů (+11 %), export roste, tuzemsko klesá. Třetí generace elektrického Tangu má přijít 24. 11.",
+      "asOf": "2026-11-22",
+      "summary": "Akcie BYD klesá dál: 19. 11. 2026 padlo nové 12měsíční minimum 7,31 € a 20. 11. večer se v Německu obchodovala kolem 6,99 € (−3,8 %, boerse.de); od 4. 5. 2026 ztratila asi 35 %. Pátek byl slabý na trzích obecně (výprodej technologických akcií); konkrétní zprávu, která by pohyb BYD vysvětlovala, zdroje neuvádějí. Nově: soud v Haagu 20. 11. (po zavření burzy) vydal předběžné opatření, které BYD zakazuje dovážet, vyrábět a prodávat v EU SUV Ti7 kvůli porušení designových práv k Land Roveru Defender 110 (CnEVPost, 22. 11.); Ti7 se v EU zatím neprodává a BYD se odvolá. Jak na to zareaguje cena, ukáže až pondělní obchodování. Bank of America (18. 11.) i CLSA (9. 11.) snížily cíle, ale ponechaly nákupní doporučení. Třetí generace elektrického Tangu má přijít 24. 11.",
       "drivers": [
+        "Soud v Haagu 20. 11.: předběžný zákaz dovozu, výroby a prodeje Ti7 v EU (vč. závodu v Maďarsku), platí týden po doručení, pokuty do 10 mil. €; Velké Británie se netýká (CnEVPost, 22. 11.)",
         "Nové 12měsíční minimum 7,31 € (19. 11.), 20. 11. večer ~6,99 € (boerse.de)",
         "Daiwa 20. 11.: zpráva zdůrazňuje humanoidní roboty jako další potenciál (IT-Times přes finanznachrichten)",
         "BofA snížila cíl na 104 HKD a odhady EPS (2026: 3,68 CNY), Buy ponechán (trading-treff, 18. 11.)",
@@ -41,13 +42,20 @@
         }
       ],
       "risks": [
+        "Předběžné opatření proti Ti7 v EU – JLR musí do 6 měsíců podat žalobu ve věci samé; BYD se odvolá (CnEVPost, 22. 11.)",
         "Europoslanci 4. 11. vyzvali Evropskou komisi, aby posoudila bezpečnostní rizika vozů BYD a případné vyloučení z veřejných zakázek (Reuters, cituje Börse Express)",
         "Klesající tuzemské prodeje (říjen −10,6 % meziročně)",
         "Tlak na ziskovost exportu podle CLSA",
         "Kvalitativní problém u Great Tang (zaměněná kola)",
-        "Spor o duševní vlastnictví s Jaguar Land Rover – soud v Haagu 13. 11. nařídil JLR zničit dokumenty zabavené v nizozemské kanceláři BYD (ad-hoc-news, 19. 11.)"
+        "Spor s JLR o duševní vlastnictví: 13. 11. soud nařídil JLR zničit dokumenty zabavené v kanceláři BYD (ad-hoc-news, 19. 11.) – samotný spor o design ale BYD 20. 11. předběžně prohrál"
       ],
       "headlines": [
+        {
+          "title": "Dutch court bars EU sales of BYD Ti7, citing infringement of Land Rover Defender design rights",
+          "url": "https://cnevpost.com/2026/11/22/dutch-court-bars-eu-sales-byd-ti7-land-rover-defender-design/",
+          "source": "CnEVPost",
+          "date": "2026-11-22"
+        },
         {
           "title": "BYD-Aktie mit neuem 12-Monats-Tief",
           "url": "https://www.boerse.de/nachrichten/BYD-Aktie-mit-neuem-12-Monats-Tief/38729672",
@@ -89,12 +97,6 @@
           "url": "https://www.boerse-express.com/news/articles/byd-aktie-great-tang-mit-vertauschten-felgen-963705",
           "source": "Börse Express",
           "date": "2026-11-16"
-        },
-        {
-          "title": "BYD Aktie: CLSA kappt Ziel und bleibt beim Kaufen",
-          "url": "https://www.boerse-express.com/news/articles/byd-aktie-clsa-kappt-ziel-und-bleibt-beim-kaufen-961916",
-          "source": "Börse Express",
-          "date": "2026-11-11"
         }
       ]
     },
@@ -102,16 +104,38 @@
       "name": "Bitcoin",
       "symbol": "bitcoin",
       "mode": "claude",
-      "asOf": "2026-11-21",
-      "summary": "Bitcoin 20. 11. 2026 poprvé od července spadl pod 60 000 USD – odpoledne (UTC) až k 58 811 USD, za týden −13,8 %, za měsíc téměř −30 % (Cointelegraph); večer v USA kotace Motley Fool ukazovala zhruba 56 700 USD. Hlavní spouštěč byl výprodej technologických a AI akcií: Nasdaq Composite −5,28 %, S&P 500 −3,69 %, akcie Anthropicu −8,5 %. Ze spotových ETF odteklo 19. 11. 582,3 mil. USD, z toho rekordních 541,1 mil. USD z BlackRock IBIT (Farside), a za 24 h se zlikvidovaly pákové pozice za přes 1,5 mld. USD (CoinGlass přes CoinDesk). Na pozadí jsou očekávání dalšího zvýšení sazeb Fedu 9. 12. (25 b. b. trh bere jako nejpravděpodobnější, 50 b. b. už nečeká) a bitcoin je víc než 50 % pod rekordem ~126 000 USD.",
+      "asOf": "2026-11-22",
+      "summary": "Bitcoin 20. 11. 2026 propadl pod 60 000 USD a v noci na sobotu sjel až k zhruba 55 130 USD – nejníž od září 2024 (CoinDesk, 21. 11.); za 24 h se zlikvidovaly futures za 2,40 mld. USD (CoinGlass přes CoinDesk). Spouštěčem byl výprodej technologických a AI akcií (Nasdaq Composite v pátek −5,28 %, akcie Anthropicu −8,5 %) a podle analytiků citovaných CoinDeskem i rostoucí reálné výnosy dluhopisů a jestřábí Fed – trh čeká zvýšení sazeb 9. 12. V sobotu se cena odrazila o víc než 9 % zpět nad 60 000 USD (odpoledne v USA kolem 60 300 USD); Glassnode uvádí, že výprodej vyčistil největší shluk likvidací mezi 59 000 a 62 000 USD. Ze spotových ETF za týden odteklo asi 1,1 mld. USD. Dalším testem je pondělní otevření amerických akcií; bitcoin je víc než 50 % pod rekordem nad 126 000 USD.",
       "drivers": [
-        "Pod 60 000 USD poprvé od července, minimum 58 811 USD (Cointelegraph, 20. 11.)",
+        "Minimum ~55 130 USD, nejníž od září 2024; v sobotu odraz nad 60 000 USD (CoinDesk, 21. 11.)",
+        "Likvidace futures 2,40 mld. USD za 24 h, z toho bitcoin přes 1 mld. USD (CoinGlass přes CoinDesk, 21. 11.)",
         "Výprodej AI/technologií: Nasdaq Composite −5,28 %, Anthropic −8,5 % (Cointelegraph, 20. 11.)",
-        "ETF 19. 11.: −582,3 mil. USD, IBIT −541,1 mil. USD – největší denní odliv od spuštění (Farside přes CoinDesk)",
-        "Likvidace přes 1,5 mld. USD za 24 h (CoinGlass přes CoinDesk, 20. 11.)",
-        "Fed: trh čeká zvýšení o 25 b. b. 9. 12. na 4,00–4,25 %; guvernérka Cook zmínila inflaci ~3,8 % (CoinDesk, 20. 11.)"
+        "Rostoucí reálné výnosy a jestřábí Fed – guvernér Waller zmínil i zvýšení o 50 b. b. (CoinDesk, 20.–21. 11.)",
+        "ETF: 19. 11. −582,3 mil. USD, z toho IBIT −541,1 mil. USD (Farside přes CoinDesk); za týden asi −1,1 mld. USD (CoinDesk, 21. 11.)",
+        "Držitelé za 7 dní realizovali ztráty přes 11,3 mld. USD – CryptoQuant mluví o „extrémní kapitulaci“ (CoinDesk, 21. 11.)"
       ],
       "outlook": [
+        {
+          "source": "QCP Capital (cituje CoinDesk)",
+          "view": "Výraznější oživení podle nich vyžaduje stabilizaci technologických akcií a návrat institucionálních toků; odrazy z uzavírání shortů nemusí přejít v trvalý růst.",
+          "target": "",
+          "date": "2026-11-21",
+          "url": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open"
+        },
+        {
+          "source": "Darkfost, CryptoQuant (cituje CoinDesk)",
+          "view": "Výprodej označil za „extrémní kapitulaci“ – realizované ztráty za týden přes 11,3 mld. USD, asi osminásobek realizovaných zisků.",
+          "target": "",
+          "date": "2026-11-21",
+          "url": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open"
+        },
+        {
+          "source": "Maxime Seiler, STS Digital (cituje CoinDesk)",
+          "view": "Jednostranný „risk-off“; úkryt vidí v hotovosti (2leté Treasuries ~4,7 %, švýcarský frank), aby šlo korekci nakoupit, ne ji přečkat.",
+          "target": "",
+          "date": "2026-11-20",
+          "url": "https://www.coindesk.com/markets/2026/11/20/bitcoin-plunges-below-usd59-000-as-rush-to-cash-puts-new-bear-market-lows-back-in-play"
+        },
         {
           "source": "James Butterfill, CoinShares (cituje Cointelegraph)",
           "view": "Pokles připisuje hlavně výprodeji AI akcií; čekal obchodování v pásmu 60–90 tis. USD, propad pod něj označuje za „nepříjemný, ne měnící tezi“. Při prohloubení výprodeje AI čeká další krátkodobé ztráty, při stabilizaci technologií rychlé zotavení",
@@ -184,12 +208,37 @@
         }
       ],
       "risks": [
-        "Zvýšení sazeb Fedu 9. 12.",
-        "Další prohloubení výprodeje AI/technologických akcií (Butterfill, CoinShares)",
-        "Pokračující rekordní odlivy z ETF",
-        "Wintermute (16. 11.) počítal s tlakem do pásma 50 000–60 000 USD"
+        "Pondělní otevření amerických akcií – test sobotního odrazu (CoinDesk, 21. 11.)",
+        "Zvýšení sazeb Fedu 9. 12., případně o 50 b. b. (Waller)",
+        "Rostoucí reálné výnosy dluhopisů",
+        "Pokračující odlivy z ETF (za týden ~1,1 mld. USD)",
+        "Další prohloubení výprodeje AI/technologických akcií (Butterfill, CoinShares)"
       ],
       "headlines": [
+        {
+          "title": "Bitcoin rebounds above $60,000 after $1.8 billion crypto liquidation wave",
+          "url": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
+          "source": "CoinDesk",
+          "date": "2026-11-21"
+        },
+        {
+          "title": "Bitcoin tanks below $57,000 for the first time in two years, and its not alone",
+          "url": "https://www.coindesk.com/markets/2026/11/21/bitcoin-tanks-below-usd57-000-for-the-first-time-in-two-years-and-its-not-alone",
+          "source": "CoinDesk",
+          "date": "2026-11-21"
+        },
+        {
+          "title": "Bitcoin plunges below $59,000 as rush to cash puts new bear market lows back in play",
+          "url": "https://www.coindesk.com/markets/2026/11/20/bitcoin-plunges-below-usd59-000-as-rush-to-cash-puts-new-bear-market-lows-back-in-play",
+          "source": "CoinDesk",
+          "date": "2026-11-20"
+        },
+        {
+          "title": "Here's what happened in crypto today",
+          "url": "https://cointelegraph.com/news/what-happened-in-crypto-today",
+          "source": "Cointelegraph",
+          "date": "2026-11-21"
+        },
         {
           "title": "Bitcoin Price Sinks Below $60K as Tech Stocks Slide",
           "url": "https://cointelegraph.com/markets/bitcoin-falls-below-60k-for-first-time-since-july-amid-broader-market-selloff",
@@ -213,30 +262,6 @@
           "url": "https://www.coindesk.com/markets/2026/11/20/bitcoin-hits-four-month-low-after-anthropic-s-ipo-as-tech-stocks-wilt",
           "source": "CoinDesk",
           "date": "2026-11-20"
-        },
-        {
-          "title": "Live updates: Bitcoin plunges to lowest since July as Anthropic gains, but broader markets tumble",
-          "url": "https://www.coindesk.com/markets/2026/11/19/live-updates-bitcoin-nears-usd64-000-as-anthropic-s-record-ipo-lifts-tech",
-          "source": "CoinDesk",
-          "date": "2026-11-19"
-        },
-        {
-          "title": "Crypto Market Today, Nov. 19: Bitcoin Approaches $60,000 as ETF Outflows Surpass $2.5 Billion",
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/11/19/crypto-market-today-nov-19-bitcoin-approaches-usd60-000-as-etf-outflows-surpass-usd2-5-billion-in-2026/",
-          "source": "Motley Fool",
-          "date": "2026-11-19"
-        },
-        {
-          "title": "Blaming Anthropic's IPO for bitcoin's price slide is 'easy to believe,' but flawed",
-          "url": "https://www.coindesk.com/daybook-us/2026/11/18/blaming-anthropic-s-ipo-for-bitcoin-s-slide-is-easy-to-believe-but-flawed-analysts-say",
-          "source": "CoinDesk",
-          "date": "2026-11-18"
-        },
-        {
-          "title": "Bitcoin (BTC) Breaks 200-Week Line for Second Time in 2026 After Fed Minutes",
-          "url": "https://en.coinotag.com/bitcoin-btc-breaks-200-week-line-fed-minutes",
-          "source": "COINOTAG",
-          "date": "2026-11-18"
         }
       ]
     },
