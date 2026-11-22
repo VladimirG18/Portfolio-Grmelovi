@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-22T04:30:00+00:00",
+  "updatedAt": "2026-11-22T13:24:20+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -268,8 +268,8 @@
     "HO.PA": {
       "name": "Thales SA",
       "symbol": "HO.PA",
-      "mode": "claude",
-      "asOf": "2026-11-21",
+      "mode": "auto",
+      "asOf": "2026-11-22",
       "summary": "Thales v pátek 20. 11. 2026 oslabil o 1,85 % na 223,40 € v Paříži, která celkově klesala; titul je pod všemi třemi klouzavými průměry (200denní 238,89 €) a za čtvrtletí ztrácí asi 13 % (Idéal Investisseur, 20. 11.). Konkrétní firemní důvod poklesu zdroje neuvádějí – zprávy z týdne byly spíš pozitivní: 19. 11. Švýcarsko vybralo radar Ground Master 200 MM/A a Thales podepsal dvě memoranda s malajskou Weststar (družice; protivzdušná obrana, drony, kyber), 17. 11. Thales Alenia Space získala zakázku ASI na radarovou družici SAR. Medián cílů analytiků je podle Idéal Investisseur 273,50 €, podle Boursoramy (14. 11.) 285,25 €. Dne 2. 12. 2026 firma vyplatí dividendu 1,05 €.",
       "drivers": [
         "20. 11. pokles −1,85 % na 223,40 € v klesající Paříži; pod MA20/50/200, podpora 218,30 € (Idéal Investisseur)",
@@ -316,44 +316,50 @@
       ],
       "headlines": [
         {
-          "title": "Thales shares down 13% over the quarter and remain below their moving averages",
-          "url": "https://www.ideal-investisseur.fr/en/stock-news/thales-shares-down-13-over-the-quarter-and-remain-below-their-moving-averages/29856.html",
-          "source": "Idéal Investisseur",
-          "date": "2026-11-20"
+          "title": "Thales S.A. (HO.PA) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5nTlpnODNqendhWmpBd09nWjBVaHJVVG9oajItV0FVRFhaNmkycjYxbHh0WERKb2FXeTRyWUhqQzYyaEl1XzBSdU5SNjZzNXZncFVB?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-11-22"
         },
         {
-          "title": "Switzerland selects Thales GM200 radar to replace ageing TAFLIR system",
-          "url": "https://www.airforce-technology.com/news/switzerland-thales-gm200-radar/",
-          "source": "Airforce Technology",
+          "title": "Global Military Tactical Communications Market Report 2026 | Capitalize on AI, LEO SATCOM and Anti-Jamming Growth to $32.97B by 2030 with RTX, Lockheed Martin, Thales and L3Harris",
+          "url": "https://finance.yahoo.com/technology/articles/global-military-tactical-communications-market-143700299.html?.tsrc=rss",
+          "source": "Yahoo Finance",
           "date": "2026-11-19"
         },
         {
-          "title": "Thales et Weststar renforcent leur coopération dans le spatial et la défense en Malaisie",
-          "url": "https://www.boursorama.com/bourse/actualites/thales-et-weststar-renforcent-leur-cooperation-dans-le-spatial-et-la-defense-en-malaisie-c6343937f6077092f6ca41f1037fe8a8",
-          "source": "Boursorama (Zonebourse)",
+          "title": "Saviynt Launches EU Identity Security Offering on French S3NS’s Trusted Cloud",
+          "url": "https://finance.yahoo.com/technology/ai/articles/saviynt-launches-eu-identity-security-073000222.html?.tsrc=rss",
+          "source": "Yahoo Finance",
           "date": "2026-11-19"
         },
         {
-          "title": "Thales stock: Space unit signs Italian radar satellite contract",
-          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/thales-stock-space-unit-signs-italian-radar-satellite-contract/70531828",
-          "source": "ad-hoc-news",
-          "date": "2026-11-18"
-        },
-        {
-          "title": "Thales stock: Romania brings forward radar deliveries",
-          "url": "https://ad-hoc-news.de/boerse/news/corporate-news/thales-stock-romania-brings-forward-radar-deliveries/70521837",
-          "source": "ad-hoc-news",
+          "title": "Global Anti Jamming Equipment Market Report 2026 | Capitalize on $7.21B in AI-Driven GNSS Demand by 2030 as Lockheed Martin, Northrop Grumman, BAE Systems, and L3Harris Accelerate",
+          "url": "https://finance.yahoo.com/technology/articles/global-anti-jamming-equipment-market-153000848.html?.tsrc=rss",
+          "source": "Yahoo Finance",
           "date": "2026-11-16"
         },
         {
-          "title": "Analyst Ratings THALES",
-          "url": "https://www.ideal-investisseur.fr/en/analyst-consensus/thales/FR0000121329.html",
-          "source": "Idéal Investisseur",
-          "date": "2026-11-18"
+          "title": "3 Space Stocks To Watch As Cheaper Launches Reshape Satellite Economics",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-space-stocks-watch-cheaper-031408747.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-15"
         },
         {
-          "title": "Thales (ENXTPA:HO) Deepens Its European Defence Technology Push",
-          "url": "https://finance.yahoo.com/technology/ai/articles/thales-enxtpa-ho-deepens-european-071625650.html?.tsrc=rss",
+          "title": "Global Airport Information Technology (IT) Spending Market Report 2026 | Capitalize on 9.3% CAGR Through 2030 as Siemens, Cisco, Thales and SITA Accelerate AI, Cloud and Biometrics",
+          "url": "https://finance.yahoo.com/technology/articles/global-airport-information-technology-spending-142100947.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Artificial Intelligence (AI)-Enabled Counter-Drone System Market Global Report 2026 | Secure the $1.66B Market by 2030 with Lockheed Martin, Thales, Rheinmetall and Anduril",
+          "url": "https://finance.yahoo.com/technology/ai/articles/artificial-intelligence-ai-enabled-counter-141900234.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Thales (ENXTPA:HO) Is Getting Fresh Attention, What Is Behind It?",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/thales-enxtpa-ho-getting-fresh-121324005.html?.tsrc=rss",
           "source": "Yahoo Finance",
           "date": "2026-11-12"
         }
@@ -362,8 +368,8 @@
     "RHM.DE": {
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
-      "mode": "claude",
-      "asOf": "2026-11-21",
+      "mode": "auto",
+      "asOf": "2026-11-22",
       "summary": "Pád pokračoval i v pátek: 20. 11. 2026 akcie Rheinmetallu krátce klesla pod 700 € (minimum 696 €) a večer se obchodovala kolem 681–687 € (−4,2 %, boerse.de); od 23. 2. 2026 ztratila téměř 59 % a je asi 41 % pod 200denním průměrem. Na náladě dál leží skeptická studie Bernsteinu (cíl 950 €): drony podle ní v Ukrajině způsobují zhruba 80 % ztrát, ceny dělostřelecké munice klesají a zásoby NATO mohou být doplněné do tří let, ne za deset. Výprodej začal snížením ročního výhledu na začátku listopadu; boerse.de zmiňuje i Putinovy signály ochoty ke kompromisu ohledně konce války, přímou souvislost s cenou ale netvrdí. Trh teď čeká na kapitálový den 25.–27. 11. v Hamburku.",
       "drivers": [
         "20. 11. krátce pod 700 € (minimum 696 €), večer kolem 681 € (−4,2 %; boerse.de)",
@@ -459,51 +465,51 @@
       ],
       "headlines": [
         {
-          "title": "Rheinmetall-Aktie zeitweise unter 700 Euro: (K)ein Ende in Sicht?",
-          "url": "https://www.boerse.de/nachrichten/Rheinmetall-Aktie-zeitweise-unter-700-Euro-K-ein-Ende-in-Sicht/38731080",
-          "source": "boerse.de",
-          "date": "2026-11-20"
-        },
-        {
-          "title": "Rheinmetall-Aktie: Ist das Geschäftsmodell wirklich „tot“?",
-          "url": "https://www.boerse.de/nachrichten/Rheinmetall-Aktie-Ist-das-Geschaeftsmodell-wirklich-tot/38729005",
-          "source": "boerse.de",
-          "date": "2026-11-20"
-        },
-        {
-          "title": "AKTIE IM FOKUS: Rheinmetall auf Jahrestief – Bernstein sehr skeptisch ab 2030",
-          "url": "https://de.investing.com/news/stock-market-news/aktie-im-fokus-rheinmetall-auf-jahrestief--bernstein-sehr-skeptisch-ab-2030-3777021",
-          "source": "dpa-AFX / Investing.com",
+          "title": "Rheinmetall and the Netherlands want to strengthen their cooperation, but stock continues to fall - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQTGl6RDBmQTQ3d2FnUUJZUE1oSzlHSC00SHFKMUZkdVByejRWWmg3YnJZSEVZODBDbTRfXzNtenJ1QUJhN0pLYXVqT1FYcHdQcmNsbG8zX0VMQjBCUFB5VnprNEhaZ2hfZ2xIRGh3Yl9LcnJMTklIRVY0eEd4REt2NHN3d2V1dWtmYkk4ejdQQWY2RS04Vk9MVUZoLUlVQ3A1VDlaRm9MRGV1WDVtMWJGR3BURFExTVVKRmZWbzJNbmlGZUFhVE5YU3dycTNqNmtuQ0dKRlBUcEFQel8wdk5mOE9MR0JoRzhfUVVFV3ZZQVFUWjZYUnMzS2JNRl9jeTZPZ0hBNlB5UQ?oc=5",
+          "source": "marketscreener.com",
           "date": "2026-11-19"
         },
         {
-          "title": "Rheinmetall und die Niederlande wollen Zusammenarbeit stärken, Aktie gibt weiter nach",
-          "url": "https://de.marketscreener.com/boerse-nachrichten/rheinmetall-und-die-niederlande-wollen-zusammenarbeit-staerken-aktie-gibt-weiter-nach-ce785ed2da89f02c",
-          "source": "MarketScreener",
+          "title": "Rheinmetall at yearly low - Bernstein highly skeptical from 2030 onward - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQck5HaFd5U0c0ZWZqalJlcGRBV2NpZlNabmd4R2VSSkJOa0FEZHB1Ym9Rek9iWmE4eFdKcG1wb3c5V18xR2o5Z0s2bjNjLURQWXNKNS1MTk1DT21FaUh4S25zaGVvek9mZ3Z2Yi1qeVVHUm4yTlhHb3dzaTF5T2NWRmhrbV8wVzVaSFhoQzBjTzZiYUg3MXRxaWIwTzNLZjVNTjI1NXRWX045SF9tOEhLbEdVYWRmbW1hemZQb0VRWQ?oc=5",
+          "source": "marketscreener.com",
           "date": "2026-11-19"
         },
         {
-          "title": "Berenberg Expects Rheinmetall to Cut FY30 Organic Revenue Outlook at Capital Markets Day",
-          "url": "https://www.marketscreener.com/news/berenberg-expects-rheinmetall-to-cut-fy30-organic-revenue-outlook-at-capital-markets-day-price-targ-ce785edadf8cff24",
-          "source": "MarketScreener",
+          "title": "Rheinmetall AG : Bernstein reiterates its Neutral rating - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPb2doUXlGT1ExWnFzTlg4a3kzX2lRWDhfNS1YSGZ1UjF4bjE5MGNpR0dYZ0RGSUcyNE1FbTJKeFhqb3JvcWp3bWRVVUxrZ3hKX18yUUFMMDlMMVFnc0VFYXZ1Mllwa195eHN5QVBPVFRtMV8wZWhfcjRock95WTFtQ0tCVUN4bEhzZXFoQVN2emdqdF9kempZSXh3Y2hCV1kxRzNCWE0wMUR6OWs?oc=5",
+          "source": "marketscreener.com",
+          "date": "2026-11-19"
+        },
+        {
+          "title": "Rheinmetall AG (RNMBY) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAxbzkzTDExckFpNHdJNktXTUZhdGRONzhQLXBOTEVvX1RmMGFpVVdFT1BVQTR4SmNvV2VPRkJoelJwWWhMWldoTzRNd1Rad3JqUWxn?oc=5",
+          "source": "Yahoo! Finance Canada",
           "date": "2026-11-18"
         },
         {
-          "title": "Rheinmetall-Aktie: Absolut spekulativ!",
-          "url": "https://www.boerse-express.com/news/articles/rheinmetall-aktie-absolut-spekulativ-964178",
-          "source": "Börse Express",
-          "date": "2026-11-19"
-        },
-        {
-          "title": "Rheinmetall-Aktie vor Berlin-Gipfel und Kapitalmarkttag",
-          "url": "https://aktiencheck.de/artikel/rheinmetall-aktie-vor-berlin-gipfel-und-kapitalmarkttag-ist-der-frieden-schon",
-          "source": "aktiencheck.de",
+          "title": "Rheinmetall AG (RHM.DE) Seasonal returns chart - Yahoo Finance Australia",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5oLXpFd3BEa1FQMzBEQ3hpTjhEaWNfdW0xM2xYSWtDTlV3SWN6bzQ4WkVwckUtRjloYnNJT0RTOGpVaHFJMW0wR3B4RzZIaWRwVjZpb1pBcl9JTW04d185bEZTcW8?oc=5",
+          "source": "Yahoo Finance Australia",
           "date": "2026-11-18"
         },
         {
-          "title": "Rheinmetall-Aktie mit neuem 12-Monats-Tief",
-          "url": "https://www.boerse.de/nachrichten/Rheinmetall-Aktie-mit-neuem-12-Monats-Tief/38725599",
-          "source": "boerse.de",
+          "title": "Rheinmetall AG (RHM.F) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBCWUQwclhlSGd5QjFLSGg0VmFSRVhZbGlpUWNiNWJvRzdVNFpiamlsb2toSEpCNzZEX0M4ZG03Q1V1bFlxWEdBc0tqNE9nUmYwVU44?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "Rheinmetall AG (RHMB.HM) options chain - Yahoo Finance UK",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1jTzV1cmthaXdHMnBxRmZFVUVsSTFBUU9BS1BubWdNWWVUNWVVQW1qTEktbW9yMHFrNnlPaThZSHkzRHZUV2xfTUFYMGt5X1lNRjFOV2hKTnNwRmJzYmhtMg?oc=5",
+          "source": "Yahoo Finance UK",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "Rheinmetall AG (RHMB.HM) stock major holders - Yahoo Finance UK",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9kNGFvWGlaQ0gtQW80LU1wczNaS3BxM2pBZGZuT016WVBub2FvdjRoY1pPV0E2TWRTT2hqTC1OUTZTTGtacFdQSkRRR0hfRExZaDRNTXBxd3lfM0hYTmo0Tg?oc=5",
+          "source": "Yahoo Finance UK",
           "date": "2026-11-18"
         }
       ]
