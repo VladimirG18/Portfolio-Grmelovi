@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-26T04:10:34+00:00",
+  "updatedAt": "2026-11-26T15:23:28+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
@@ -294,8 +294,8 @@
     "HO.PA": {
       "name": "Thales SA",
       "symbol": "HO.PA",
-      "mode": "claude",
-      "asOf": "2026-11-25",
+      "mode": "auto",
+      "asOf": "2026-11-26",
       "summary": "Thales v úterý 24. 11. 2026 přidal dalších +1,28 % a na Euronextu uzavřel na 229,70 € (rozpětí dne 227,20–231,10 €; Fortuneo), takže se vrátil zhruba k 50dennímu průměru (~229 €), stále ale pod 200denním (~239 €; Idéal Investisseur). Pomáhal mu celý obranný sektor, který v jinak slabém evropském trhu rostl (dpa-AFX), a pondělní zakázky – radary pro nizozemské letectvo a výškoměry pro družici Sentinel-3NG za 240 mil. € (Fortuneo, 23. 11.). Nová firemní zpráva z 24. 11. dohledaná nebyla. Za tři měsíce titul dál ztrácí; 2. 12. je ex-date zálohové dividendy 1,05 € (Thales).",
       "drivers": [
         "24. 11.: Euronext 229,70 € (+1,28 %), rozpětí 227,20–231,10 € (Fortuneo)",
@@ -348,46 +348,52 @@
       ],
       "headlines": [
         {
-          "title": "AKTIEN IM FOKUS: Rüstungswerte stark - Rheinmetall-Kapitalmarkttag steht bevor",
-          "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70214175-aktien-im-fokus-ruestungswerte-stark-rheinmetall-kapitalmarkttag-steht-bevor-016.htm",
-          "source": "dpa-AFX",
+          "title": "Latecoere: Extension of the Maturity of the PGE Loans",
+          "url": "https://finance.yahoo.com/economy/policy/articles/latecoere-extension-maturity-pge-loans-170000496.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-25"
+        },
+        {
+          "title": "Netherlands becomes latest NATO nation to adopt STAR NG and RSM NG radars - Janes Defence Intelligence",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOMVd2Wkk3VURDS3BZRkJiOEpSd2gxemoyRWhrRXdRVWd3Q0RHZEJaUG94RXlwT05mTUtsU2NLMFQxd0VUQi1jQ3Q2c05rVENvdjlqSWU4bTlFVW4wQTJDRkhoTDFQRXpDeUJlREZXNFVPb0FFR2hvOC1YbC1hb1RRMlUwdVRwYktIUTBYdWZLSnp0YVB4Vks2U3Y4UkhjUHgwNTAxSEpPRjZtdlVSNnRsYWxITVd2anc2Wm1JQzh6UzBhUVp3YXFGVXJnSGhlTEU1M0FOQ0lZMzluajU1?oc=5",
+          "source": "Janes Defence Intelligence",
+          "date": "2026-11-25"
+        },
+        {
+          "title": "THALES S.A. A (CSF0.HA) Q4 FY2025 earnings call transcript - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNdE1QZzVnQmxoX28tamRrU3BXNmJ5Q0p5TFp1ZlhvYmpCc1NFV1c0VzUtaUExS0U4ZXd3WElKZjJLOXlHVmNuLTlrVXU3SW1SSmJCei1pdTMwR1dYR25DVGJLbXRmNUVuR2dYQ3RiZDhlYU9sQXFZOWtNQWItQ2RRajhpamVfTER0aXh2bDVZQjlId0ZO?oc=5",
+          "source": "Yahoo Finance",
+          "date": "2026-11-25"
+        },
+        {
+          "title": "Global Airborne ISR Market Forecast 2026-2035 Featuring Profiles of Boeing, BAE Systems, Elbit Systems, FLIR Systems, Northrop Grumman, General Dynamics, and Thales",
+          "url": "https://finance.yahoo.com/technology/articles/global-airborne-isr-market-forecast-151800835.html?.tsrc=rss",
+          "source": "Yahoo Finance",
           "date": "2026-11-24"
         },
         {
-          "title": "Thales shares rebound 2% and return to their 50-day moving average",
-          "url": "https://www.ideal-investisseur.fr/en/stock-news/thales-shares-rebound-2-and-return-to-their-50-day-moving-average/29941.html",
-          "source": "Idéal Investisseur",
-          "date": "2026-11-23"
+          "title": "Thales S.A. (THLEF) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB4NE5FS0NpeFZUZXJHUzZycXFVeTdMNGpRaE1DVFNLUHFDcGxrcnM2RE42LVh5U0JOSC0xV3RQaTBVbmJGU2Q5ZklmTXp5WmhmLU5v?oc=5",
+          "source": "Yahoo! Finance Canada",
+          "date": "2026-11-24"
         },
         {
-          "title": "Thales Alenia Space Bags Over EUR 240 Mln Contract",
-          "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70202806-thales-alenia-space-bags-over-eur-240-mln-contract-020.htm",
-          "source": "AFX News",
-          "date": "2026-11-23"
+          "title": "3 French Defense Stocks With Long Backlogs and Essential Infrastructure Exposure",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-french-defense-stocks-long-091143842.html?.tsrc=rss",
+          "source": "Yahoo Finance",
+          "date": "2026-11-24"
         },
         {
-          "title": "Thales conclut un contrat avec l'armée de l'Air et de l'Espace des Pays-Bas; Thales Alenia Space – altimètres Sentinel-3NG",
-          "url": "https://bourse.fortuneo.fr/actions/cours-thales-HO-FR0000121329-23",
-          "source": "Fortuneo (zprávy)",
-          "date": "2026-11-23"
-        },
-        {
-          "title": "Thales shares in the upper part of the CAC 40 but still down 14% over the quarter",
-          "url": "https://www.ideal-investisseur.fr/en/stock-news/thales-shares-in-the-upper-part-of-the-cac-40-but-still-down-14-over-the-quarter/29756.html",
-          "source": "Idéal Investisseur",
+          "title": "Ukraine conflict: UDCG members pledge more air defence systems to Kyiv - Janes Defence Intelligence",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPOGYyM1VoR081T1lUNWd6SDlfSEl5ZjMtRERWM08ySlZMeTNyZGVFX3dmVW4tSml2R2U1X3UwRWdza3U2VXFpajM3dS04OVMyWlUxUlFWV0xNVWRNbzRYOHRpeVl6QklxM0FRSzdFa1VkdkpndEFNMXVOQlEwb082WHZEYklzYWZJZDhuN2pNdkhmYlZqR2RVV29qWi1ZeEpLZGpxOHRTUllucWN0bGFZSFFoT0Q5WmprRE1QeXNKZkx0X0hXRmNDWkxETXZFSVczWTg5QQ?oc=5",
+          "source": "Janes Defence Intelligence",
           "date": "2026-11-19"
         },
         {
-          "title": "Consensus THALES – Boursorama",
-          "url": "https://www.boursorama.com/cours/consensus/1rPHO/",
-          "source": "Boursorama",
-          "date": "2026-11-20"
-        },
-        {
-          "title": "Thales S.A. (HO.PA) historical prices",
-          "url": "https://finance.yahoo.com/quote/HO.PA/history/",
+          "title": "Global Military Tactical Communications Market Report 2026 | Capitalize on AI, LEO SATCOM and Anti-Jamming Growth to $32.97B by 2030 with RTX, Lockheed Martin, Thales and L3Harris",
+          "url": "https://finance.yahoo.com/technology/articles/global-military-tactical-communications-market-143700299.html?.tsrc=rss",
           "source": "Yahoo Finance",
-          "date": "2026-11-20"
+          "date": "2026-11-19"
         }
       ]
     },
