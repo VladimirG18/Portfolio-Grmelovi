@@ -1,23 +1,30 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-27T04:10:54+00:00",
+  "updatedAt": "2026-11-28T04:12:10+00:00",
   "entries": {
     "BY6.DE": {
       "name": "BYD Company Limited",
       "symbol": "BY6.DE",
       "mode": "claude",
-      "asOf": "2026-11-27",
-      "summary": "BYD ve čtvrtek 26. 11. 2026 klesal třetí den v řadě na nová 52týdenní minima: v Šen-čenu akcie A ke 15:04 na 73,62 CNY (−1,1 %; 52týdenní pásmo 73,33–111,82; StockAnalysis), v Německu odpoledne kolem 6,70 € (−3,5 %; Börse Express). Wallstreet-online konkrétní spouštěč neuvádí; Börse Express zmiňuje slabý čínský trh aut a technický sestupný trend. Od začátku roku titul ztrácí asi 38 %. Na druhé straně stojí export – cíl zahraničních prodejů zvýšen na ~1,8–1,9 mil. vozů – a exkluzivní jednání o koupi závodu Ineos ve Francii.",
+      "asOf": "2026-11-28",
+      "summary": "BYD se v pátek 27. 11. 2026 po třech ztrátových dnech odrazil: v Šen-čenu akcie A ke 15:04 na 76,13 CNY (+3,4 %, předchozí závěr 73,62 CNY), přičemž 52týdenní minimum se posunulo na 73,10 CNY (StockAnalysis). Konkrétní spouštěč zdroje neuvádějí; wallstreet-online zmiňuje růst celého autosektoru. Na autosalonu v Kantonu BYD představil vlajkové MPV Whale (start v Číně Q1 2027) a dál jedná o koupi bývalého závodu Smart/Ineos v Hambachu – podle stock-world podléhá konzultaci s odbory. Od začátku roku je titul stále výrazně ve ztrátě (~−38 % k 26. 11., wallstreet-online).",
       "drivers": [
-        "26. 11.: Šen-čen 73,62 CNY (−1,11 %, předchozí závěr 74,45), u 52týdenního minima 73,33 CNY (StockAnalysis)",
-        "26. 11.: Německo ~6,70 € (−3,5 %), třetí ztrátový den, nové 52týdenní minimum; konkrétní spouštěč neuveden (Börse Express, wallstreet-online)",
-        "Výkon: týden −9,7 %, měsíc −17,7 %, od začátku roku −38,5 % (wallstreet-online, 26. 11.)",
-        "CPCA 1.–22. 11.: maloobchod NEV −13 % r/r, celý trh osobních aut −25 % r/r (CnEVPost, 25. 11.)",
-        "Export za 10 měsíců ~1,5 mil. vozů, roční cíl zvýšen (Börse Express uvádí ~1,9 mil., Börse Express 14. 11. 1,8 mil.)",
-        "Exkluzivní jednání o koupi závodu Ineos v Hambachu (Francie), podrobnosti 18. 1. 2027 (CnEVPost, 25. 11.)",
-        "Třetí generace Tangu EV od 187 900 CNY, ~16,5 % pod předprodejní cenou (CnEVPost, 24. 11.)"
+        "27. 11.: Šen-čen 76,13 CNY (+3,41 %), nové 52týdenní pásmo 73,10–111,82 CNY (StockAnalysis)",
+        "Odraz po třech dnech poklesu na 52týdenní minima (26. 11. Německo ~6,70 €; Börse Express)",
+        "Auto Guangzhou 27. 11.: MPV Whale (900 km CLTC, nabíjení 10–97 % za 9 min), start v Číně Q1 2027 (CnEVPost, AutomotiveWorld)",
+        "Hambach (Francie): exkluzivní jednání s Ineos, podmíněno konzultací se zaměstnaneckými radami; byl by to druhý evropský závod (stock-world, Automotive News – titulek)",
+        "Malajsie: montáž pickupu Shark 6 v Kulimu od Q1 2027 (stock-world)",
+        "CPCA 1.–22. 11.: maloobchod NEV −13 % r/r (CnEVPost, 25. 11.)",
+        "Export ~1,5 mil. vozů za 10 měsíců, roční cíl zahraničí ~1,8 mil. (Börse Express, aktiencheck.de)"
       ],
       "outlook": [
+        {
+          "source": "Daiwa (cituje stock-world / Börse Global)",
+          "view": "Buy ponechán; snížené odhady zisku 2026 o 7 % a 2027 o 9 % kvůli slabší sezónní poptávce v Číně, částečně vyvážené exportem",
+          "target": "100 HKD (dříve 119 HKD)",
+          "date": "2026-11-20",
+          "url": "https://www.stock-world.de/byd-aktie-hambach-kauf-wartet-auf-die-betriebsraete/"
+        },
         {
           "source": "Konsenzus Börse Express",
           "view": "26 analytiků, 14 hodnocení: 12× Buy, 1× Hold, 1× Sell",
@@ -48,15 +55,38 @@
         }
       ],
       "risks": [
-        "Akvizice závodu Ineos zatím není dohodnutá – jde o exkluzivní jednání (CnEVPost, 25. 11.)",
-        "Předběžné opatření proti Ti7 v EU – JLR musí do 6 měsíců podat žalobu ve věci samé; BYD se odvolá (CnEVPost, 22. 11.)",
-        "Europoslanci 4. 11. vyzvali Evropskou komisi, aby posoudila bezpečnostní rizika vozů BYD a případné vyloučení z veřejných zakázek (Reuters, cituje Börse Express)",
-        "Klesající tuzemské prodeje (říjen −10,6 % meziročně)",
+        "Koupě závodu v Hambachu zatím jen exkluzivní jednání (stock-world, CnEVPost)",
+        "Předběžné opatření EU proti Ti7 (spor s JLR) – BYD se odvolá, v Brazílii start 2027 dál platí (CnEVPost, stock-world)",
+        "BMW podle Law360 zablokovalo ochrannou známku „M6“ kvůli riziku záměny (27. 11. – titulek)",
+        "Slabé tuzemské prodeje a cenová válka v Číně (CPCA, Börse Express)",
         "Tlak na ziskovost exportu podle CLSA",
-        "Kvalitativní problém u Great Tang (zaměněná kola)",
-        "Spor s JLR o duševní vlastnictví: 13. 11. soud nařídil JLR zničit dokumenty zabavené v kanceláři BYD (ad-hoc-news, 19. 11.) – samotný spor o design ale BYD 20. 11. předběžně prohrál"
+        "Europoslanci vyzvali k posouzení bezpečnostních rizik vozů BYD (Reuters, cituje Börse Express)"
       ],
       "headlines": [
+        {
+          "title": "BYD unveils Ocean lineup's first flagship MPV Whale, set to launch in Q1 2027",
+          "url": "https://cnevpost.com/2026/11/27/byd-unveils-ocean-lineup-mpv-whale/",
+          "source": "CnEVPost",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "BYD unveils Whale MPV with up to 900km of electric range",
+          "url": "https://www.automotiveworld.com/intelligence/byd-unveils-whale-mpv-with-up-to-900km-of-electric-range/",
+          "source": "AutomotiveWorld",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "BYD Company (SHE:002594) Stock Price & Overview",
+          "url": "https://stockanalysis.com/quote/she/002594/",
+          "source": "StockAnalysis",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "BYD Aktie: Hambach-Kauf wartet auf die Betriebsräte",
+          "url": "https://www.stock-world.de/byd-aktie-hambach-kauf-wartet-auf-die-betriebsraete/",
+          "source": "stock-world",
+          "date": "2026-11-25"
+        },
         {
           "title": "BYD verliert 4,42 % und fällt auf ein neues 52-Wochen-Tief",
           "url": "https://www.wallstreet-online.de/nachricht/21750574-aktie-rampenlicht-byd-verliert-4-42-faellt-52-wochen-tief",
@@ -70,12 +100,6 @@
           "date": "2026-11-26"
         },
         {
-          "title": "BYD Company (SHE:002594) Stock Price & Overview",
-          "url": "https://stockanalysis.com/quote/she/002594/",
-          "source": "StockAnalysis",
-          "date": "2026-11-26"
-        },
-        {
           "title": "China passenger NEV retail sales fall 13% year-on-year in November 1-22, penetration reaches 71.3%",
           "url": "https://cnevpost.com/2026/11/25/china-passenger-nev-retail-sales-nov-1-22/",
           "source": "CnEVPost",
@@ -86,24 +110,6 @@
           "url": "https://www.marketscreener.com/quote/stock/BYD-COMPANY-LIMITED-12615771/",
           "source": "MarketScreener",
           "date": "2026-11-25"
-        },
-        {
-          "title": "BYD targets acquisition of Ineos French plant as Macron confirms January details",
-          "url": "https://cnevpost.com/2026/11/25/byd-targets-acquisition-ineos-french-plant/",
-          "source": "CnEVPost",
-          "date": "2026-11-25"
-        },
-        {
-          "title": "BYD launches third-gen Tang electric SUV starting at $28,000 with up to 850 km range",
-          "url": "https://cnevpost.com/2026/11/24/byd-launches-3rd-gen-tang-electric-suv/",
-          "source": "CnEVPost",
-          "date": "2026-11-24"
-        },
-        {
-          "title": "BYD Fang Cheng Bao Shark pickup to launch in China on December 2",
-          "url": "https://cnevpost.com/2026/11/24/byd-fang-cheng-bao-shark-launch-china-dec-2/",
-          "source": "CnEVPost",
-          "date": "2026-11-24"
         }
       ]
     },
@@ -111,29 +117,50 @@
       "name": "Bitcoin",
       "symbol": "bitcoin",
       "mode": "claude",
-      "asOf": "2026-11-27",
-      "summary": "Bitcoin se po středečním propadu k ~57 200–57 500 USD stabilizoval kolem 60 000 USD: CoinDesk 26. 11. ráno ~60 875 USD, denní závěr podle Yahoo Finance ~60 440 USD (rozpětí 24 h na Coinbase ~57 200–61 500 USD). Ve čtvrtek byl v USA svátek díkůvzdání a v pátek 27. 11. v 8:00 UTC expirují na Deribitu opce za ~6,8–7 mld. USD, což může zvýšit krátkodobou volatilitu (KuCoin, FXStreet podle titulku). Tlak dál dělají odlivy ze spotových ETF – listopad k 24. 11. −4,94 mld. USD, nejvíc od spuštění (KuCoin) – a sázky na zvýšení sazeb Fedu v prosinci po tvrdší PCE. Index strachu a chamtivosti je na 11 („extrémní strach“). Glassnode zároveň ukazuje růst „spící“ nabídky na 68,5 %, což v minulosti provázelo fáze tvorby dna (CoinDesk).",
+      "asOf": "2026-11-28",
+      "summary": "Bitcoin v pátek 27. 11. 2026 zůstal kolem 60 000 USD s velkými výkyvy: ráno ~61 600 USD (CoinDesk), denní maximum 62 125 USD, po začátku obchodování v USA propad na 58 719 USD a návrat k 60 000 USD (Bitcoin.com). Na Deribitu expirovaly opce za ~7 mld. USD; likvidace na celém kryptotrhu za 24 h ~478 mil. USD, převážně long pozice (Bitcoin.com, data Coinglass). Za listopad je BTC asi −20 % a odlivy ze spotových ETF přesáhly 5 mld. USD; týdně je ale mírně v plusu (+0,6 %), takže může ukončit sérii sedmi ztrátových týdnů (CoinDesk). CoinDesk upozorňuje na blížící se „death cross“ (50denní průměr jen ~3,45 % nad 200denním).",
       "drivers": [
-        "26. 11.: ~60 400–60 900 USD; minimum 25. 11. ~57 200–57 500 USD (CoinDesk, KuCoin, Yahoo Finance)",
-        "Opční expirace 27. 11. 8:00 UTC na Deribitu ~6,8–7 mld. USD (KuCoin, FXStreet – titulek)",
-        "Spotová BTC ETF: šest dní odlivů do 24. 11., listopad −4,94 mld. USD – největší měsíční odliv od spuštění (KuCoin, 26. 11.)",
-        "PCE říjen: jádrová 3,3 % r/r (čekalo se 3,2 %), HDP Q3 4,3 %, žádosti o podporu 189 tis. – roste šance na zvýšení sazeb Fedu v prosinci (KuCoin)",
-        "Glassnode: podíl BTC nehnutých aspoň rok 68,5 % (v červenci 62 %), chování typické pro tvorbu dna v minulých medvědích trzích; načasování neurčuje (CoinDesk, 26. 11.)",
-        "Bitcoin −50 % od rekordu ~126 000 USD (říjen 2025), od ledna −30 %, za listopad přes −20 % (CoinDesk, KuCoin)",
-        "Fear & Greed Index 11 – extrémní strach (KuCoin, 26. 11.)",
-        "Perpetuály na Binance v říjnu ~8× objem spotu – cena citlivější na likvidace (KuCoin)"
+        "27. 11.: maximum 62 125 USD, minimum 58 719 USD, odpoledne ~60 000 USD (Bitcoin.com)",
+        "Opční expirace ~7 mld. USD (112 tis. kontraktů) na Deribitu 27. 11. v 8:00 UTC; put/call poměr ~0,89 (Bitcoin.com, CoinDesk)",
+        "Likvidace: BTC přes 100 mil. USD třetí den v řadě, celý trh ~478 mil. USD za 24 h (Bitcoin.com, Coinglass)",
+        "Spotová BTC ETF: listopadové odlivy přes 5 mld. USD (Bitcoin.com, 27. 11.)",
+        "Týden +0,6 % – možný konec sedmi ztrátových týdnů v řadě; listopad ~−20 %, nejhorší měsíc od června (CoinDesk, 27. 11.)",
+        "Blížící se death cross: 50denní SMA ~3,45 % nad 200denní (před měsícem 12 %) (CoinDesk, 27. 11.)",
+        "Fear & Greed Index 11 – extrémní strach (CoinMarketCap, cituje CoinDesk)",
+        "Glassnode: podíl BTC nehnutých aspoň rok 68,5 % – v minulosti provázelo tvorbu dna (CoinDesk, 26. 11.)"
       ],
       "outlook": [
         {
-          "source": "KuCoin – denní tržní zpráva",
-          "view": "Podpora 57 000–58 000 USD, pod ní 55 000 a 53 000 USD; odpor 61 000–62 000 USD, pak 63 000–65 000 USD",
+          "source": "CoinDesk (Omkar Godbole) – historie 13 death crossů",
+          "view": "Po minulých signálech medián poklesu ~24 %, rozpětí od 0,3 % po 66 %; jde o zpožděný ukazatel a malý vzorek",
           "target": "",
-          "date": "2026-11-26",
-          "url": "https://www.kucoin.com/news/articles/crypto-daily-market-report-november-26-2026"
+          "date": "2026-11-27",
+          "url": "https://www.coindesk.com/daybook-us/2026/11/27/bitcoin-death-cross-is-coming-here-s-what-happened-after-previous-13"
         },
         {
-          "source": "CryptoQuant (cituje KuCoin)",
-          "view": "Varuje, že velké realizované ztráty mohou být zkreslené konsolidací UTXO a přesuny mezi peněženkami – nemusí jít jen o prodeje",
+          "source": "BIT Research (cituje Bitcoin.com)",
+          "view": "Rozpouštění zajištění dealerů po expiraci může dočasně ulevit prodejnímu tlaku, nejde ale o obrat trendu; roste poptávka po zajištění na prosincovou expiraci",
+          "target": "",
+          "date": "2026-11-27",
+          "url": "https://news.bitcoin.com/market-updates/bitcoins-thanksgiving-rally-unravels-as-7b-options-expiry-rocks-markets/"
+        },
+        {
+          "source": "Himanshu Sahay, Arch Lending (cituje Bitcoin.com)",
+          "view": "Sledovat obnovu hloubky trhu po svátku a toky do ETF příští týden; úvěrový stres a pokračující likvidace by signalizovaly širší stres",
+          "target": "",
+          "date": "2026-11-27",
+          "url": "https://news.bitcoin.com/market-updates/bitcoins-thanksgiving-rally-unravels-as-7b-options-expiry-rocks-markets/"
+        },
+        {
+          "source": "CoinDesk – opční trh",
+          "view": "Nejobchodovanější cally 62 000–64 000 USD (28.–29. 11.) a 68 000 USD (4. 12.); nejvíc otevřených pozic má put 50 000 USD na 25. 12.",
+          "target": "",
+          "date": "2026-11-27",
+          "url": "https://coindesk.com/markets/2026/11/27/bitcoin-on-course-to-end-seven-week-losing-streak-while-trailing-stock-rebound"
+        },
+        {
+          "source": "KuCoin – denní tržní zpráva",
+          "view": "Podpora 57 000–58 000 USD, pod ní 55 000 a 53 000 USD; odpor 61 000–62 000 USD, pak 63 000–65 000 USD",
           "target": "",
           "date": "2026-11-26",
           "url": "https://www.kucoin.com/news/articles/crypto-daily-market-report-november-26-2026"
@@ -160,71 +187,46 @@
           "url": "https://www.coindesk.com/markets/2026/11/25/this-time-actually-seems-different-crypto-veterans-brace-for-more-pain-as-bitcoin-tumbles"
         },
         {
-          "source": "Mark Connors, Risk Dimensions (cituje CoinDesk)",
-          "view": "Odlivy z ETF odrážejí rozklad futures carry trade a snižování páky, ne sázky na pokles",
-          "target": "",
-          "date": "2026-11-25",
-          "url": "https://www.coindesk.com/markets/2026/11/25/this-time-actually-seems-different-crypto-veterans-brace-for-more-pain-as-bitcoin-tumbles"
-        },
-        {
           "source": "José Maria Macedo, Delphi Digital (cituje CoinDesk)",
           "view": "Sentiment na dně, ale příštích 12–24 měsíců čeká těžkých (rizika AI pro chytré kontrakty a kryptografii)",
           "target": "",
           "date": "2026-11-25",
           "url": "https://www.coindesk.com/markets/2026/11/25/this-time-actually-seems-different-crypto-veterans-brace-for-more-pain-as-bitcoin-tumbles"
-        },
-        {
-          "source": "Axel Rudolph, IG (cituje CoinDesk)",
-          "view": "Odlivy z ETF vidí spíš jako snižování rizika než úprk z bitcoinu",
-          "target": "",
-          "date": "2026-11-25",
-          "url": "https://www.coindesk.com/business/2026/11/25/live-updates-bitcoin-slips-back-under-usd60-000-as-hype-leads-altcoins-lower"
-        },
-        {
-          "source": "KuCoin – denní tržní zpráva",
-          "view": "Podpora 58 000–58 500 USD (víkendové minimum ~55 000 USD), odpor 60 000–62 000 USD",
-          "target": "",
-          "date": "2026-11-25",
-          "url": "https://www.kucoin.com/news/articles/crypto-daily-market-report-november-25-2026"
-        },
-        {
-          "source": "Joshua Lim, FalconX (cituje CoinDesk)",
-          "view": "Nvidia smazala přes 80 % ztrát od Huangova odchodu, bitcoin jen asi 25 % svého propadu – zaostává za akciemi",
-          "target": "",
-          "date": "2026-11-24",
-          "url": "https://www.coindesk.com/markets/2026/11/24/bitcoin-hands-back-monday-s-nvidia-driven-gains-liquidations-triple"
-        },
-        {
-          "source": "Mark Connors, Risk Dimensions (cituje CoinDesk)",
-          "view": "Sleduje, zda bitcoin zůstane přehlížený kupci, které zaměstnává dění kolem AI; cenový odhad nedává",
-          "target": "",
-          "date": "2026-11-24",
-          "url": "https://www.coindesk.com/markets/2026/11/24/ai-trade-never-died-traders-see-room-for-market-recovery-despite-bitcoin-s-weakness"
-        },
-        {
-          "source": "Goldman Sachs (cituje KuCoin)",
-          "view": "Velká část pondělní technologické rally byla z uzavírání shortů",
-          "target": "",
-          "date": "2026-11-25",
-          "url": "https://www.kucoin.com/news/articles/crypto-daily-market-report-november-25-2026"
-        },
-        {
-          "source": "Adam Haeems, Tesseract Group (cituje Bitcoin Magazine)",
-          "view": "Denní poklesy kopírují odlivy z ETF; pondělní data o tocích do ETF budou „prvním skutečným testem tohoto odrazu“",
-          "target": "",
-          "date": "2026-11-23",
-          "url": "https://bitcoinmagazine.com/markets/bitcoin-price-fades-61000-huang"
         }
       ],
       "risks": [
-        "Opční expirace ~7 mld. USD 27. 11. a nízká likvidita kolem svátku díkůvzdání (KuCoin)",
+        "Pokračující odlivy ze spotových ETF (přes 5 mld. USD v listopadu)",
+        "Death cross by mohl přilákat další technické prodeje (CoinDesk, 27. 11.)",
         "Možné zvýšení sazeb Fedu v prosinci po tvrdší PCE (KuCoin, CoinDesk)",
-        "Pokračující odlivy ze spotových ETF (KuCoin)",
-        "Rostoucí úvěrová rizika AI firem (CDS CoreWeave ~15 %) a tlak na ceny pronájmu GPU (KuCoin, data ICE/SemiAnalysis)",
-        "Geopolitika – útoky v Hormuzském průlivu a Rudém moři, nová cla (KuCoin)",
-        "Galaxy: denní uzavření pod 58 525 USD by signalizovalo nižší dno (CoinDesk, 25. 11.)"
+        "Silný dolar – BTC se podle BIT Research obchoduje inverzně k USD (Bitcoin.com)",
+        "Galaxy: denní uzavření pod 58 525 USD by signalizovalo nižší dno (CoinDesk, 25. 11.)",
+        "Vysoké likvidace a nízká likvidita kolem svátků"
       ],
       "headlines": [
+        {
+          "title": "Bitcoin's Thanksgiving Rally Unravels as $7B Options Expiry Rocks Markets",
+          "url": "https://news.bitcoin.com/market-updates/bitcoins-thanksgiving-rally-unravels-as-7b-options-expiry-rocks-markets/",
+          "source": "Bitcoin.com",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "A 'death cross' in the bitcoin (BTC) price is coming: Crypto Daily",
+          "url": "https://www.coindesk.com/daybook-us/2026/11/27/bitcoin-death-cross-is-coming-here-s-what-happened-after-previous-13",
+          "source": "CoinDesk",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "Bitcoin, rising with stocks, is on course to end its seven-week losing streak",
+          "url": "https://coindesk.com/markets/2026/11/27/bitcoin-on-course-to-end-seven-week-losing-streak-while-trailing-stock-rebound",
+          "source": "CoinDesk",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "Bitcoin Price Falls as $183 Million in Liquidations Hit Ahead of $6.8 Billion Options Expiry",
+          "url": "https://www.benzinga.com/crypto/cryptocurrency/26/11/63687314/bitcoin-price-falls-as-183-million-in-liquidations-hit-ahead-of-6-8-billion-options-expiry",
+          "source": "Benzinga",
+          "date": "2026-11-27"
+        },
         {
           "title": "Bitcoin's dormant supply rises, a behavior seen during previous bear-market bottoming phases",
           "url": "https://www.coindesk.com/markets/2026/11/26/bitcoin-s-dormant-supply-rises-a-behavior-seen-during-previous-bear-market-bottoming-phases",
@@ -244,34 +246,10 @@
           "date": "2026-11-26"
         },
         {
-          "title": "Bitcoin price today, BTC to USD live price",
-          "url": "https://www.coindesk.com/price/bitcoin",
-          "source": "CoinDesk",
-          "date": "2026-11-26"
-        },
-        {
           "title": "Bitcoin price stuck below $60,000 as Galaxy takes back bottom call, crypto bulls lose faith",
           "url": "https://www.coindesk.com/markets/2026/11/25/this-time-actually-seems-different-crypto-veterans-brace-for-more-pain-as-bitcoin-tumbles",
           "source": "CoinDesk",
           "date": "2026-11-25"
-        },
-        {
-          "title": "Live updates: Bitcoin climbs from lows as markets bounce from big early declines",
-          "url": "https://www.coindesk.com/business/2026/11/25/live-updates-bitcoin-slips-back-under-usd60-000-as-hype-leads-altcoins-lower",
-          "source": "CoinDesk",
-          "date": "2026-11-25"
-        },
-        {
-          "title": "Crypto Long & Short: Bitcoin investors can't keep ignoring Japan",
-          "url": "https://www.coindesk.com/coindesk-indices/2026/11/25/crypto-long-and-short-bitcoin-investors-can-t-keep-ignoring-japan",
-          "source": "CoinDesk",
-          "date": "2026-11-25"
-        },
-        {
-          "title": "Bitcoin hands back Monday's Nvidia-driven gains, liquidations triple",
-          "url": "https://www.coindesk.com/markets/2026/11/24/bitcoin-hands-back-monday-s-nvidia-driven-gains-liquidations-triple",
-          "source": "CoinDesk",
-          "date": "2026-11-24"
         }
       ]
     },
@@ -279,16 +257,15 @@
       "name": "Thales SA",
       "symbol": "HO.PA",
       "mode": "claude",
-      "asOf": "2026-11-27",
-      "summary": "Thales ve čtvrtek 26. 11. 2026 přidal kolem 3 % – v poledne 233,80–235,10 € (Idéal Investisseur, 12:04; předchozí závěr 227,60 € podle ABC Bourse) při CAC 40 zhruba +1,6–2 %; obranné a letecké tituly patřily k lídrům pařížské burzy (Orange/AFP). Cena se tím vrátila nad 20denní a 50denní průměr (~228,5 €), těsně pod 200denní (~238,5 €). Konkrétní firemní zpráva z 26. 11. dohledaná nebyla; zdroje zmiňují úterní rozšíření partnerství S3NS s Red Hat a pondělní radarovou zakázku pro Nizozemsko. Konečný závěr 26. 11. jsme nedohledali.",
+      "asOf": "2026-11-28",
+      "summary": "Thales v pátek 27. 11. 2026 oznámil exkluzivní jednání o koupi 51,6 % bretaňské laserové firmy Lumibird za 30,10 € za akcii (s možným doplatkem až 32,66 €), po níž má následovat povinná nabídka ostatním akcionářům; fotonická divize je oceněna na ~440 mil. €, dokončení se čeká do Q2 2027 (Boursorama, ad-hoc-news). Trh to přijal kladně: Thales přidal kolem 2 % (BFM Bourse; Boursorama ukazuje 239,20 €, +2,31 %) a podle Idéal Investisseur prolomil odpor 238,40 €, Lumibird vyskočil o ~18 %. Thales sám uvádí, že akvizice nemá mít v blízké době podstatný dopad na jeho finance.",
       "drivers": [
-        "26. 11. poledne: 233,80–235,10 € (+2,7 až +3,3 %), CAC 40 +1,6 až +2 % (Idéal Investisseur, Boursorama)",
-        "Nad MA20 (228,68 €) a MA50 (228,51 €), pod MA200 (238,53 €); odpor 238,40 €, RSI 58 (Idéal Investisseur, 26. 11.)",
-        "Za týden +4 %, za tři měsíce −6 % (Idéal Investisseur, 26. 11.)",
-        "S3NS (Thales) rozšířil partnerství s Red Hat v suverénním cloudu (24. 11.)",
-        "Nizozemsko: primární a sekundární radary pro letectvo vč. instalace a údržby, částka nezveřejněna (Opex360, 23. 11.)",
-        "Dvě memoranda s malajskou Weststar (19. 11.)",
-        "Výsledky 9M (22. 10.): roční cíle potvrzeny, tržby Q3 5 473 mil. € (+9,7 %)",
+        "Lumibird: 51,6 % od firem CEO Marca Le Flohica za 30,10 €/akcii (+ až 2,56 € doplatek), prémie ~24,7 % k měsíčnímu průměru; EV fotonické divize ~440 mil. € (~23× EBIT 2027) (ad-hoc-news, 27. 11.)",
+        "Podmínka: Lumibird nejdřív prodá zdravotnickou divizi; pak povinná zjednodušená nabídka a případný squeeze-out, dokončení do H2 2027 (Boursorama, ad-hoc-news)",
+        "Reakce 27. 11.: Thales ~+2 %, prolomení odporu 238,40 € (BFM Bourse, Idéal Investisseur – titulky); Lumibird +18 % (Boursorama)",
+        "Po Exailu (námořní drony) další akvizice v obranných technologiích (Challenges – titulek)",
+        "26. 11.: +3 % a návrat nad 20/50denní průměr (~228,5 €) (Idéal Investisseur)",
+        "Nizozemsko: radary pro letectvo (Opex360, 23. 11.)",
         "Ex-date zálohové dividendy 1,05 € dne 2. 12. 2026"
       ],
       "outlook": [
@@ -322,10 +299,29 @@
         }
       ],
       "risks": [
-        "Dopad konfliktu na Blízkém východě na servis avioniky (uvedeno u výsledků 9M; Idéal Investisseur)",
-        "Cena stále pod 200denním průměrem (Idéal Investisseur, 26. 11.)"
+        "Akvizice Lumibird zatím ve fázi exkluzivního jednání – podmíněná prodejem zdravotnické divize, konzultací se zaměstnanci a regulatorními schváleními (ad-hoc-news)",
+        "Cena kolem 200denního průměru (~238,5 €) – technicky důležitá hladina (Idéal Investisseur)",
+        "Dopad konfliktu na Blízkém východě na servis avioniky (výsledky 9M)"
       ],
       "headlines": [
+        {
+          "title": "Thales en passe de prendre le contrôle de Lumibird, entreprise spécialisée dans le laser",
+          "url": "https://www.boursorama.com/bourse/actualites/thales-en-passe-de-prendre-le-controle-de-lumibird-entreprise-specialisee-dans-le-laser-0270cf3536f602babaeb58a151fa93da",
+          "source": "Boursorama / AFP",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "Thales stock enters talks for 51.6% Lumibird stake",
+          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/thales-stock-enters-talks-for-51-6-prozent-lumibird-stake/70561802",
+          "source": "ad-hoc-news",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "Thales Targets Controlling Interest in Lumibird to Establish European Photonics Platform",
+          "url": "https://news.europawire.eu/thales-targets-controlling-interest-in-lumibird-to-establish-european-photonics-platform/2026/11/27/18/55/03/190121/",
+          "source": "EuropaWire",
+          "date": "2026-11-27"
+        },
         {
           "title": "Thales shares rebound 3.5% and move back above their 20-day and 50-day moving averages",
           "url": "https://www.ideal-investisseur.fr/en/stock-news/thales-shares-rebound-3-5-and-move-back-above-their-20-day-and-50-day-moving-averages/30272.html",
@@ -356,38 +352,46 @@
       "name": "Rheinmetall AG",
       "symbol": "RHM.DE",
       "mode": "claude",
-      "asOf": "2026-11-27",
-      "summary": "Rheinmetall ve čtvrtek 26. 11. 2026 posílil na začátku kapitálového dne v Hamburku: ráno na Xetře 769,20 € (+4,5 %, nejsilnější titul DAXu; aktiencheck.de, 9:12), DAX přidal 1,8 %. Nové střednědobé cíle první den zveřejněné nebyly – podle Investing.com se mají představit v pátek 27. 11. (webcast od 10:00). Analytici čekají snížení cíle tržeb 2030 z ~50 mld. €: Barclays na 35–40 mld. € s marží kolem 19 %, Berenberg na ~43 mld. €, RBC mírně nad konsenzem 35,6 mld. € (4investors, onvista). Část snížení je podle Barclays už v ceně – kurz kolem 700 € odpovídá ~30 mld. € tržeb.",
+      "asOf": "2026-11-28",
+      "summary": "Rheinmetall na kapitálovém dni v pátek 27. 11. 2026 snížil cíl tržeb pro rok 2030 na 33–37 mld. € (dříve zhruba 45 mld. € organicky) a dlouhodobou provozní marži na zhruba 20 %; výhled 2026 (tržby ~13,2 mld. €, marže ~18,5 %) potvrdil (CNBC, ad-hoc-news/Reuters). Důvodem je ztráta zakázky na fregaty F126, zdržení zakázky Boxer „Arminius“ a problémy u munice; CEO Papperger snížení u vozidel označil za rezervu proti zpožděním, ne za slabší poptávku. Snížení trh čekal – akcie dopoledne přidala asi 4 % (CNBC). Týž den přišla zakázka z Rumunska na 66 vozidel Lynx za 738 mil. € (Rheinmetall).",
       "drivers": [
-        "26. 11. ráno: Xetra 769,20 € (+4,5 %), nejsilnější v DAXu; 52týdenní minimum 682,80 € (aktiencheck.de)",
-        "Kapitálový den 26.–27. 11. v Hamburku (Blohm+Voss); cíle 2030 se mají představit 27. 11., webcast od 10:00 (Investing.com)",
-        "Investoři sledují tři otázky: cíl 50 mld. € pro 2030, kdy se provozní volné cash flow otočí do plusu a jak opatrný bude plán 2027 (aktiencheck.de, 26. 11.)",
-        "Barclays: cena ~700 € implikuje ~30 mld. € tržeb a marži 18,5 % (onvista, 26. 11.)",
-        "Bundeswehr: satelitní síť ~600 družic (OHB, Airbus, Rheinmetall – pozemní segment), podle Handelsblattu ~15 mld. € vč. DPH a provozu; rozpočtový výbor má rozhodnout v Q1 2027 (Der Aktionär, 25. 11.)",
-        "Výhled 2026 snížen 5. 11.: tržby ~13,2 mld. € (dříve 13,7–14,2) kvůli zpoždění zakázky Boxer a odvolávek munice (aktiencheck.de)",
-        "9 měsíců 2026: tržby +38 % na 8,38 mld. €, provozní volné cash flow −1,7 mld. €, zakázky 78 mld. € (aktiencheck.de)"
+        "Nový cíl 2030: tržby 33–37 mld. € (dříve ~45 mld. € organicky), provozní marže ~20 % (ad-hoc-news / Reuters, 27. 11.)",
+        "Výhled 2026 potvrzen: tržby ~13,2 mld. €, provozní marže ~18,5 % (ad-hoc-news, 27. 11.)",
+        "Důvody: zrušené fregaty F126 („politické rozhodnutí“ – Papperger), zdržení Boxer Arminius kvůli jednání o ceně, výbuch v muniční továrně v Murcii (CNBC, 27. 11.)",
+        "Papperger: Arminius podepíše jen při rozumné ekonomice, podpis čeká v roce 2027 (ad-hoc-news, 27. 11.)",
+        "Akcie 27. 11. dopoledne +4 %; od začátku roku −49 % (CNBC)",
+        "Rumunsko: 66 dalších Lynx za 738 mil. €, dodávky 2028–2030, uzavírá rámcovou smlouvu na 298 vozidel z května (Rheinmetall, 27. 11.)",
+        "Bundeswehr: satelitní síť ~600 družic, rozpočtový výbor má rozhodnout v Q1 2027 (Der Aktionär, 25. 11.)",
+        "Další výsledky: 11. 3. 2027 (ad-hoc-news)"
       ],
       "outlook": [
         {
+          "source": "Jefferies (Chloe Lemarie, cituje ad-hoc-news)",
+          "view": "Buy; nové cíle „stále ambiciózní, ale dosažitelnější“, klíčové bude provedení a podpis zakázky Arminius",
+          "target": "1 100 €",
+          "date": "2026-11-27",
+          "url": "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/romania-closes-out-lynx-framework-with-eur-738-million-order-as-rheinmetall-trims-2030-ambitions/70562128"
+        },
+        {
+          "source": "JPMorgan (David Perry, cituje ad-hoc-news)",
+          "view": "Neutral; cíl tržeb je věrohodnější, marži EBITA považuje za velmi ambiciózní",
+          "target": "1 150 €",
+          "date": "2026-11-27",
+          "url": "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/rheinmetall-ties-arminius-deal-to-margins-as-analysts-split-on-reset-targets/70562361"
+        },
+        {
+          "source": "RBC Capital (Colin Moody, cituje CNBC / ad-hoc-news)",
+          "view": "Outperform; „široce očekávaný reset“ s „dávkou konzervatismu“, odhady trhu považuje za příliš opatrné",
+          "target": "1 300 € (dříve 1 600 €)",
+          "date": "2026-11-27",
+          "url": "https://www.cnbc.com/2026/11/27/rheinmetall-stock-cmd-guidance-sales.html"
+        },
+        {
           "source": "Barclays (Afonso Osorio, cituje 4investors)",
-          "view": "Overweight; čeká nové cíle 2030 35–40 mld. € tržeb a marži lehce nad 19 %; opatrný plán 2027 by mohl podpořit oživení",
+          "view": "Overweight; před kapitálovým dnem čekal cíl 35–40 mld. € a marži lehce nad 19 %",
           "target": "1 340 € (dříve 2 000 €)",
           "date": "2026-11-26",
           "url": "https://www.4investors.de/nachrichten/boerse.php?sektion=stock&ID=193618"
-        },
-        {
-          "source": "RBC Capital (cituje 4investors / Investing.com)",
-          "view": "Outperform; plán tržeb 2030 čeká mírně nad konsenzem 35,6 mld. €, očekávání trhu ohledně zisku považuje za příliš pesimistická",
-          "target": "1 300 € (dříve 1 600 €)",
-          "date": "2026-11-26",
-          "url": "https://www.4investors.de/nachrichten/boerse.php?sektion=stock&ID=193618"
-        },
-        {
-          "source": "Berenberg (cituje onvista)",
-          "view": "Čeká snížení cíle tržeb 2030 asi o 14 % na ~43 mld. €",
-          "target": "",
-          "date": "2026-11-26",
-          "url": "https://www.onvista.de/news/2026/11-26-rheinmetalls-aktie-kann-wieder-fast-1-000-euro-erreichen-40338625-19-26580882"
         },
         {
           "source": "Bernstein (cituje Investing.com / 4investors)",
@@ -419,12 +423,50 @@
         }
       ],
       "risks": [
-        "Nové cíle 2030 mohou zklamat i po snížení očekávání; dosud oficiálně nezveřejněné (k 27. 11. ráno)",
-        "Záporné provozní volné cash flow (9M −1,7 mld. €) a zpoždění zakázek (aktiencheck.de)",
-        "Bernstein: klesající ceny munice a rychlejší doplnění zásob NATO (Investing.com)",
-        "Satelitní projekt Bundeswehru zatím nepodepsán, start už posunut o rok (Der Aktionär, 25. 11.)"
+        "Zakázka Boxer Arminius zatím nepodepsaná, podle Pappergera až 2027; Berlín podle Reuters tvrdě vyjednává a zpožděné zálohy zatěžují plánování (ad-hoc-news, 27. 11.)",
+        "JPMorgan: cíl marže ~20 % je velmi ambiciózní (27. 11.)",
+        "Pátý pokles výhledu v roce – riziko dalších zpoždění zakázek a munice (CNBC, Börsen-Zeitung)",
+        "Záporné provozní volné cash flow (9M −1,7 mld. €; aktiencheck.de)",
+        "Bernstein: klesající ceny munice a rychlejší doplnění zásob NATO (Investing.com, 19. 11.)",
+        "Bezpečnost zaměstnanců: dva kolegové zahynuli při útoku dronu v Kuvajtu (Rheinmetall, 27. 11.)"
       ],
       "headlines": [
+        {
+          "title": "Rheinmetall reins in growth ambitions as Europe's rearmament boom hits hurdles",
+          "url": "https://www.cnbc.com/2026/11/27/rheinmetall-stock-cmd-guidance-sales.html",
+          "source": "CNBC",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "Rheinmetall Ties Arminius Deal to Margins as Analysts Split on Reset Targets",
+          "url": "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/rheinmetall-ties-arminius-deal-to-margins-as-analysts-split-on-reset-targets/70562361",
+          "source": "ad-hoc-news",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "Romania Closes Out Lynx Framework With EUR 738 Million Order as Rheinmetall Trims 2030 Ambitions",
+          "url": "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/romania-closes-out-lynx-framework-with-eur-738-million-order-as-rheinmetall-trims-2030-ambitions/70562128",
+          "source": "ad-hoc-news",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "Major order for combat vehicles: Romania calls off further Lynx combat vehicles from Rheinmetall",
+          "url": "https://www.rheinmetall.com/en/media/news-watch/news/2026/11/2026-11-27-rheinmetall-receives-major-contract-for-the-lynx-in-romania",
+          "source": "Rheinmetall",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "The Rheinmetall Group is in deep mourning",
+          "url": "https://www.rheinmetall.com/en/media/news-watch/news/2026/11/2026-11-26-statement-on-this-sad-occasion",
+          "source": "Rheinmetall",
+          "date": "2026-11-27"
+        },
+        {
+          "title": "Rheinmetall embraces a \"new normal\" of caution as it cuts 2030 targets",
+          "url": "https://www.bairdmaritime.com/security/naval/naval-ships/rheinmetall-embraces-a-new-normal-of-caution-as-it-cuts-2030-targets",
+          "source": "Baird Maritime",
+          "date": "2026-11-27"
+        },
         {
           "title": "Rheinmetall Aktie: Plus 4,5 Prozent zum Kapitalmarkttag",
           "url": "https://aktiencheck.de/artikel/rheinmetall-aktie-plus-4-5-prozent-kapitalmarkttag-50-milliarden-2026-11-26",
@@ -436,42 +478,6 @@
           "url": "https://de.investing.com/news/stock-market-news/rheinmetallaktie-kapitalmarkttag-heute--35-statt-50-mrd-euro-erwartet-3787500",
           "source": "Investing.com",
           "date": "2026-11-26"
-        },
-        {
-          "title": "Rheinmetall Aktie: Warum selbst eine Prognosesenkung eine Kursrallye auslösen könnte",
-          "url": "https://www.4investors.de/nachrichten/boerse.php?sektion=stock&ID=193618",
-          "source": "4investors",
-          "date": "2026-11-26"
-        },
-        {
-          "title": "Rheinmetall: Die Aktie kann wieder fast 1.000 Euro erreichen",
-          "url": "https://www.onvista.de/news/2026/11-26-rheinmetalls-aktie-kann-wieder-fast-1-000-euro-erreichen-40338625-19-26580882",
-          "source": "onvista",
-          "date": "2026-11-26"
-        },
-        {
-          "title": "Rheinmetall-Aktie: Jetzt Rekordprojekt im All für 15 Milliarden",
-          "url": "https://www.deraktionaer.de/artikel/commerce-brands-unicorns/rheinmetall-aktie-jetzt-rekordprojekt-im-all-fuer-15-milliarden-20450492.html",
-          "source": "Der Aktionär",
-          "date": "2026-11-25"
-        },
-        {
-          "title": "Rheinmetall Aktie Prognose: Analysten sehen im Schnitt 1.328 Euro vor dem Kapitalmarkttag",
-          "url": "https://aktiencheck.de/artikel/rheinmetall-aktie-prognose-analysten-sehen-im-schnitt-1328-euro-vor-dem",
-          "source": "aktiencheck.de",
-          "date": "2026-11-25"
-        },
-        {
-          "title": "Rheinmetall Aktie: Heute beginnt der Showdown in Hamburg",
-          "url": "https://aktiencheck.de/artikel/rheinmetall-aktie-heute-beginnt-der-showdown-in-hamburg-kann-der-kapitalmarkttag",
-          "source": "aktiencheck.de",
-          "date": "2026-11-25"
-        },
-        {
-          "title": "Rheinmetall Capital Markets Day 2026",
-          "url": "https://www.rheinmetall.com/en/events/2026/ir/capital-markets-day",
-          "source": "Rheinmetall IR",
-          "date": "2026-11-25"
         }
       ]
     }
